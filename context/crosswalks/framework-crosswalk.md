@@ -62,6 +62,25 @@ Framework detail lives in the per-framework context files — link there rather 
 - **Logging vs. monitoring vs. detection.** Frameworks split these differently: CIS separates log management (8) from network defense (13); CSF splits continuous monitoring (DE.CM) from event analysis (DE.AE); PCI folds both into Req 10 plus testing in Req 11. Map at safeguard level before claiming coverage.
 - **Vulnerability management.** ISO has a single control (A.8.8); PCI is the most prescriptive (defined scan cadence, ASV scans, pen testing under Req 11). A "compliant" ISO program can be far weaker than a compliant PCI one in this domain — granularity differs by an order of magnitude.
 
+## Beyond the core six
+
+The crosswalk tables above cover the six frameworks most organizations anchor on. The repository also carries packs for frameworks that largely *inherit* or *repackage* the core six — map them by locating their parent rather than extending the tables:
+
+| Framework | Maps through | Note |
+|---|---|---|
+| [SP 800-171 / CMMC](../frameworks/nist-800-171-cmmc.md) | NIST 800-53 families | 800-171 derives from 800-53; use the 800-53 column, then narrow to CUI scope |
+| [FedRAMP](../frameworks/fedramp.md) | NIST 800-53 baselines | 800-53 r5 plus FedRAMP-specific parameters — the 800-53 column applies directly |
+| [HITRUST CSF](../frameworks/hitrust-csf.md) | Harmonizes many sources | Ships its own authoritative-source mappings; prefer those over this table |
+| [CSA CCM v4](../frameworks/csa-ccm.md) | ISO 27001 / 800-53 | Cloud-specific domains (IPY, SEF) have no clean single parent; map at safeguard level |
+| [COBIT 2019](../frameworks/cobit-2019.md) | Governance row mostly | IT governance wrapper, not a security control catalog — expect thin coverage below the governance row |
+| [NERC CIP](../frameworks/nerc-cip.md) | Domain rows individually | Sector-mandatory; its own asset-categorization logic (CIP-002) drives everything |
+| [ISO 22301](../frameworks/iso-22301.md) | Continuity row | Full BCMS behind the continuity row's ISO A.5.29–A.5.30 cells |
+| [ISO 27701](../frameworks/iso-27701.md) | ISO 27001 extension | Adds privacy (PIMS) controls on the 27001 machinery |
+| [ISO 42001](../frameworks/iso-42001.md) / [NIST AI RMF](../frameworks/nist-ai-rmf.md) | Governance + new AI domains | AI-specific obligations mostly sit outside these security domains — see [../../skills/ai-governance/SKILL.md](../../skills/ai-governance/SKILL.md) |
+| [Essential Eight](../frameworks/essential-eight.md) | CIS v8 subset areas | Eight prioritized mitigations, closest to CIS safeguards; no governance layer |
+| [Cyber Essentials](../frameworks/cyber-essentials.md) | Access, network, ops rows | Five baseline technical themes only |
+| [TISAX](../frameworks/tisax.md) | ISO 27001 heritage | VDA ISA catalogue follows 27001/27002 structure with automotive additions |
+
 ## Related
 
 - [../crosswalks/breach-notification-timelines.md](breach-notification-timelines.md) — regulatory deadline matrix
