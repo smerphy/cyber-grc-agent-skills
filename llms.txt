@@ -24,6 +24,13 @@ Load a persona from agents/ as the system prompt, the matching skills/<name>/SKI
 - [OpenAI (Custom GPTs, Assistants/Responses API)](docs/integrations/openai.md)
 - [Any provider (prompt assembly, RAG chunking)](docs/integrations/generic.md)
 
+## Tooling
+
+- [MCP server setup (skills, search, deadline computation as native tools)](docs/integrations/mcp.md)
+- [Machine-readable breach-notification clocks](data/breach-timelines.json) — consumed by scripts/deadline_calc.py
+- [Eval harness (regression tests for the advice)](evals/README.md)
+- [Maintenance and freshness policy](MAINTENANCE.md)
+
 ## Contributing
 
 - [Contribution rules and accuracy standard](CONTRIBUTING.md)

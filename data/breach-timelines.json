@@ -1,0 +1,647 @@
+{
+  "$schema_note": "Machine-readable companion to context/crosswalks/breach-notification-timelines.md. The markdown carries the nuance; this file carries the clocks for tooling (scripts/deadline_calc.py, the MCP server). Every regime here must have a row in the markdown matrix — the validator enforces name-level sync. Deadline types: hours | days (calendar) | business_days (Mon-Fri, not holiday-aware) | calendar_months | text (no computable offset). 'basis' names the event whose timestamp starts that clock; different regimes define different trigger events on purpose.",
+  "$verification": "Reflects public sources as of mid-2026; verify against official texts before filing. Last reviewed: 2026-07.",
+  "regimes": [
+    {
+      "id": "gdpr",
+      "name": "EU GDPR Art. 33/34",
+      "jurisdiction": "EU",
+      "notifier": "Controller (processor notifies the controller without undue delay)",
+      "pack": "context/regulations/gdpr.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "Art. 33(1) supervisory authority notification",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 72,
+          "recipient": "Competent supervisory authority",
+          "notes": "Calendar hours; phased notification permitted with reasons; exempt if unlikely to result in risk"
+        },
+        {
+          "label": "Art. 33(2) processor-to-controller notice",
+          "basis": "awareness",
+          "type": "text",
+          "value": "without undue delay",
+          "recipient": "Each affected controller",
+          "notes": "DPA clauses commonly specify 24-48h"
+        },
+        {
+          "label": "Art. 34 data subject notification",
+          "basis": "awareness",
+          "type": "text",
+          "value": "without undue delay (high risk only)",
+          "recipient": "Affected data subjects",
+          "notes": "Only when likely high risk; encryption exemption Art. 34(3)(a)"
+        }
+      ]
+    },
+    {
+      "id": "nis2",
+      "name": "EU NIS2 Art. 23",
+      "jurisdiction": "EU",
+      "notifier": "Essential and important entities (significant incidents)",
+      "pack": "context/regulations/nis2.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "Early warning",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 24,
+          "recipient": "CSIRT / competent authority",
+          "notes": "Thin by design: suspected malicious cause, cross-border impact"
+        },
+        {
+          "label": "Incident notification",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 72,
+          "recipient": "CSIRT / competent authority",
+          "notes": "Initial assessment, severity, impact, IoCs"
+        },
+        {
+          "label": "Final report",
+          "basis": "awareness",
+          "type": "calendar_months",
+          "value": 1,
+          "recipient": "CSIRT / competent authority",
+          "notes": "One month from the incident notification; member-state portals vary"
+        }
+      ]
+    },
+    {
+      "id": "dora",
+      "name": "EU DORA major ICT incident",
+      "jurisdiction": "EU (financial entities)",
+      "notifier": "Financial entities",
+      "pack": "context/regulations/dora.md",
+      "hedged": true,
+      "deadlines": [
+        {
+          "label": "Initial report",
+          "basis": "classification",
+          "type": "hours",
+          "value": 4,
+          "recipient": "Competent financial authority",
+          "notes": "4h from classification as major AND no later than 24h from awareness - timelines set by RTS, verify"
+        },
+        {
+          "label": "Initial report outer bound",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 24,
+          "recipient": "Competent financial authority",
+          "notes": "Outer bound per RTS - verify"
+        },
+        {
+          "label": "Intermediate report",
+          "basis": "initial_report",
+          "type": "hours",
+          "value": 72,
+          "recipient": "Competent financial authority",
+          "notes": "Per RTS - verify"
+        },
+        {
+          "label": "Final report",
+          "basis": "intermediate_report",
+          "type": "calendar_months",
+          "value": 1,
+          "recipient": "Competent financial authority",
+          "notes": "Per RTS - verify"
+        }
+      ],
+      "matrix_match": "DORA"
+    },
+    {
+      "id": "hipaa",
+      "name": "US HIPAA Breach Notification Rule",
+      "jurisdiction": "US (covered entities / business associates)",
+      "notifier": "Covered entity (BA notifies CE within 60 days of discovery)",
+      "pack": "context/regulations/hipaa.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "Individual notification",
+          "basis": "discovery",
+          "type": "days",
+          "value": 60,
+          "recipient": "Affected individuals",
+          "notes": "'Without unreasonable delay' is the operative standard; 60 days is the outer limit; discovery is imputed"
+        },
+        {
+          "label": "HHS notification (>=500)",
+          "basis": "discovery",
+          "type": "days",
+          "value": 60,
+          "recipient": "HHS OCR portal",
+          "notes": "Contemporaneous with individual notice for 500+ breaches; media if >500 residents of one state"
+        },
+        {
+          "label": "HHS annual log (<500)",
+          "basis": "calendar_year_end",
+          "type": "days",
+          "value": 60,
+          "recipient": "HHS OCR portal",
+          "notes": "Within 60 days after the calendar year end"
+        }
+      ]
+    },
+    {
+      "id": "sec-8k",
+      "name": "US SEC 8-K Item 1.05",
+      "jurisdiction": "US (public companies)",
+      "notifier": "Registrant",
+      "pack": "context/regulations/sec-cyber-disclosure.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "8-K Item 1.05 filing",
+          "basis": "materiality_determination",
+          "type": "business_days",
+          "value": 4,
+          "recipient": "SEC (EDGAR, public)",
+          "notes": "Clock starts at the materiality DETERMINATION, which must be made without unreasonable delay - not at detection"
+        }
+      ]
+    },
+    {
+      "id": "us-state",
+      "name": "US state breach laws (general pattern)",
+      "jurisdiction": "US (all 50 states + DC/territories)",
+      "notifier": "Data owner/licensee",
+      "pack": "context/regulations/us-state-privacy.md",
+      "hedged": true,
+      "deadlines": [
+        {
+          "label": "Resident notification",
+          "basis": "discovery",
+          "type": "text",
+          "value": "most expedient time, without unreasonable delay; specific outer bounds commonly 30-60 days",
+          "recipient": "Affected residents; many states AG/regulator above thresholds",
+          "notes": "Per-state grid required - definitions and clocks vary"
+        }
+      ]
+    },
+    {
+      "id": "ftc-safeguards",
+      "name": "US FTC Safeguards Rule",
+      "jurisdiction": "US (non-bank financial institutions)",
+      "notifier": "Financial institution",
+      "pack": "context/regulations/glba-ftc-safeguards.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "FTC notification",
+          "basis": "discovery",
+          "type": "days",
+          "value": 30,
+          "recipient": "FTC (online form, public)",
+          "notes": "Notification event: unencrypted customer information of >=500 consumers"
+        }
+      ]
+    },
+    {
+      "id": "us-banking-36h",
+      "name": "US banking 36-hour rule (OCC/FRB/FDIC)",
+      "jurisdiction": "US (banking organizations)",
+      "notifier": "Banking organization",
+      "pack": "context/regulations/glba-ftc-safeguards.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "Regulator notification",
+          "basis": "determination",
+          "type": "hours",
+          "value": 36,
+          "recipient": "Primary federal regulator",
+          "notes": "Clock starts at determination a notification incident occurred; operational disruption standard, no personal data required"
+        }
+      ]
+    },
+    {
+      "id": "nydfs-500",
+      "name": "US NYDFS 23 NYCRR Part 500",
+      "jurisdiction": "US (NY-licensed financial services)",
+      "notifier": "Covered entity",
+      "pack": "context/regulations/nydfs-500.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "Cybersecurity event notice",
+          "basis": "determination",
+          "type": "hours",
+          "value": 72,
+          "recipient": "NYDFS superintendent (portal)",
+          "notes": "From determination of a reportable event"
+        },
+        {
+          "label": "Extortion payment notice",
+          "basis": "payment",
+          "type": "hours",
+          "value": 24,
+          "recipient": "NYDFS superintendent",
+          "notes": "If a payment is made"
+        },
+        {
+          "label": "Extortion payment explanation",
+          "basis": "payment",
+          "type": "days",
+          "value": 30,
+          "recipient": "NYDFS superintendent",
+          "notes": "Written explanation of necessity and alternatives considered"
+        }
+      ],
+      "matrix_match": "NYDFS"
+    },
+    {
+      "id": "circia",
+      "name": "US CIRCIA",
+      "jurisdiction": "US (critical infrastructure covered entities)",
+      "notifier": "Covered entity",
+      "pack": "context/regulations/circia.md",
+      "hedged": true,
+      "deadlines": [
+        {
+          "label": "Covered cyber incident report",
+          "basis": "reasonable_belief",
+          "type": "hours",
+          "value": 72,
+          "recipient": "CISA (portal)",
+          "notes": "Rule status and covered-entity criteria: verify current status before relying"
+        },
+        {
+          "label": "Ransom payment report",
+          "basis": "payment",
+          "type": "hours",
+          "value": 24,
+          "recipient": "CISA (portal)",
+          "notes": "Verify rule status"
+        }
+      ]
+    },
+    {
+      "id": "eu-cra",
+      "name": "EU Cyber Resilience Act (manufacturer reporting)",
+      "jurisdiction": "EU (manufacturers of products with digital elements)",
+      "notifier": "Manufacturer",
+      "pack": "context/regulations/eu-cra.md",
+      "hedged": true,
+      "deadlines": [
+        {
+          "label": "Early warning (actively exploited vulnerability / severe incident)",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 24,
+          "recipient": "Coordinating CSIRT + ENISA (single platform)",
+          "notes": "Product-defect reporting, different trigger nature than victim-entity duties"
+        },
+        {
+          "label": "Vulnerability/incident notification",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 72,
+          "recipient": "Coordinating CSIRT + ENISA",
+          "notes": "Verify final report cadence (14 days / 1 month by case) against official text"
+        }
+      ],
+      "matrix_match": "EU CRA"
+    },
+    {
+      "id": "uk-gdpr",
+      "name": "UK GDPR Art. 33/34",
+      "jurisdiction": "UK",
+      "notifier": "Controller",
+      "pack": "context/regulations/uk-data-protection.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "ICO notification",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 72,
+          "recipient": "ICO",
+          "notes": "Separate filing from any EU authority - no one-stop-shop across the Channel"
+        },
+        {
+          "label": "Data subject notification",
+          "basis": "awareness",
+          "type": "text",
+          "value": "without undue delay (high risk only)",
+          "recipient": "Affected data subjects",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "apra-cps234",
+      "name": "Australia APRA CPS 234",
+      "jurisdiction": "Australia (APRA-regulated entities)",
+      "notifier": "Regulated entity",
+      "pack": "context/regulations/australia.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "Material incident notification",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 72,
+          "recipient": "APRA",
+          "notes": ""
+        },
+        {
+          "label": "Material control weakness notification",
+          "basis": "identification",
+          "type": "business_days",
+          "value": 10,
+          "recipient": "APRA",
+          "notes": "Weaknesses that cannot be remediated in a timely manner"
+        }
+      ]
+    },
+    {
+      "id": "australia-ndb",
+      "name": "Australia Notifiable Data Breaches scheme",
+      "jurisdiction": "Australia",
+      "notifier": "Entities covered by the Privacy Act",
+      "pack": "context/regulations/australia.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "Eligibility assessment",
+          "basis": "awareness",
+          "type": "days",
+          "value": 30,
+          "recipient": "(internal)",
+          "notes": "Complete the assessment within 30 days if eligibility is unclear"
+        },
+        {
+          "label": "OAIC + individual notification",
+          "basis": "eligibility_determination",
+          "type": "text",
+          "value": "as soon as practicable",
+          "recipient": "OAIC + affected individuals",
+          "notes": ""
+        }
+      ],
+      "matrix_match": "NDB scheme"
+    },
+    {
+      "id": "australia-soci",
+      "name": "Australia SOCI Act",
+      "jurisdiction": "Australia (critical infrastructure)",
+      "notifier": "Responsible entity",
+      "pack": "context/regulations/australia.md",
+      "hedged": true,
+      "deadlines": [
+        {
+          "label": "Significant-impact incident report",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 12,
+          "recipient": "ACSC",
+          "notes": "Verify impact categories"
+        },
+        {
+          "label": "Other relevant incident report",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 72,
+          "recipient": "ACSC",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "singapore-pdpa",
+      "name": "Singapore PDPA",
+      "jurisdiction": "Singapore",
+      "notifier": "Organization",
+      "pack": "context/regulations/singapore.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "PDPC notification",
+          "basis": "notifiability_determination",
+          "type": "days",
+          "value": 3,
+          "recipient": "PDPC",
+          "notes": "3 calendar days from determining the breach is notifiable; the preceding assessment must itself be expeditious (~30 days guidance)"
+        },
+        {
+          "label": "Individual notification",
+          "basis": "notifiability_determination",
+          "type": "text",
+          "value": "contemporaneous with PDPC notice",
+          "recipient": "Affected individuals",
+          "notes": "Where significant harm likely"
+        }
+      ]
+    },
+    {
+      "id": "singapore-mas",
+      "name": "Singapore MAS TRM notices",
+      "jurisdiction": "Singapore (MAS-regulated FIs)",
+      "notifier": "Financial institution",
+      "pack": "context/regulations/singapore.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "Incident notification",
+          "basis": "discovery",
+          "type": "hours",
+          "value": 1,
+          "recipient": "MAS",
+          "notes": "Relevant IT security incident or major system malfunction"
+        },
+        {
+          "label": "Root-cause and impact report",
+          "basis": "discovery",
+          "type": "days",
+          "value": 14,
+          "recipient": "MAS",
+          "notes": ""
+        }
+      ],
+      "matrix_match": "MAS notices"
+    },
+    {
+      "id": "japan-appi",
+      "name": "Japan APPI",
+      "jurisdiction": "Japan",
+      "notifier": "Business operator (four reportable incident classes)",
+      "pack": "context/regulations/japan.md",
+      "hedged": true,
+      "deadlines": [
+        {
+          "label": "Initial report",
+          "basis": "awareness",
+          "type": "days",
+          "value": 5,
+          "recipient": "PPC",
+          "notes": "Prompt initial report - PPC guidance indicates roughly 3-5 days, verify"
+        },
+        {
+          "label": "Final report",
+          "basis": "awareness",
+          "type": "days",
+          "value": 30,
+          "recipient": "PPC",
+          "notes": "60 days for wrongful-intent incident classes"
+        }
+      ]
+    },
+    {
+      "id": "south-korea-pipa",
+      "name": "South Korea PIPA",
+      "jurisdiction": "South Korea",
+      "notifier": "Personal information controller",
+      "pack": "context/regulations/south-korea.md",
+      "hedged": true,
+      "deadlines": [
+        {
+          "label": "Individual + PIPC notification",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 72,
+          "recipient": "Affected data subjects + PIPC (above thresholds)",
+          "notes": "Verify current Enforcement Decree thresholds"
+        }
+      ]
+    },
+    {
+      "id": "india-dpdp",
+      "name": "India DPDP Act",
+      "jurisdiction": "India",
+      "notifier": "Data fiduciary",
+      "pack": "context/regulations/india-dpdp.md",
+      "hedged": true,
+      "deadlines": [
+        {
+          "label": "Data principal notification",
+          "basis": "awareness",
+          "type": "text",
+          "value": "without delay (per Rules)",
+          "recipient": "Each affected data principal",
+          "notes": "No statutory harm threshold - assume notifiable by default; verify final Rules"
+        },
+        {
+          "label": "Board report",
+          "basis": "awareness",
+          "type": "hours",
+          "value": 72,
+          "recipient": "Data Protection Board of India",
+          "notes": "Per Rules, extendable on request - verify"
+        }
+      ]
+    },
+    {
+      "id": "india-cert-in",
+      "name": "India CERT-In directions",
+      "jurisdiction": "India",
+      "notifier": "Service providers, intermediaries, companies operating in India",
+      "pack": "context/regulations/india-dpdp.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "Incident report",
+          "basis": "noticing",
+          "type": "hours",
+          "value": 6,
+          "recipient": "CERT-In",
+          "notes": "Specified incident types (20-item list); among the world's tightest clocks"
+        }
+      ]
+    },
+    {
+      "id": "china-pipl",
+      "name": "China PIPL",
+      "jurisdiction": "China",
+      "notifier": "Personal information processor",
+      "pack": "context/regulations/china.md",
+      "hedged": true,
+      "deadlines": [
+        {
+          "label": "Regulator + individual notification",
+          "basis": "awareness",
+          "type": "text",
+          "value": "promptly / without delay",
+          "recipient": "CAC or sector regulator + affected individuals",
+          "notes": "Individual notice waivable if harm effectively avoided unless ordered; incident-reporting measures push severe incidents to hour-scale windows - verify"
+        }
+      ]
+    },
+    {
+      "id": "brazil-lgpd",
+      "name": "Brazil LGPD",
+      "jurisdiction": "Brazil",
+      "notifier": "Controller",
+      "pack": "context/regulations/brazil-lgpd.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "ANPD + data subject notification",
+          "basis": "knowledge",
+          "type": "business_days",
+          "value": 3,
+          "recipient": "ANPD + affected data subjects",
+          "notes": "Per ANPD 2024 incident-reporting regulation; incidents with relevant risk or damage"
+        }
+      ]
+    },
+    {
+      "id": "canada-pipeda",
+      "name": "Canada PIPEDA",
+      "jurisdiction": "Canada",
+      "notifier": "Organization",
+      "pack": "context/regulations/canada.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "OPC report + individual notification",
+          "basis": "rrosh_determination",
+          "type": "text",
+          "value": "as soon as feasible",
+          "recipient": "OPC + affected individuals",
+          "notes": "Real risk of significant harm standard; keep records of ALL breaches for 24 months"
+        }
+      ]
+    },
+    {
+      "id": "quebec-law25",
+      "name": "Canada Quebec Law 25",
+      "jurisdiction": "Canada (Quebec)",
+      "notifier": "Enterprise",
+      "pack": "context/regulations/canada.md",
+      "hedged": false,
+      "deadlines": [
+        {
+          "label": "CAI + affected persons notification",
+          "basis": "serious_injury_determination",
+          "type": "text",
+          "value": "promptly",
+          "recipient": "CAI + affected persons",
+          "notes": "Confidentiality incident presenting risk of serious injury; incident register mandatory"
+        }
+      ]
+    },
+    {
+      "id": "pci-dss",
+      "name": "PCI DSS (card brands/acquirer)",
+      "jurisdiction": "Contractual (global)",
+      "notifier": "Merchant / service provider",
+      "pack": "context/frameworks/pci-dss-4.md",
+      "hedged": true,
+      "deadlines": [
+        {
+          "label": "Acquirer + card brand notification",
+          "basis": "discovery",
+          "type": "text",
+          "value": "per contract - typically immediately / 24-72h",
+          "recipient": "Acquiring bank + affected card brands",
+          "notes": "Contractual, not statutory; treat as same-day"
+        }
+      ]
+    }
+  ]
+}

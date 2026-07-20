@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cyber-grc": {
+      "command": "python3",
+      "args": ["/absolute/path/to/Cyber-GRC-Agent-Skills/scripts/mcp_server.py"]
+    }
+  }
+}

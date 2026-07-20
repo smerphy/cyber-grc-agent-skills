@@ -29,6 +29,7 @@ Exits 1 with a per-file error report on any failure.
 import argparse
 import csv
 import datetime
+import json
 import os
 import re
 import sys
@@ -324,6 +325,59 @@ def check_csv(path, errors):
             )
 
 
+def check_data_layer(errors):
+    """data/*.json must parse; breach-timelines regimes must appear (by name)
+    in the markdown matrix so the two never drift silently."""
+    count = 0
+    data_dir = os.path.join(REPO_ROOT, "data")
+    if not os.path.isdir(data_dir):
+        return 0
+    matrix_path = os.path.join(REPO_ROOT, "context", "crosswalks", "breach-notification-timelines.md")
+    matrix_text = ""
+    if os.path.isfile(matrix_path):
+        with open(matrix_path, encoding="utf-8") as f:
+            matrix_text = f.read().lower()
+    for fname in sorted(os.listdir(data_dir)):
+        if not fname.endswith(".json"):
+            continue
+        rel = os.path.join("data", fname)
+        count += 1
+        try:
+            with open(os.path.join(data_dir, fname), encoding="utf-8") as f:
+                payload = json.load(f)
+        except json.JSONDecodeError as exc:
+            errors.setdefault(rel, []).append(f"JSON does not parse: {exc}")
+            continue
+        if fname == "breach-timelines.json":
+            seen_ids = set()
+            for regime in payload.get("regimes", []):
+                rid = regime.get("id", "")
+                if rid in seen_ids:
+                    errors.setdefault(rel, []).append(f"duplicate regime id: {rid}")
+                seen_ids.add(rid)
+                for key in ("id", "name", "notifier", "pack", "deadlines"):
+                    if not regime.get(key):
+                        errors.setdefault(rel, []).append(f"regime '{rid}' missing '{key}'")
+                pack = regime.get("pack")
+                if pack and not os.path.isfile(os.path.join(REPO_ROOT, pack)):
+                    errors.setdefault(rel, []).append(f"regime '{rid}' pack does not exist: {pack}")
+                for d in regime.get("deadlines", []):
+                    if d.get("type") not in ("hours", "days", "business_days", "calendar_months", "text"):
+                        errors.setdefault(rel, []).append(
+                            f"regime '{rid}' deadline '{d.get('label')}' has unknown type '{d.get('type')}'")
+                # Name-level sync with the markdown matrix: a distinctive token
+                # of the regime name must appear in the matrix document.
+                token = regime.get("matrix_match") or re.sub(
+                    r"^(EU|US|UK|Australia|Canada|Singapore|Japan|India|China|Brazil|South Korea)\s+", "",
+                    regime.get("name", "")).split("(")[0].strip()
+                token = token.lower()
+                if matrix_text and token and token not in matrix_text:
+                    errors.setdefault(rel, []).append(
+                        f"regime '{rid}' ('{regime.get('name')}') not found in the markdown matrix "
+                        f"(context/crosswalks/breach-notification-timelines.md) — keep them in sync")
+    return count
+
+
 def months_old(year, month, today=None):
     today = today or datetime.date.today()
     return (today.year - year) * 12 + (today.month - month)
@@ -407,7 +461,10 @@ def main():
                 csv_count += 1
                 check_csv(os.path.join(templates_dir, fname), errors)
 
-    # 7. Optional staleness report.
+    # 7. Data layer checks.
+    data_count = check_data_layer(errors)
+
+    # 8. Optional staleness report.
     stale = []
     if args.stale is not None:
         for rel, (year, month) in sorted(reviewed_dates.items()):
@@ -437,7 +494,7 @@ def main():
         sys.exit(1)
 
     print(f"OK: {skill_count} skills, {workflow_count} workflows, {agent_count} personas, "
-          f"{context_count} context packs, {csv_count} CSVs validated; "
+          f"{context_count} context packs, {csv_count} CSVs, {data_count} data files validated; "
           f"{file_count} markdown files scanned, {link_count} relative links resolved.")
 
 

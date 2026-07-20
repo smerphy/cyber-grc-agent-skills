@@ -6,6 +6,32 @@ All notable changes to this repository are documented here. The format follows
 restructures that break existing links/integrations, MINOR for new skills,
 packs, workflows, or templates, PATCH for corrections and clarifications.
 
+## [1.2.0] — 2026-07
+
+### Added
+
+- **Machine-readable data layer**: `data/breach-timelines.json` — every
+  covered notification regime with typed deadlines and clock-start
+  semantics; the validator enforces name-level sync with the markdown
+  matrix so the two cannot drift silently.
+- **Deadline calculator** (`scripts/deadline_calc.py`): computes concrete,
+  sorted notification deadlines from incident timestamps, honoring
+  per-regime clock-start events (awareness vs determination vs materiality
+  determination), with business-day and calendar-month math.
+- **MCP server** (`scripts/mcp_server.py`, stdlib-only): exposes
+  `list_skills`, `get_skill`, `get_file`, `search`, and
+  `compute_deadlines` to any MCP client; `.mcp.json.example` and
+  `docs/integrations/mcp.md` added.
+- **Eval harness** (`evals/` + `scripts/run_evals.py`): three scenarios
+  (multi-regime incident notification, regulatory applicability, control
+  test sampling design) with machine-gradable rubrics of required findings
+  and forbidden wrong claims; grades answers from any provider.
+- **Freshness automation** (`.github/workflows/freshness.yml`): monthly
+  staleness check that opens/updates a `freshness-review` issue;
+  `MAINTENANCE.md` documents the review cadence and release checklist.
+- Validator: data-layer checks (JSON schema sanity, pack references,
+  deadline types, matrix sync).
+
 ## [1.1.0] — 2026-07
 
 ### Added

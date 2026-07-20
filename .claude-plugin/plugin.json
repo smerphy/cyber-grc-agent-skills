@@ -1,6 +1,6 @@
 {
   "name": "cyber-grc",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Cyber GRC agent skills: gap assessments, control mapping, risk registers, breach notification decisions, DPIAs, audit prep, vendor risk, AI governance and more — with framework and regulation knowledge packs covering NIST, ISO, SOC 2, GDPR, NIS2, DORA, and 40+ other frameworks and laws.",
   "author": {
     "name": "Cyber GRC Agent Skills contributors",

@@ -18,8 +18,11 @@ context/      Shared knowledge packs: 19 frameworks, 26 regulation files, crossw
               glossary, risk-scoring methods
 workflows/    8 multi-step playbooks chaining skills with decision gates
 templates/    11 deliverable skeletons (risk register, DPIA, SoA, workpapers, ...)
-docs/         Integration guides (Claude, OpenAI, generic) and architecture notes
-scripts/      Validator for skill format and cross-file links (runs in CI)
+docs/         Integration guides (Claude, OpenAI, MCP, generic) and architecture notes
+data/         Machine-readable breach-notification clocks (JSON) powering the tooling
+evals/        Scenario + rubric regression tests for the advice itself
+scripts/      Validator, installer, bundle builder, deadline calculator,
+              MCP server, eval runner (all stdlib-only Python/bash)
 ```
 
 ### Skills
@@ -144,6 +147,15 @@ Full rationale: [docs/architecture.md](docs/architecture.md).
 ## Workflows
 
 For multi-phase engagements, `workflows/` chains skills with explicit decision gates: [new-regulation impact assessment](workflows/new-regulation-impact-assessment.md), [annual risk assessment](workflows/annual-risk-assessment.md), [vendor onboarding](workflows/vendor-onboarding.md), [audit readiness](workflows/audit-readiness.md), [incident regulatory response](workflows/incident-regulatory-response.md), [policy lifecycle](workflows/policy-lifecycle.md), [certification readiness](workflows/certification-readiness.md), and [AI system intake](workflows/ai-system-intake.md).
+
+## Advanced tooling
+
+- **MCP server** — expose the whole library (skills, context, search, deadline computation) as native tools to Claude Desktop/Code, Cursor, or any MCP client: `scripts/mcp_server.py`, see [docs/integrations/mcp.md](docs/integrations/mcp.md).
+- **Deadline calculator** — `python3 scripts/deadline_calc.py --regime gdpr --regime sec-8k --when awareness=2026-07-14T06:40Z --when materiality_determination=2026-07-16T17:00Z` computes a sorted deadline table honoring each regime's clock-start semantics, from the machine-readable [data/breach-timelines.json](data/breach-timelines.json) (kept in sync with the markdown matrix by the validator).
+- **Eval harness** — [evals/](evals/README.md) holds scenarios with machine-gradable rubrics (required findings + forbidden wrong claims); `scripts/run_evals.py` grades any provider's answers and fails CI-style on regressions.
+- **Freshness automation** — a monthly workflow opens a review issue when any pack's `Last reviewed` date passes 11 months; policy in [MAINTENANCE.md](MAINTENANCE.md).
+
+**Roadmap:** OSCAL export of the control crosswalk for GRC-platform interop; structured data companions for the framework crosswalk; additional eval scenarios. Proposals welcome via the issue templates.
 
 ## Contributing
 

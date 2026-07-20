@@ -1,0 +1,92 @@
+{
+  "title": "Multi-regime incident notification decision",
+  "threshold": 0.7,
+  "checks": [
+    {
+      "id": "ba-role",
+      "description": "Identifies Tarn as HIPAA business associate with duty to notify the covered entities (hospital clients), not individuals directly, for the PHI",
+      "points": 3,
+      "any": ["business associate[^.]*notif[^.]*covered entit", "notify (the )?(12 )?(affected )?(hospital|covered entit)", "BA[^.]*notif[^.]*CE"]
+    },
+    {
+      "id": "ba-60-days",
+      "description": "States the BA-to-CE notification window (without unreasonable delay, 60-day outer limit from discovery)",
+      "points": 2,
+      "any": ["60 (calendar )?days", "sixty days"]
+    },
+    {
+      "id": "hipaa-discovery-clock",
+      "description": "Uses discovery (incl. imputed/reasonable-diligence standard) as the HIPAA clock start",
+      "points": 2,
+      "any": ["discover", "imputed"]
+    },
+    {
+      "id": "hbnr",
+      "description": "Catches that the wellness app is NOT covered by HIPAA and triggers the FTC Health Breach Notification Rule analysis instead",
+      "points": 3,
+      "any": ["health breach notification rule", "HBNR", "not (covered by|subject to) HIPAA[^.]*(FTC|app)", "FTC[^.]*health"]
+    },
+    {
+      "id": "state-breach",
+      "description": "Identifies US state breach notification duties for app users (multi-state grid; California explicitly)",
+      "points": 2,
+      "any": ["state breach", "state (notification|breach) law", "California[^.]*(breach|notif|1798)"]
+    },
+    {
+      "id": "ccpa-pra",
+      "description": "Notes CCPA private right of action exposure for California residents (statutory damages for unreasonable security)",
+      "points": 1,
+      "any": ["private right of action", "1798\\.150", "statutory damages"]
+    },
+    {
+      "id": "sec-materiality",
+      "description": "SEC 8-K Item 1.05: 4 business days from the MATERIALITY DETERMINATION, and the determination must not be unreasonably delayed",
+      "points": 3,
+      "any": ["materiality determination", "determin[^.]*material[^.]*without unreasonable delay"]
+    },
+    {
+      "id": "insurer",
+      "description": "Flags prompt cyber insurer notice as a contractual obligation",
+      "points": 1,
+      "any": ["insur"]
+    },
+    {
+      "id": "hhs-500",
+      "description": "Notes the >=500 threshold consequences (HHS + media) that the covered entities will face / coordination needed",
+      "points": 1,
+      "any": ["HHS", "media notice", "500"]
+    },
+    {
+      "id": "not-triggered",
+      "description": "Documents at least one explicitly not-triggered regime with rationale (e.g., GDPR/EU — no EU offering)",
+      "points": 2,
+      "any": ["not triggered", "no[t]? appl(y|icable)", "GDPR[^.]*(not|no )", "out of scope"]
+    },
+    {
+      "id": "counsel",
+      "description": "Flags counsel review for legal determinations",
+      "points": 1,
+      "any": ["counsel", "legal review", "attorney"]
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "sec-from-detection",
+      "description": "Claims the SEC 4-business-day clock runs from detection/discovery of the incident",
+      "penalty": 3,
+      "any": ["4 business days (from|of|after) (detection|discovery)", "four business days (from|of|after) (detection|discovery)"]
+    },
+    {
+      "id": "gdpr-applied",
+      "description": "Files GDPR notification despite no EU exposure in the fact pattern",
+      "penalty": 2,
+      "any": ["notif[^.]*supervisory authority within 72", "file (a )?GDPR", "GDPR Art(icle|\\.) ?33 notification", "GDPR[^.]*(must|required|file)[^.]*72"]
+    },
+    {
+      "id": "hipaa-individuals-direct",
+      "description": "Has Tarn (the BA) notifying patients directly as a legal duty without noting it belongs to the covered entities (unless delegated)",
+      "penalty": 2,
+      "any": ["Tarn must notify (the )?(affected )?(patients|individuals) directly"]
+    }
+  ]
+}

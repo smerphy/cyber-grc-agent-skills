@@ -1,0 +1,57 @@
+name: content-freshness
+
+on:
+  schedule:
+    - cron: "17 6 1 * *"   # 06:17 UTC on the 1st of each month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check for stale context packs
+        id: stale
+        run: |
+          set -euo pipefail
+          python3 scripts/validate_skills.py --stale 11 | tee stale.txt
+          if grep -q "^STALE: none" stale.txt; then
+            echo "stale=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "stale=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Open or update the review issue
+        if: steps.stale.outputs.stale == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          BODY_FILE=issue-body.md
+          {
+            echo "The monthly freshness check found context packs last reviewed more than 11 months ago."
+            echo "Regulatory content is expected to be re-verified at least annually (see MAINTENANCE.md)."
+            echo
+            echo '```'
+            sed -n '/^STALE:/,/^OK:/p' stale.txt | sed '$d'
+            echo '```'
+            echo
+            echo "For each pack: re-verify against the Primary sources links, apply corrections,"
+            echo "and bump the \`Last reviewed:\` date (see CONTRIBUTING.md)."
+          } > "$BODY_FILE"
+          EXISTING=$(gh issue list --label "freshness-review" --state open --json number --jq '.[0].number' || true)
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body-file "$BODY_FILE"
+          else
+            gh issue create \
+              --title "Regulatory content review due ($(date -u +%Y-%m))" \
+              --label "freshness-review" \
+              --body-file "$BODY_FILE"
+          fi

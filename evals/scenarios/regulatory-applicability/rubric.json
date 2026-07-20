@@ -1,0 +1,80 @@
+{
+  "title": "Regulatory applicability register",
+  "threshold": 0.7,
+  "checks": [
+    {
+      "id": "gdpr",
+      "description": "GDPR applies (EU establishment + consumer app processing)",
+      "points": 2,
+      "any": ["GDPR[^.]*(applies|applicable|yes)", "GDPR.*establishment"]
+    },
+    {
+      "id": "nis2-energy",
+      "description": "NIS2 analysis via the energy/charging-infrastructure angle, with entity classification (essential vs important) raised and member-state transposition (DK/DE/NL) flagged",
+      "points": 3,
+      "any": ["NIS ?2[^.]*(energy|charging|Annex I|essential|important)"]
+    },
+    {
+      "id": "nis2-multi-state",
+      "description": "Notes NIS2 obligations arise per member state of operation (Denmark, Germany, Netherlands transpositions)",
+      "points": 2,
+      "any": ["transposition", "member state[s]?[^.]*(each|per|Denmark|Germany|Netherlands)", "national implementation"]
+    },
+    {
+      "id": "pci-contractual",
+      "description": "PCI DSS identified as contractual, with correct instinct on reduced scope via PSP (SAQ A / A-EP class question, not full SAQ D assumption)",
+      "points": 2,
+      "any": ["PCI[^.]*contract", "SAQ ?A", "PSP[^.]*(scope|reduce)", "PCI[^.]*(not statutory|contractual)"]
+    },
+    {
+      "id": "ai-act",
+      "description": "EU AI Act analysis for the ML load-forecasting and/or chatbot: risk-tier classification, likely limited/minimal with transparency duties for the chatbot; deployer role",
+      "points": 3,
+      "any": ["AI Act[^.]*(chatbot|transparency|deployer|risk tier|classif|minimal|limited)"]
+    },
+    {
+      "id": "cra-question",
+      "description": "Raises the EU Cyber Resilience Act for the charging-station software / connected products angle",
+      "points": 2,
+      "any": ["Cyber Resilience Act", "CRA"]
+    },
+    {
+      "id": "soc2-voluntary",
+      "description": "SOC 2 classed as voluntary/contractual customer-driven attestation, not law",
+      "points": 1,
+      "any": ["SOC 2[^.]*(voluntary|contractual|customer|not (a )?law|attestation)"]
+    },
+    {
+      "id": "us-sub",
+      "description": "US subsidiary analyzed: no consumer-scale state privacy thresholds met / B2B contacts nuance; sectoral exposure via utility customers noted (e.g., NERC CIP applies to the utilities, flow-down possible)",
+      "points": 2,
+      "any": ["threshold[^.]*(not met|below)", "B2B", "NERC", "utilit(y|ies)[^.]*(customer|flow|contract)"]
+    },
+    {
+      "id": "no-us-listing",
+      "description": "SEC disclosure rules correctly NOT applied (not listed)",
+      "points": 1,
+      "any": ["SEC[^.]*(not|no )", "not (a )?(US[- ])?(public|listed)"]
+    },
+    {
+      "id": "confidence-openfacts",
+      "description": "Register carries confidence levels and open facts / counsel flags",
+      "points": 2,
+      "any": ["confidence", "open fact", "counsel"]
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "sec-applied",
+      "description": "Applies SEC cyber disclosure rules to an unlisted company",
+      "penalty": 2,
+      "any": ["8-K[^.]*(must|required|applies)", "SEC disclosure[^.]*applies"]
+    },
+    {
+      "id": "pci-as-law",
+      "description": "Describes PCI DSS as a legal/statutory requirement",
+      "penalty": 2,
+      "any": ["PCI[^.]*(law|statut|legally required|legal requirement)"]
+    }
+  ]
+}
