@@ -172,6 +172,20 @@ Classify all of these as **contractually binding** with statutory enforcement ba
 
 ---
 
+## 11. Additional regimes — quick trigger tests
+
+Run these one-line tests and pull the linked pack for any "yes"; each pack's "At a glance" table carries the fuller scope test:
+
+- **EU Cyber Resilience Act** — do you manufacture (or import/distribute into the EU) hardware or software "products with digital elements"? → [../../../context/regulations/eu-cra.md](../../../context/regulations/eu-cra.md)
+- **CER Directive** — could a member state designate you a critical entity (physical/essential services lens)? → [../../../context/regulations/eu-cer.md](../../../context/regulations/eu-cer.md)
+- **ePrivacy / PECR** — do you set cookies/trackers on, or send electronic marketing to, EU/UK users? → [../../../context/regulations/eu-eprivacy.md](../../../context/regulations/eu-eprivacy.md)
+- **UK regime** — UK establishment, UK customers, or monitoring of UK individuals? → [../../../context/regulations/uk-data-protection.md](../../../context/regulations/uk-data-protection.md)
+- **NYDFS Part 500** — do you hold a NY banking, insurance, or financial-services license or authorization? → [../../../context/regulations/nydfs-500.md](../../../context/regulations/nydfs-500.md)
+- **CIRCIA** — do you operate in one of the 16 US critical-infrastructure sectors above the rule's size/criteria thresholds? → [../../../context/regulations/circia.md](../../../context/regulations/circia.md)
+- **FISMA stack** — are you a US federal agency, or a contractor operating systems on an agency's behalf? → [../../../context/regulations/fisma.md](../../../context/regulations/fisma.md)
+- **US sectoral privacy** — children under 13 (COPPA), student records (FERPA), non-HIPAA health apps (HBNR), video viewing data (VPPA)? → [../../../context/regulations/us-sector-privacy.md](../../../context/regulations/us-sector-privacy.md)
+- **APAC / Americas national regimes** — customers, employees, or operations in Australia, Canada, Singapore, Japan, South Korea, India, China, or Brazil? → per-country packs indexed in [../../../context/regulations/other-jurisdictions.md](../../../context/regulations/other-jurisdictions.md); note the sector overlays with the shortest clocks (MAS 1h, CERT-In 6h, SOCI 12h).
+
 ## Using the trees
 
 1. Run every tree, even where the answer seems obvious — the register needs the documented "no" with its test outcome.

@@ -10,7 +10,7 @@ Everything is plain markdown in the open [Agent Skills format](https://agentskil
 agents/       6 persona system prompts (GRC analyst, compliance officer, risk manager,
               internal auditor, privacy officer, AI governance lead)
 skills/       17 task skills, each a SKILL.md procedure + references/ deep material
-context/      Shared knowledge packs: 19 frameworks, 10 regulation files, crosswalks,
+context/      Shared knowledge packs: 19 frameworks, 26 regulation files, crosswalks,
               glossary, risk-scoring methods
 workflows/    8 multi-step playbooks chaining skills with decision gates
 templates/    11 deliverable skeletons (risk register, DPIA, SoA, workpapers, ...)
@@ -44,7 +44,7 @@ scripts/      Validator for skill format and cross-file links (runs in CI)
 
 **Frameworks:** NIST CSF 2.0 · ISO/IEC 27001:2022 · CIS Controls v8/v8.1 · SOC 2 (TSC) · NIST SP 800-53 r5 · NIST SP 800-171 + CMMC 2.0 · FedRAMP · PCI DSS v4 · HITRUST CSF · CSA CCM v4 · COBIT 2019 · NERC CIP · NIST AI RMF · ISO/IEC 42001 · ISO/IEC 27701 · ISO 22301 · ACSC Essential Eight · UK Cyber Essentials · TISAX
 
-**Regulations & laws:** EU GDPR · NIS2 · DORA · EU AI Act · HIPAA · CCPA/CPRA and US state privacy & breach laws · SOX (ITGC) · SEC cyber disclosure rules · GLBA / FTC Safeguards Rule · UK, Australia (APRA CPS 234, SOCI), Canada, Singapore, Brazil, China, Japan, India summaries
+**Regulations & laws:** EU GDPR · NIS2 · DORA · EU AI Act · EU Cyber Resilience Act · CER Directive · ePrivacy · UK (UK GDPR, PECR, NIS, resilience) · HIPAA · CCPA/CPRA and US state privacy & breach laws · SOX (ITGC) · SEC cyber disclosure · GLBA / FTC Safeguards · NYDFS Part 500 · CIRCIA · FISMA · US sectoral privacy (COPPA, FERPA, HBNR) · Australia (Privacy Act/NDB, SOCI, CPS 234) · Canada (PIPEDA, Quebec Law 25) · Singapore · Japan · South Korea · India (DPDP, CERT-In) · China (PIPL/DSL/CSL) · Brazil (LGPD) · plus Switzerland, Saudi Arabia, UAE, South Africa, New Zealand, Israel summaries
 
 **Crosswalks:** domain-level control crosswalk across the six frameworks; breach-notification deadline matrix across all covered regimes.
 
