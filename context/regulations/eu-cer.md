@@ -73,6 +73,12 @@ Competent authorities can conduct on-site inspections and off-site supervision, 
 - **DORA:** for banking and financial market infrastructure, DORA occupies the ICT-resilience field; CER designation would layer physical-resilience duties on top. Member states may apply CER to these sectors in a limited way given the density of financial-sector regulation — verify national approach. See [./dora.md](./dora.md).
 - **GDPR:** background checks and incident records involve personal data; process them with a documented lawful basis and retention limits. See [./gdpr.md](./gdpr.md).
 
+## Primary sources
+
+- [Directive (EU) 2022/2557 (CER) — official text on EUR-Lex](https://eur-lex.europa.eu/eli/dir/2022/2557/oj)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

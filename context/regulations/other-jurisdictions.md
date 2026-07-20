@@ -85,5 +85,16 @@ Three regimes coexist. **Federal PDPL** (Decree-Law 45/2021): GDPR-style skeleto
 5. For financial-sector entities, treat APRA CPS 234, MAS TRM, RBI, SAMA, and local equivalents as the operative control baselines — they are examined, prescriptive, and carry the shortest reporting windows.
 6. Localize IR playbooks: regulator contact points, report templates, and language requirements per jurisdiction, rehearsed in tabletops.
 
+## Primary sources
+
+- [Switzerland — FDPIC](https://www.edoeb.admin.ch)
+- [Saudi Arabia — SDAIA](https://sdaia.gov.sa)
+- [UAE — DIFC Commissioner of Data Protection](https://www.difc.com)
+- [South Africa — Information Regulator](https://inforegulator.org.za)
+- [New Zealand — Office of the Privacy Commissioner](https://www.privacy.org.nz)
+- [Israel — Privacy Protection Authority (gov.il)](https://www.gov.il)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

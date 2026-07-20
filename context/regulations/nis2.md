@@ -134,5 +134,12 @@ Fine ceilings are minimums that national laws must provide; member states may se
 - **Sector rules:** sector-specific EU acts with at-least-equivalent security and reporting requirements displace NIS2 for those matters (the DORA situation generalized).
 - **EU AI Act:** no direct overlap in reporting, but Art. 21 supply-chain and secure-development measures extend to AI systems an entity operates; see [eu-ai-act.md](eu-ai-act.md).
 
+## Primary sources
+
+- [Directive (EU) 2022/2555 (NIS2) — official text on EUR-Lex](https://eur-lex.europa.eu/eli/dir/2022/2555/oj)
+- [ENISA (implementing guidance, technical standards support)](https://www.enisa.europa.eu)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

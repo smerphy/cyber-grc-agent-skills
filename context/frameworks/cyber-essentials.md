@@ -117,6 +117,13 @@ Cyber Essentials is **baseline hygiene, not a security program**. It contains no
 - Crosswalks: [../crosswalks/framework-crosswalk.md](../crosswalks/framework-crosswalk.md)
 - Skills: [../../skills/framework-gap-assessment/SKILL.md](../../skills/framework-gap-assessment/SKILL.md), [../../skills/control-testing/SKILL.md](../../skills/control-testing/SKILL.md), [../../skills/third-party-risk-assessment/SKILL.md](../../skills/third-party-risk-assessment/SKILL.md), [../../skills/audit-preparation/SKILL.md](../../skills/audit-preparation/SKILL.md)
 
+## Primary sources
+
+- [NCSC Cyber Essentials overview (requirements, question sets)](https://www.ncsc.gov.uk/cyberessentials/overview)
+- [IASME (certification delivery partner)](https://iasme.co.uk)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

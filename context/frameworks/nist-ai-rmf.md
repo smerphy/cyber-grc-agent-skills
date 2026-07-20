@@ -149,6 +149,14 @@ Treat the table as directional, not authoritative — use published crosswalks f
 - **Integrate, don't duplicate.** AI RMF findings should land in the enterprise risk register and existing control-testing universe with standard scales — the framework itself pushes integration with enterprise risk management, and an orphan "AI RMF tracker" is an anti-pattern. See [../../skills/control-mapping/SKILL.md](../../skills/control-mapping/SKILL.md) for folding AI controls into the common control set.
 - **Evidence to request in an assessment:** AI policy and risk tolerance (GOVERN 1), RACI or equivalent (GOVERN 2), AI system inventory with decommissioning provisions (GOVERN 1.6), per-system context/impact documentation (MAP), test and evaluation reports against the trustworthy characteristics (MEASURE 2), risk register entries and treatment decisions (MANAGE 1), post-deployment monitoring output and incident records (MANAGE 4).
 
+## Primary sources
+
+- [NIST AI RMF 1.0 (AI 100-1), official PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
+- [NIST Generative AI Profile (AI 600-1), official PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)
+- [NIST AI RMF program page (Playbook, crosswalks)](https://www.nist.gov/itl/ai-risk-management-framework)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

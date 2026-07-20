@@ -126,5 +126,11 @@ For SMEs and startups, each ceiling is the **lower** of the percentage or fixed 
 - **DORA:** financial entities using AI for credit scoring or insurance pricing face Annex III high-risk duties on top of DORA ICT-risk and third-party controls; GPAI vendors may appear in the DORA register of information and, if designated, CTPP oversight. See [dora.md](dora.md).
 - **Product law:** for Annex I products, AI Act conformity assessment integrates into the existing sectoral CE process (one assessment, extended scope), which is why those obligations start in 2027.
 
+## Primary sources
+
+- [Regulation (EU) 2024/1689 (AI Act) — official text on EUR-Lex](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

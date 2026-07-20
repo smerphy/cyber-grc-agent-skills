@@ -85,5 +85,12 @@ Depository institutions answer to their prudential regulators, not the FTC:
 7. Keep the incident response plan current and rehearsed; pre-build the FTC 30-day report template and (for banking organizations) the 36-hour regulator alert path.
 8. Deliver the annual written board report; keep board minutes reflecting it (see [../../skills/grc-metrics-reporting/SKILL.md](../../skills/grc-metrics-reporting/SKILL.md)).
 
+## Primary sources
+
+- [16 CFR Part 314 (Safeguards Rule) — eCFR current text](https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314)
+- [FTC Safeguards Rule page (guidance, breach reporting form)](https://www.ftc.gov/legal-library/browse/rules/safeguards-rule)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

@@ -96,6 +96,13 @@ See [../../skills/incident-regulatory-reporting/SKILL.md](../../skills/incident-
 5. Reconcile CIRCIA with every other reporting regime you face and identify where the substantially-similar exception can collapse duplicate work.
 6. Do not report through informal channels and assume it counts — only the mechanism specified in the final rule discharges the duty.
 
+## Primary sources
+
+- [CISA CIRCIA program page (rulemaking status, reporting portal)](https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cyber-incident-reporting-critical-infrastructure-act-2022-circia)
+- [Federal Register (rule texts and dates)](https://www.federalregister.gov)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

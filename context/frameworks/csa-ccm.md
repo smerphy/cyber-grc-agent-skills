@@ -109,6 +109,12 @@ Prefer a generic framework when the organization is not primarily a cloud provid
 
 Related skills: [third-party-risk-assessment](../../skills/third-party-risk-assessment/SKILL.md), [framework-gap-assessment](../../skills/framework-gap-assessment/SKILL.md), [control-mapping](../../skills/control-mapping/SKILL.md), [soc2-readiness](../../skills/soc2-readiness/SKILL.md).
 
+## Primary sources
+
+- [CSA Cloud Controls Matrix — official download (CCM, CAIQ, mappings)](https://cloudsecurityalliance.org/research/cloud-controls-matrix)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

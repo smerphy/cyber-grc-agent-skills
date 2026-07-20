@@ -59,6 +59,15 @@ The **CPPA** (Consumer Privacy Protection Act) and **AIDA** (AI and Data Act), b
 - **GDPR** ([./gdpr.md](./gdpr.md)): Canada (PIPEDA scope) holds an EU adequacy decision (reaffirmed in the 2024 review — verify), easing EU→Canada flows. Law 25 borrows GDPR mechanics (PIAs, penalties, portability); PIPEDA remains principles-based and lighter.
 - **US state laws** ([./us-state-privacy.md](./us-state-privacy.md)): cross-border North American programs typically run a merged rights-request and breach process; note Canada's RROSH standard differs from US per-state PI-element triggers.
 
+## Primary sources
+
+- [PIPEDA — official consolidated text (Justice Laws)](https://laws-lois.justice.gc.ca/eng/acts/P-8.6/)
+- [Office of the Privacy Commissioner of Canada (breach reporting, guidance)](https://www.priv.gc.ca)
+- [Commission d'accès à l'information du Québec (Law 25)](https://www.cai.gouv.qc.ca)
+- [OSFI (Guideline B-13, incident reporting advisory)](https://www.osfi-bsif.gc.ca)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

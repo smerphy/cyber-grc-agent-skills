@@ -87,5 +87,12 @@ The crosswalk tables above cover the six frameworks most organizations anchor on
 - [../../skills/framework-gap-assessment/SKILL.md](../../skills/framework-gap-assessment/SKILL.md) — using this crosswalk in a gap assessment
 - [../../skills/control-mapping/SKILL.md](../../skills/control-mapping/SKILL.md) — producing defensible control-level mappings
 
+## Primary sources
+
+- [CIS Controls mappings (official CIS mapping downloads)](https://www.cisecurity.org/controls)
+- [NIST OLIR / informative references program](https://csrc.nist.gov/projects/olir)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

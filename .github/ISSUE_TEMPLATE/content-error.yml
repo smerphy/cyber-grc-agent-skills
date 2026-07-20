@@ -1,0 +1,49 @@
+name: Content error (regulatory/framework accuracy)
+description: Report an inaccurate claim, citation, deadline, or identifier in a context pack or skill
+title: "[content] "
+labels: ["content-error", "accuracy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Accuracy reports are the highest-priority issue type in this repo. Thank you.
+  - type: input
+    id: file
+    attributes:
+      label: File and location
+      description: Repo-relative path and the section or line with the error
+      placeholder: context/regulations/nis2.md — "Incident reporting" section
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: The claim as currently written
+      description: Quote the exact text you believe is wrong
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What it should say
+      description: Your proposed correction, or "unsure — needs verification"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source (required)
+      description: Link to the official text, regulator guidance, or standards body page that supports the correction. Corrections without an authoritative source cannot be merged.
+      placeholder: https://eur-lex.europa.eu/eli/dir/2022/2555/oj — Art. 23(4)
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - "Critical — wrong deadline, threshold, or obligation that could cause a compliance failure"
+        - "Major — wrong identifier, citation, or materially misleading statement"
+        - "Minor — outdated but flagged detail, phrasing, or nuance"
+    validations:
+      required: true

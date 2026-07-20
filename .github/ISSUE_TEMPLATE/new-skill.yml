@@ -1,0 +1,41 @@
+name: New skill or content proposal
+description: Propose a new skill, framework pack, regulation pack, workflow, or template
+title: "[proposal] "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Content type
+      options:
+        - Skill (skills/)
+        - Framework pack (context/frameworks/)
+        - Regulation pack (context/regulations/)
+        - Workflow (workflows/)
+        - Template (templates/)
+        - Persona (agents/)
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: What it covers and why it belongs here
+      description: The task or regime, who needs it, and why existing content doesn't cover it
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Authoritative sources
+      description: Official texts / standards pages the content would be grounded in
+    validations:
+      required: true
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Are you offering to write it?
+      options:
+        - "Yes — I'll open a PR following CONTRIBUTING.md"
+        - "No — proposal only"
+    validations:
+      required: true

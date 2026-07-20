@@ -66,6 +66,12 @@ The Act is subject to a **triennial review**. The review cycle running through t
 - **APEC CBPR:** Japan participates; CBPR certification can serve as a transfer mechanism and vendor-assurance signal in APAC.
 - **Sector rules:** financial services (FSA guidelines), telecom, and medical sectors carry additional security and secrecy obligations — check sector guidance when scoping.
 
+## Primary sources
+
+- [Personal Information Protection Commission (English) — APPI text, guidelines, breach reporting](https://www.ppc.go.jp/en/)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

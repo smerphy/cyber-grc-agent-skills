@@ -57,6 +57,13 @@ Notify **without delay — within 72 hours** of awareness, both to affected data
 - **EU adequacy:** the EU granted Korea adequacy in December 2021, easing EU→Korea flows (covers most PIPA-regulated processing — verify scope).
 - **Sector overlays:** credit information (Credit Information Act), financial cloud rules (FSC/FSS), and location information (Location Information Act) carry their own consent and security regimes.
 
+## Primary sources
+
+- [Personal Information Protection Commission (PIPC)](https://www.pipc.go.kr)
+- [Korea Law Translation Center (English PIPA text)](https://elaw.klri.re.kr)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

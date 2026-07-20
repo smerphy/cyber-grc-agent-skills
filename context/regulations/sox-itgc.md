@@ -112,5 +112,12 @@ Key dynamics for IT:
 7. Collect and review SOC 1 reports for in-scope service providers; map and operate CUECs (see [../../skills/third-party-risk-assessment/SKILL.md](../../skills/third-party-risk-assessment/SKILL.md)).
 8. Test controls before the auditor does (see [../../skills/control-testing/SKILL.md](../../skills/control-testing/SKILL.md)) and prepare evidence packages proactively (see [../../skills/audit-preparation/SKILL.md](../../skills/audit-preparation/SKILL.md)).
 
+## Primary sources
+
+- [Sarbanes-Oxley Act (Pub. L. 107-204) — govinfo](https://www.govinfo.gov/app/details/PLAW-107publ204)
+- [PCAOB auditing standards (AS 2201 et al.)](https://pcaobus.org/oversight/standards)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

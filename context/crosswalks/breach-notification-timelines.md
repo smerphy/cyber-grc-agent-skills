@@ -80,5 +80,11 @@ Scope note: "breach" below covers both personal-data breaches (GDPR, HIPAA, stat
 - [../regulations/gdpr.md](../regulations/gdpr.md) · [../regulations/nis2.md](../regulations/nis2.md) · [../regulations/dora.md](../regulations/dora.md) · [../regulations/hipaa.md](../regulations/hipaa.md) · [../regulations/sec-cyber-disclosure.md](../regulations/sec-cyber-disclosure.md) · [../regulations/glba-ftc-safeguards.md](../regulations/glba-ftc-safeguards.md) · [../regulations/us-state-privacy.md](../regulations/us-state-privacy.md) · [../regulations/nydfs-500.md](../regulations/nydfs-500.md) · [../regulations/circia.md](../regulations/circia.md) · [../regulations/eu-cra.md](../regulations/eu-cra.md) · [../regulations/uk-data-protection.md](../regulations/uk-data-protection.md) · [../regulations/other-jurisdictions.md](../regulations/other-jurisdictions.md)
 - [../../skills/incident-regulatory-reporting/SKILL.md](../../skills/incident-regulatory-reporting/SKILL.md) — applying this matrix during a live incident
 
+## Primary sources
+
+- Each regime's official text — see the Primary sources section of the linked regulation pack per row
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

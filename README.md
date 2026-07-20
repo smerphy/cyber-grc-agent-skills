@@ -1,5 +1,9 @@
 # Cyber GRC Agent Skills
 
+[![validate](https://github.com/smerphy/Cyber-GRC-Agent-Skills/actions/workflows/validate.yml/badge.svg)](https://github.com/smerphy/Cyber-GRC-Agent-Skills/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Content: verified sources](https://img.shields.io/badge/content-primary--sourced-blue)](CONTRIBUTING.md)
+
 Portable, provider-neutral AI agent skills for cyber Governance, Risk & Compliance. Load them into Claude, ChatGPT, or any capable LLM and get an agent that runs gap assessments, maps controls across frameworks, determines breach notification obligations, drafts policies, prepares audits, and more — following practitioner-grade procedures instead of improvising.
 
 Everything is plain markdown in the open [Agent Skills format](https://agentskills.io) (`SKILL.md` + progressive-disclosure references). No provider lock-in, no runtime dependencies, no API keys.
@@ -88,8 +92,8 @@ Details and RAG/chunking guidance: [docs/integrations/generic.md](docs/integrati
 - **Three layers.** Personas define *who the agent is*, skills define *how a task is done*, context/templates define *what it needs to know and produce*. Compose them per task instead of one monolithic prompt.
 - **Progressive disclosure.** Each `SKILL.md` stays small enough to load whole; depth (question banks, rubrics, per-regime detail) lives in `references/` and `context/` files loaded on demand. This keeps token cost proportional to the task.
 - **Provider-neutral content.** No tool syntax, no vendor-specific markup anywhere in `skills/`, `context/`, `workflows/`, `agents/`, or `templates/`. Provider specifics are quarantined in `docs/integrations/`.
-- **Anti-fabrication by construction.** Skills instruct the agent to tie conclusions to evidence, flag uncertainty, and never invent citations or compliance status. Regulatory files carry a `Last reviewed` date and a verification footer.
-- **Validated.** `python3 scripts/validate_skills.py` checks frontmatter, required sections, and that every cross-file link resolves; it runs in CI on every PR.
+- **Anti-fabrication by construction.** Skills instruct the agent to tie conclusions to evidence, flag uncertainty, and never invent citations or compliance status. Every framework and regulation pack ends with a **Primary sources** section linking the official text (links verified at review time), plus a `Last reviewed` date and verification footer.
+- **Validated.** `python3 scripts/validate_skills.py` checks skill frontmatter and sections, every cross-file link, verification footers and review dates, primary-source presence, workflow/persona headers, and CSV integrity; it runs in CI on every PR. `--stale N` reports packs due for re-review.
 
 Full rationale: [docs/architecture.md](docs/architecture.md).
 

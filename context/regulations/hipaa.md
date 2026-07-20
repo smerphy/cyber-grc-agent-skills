@@ -125,5 +125,12 @@ In late 2024/early 2025, HHS issued a **Notice of Proposed Rulemaking to strengt
 9. **Meet the right of access** — 30-day SLA with tracking; a top OCR enforcement priority.
 10. **Retain documentation 6 years** and train workforce with sanctions applied and recorded. Periodic evaluation (§164.308(a)(8)) maps cleanly to control testing — see [../../skills/control-testing/SKILL.md](../../skills/control-testing/SKILL.md) and [../../skills/audit-preparation/SKILL.md](../../skills/audit-preparation/SKILL.md).
 
+## Primary sources
+
+- [HHS HIPAA hub (rules, guidance, breach portal)](https://www.hhs.gov/hipaa/index.html)
+- [45 CFR Parts 160–164 — eCFR (current regulatory text)](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

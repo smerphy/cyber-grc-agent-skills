@@ -94,6 +94,14 @@ Ask these questions in order; each "yes" adds a regime:
 - [sec-cyber-disclosure.md](sec-cyber-disclosure.md) — a sectoral-law enforcement action or class action can itself be a material development for public companies.
 - Privacy program structure and DSR handling: see [gdpr.md](gdpr.md) patterns and [../frameworks/iso-27701.md](../frameworks/iso-27701.md) for the management-system scaffolding these laws can hang on.
 
+## Primary sources
+
+- [FTC COPPA rule page](https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa)
+- [FTC Health Breach Notification Rule page](https://www.ftc.gov/legal-library/browse/rules/health-breach-notification-rule)
+- [US Dept. of Education student privacy hub (FERPA)](https://studentprivacy.ed.gov)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

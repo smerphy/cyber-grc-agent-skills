@@ -1,0 +1,26 @@
+name: Bug report (tooling/structure)
+description: Broken links, validator failures, malformed files, or integration problems
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What's broken
+      description: What happened, and what you expected instead
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: Steps, commands, or the file(s) involved (include validator output if relevant)
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Where you hit it
+      placeholder: "e.g., Claude Code 2.x project skills, Custom GPT knowledge upload, python3 scripts/validate_skills.py on macOS"
+    validations:
+      required: false

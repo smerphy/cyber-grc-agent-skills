@@ -49,7 +49,8 @@ Files under `context/` (and any file citing article numbers, deadlines, control 
    relying on them for compliance decisions. Last reviewed: YYYY-MM.
    ```
 
-4. Do **not** add per-paragraph legal disclaimers in file bodies — the repo carries one global disclaimer and the standard footer; scattering more adds noise, not safety.
+4. **Maintain the `## Primary sources` section.** Every framework, regulation, and crosswalk pack carries one, linking the official text or publisher page. If your change relies on a source not yet listed, add it; if a linked source has moved, fix the link. The validator fails packs that lack the section.
+5. Do **not** add per-paragraph legal disclaimers in file bodies — the repo carries one global disclaimer and the standard footer; scattering more adds noise, not safety.
 
 ## Accuracy standard
 
@@ -72,7 +73,9 @@ Some frameworks are copyrighted, paid publications — ISO/IEC 27001 and 27002, 
 python3 scripts/validate_skills.py
 ```
 
-Run from the repo root; Python 3.10+ with no dependencies. It checks skill frontmatter (required keys, name/directory match, description length), required H2 sections, body length, and that every relative markdown link across `skills/`, `workflows/`, `context/`, `docs/`, `agents/`, and `templates/` resolves. CI ([.github/workflows/validate.yml](.github/workflows/validate.yml)) runs the same script on every push and PR — a red validator blocks merge.
+Run from the repo root; Python 3.10+ with no dependencies. It checks skill frontmatter (required keys, name/directory match, description length), required H2 sections, body length, every relative markdown link across `skills/`, `workflows/`, `context/`, `docs/`, `agents/`, and `templates/`, verification footers with parseable `Last reviewed` dates, `## Primary sources` presence in framework/regulation/crosswalk packs, workflow yaml headers and persona frontmatter (including that every referenced skill exists), and CSV integrity in `templates/`. CI ([.github/workflows/validate.yml](.github/workflows/validate.yml)) runs the same script on every push and PR — a red validator blocks merge.
+
+`python3 scripts/validate_skills.py --stale 12` additionally lists context packs whose `Last reviewed` date is more than 12 months old — run it when picking up maintenance work.
 
 ## Pull request expectations
 

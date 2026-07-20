@@ -125,6 +125,12 @@ What a software or device vendor's GRC team should be doing now (mid-2026):
 - **DORA:** financial entities procuring ICT products can use CRA conformity as evidence within DORA's ICT third-party risk framework; the regimes do not displace each other. See [./dora.md](./dora.md).
 - **RED delegated act:** the radio-equipment cybersecurity requirements (applicable from 2025) act as a bridge until the CRA fully applies; CRA compliance is expected to subsume them for covered products — verify transition mechanics.
 
+## Primary sources
+
+- [Regulation (EU) 2024/2847 (Cyber Resilience Act) — official text on EUR-Lex](https://eur-lex.europa.eu/eli/reg/2024/2847/oj)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

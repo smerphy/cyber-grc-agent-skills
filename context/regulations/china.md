@@ -119,6 +119,12 @@ A workable sequencing for a multinational building China compliance:
 - Sector overlays (PBOC/NFRA financial data rules, health, automotive, mapping) add localization and reporting on top of the triad.
 - Regional program parallels: [japan.md](japan.md), [south-korea.md](south-korea.md), [singapore.md](singapore.md), [india-dpdp.md](india-dpdp.md).
 
+## Primary sources
+
+- [Cyberspace Administration of China (laws, measures, filings — Chinese)](https://www.cac.gov.cn)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

@@ -117,5 +117,13 @@ Hybrid is the norm in practice: a qualitative register for breadth, quantitative
 - [../skills/grc-metrics-reporting/SKILL.md](../skills/grc-metrics-reporting/SKILL.md) — reporting risk without aggregation traps
 - [../skills/dpia-privacy-assessment/SKILL.md](../skills/dpia-privacy-assessment/SKILL.md) — risk-to-individuals analysis, a different lens than enterprise risk
 
+## Primary sources
+
+- [FAIR Institute (FAIR methodology)](https://www.fairinstitute.org)
+- [FIRST — CVSS specification and EPSS](https://www.first.org)
+- [CISA Known Exploited Vulnerabilities catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

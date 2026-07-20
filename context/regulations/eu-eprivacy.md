@@ -80,6 +80,13 @@ A defensible cookie/tracking compliance program contains:
 - **EU AI Act:** ad-tech profiling built on tracker data can intersect with AI Act transparency duties where AI systems are involved; no direct mechanical overlap, but consent provenance becomes training-data governance input. See [./eu-ai-act.md](./eu-ai-act.md).
 - **Digital Services Act / Digital Markets Act:** dark-pattern prohibitions and consent-or-pay scrutiny for large platforms overlap the same banner design choices — coordinate legal review rather than treating ePrivacy in isolation.
 
+## Primary sources
+
+- [Directive 2002/58/EC (ePrivacy) — official text on EUR-Lex](https://eur-lex.europa.eu/eli/dir/2002/58/oj)
+- [EDPB (cookie/consent guidance)](https://www.edpb.europa.eu)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

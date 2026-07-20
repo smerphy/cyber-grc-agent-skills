@@ -63,6 +63,13 @@ The **Data Protection Board** inquires into breaches and non-compliance and impo
 - **IT Act / CERT-In directions:** CERT-In's 2022 directions (6-hour incident reporting for specified incident types to CERT-In, log retention, VPN/cloud provider record-keeping) operate **independently** of the DPDP Act and remain in force — a security incident in India can trigger both CERT-In and DPDP clocks. Verify current directions.
 - **Sector regulators:** RBI (payments localization, outsourcing, cyber security framework for banks), IRDAI, SEBI cyber rules continue to apply alongside.
 
+## Primary sources
+
+- [MeitY (DPDP Act and Rules texts)](https://www.meity.gov.in)
+- [CERT-In (2022 directions, incident reporting)](https://www.cert-in.org.in)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

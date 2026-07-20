@@ -115,6 +115,12 @@ An existing ISO 27001 ISMS is the best possible foundation — the VDA ISA catal
 - Crosswalks: [../crosswalks/framework-crosswalk.md](../crosswalks/framework-crosswalk.md)
 - Skills: [../../skills/framework-gap-assessment/SKILL.md](../../skills/framework-gap-assessment/SKILL.md), [../../skills/iso27001-readiness/SKILL.md](../../skills/iso27001-readiness/SKILL.md), [../../skills/control-mapping/SKILL.md](../../skills/control-mapping/SKILL.md), [../../skills/audit-preparation/SKILL.md](../../skills/audit-preparation/SKILL.md), [../../skills/third-party-risk-assessment/SKILL.md](../../skills/third-party-risk-assessment/SKILL.md)
 
+## Primary sources
+
+- [ENX Association (TISAX participant portal and VDA ISA catalogue access)](https://enx.com)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

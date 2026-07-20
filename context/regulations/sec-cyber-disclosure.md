@@ -113,5 +113,11 @@ An incident on a vendor's, cloud provider's, or supply-chain partner's systems c
 6. Require and test vendor incident-notification SLAs for materially relied-upon providers.
 7. Track amendments owed on open 8-K Item 1.05 filings.
 
+## Primary sources
+
+- [SEC final rule 33-11216, Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure (official PDF)](https://www.sec.gov/rules/final/2023/33-11216.pdf)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

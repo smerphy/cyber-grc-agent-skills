@@ -101,6 +101,12 @@ DFS enforcement has followed a consistent arc worth studying before it studies y
 - New York's SHIELD Act and other state breach laws govern consumer notification separately from DFS regulator notice — see [us-state-privacy.md](us-state-privacy.md).
 - Part 500's control set maps cleanly onto [../frameworks/nist-csf-2.md](../frameworks/nist-csf-2.md) functions; many firms evidence compliance through a CSF-organized program.
 
+## Primary sources
+
+- [NYDFS cybersecurity resource center (23 NYCRR 500 text, FAQs, filing portal)](https://www.dfs.ny.gov/industry_guidance/cybersecurity)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

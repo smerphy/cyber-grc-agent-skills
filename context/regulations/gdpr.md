@@ -160,5 +160,12 @@ Note the asymmetry: a security failure (Art. 32) is Tier 1, but the same inciden
 
 Related context: [nis2.md](nis2.md) and [dora.md](dora.md) impose parallel EU incident-reporting duties that can apply to the same event; [us-state-privacy.md](us-state-privacy.md) for the US analogue landscape.
 
+## Primary sources
+
+- [Regulation (EU) 2016/679 (GDPR) — official consolidated text on EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
+- [EDPB guidelines and decisions](https://www.edpb.europa.eu)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

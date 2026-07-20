@@ -111,5 +111,11 @@ Payroll processors, fund administrators, and claims processors typically need SO
 - Crosswalk: [../crosswalks/framework-crosswalk.md](../crosswalks/framework-crosswalk.md)
 - Skills: [../../skills/soc2-readiness/SKILL.md](../../skills/soc2-readiness/SKILL.md), [../../skills/audit-preparation/SKILL.md](../../skills/audit-preparation/SKILL.md), [../../skills/control-testing/SKILL.md](../../skills/control-testing/SKILL.md)
 
+## Primary sources
+
+- [AICPA Audit & Assurance topic hub (Trust Services Criteria, SOC suite guidance)](https://www.aicpa-cima.com/topic/audit-assurance)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

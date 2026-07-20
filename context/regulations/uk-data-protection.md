@@ -88,6 +88,14 @@ The **Telecommunications (Security) Act 2021** and its secondary legislation (El
 - **DORA:** UK operational resilience + CTP regime is the UK's functional equivalent; dual-regulated financial groups should maintain a single mapped control set. See [./dora.md](./dora.md).
 - **EU AI Act:** the UK has no AI Act equivalent (a principles-based, regulator-led approach, with targeted legislation repeatedly signalled — verify status); UK AI governance currently hangs off UK GDPR (ADM rules) and sector regulators. See [./eu-ai-act.md](./eu-ai-act.md).
 
+## Primary sources
+
+- [Data Protection Act 2018 — legislation.gov.uk](https://www.legislation.gov.uk/ukpga/2018/12)
+- [ICO (UK GDPR guidance, PECR, breach reporting portal)](https://ico.org.uk)
+- [NCSC (CAF, security guidance)](https://www.ncsc.gov.uk)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

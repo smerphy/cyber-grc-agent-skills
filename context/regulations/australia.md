@@ -89,6 +89,15 @@ Australia's first standalone Cyber Security Act added: **mandatory ransomware pa
 - **CPS 234/230 vs. DORA** ([./dora.md](dora.md)): the same board-accountability, testing, and third-party themes — a DORA program maps well onto CPS 230, but APRA's notification triggers and timelines are distinct.
 - OAIC (privacy), ACSC (SOCI incidents), and APRA notifications for one incident are separate filings with different content — expect to file all three for a major breach at a regulated financial entity.
 
+## Primary sources
+
+- [OAIC (Privacy Act guidance, NDB scheme, reporting)](https://www.oaic.gov.au)
+- [APRA (CPS 234, CPS 230 and practice guides)](https://www.apra.gov.au)
+- [ACSC / cyber.gov.au (SOCI incident reporting, Essential Eight)](https://www.cyber.gov.au)
+- [Federal Register of Legislation (Privacy Act, SOCI Act texts)](https://www.legislation.gov.au)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

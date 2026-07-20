@@ -85,6 +85,12 @@ Treat CIP like other mandatory regimes in this library ([SOX ITGC](../regulation
 
 Related skills: [regulatory-applicability](../../skills/regulatory-applicability/SKILL.md), [audit-preparation](../../skills/audit-preparation/SKILL.md), [control-testing](../../skills/control-testing/SKILL.md), [incident-regulatory-reporting](../../skills/incident-regulatory-reporting/SKILL.md).
 
+## Primary sources
+
+- [NERC Reliability Standards (current CIP standards and effective dates)](https://www.nerc.com/pa/Stand/Pages/ReliabilityStandards.aspx)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

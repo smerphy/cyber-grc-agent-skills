@@ -105,6 +105,12 @@ COBIT is ISACA's house framework, so it permeates ISACA's credential ecosystem: 
 
 Related skills: [framework-gap-assessment](../../skills/framework-gap-assessment/SKILL.md), [grc-metrics-reporting](../../skills/grc-metrics-reporting/SKILL.md), [audit-preparation](../../skills/audit-preparation/SKILL.md), [risk-assessment](../../skills/risk-assessment/SKILL.md).
 
+## Primary sources
+
+- [ISACA COBIT resource hub (framework publications)](https://www.isaca.org/resources/cobit)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

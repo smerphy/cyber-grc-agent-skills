@@ -76,6 +76,15 @@ The **transfer limitation obligation (s 26)** prohibits transferring personal da
 - **MAS TRM vs. DORA** ([./dora.md](dora.md)): strongly parallel (governance, testing, third-party/cloud, incident reporting), but MAS's 1-hour notification is far tighter than DORA's initial-report window; a DORA program needs its clocks rebuilt for Singapore.
 - Regional practice note: PDPA compliance is often the anchor for ASEAN programs (the ASEAN Model Contractual Clauses are PDPA-compatible), with Malaysia, Thailand, Indonesia, and the Philippines running broadly similar consent-based regimes.
 
+## Primary sources
+
+- [PDPC (PDPA guidance, breach notification)](https://www.pdpc.gov.sg)
+- [PDPA — Singapore Statutes Online](https://sso.agc.gov.sg/Act/PDPA2012)
+- [MAS (TRM guidelines and notices)](https://www.mas.gov.sg)
+- [Cyber Security Agency of Singapore (Cybersecurity Act, CII)](https://www.csa.gov.sg)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

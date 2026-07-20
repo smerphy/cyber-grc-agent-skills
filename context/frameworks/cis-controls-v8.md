@@ -98,5 +98,11 @@ Mappings are directional and lossy: a CIS safeguard mapping to an ISO control do
 
 Related skills: [framework-gap-assessment](../../skills/framework-gap-assessment/SKILL.md), [control-testing](../../skills/control-testing/SKILL.md), [control-mapping](../../skills/control-mapping/SKILL.md).
 
+## Primary sources
+
+- [CIS Critical Security Controls — official download and mappings](https://www.cisecurity.org/controls)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

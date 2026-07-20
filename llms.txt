@@ -1,0 +1,30 @@
+# Cyber GRC Agent Skills
+
+> Portable, provider-neutral AI agent skills for cyber governance, risk & compliance: 17 task skills, 19 framework packs, 26 regulation packs, crosswalks, workflows, templates, and personas — plain markdown in the Agent Skills format (SKILL.md + progressive-disclosure references).
+
+Load a persona from agents/ as the system prompt, the matching skills/<name>/SKILL.md for the task, and only the context/ files the skill links to. Do not bulk-load the repository; follow links on demand. Never fabricate compliance facts; respect each file's "Last reviewed" date and verification footer.
+
+## Start here
+
+- [README](README.md): what's inside, quick start per provider
+- [AGENTS.md](AGENTS.md): operating rules for agents using this library
+- [Architecture](docs/architecture.md): the three-layer model and design principles
+
+## Core indexes
+
+- [Skills catalog (17 skills, table in README)](README.md)
+- [Jurisdiction index + breach-clock quick reference](context/regulations/other-jurisdictions.md)
+- [Breach-notification deadline matrix](context/crosswalks/breach-notification-timelines.md)
+- [Framework crosswalk](context/crosswalks/framework-crosswalk.md)
+- [Glossary](context/glossary.md)
+
+## Integration guides
+
+- [Claude (Claude Code skills, Projects, API)](docs/integrations/claude.md)
+- [OpenAI (Custom GPTs, Assistants/Responses API)](docs/integrations/openai.md)
+- [Any provider (prompt assembly, RAG chunking)](docs/integrations/generic.md)
+
+## Contributing
+
+- [Contribution rules and accuracy standard](CONTRIBUTING.md)
+- [Security and content-integrity policy](SECURITY.md)

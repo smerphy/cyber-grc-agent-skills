@@ -139,5 +139,12 @@ When updating an assessment performed against 1.1, do not assume subcategory IDs
 
 Related skills: [framework-gap-assessment](../../skills/framework-gap-assessment/SKILL.md), [control-mapping](../../skills/control-mapping/SKILL.md), [grc-metrics-reporting](../../skills/grc-metrics-reporting/SKILL.md).
 
+## Primary sources
+
+- [NIST CSF 2.0 (CSWP 29), official PDF](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf)
+- [NIST Cybersecurity Framework program page (tools, profiles, informative references)](https://www.nist.gov/cyberframework)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

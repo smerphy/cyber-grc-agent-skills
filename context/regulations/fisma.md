@@ -98,6 +98,13 @@ FISMA modernization bills have been introduced repeatedly (2021 through the mid-
 - [sox-itgc.md](sox-itgc.md) — 800-53's control families overlap heavily with ITGC domains; reuse evidence where you can.
 - [../crosswalks/framework-crosswalk.md](../crosswalks/framework-crosswalk.md) — mappings from 800-53 to ISO 27001, CSF, and SOC 2.
 
+## Primary sources
+
+- [NIST FISMA implementation page](https://csrc.nist.gov/topics/laws-and-regulations/laws/fisma)
+- [CISA binding operational and emergency directives](https://www.cisa.gov/news-events/directives)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

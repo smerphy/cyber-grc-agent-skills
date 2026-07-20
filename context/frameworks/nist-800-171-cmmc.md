@@ -118,6 +118,13 @@ Rollout is **phased over roughly three years** from the 48 CFR effective date: e
 - Related frameworks: [nist-800-53.md](./nist-800-53.md) (parent catalog), [fedramp.md](./fedramp.md) (cloud services holding CUI), [nist-csf-2.md](./nist-csf-2.md)
 - Skills: [../../skills/framework-gap-assessment/SKILL.md](../../skills/framework-gap-assessment/SKILL.md), [../../skills/control-testing/SKILL.md](../../skills/control-testing/SKILL.md), [../../skills/audit-preparation/SKILL.md](../../skills/audit-preparation/SKILL.md)
 
+## Primary sources
+
+- [NIST SP 800-171 Rev. 3 — official publication](https://csrc.nist.gov/pubs/sp/800/171/r3/final)
+- [DoD CIO CMMC program site (rules, scoping and assessment guides)](https://dodcio.defense.gov/cmmc/)
+
+*Links verified 2026-07; if one has moved, search the publisher's site for the identifier.*
+
 ---
 
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.
