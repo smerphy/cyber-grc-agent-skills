@@ -31,6 +31,9 @@ packs, workflows, or templates, PATCH for corrections and clarifications.
   `MAINTENANCE.md` documents the review cadence and release checklist.
 - Validator: data-layer checks (JSON schema sanity, pack references,
   deadline types, matrix sync).
+- **Greybeard persona** (`agents/greybeard.md`): senior technical reviewer —
+  fatal-flaw hunting on architectures, control designs, and DR claims, with
+  layered explanation of complex technical issues for any audience.
 
 ## [1.1.0] — 2026-07
 

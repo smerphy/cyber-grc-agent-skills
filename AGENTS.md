@@ -6,7 +6,7 @@ This repository is a library of portable AI agent skills for cyber Governance, R
 
 | Layer | Path | What it is | When to load |
 |---|---|---|---|
-| Personas | `agents/` | System-prompt role definitions (GRC analyst, compliance officer, risk manager, internal auditor, privacy officer, AI governance lead) | Pick one at session start to set role, tone, and boundaries |
+| Personas | `agents/` | System-prompt role definitions (GRC analyst, compliance officer, risk manager, internal auditor, privacy officer, AI governance lead, greybeard technical reviewer) | Pick one at session start to set role, tone, and boundaries |
 | Skills | `skills/<name>/SKILL.md` | Step-by-step procedures for a specific GRC task | Load when the task matches the skill's `description` frontmatter |
 | Skill references | `skills/<name>/references/` | Deep supporting material (question banks, rubrics, worked examples) | Load on demand from links in the SKILL.md — not up front |
 | Context packs | `context/` | Framework and regulation knowledge (NIST CSF 2.0, ISO 27001, GDPR, NIS2, DORA, EU AI Act, …) | Load the specific file a skill links to |

@@ -11,8 +11,9 @@ Everything is plain markdown in the open [Agent Skills format](https://agentskil
 ## What's inside
 
 ```
-agents/       6 persona system prompts (GRC analyst, compliance officer, risk manager,
-              internal auditor, privacy officer, AI governance lead)
+agents/       7 persona system prompts (GRC analyst, compliance officer, risk manager,
+              internal auditor, privacy officer, AI governance lead, greybeard
+              technical reviewer)
 skills/       21 task skills, each a SKILL.md procedure + references/ deep material
 context/      Shared knowledge packs: 19 frameworks, 26 regulation files, crosswalks,
               glossary, risk-scoring methods
@@ -118,7 +119,7 @@ See the skills producing real deliverables before installing anything: an [incid
 ```mermaid
 flowchart LR
     subgraph L1["1 · Persona (who)"]
-        A["agents/<br/>grc-analyst · compliance-officer · risk-manager<br/>internal-auditor · privacy-officer · ai-governance-lead"]
+        A["agents/<br/>grc-analyst · compliance-officer · risk-manager<br/>internal-auditor · privacy-officer · ai-governance-lead · greybeard"]
     end
     subgraph L2["2 · Skill (how)"]
         S["skills/&lt;name&gt;/SKILL.md<br/>procedure · output format · quality checklist"]
