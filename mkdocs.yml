@@ -56,6 +56,9 @@ nav:
       - Overview: branding/README.md
       - Brand profile: branding/brand-profile.md
       - Consulting-classic style: branding/styles/consulting-classic.md
+      - Assurance-formal style: branding/styles/assurance-formal.md
+      - Modern-minimal style: branding/styles/modern-minimal.md
+      - Regulator-submission style: branding/styles/regulator-submission.md
   - Reference:
       - Agent instructions (AGENTS.md): AGENTS.md
       - Glossary: context/glossary.md

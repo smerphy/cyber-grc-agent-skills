@@ -39,9 +39,12 @@ packs, workflows, or templates, PATCH for corrections and clarifications.
   stakeholder deliverables; `branding/assets/` for logo files; default
   report style spec `branding/styles/consulting-classic.md` — answer-first
   pyramid structure, action titles, SCR executive summary, exhibit
-  conventions. Wired into the board-report template, the reporting and
-  gap-assessment skills, AGENTS.md operating rules, and the tooling
-  (validator link checks, docs site, bundles, MCP server).
+  conventions. Three alternative styles: `assurance-formal` (audit-house
+  rated findings with management responses), `modern-minimal` (TL;DR-first
+  tech-company doc style), `regulator-submission` (numbered-paragraph
+  filings for authorities). Wired into the board-report template, the
+  reporting and gap-assessment skills, AGENTS.md operating rules, and the
+  tooling (validator link checks, docs site, bundles, MCP server).
 
 ## [1.1.0] — 2026-07
 

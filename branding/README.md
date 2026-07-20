@@ -5,7 +5,11 @@ This directory controls how formatted deliverables look — reports, board packs
 ## How it works
 
 1. **[brand-profile.md](brand-profile.md)** is the single file an agent reads before producing any formatted deliverable. Fill it in with your company's identity (logo, palette, fonts, tone, document conventions). Every field left as `DEFAULT` falls through to the selected style.
-2. **[styles/](styles/)** holds report style specifications. The default is **[styles/consulting-classic.md](styles/consulting-classic.md)** — a top-tier strategy-consulting format (answer-first structure, assertive action titles, numbered exhibits, restrained navy palette). The profile's `style` field selects which spec applies.
+2. **[styles/](styles/)** holds report style specifications; the profile's `style` field selects which one applies:
+   - **[consulting-classic](styles/consulting-classic.md)** *(default)* — top-tier strategy-consulting format: answer-first structure, assertive action titles, numbered exhibits, restrained navy palette. Best for board packs, gap assessments, and executive readouts.
+   - **[assurance-formal](styles/assurance-formal.md)** — conservative audit-house format: rated findings with condition/criteria/cause/consequence, management responses, heavy document control. Best for control test reports and anything an audit committee files.
+   - **[modern-minimal](styles/modern-minimal.md)** — tech-company doc style: TL;DR-first, plain language, tight tables, one accent color. Best for startups and internal wiki-native audiences.
+   - **[regulator-submission](styles/regulator-submission.md)** — formal filings format: numbered paragraphs, neutral institutional voice, grayscale-safe, enclosure conventions. Best for notification letters and responses to authorities (with counsel review).
 3. **[assets/](assets/)** is where you drop logo and image files (`logo.svg`, `logo-dark.png`, …). Reference them from the brand profile by relative path. Nothing in `assets/` is required — with no logo, deliverables render with a text wordmark.
 
 ## Setup (two minutes)

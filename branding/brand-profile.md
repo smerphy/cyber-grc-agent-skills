@@ -11,7 +11,11 @@ logo_dark: DEFAULT               # variant for dark backgrounds; DEFAULT = reuse
 logo_placement: DEFAULT          # DEFAULT = per style spec (cover: centered; pages: top-right, small)
 
 # ---- style selection ----
-style: consulting-classic        # a file in branding/styles/ (without .md)
+style: consulting-classic        # a file in branding/styles/ (without .md):
+                                 #   consulting-classic  — strategy-consulting format (default)
+                                 #   assurance-formal    — audit-house findings-and-ratings format
+                                 #   modern-minimal      — tech-company doc style, TL;DR-first
+                                 #   regulator-submission — numbered-paragraph filings for authorities
 
 # ---- palette (hex; DEFAULT = style spec palette) ----
 color_primary: DEFAULT           # headings, cover band, exhibit accents
