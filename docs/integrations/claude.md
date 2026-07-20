@@ -6,6 +6,23 @@ Four ways to run these skills on Anthropic's stack, from zero-setup to fully pro
 
 Claude Code natively understands the Agent Skills format used by `skills/`: each skill is a directory with a `SKILL.md` whose frontmatter `description` tells the agent when to load it. Skills placed in a skills directory are discovered automatically and loaded on demand — you do not paste anything.
 
+**Plugin install** (simplest — the repo is a Claude Code plugin; brings all skills, and the personas in `agents/` become invocable agents):
+
+```
+/plugin marketplace add smerphy/Cyber-GRC-Agent-Skills
+/plugin install cyber-grc@cyber-grc-skills
+```
+
+**Install script** (pick individual skills, copy or symlink, project or user scope):
+
+```bash
+scripts/install.sh --list
+scripts/install.sh --user risk-assessment incident-regulatory-reporting
+scripts/install.sh --project --link    # everything, symlinked
+```
+
+The manual equivalents:
+
 **Per-project install** (recommended — skills travel with the repo you're working in):
 
 ```bash

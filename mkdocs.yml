@@ -1,0 +1,62 @@
+site_name: Cyber GRC Agent Skills
+site_description: Portable, provider-neutral AI agent skills for cyber governance, risk & compliance.
+site_url: https://smerphy.github.io/Cyber-GRC-Agent-Skills/
+repo_url: https://github.com/smerphy/Cyber-GRC-Agent-Skills
+repo_name: smerphy/Cyber-GRC-Agent-Skills
+edit_uri: edit/main/
+
+docs_dir: site-src
+use_directory_urls: false
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.action.view
+
+markdown_extensions:
+  - tables
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Architecture: docs/architecture.md
+  - Integrations:
+      - Claude: docs/integrations/claude.md
+      - OpenAI: docs/integrations/openai.md
+      - Any provider: docs/integrations/generic.md
+  - Examples:
+      - Overview: examples/README.md
+      - Incident notification decision: examples/incident-notification-decision.md
+      - Gap assessment excerpt: examples/gap-assessment-excerpt.md
+      - Vendor SOC 2 review: examples/vendor-soc2-review.md
+  - Reference:
+      - Agent instructions (AGENTS.md): AGENTS.md
+      - Glossary: context/glossary.md
+      - Breach notification timelines: context/crosswalks/breach-notification-timelines.md
+      - Framework crosswalk: context/crosswalks/framework-crosswalk.md
+      - Jurisdiction index: context/regulations/other-jurisdictions.md
+  - Contributing: CONTRIBUTING.md
+  - Changelog: CHANGELOG.md

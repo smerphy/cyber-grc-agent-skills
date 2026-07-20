@@ -1,6 +1,6 @@
 # Cyber GRC Agent Skills
 
-> Portable, provider-neutral AI agent skills for cyber governance, risk & compliance: 17 task skills, 19 framework packs, 26 regulation packs, crosswalks, workflows, templates, and personas — plain markdown in the Agent Skills format (SKILL.md + progressive-disclosure references).
+> Portable, provider-neutral AI agent skills for cyber governance, risk & compliance: 21 task skills, 19 framework packs, 26 regulation packs, crosswalks, workflows, templates, and personas — plain markdown in the Agent Skills format (SKILL.md + progressive-disclosure references).
 
 Load a persona from agents/ as the system prompt, the matching skills/<name>/SKILL.md for the task, and only the context/ files the skill links to. Do not bulk-load the repository; follow links on demand. Never fabricate compliance facts; respect each file's "Last reviewed" date and verification footer.
 

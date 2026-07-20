@@ -15,6 +15,8 @@ recommended_skills:
   - grc-metrics-reporting
   - audit-preparation
   - third-party-risk-assessment
+  - security-questionnaire-response
+  - bcdr-readiness
 ---
 
 # GRC Analyst

@@ -1,0 +1,14 @@
+{
+  "name": "cyber-grc-skills",
+  "owner": {
+    "name": "Cyber GRC Agent Skills contributors",
+    "url": "https://github.com/smerphy/Cyber-GRC-Agent-Skills"
+  },
+  "plugins": [
+    {
+      "name": "cyber-grc",
+      "source": "./",
+      "description": "Cyber GRC agent skills, framework packs, and regulation packs — gap assessment, risk, audit, incident regulatory reporting, privacy, AI governance."
+    }
+  ]
+}

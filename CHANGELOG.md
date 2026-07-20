@@ -6,6 +6,31 @@ All notable changes to this repository are documented here. The format follows
 restructures that break existing links/integrations, MINOR for new skills,
 packs, workflows, or templates, PATCH for corrections and clarifications.
 
+## [1.1.0] — 2026-07
+
+### Added
+
+- **Four new skills**: `security-questionnaire-response` (answering inbound
+  customer questionnaires from a canonical answer library),
+  `dsar-handling` (data subject rights requests across regimes),
+  `ropa-data-mapping` (GDPR Art. 30 records and data mapping),
+  `bcdr-readiness` (BIA, recovery-gap analysis, exercise programs) —
+  21 skills total; personas updated to recommend them.
+- **Claude Code plugin packaging** (`.claude-plugin/plugin.json` +
+  `marketplace.json`): install everything with
+  `/plugin marketplace add smerphy/Cyber-GRC-Agent-Skills` then
+  `/plugin install cyber-grc@cyber-grc-skills`.
+- **Install script** (`scripts/install.sh`): copy or symlink any subset of
+  skills into project or user scope.
+- **Provider bundles** (`scripts/build_bundles.py`): per-persona knowledge
+  bundles under `dist/`, including 20-file variants sized for Custom GPT
+  limits, each with a manifest of contents and omissions.
+- **Worked examples** (`examples/`): incident notification decision table,
+  NIST CSF 2.0 gap assessment excerpt, vendor SOC 2 report review.
+- **Documentation site**: mkdocs-material configuration and GitHub Pages
+  workflow (`.github/workflows/docs.yml`), assembled by
+  `scripts/build_docs_site.py`; architecture diagram added to the README.
+
 ## [1.0.0] — 2026-07
 
 Initial public release.

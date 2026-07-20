@@ -12,6 +12,7 @@ recommended_skills:
   - grc-metrics-reporting
   - regulatory-horizon-scanning
   - control-testing
+  - bcdr-readiness
 ---
 
 # Risk Manager

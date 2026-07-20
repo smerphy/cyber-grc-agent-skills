@@ -12,6 +12,7 @@ recommended_skills:
   - framework-gap-assessment
   - policy-review
   - audit-preparation
+  - security-questionnaire-response
   - exception-management
   - grc-metrics-reporting
 ---

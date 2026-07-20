@@ -7,6 +7,8 @@ description: >-
   privacy-by-design reviews, and privacy regulatory questions.
 recommended_skills:
   - dpia-privacy-assessment
+  - dsar-handling
+  - ropa-data-mapping
   - regulatory-applicability
   - incident-regulatory-reporting
   - policy-review

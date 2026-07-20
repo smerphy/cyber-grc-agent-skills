@@ -13,7 +13,7 @@ Everything is plain markdown in the open [Agent Skills format](https://agentskil
 ```
 agents/       6 persona system prompts (GRC analyst, compliance officer, risk manager,
               internal auditor, privacy officer, AI governance lead)
-skills/       17 task skills, each a SKILL.md procedure + references/ deep material
+skills/       21 task skills, each a SKILL.md procedure + references/ deep material
 context/      Shared knowledge packs: 19 frameworks, 26 regulation files, crosswalks,
               glossary, risk-scoring methods
 workflows/    8 multi-step playbooks chaining skills with decision gates
@@ -43,6 +43,10 @@ scripts/      Validator for skill format and cross-file links (runs in CI)
 | [soc2-readiness](skills/soc2-readiness/SKILL.md) | Prepare for SOC 2 Type I/II: criteria selection, system description, CC mapping, evidence dry run |
 | [iso27001-readiness](skills/iso27001-readiness/SKILL.md) | Prepare for ISO 27001:2022 certification: ISMS scope, clauses 4–10, Statement of Applicability |
 | [regulatory-horizon-scanning](skills/regulatory-horizon-scanning/SKILL.md) | Track upcoming regulatory change from authoritative sources and triage impact |
+| [security-questionnaire-response](skills/security-questionnaire-response/SKILL.md) | Answer inbound customer security questionnaires (SIG, CAIQ, custom) truthfully from a canonical answer library |
+| [dsar-handling](skills/dsar-handling/SKILL.md) | Handle data subject rights requests end to end across GDPR, CCPA/CPRA, and other regimes, with deadlines and exemptions |
+| [ropa-data-mapping](skills/ropa-data-mapping/SKILL.md) | Build and maintain GDPR Art. 30 Records of Processing and the underlying data map, reusable across regimes |
+| [bcdr-readiness](skills/bcdr-readiness/SKILL.md) | Assess and build business continuity / disaster recovery readiness: BIA, declared-vs-demonstrated recovery gaps, exercise programs |
 
 ### Coverage
 
@@ -56,12 +60,21 @@ scripts/      Validator for skill format and cross-file links (runs in CI)
 
 ### Claude Code
 
+**As a plugin** (recommended — one command, includes the personas as agents):
+
+```
+/plugin marketplace add smerphy/Cyber-GRC-Agent-Skills
+/plugin install cyber-grc@cyber-grc-skills
+```
+
+**Or with the install script** (copy or symlink individual skills):
+
 ```bash
 git clone https://github.com/smerphy/Cyber-GRC-Agent-Skills.git
-# All skills, project-scoped:
-mkdir -p .claude/skills && cp -r Cyber-GRC-Agent-Skills/skills/* .claude/skills/
-# Or a single skill, user-scoped:
-cp -r Cyber-GRC-Agent-Skills/skills/risk-assessment ~/.claude/skills/
+cd Cyber-GRC-Agent-Skills
+scripts/install.sh --list                                  # see what's available
+scripts/install.sh --user risk-assessment soc2-readiness   # a curated few, user scope
+scripts/install.sh --project --link                        # everything, symlinked, project scope
 ```
 
 Skills auto-trigger from their `description` frontmatter ("assess our gaps against ISO 27001" loads `framework-gap-assessment`). Details: [docs/integrations/claude.md](docs/integrations/claude.md).
@@ -72,7 +85,13 @@ Create a Project, set a persona from `agents/` as project instructions, upload t
 
 ### ChatGPT (Custom GPT) / OpenAI API
 
-Custom GPT: paste a persona from `agents/` into Instructions; upload the relevant skills and context packs as knowledge files (curate per GPT — don't upload the whole repo). API: put persona + `SKILL.md` in the system/developer message, or index the repo into a vector store for file search. Details: [docs/integrations/openai.md](docs/integrations/openai.md).
+Pre-built bundles do the curation for you — one zip per persona, with a 20-file variant sized for Custom GPT knowledge limits:
+
+```bash
+python3 scripts/build_bundles.py          # emits dist/<persona>.zip and dist/<persona>-gpt20.zip
+```
+
+Paste the bundle's `agents__<persona>.md` into GPT Instructions and upload the rest as knowledge (each bundle ships a MANIFEST.md). API: put persona + `SKILL.md` in the system/developer message, or index the repo into a vector store for file search. Details: [docs/integrations/openai.md](docs/integrations/openai.md).
 
 ### Any other provider
 
@@ -87,7 +106,32 @@ The three-layer assembly works in a plain prompt:
 
 Details and RAG/chunking guidance: [docs/integrations/generic.md](docs/integrations/generic.md).
 
+## Worked examples
+
+See the skills producing real deliverables before installing anything: an [incident notification decision table](examples/incident-notification-decision.md) (multi-regime deadlines computed from timestamps), a [NIST CSF 2.0 gap assessment excerpt](examples/gap-assessment-excerpt.md), and a [vendor SOC 2 report review](examples/vendor-soc2-review.md). Index: [examples/](examples/README.md).
+
 ## Design
+
+```mermaid
+flowchart LR
+    subgraph L1["1 · Persona (who)"]
+        A["agents/<br/>grc-analyst · compliance-officer · risk-manager<br/>internal-auditor · privacy-officer · ai-governance-lead"]
+    end
+    subgraph L2["2 · Skill (how)"]
+        S["skills/&lt;name&gt;/SKILL.md<br/>procedure · output format · quality checklist"]
+        R["skills/&lt;name&gt;/references/<br/>question banks · rubrics · deep detail"]
+    end
+    subgraph L3["3 · Knowledge & deliverables (what)"]
+        C["context/<br/>19 framework packs · 26 regulation packs<br/>crosswalks · glossary · risk scoring"]
+        T["templates/<br/>risk register · DPIA · SoA · workpapers …"]
+    end
+    W["workflows/<br/>multi-skill playbooks with decision gates"]
+    A -->|sets role & boundaries| S
+    S -->|loads on demand| R
+    S -->|links, never duplicates| C
+    S -->|produces into| T
+    W -->|chains| S
+```
 
 - **Three layers.** Personas define *who the agent is*, skills define *how a task is done*, context/templates define *what it needs to know and produce*. Compose them per task instead of one monolithic prompt.
 - **Progressive disclosure.** Each `SKILL.md` stays small enough to load whole; depth (question banks, rubrics, per-regime detail) lives in `references/` and `context/` files loaded on demand. This keeps token cost proportional to the task.

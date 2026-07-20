@@ -2,6 +2,10 @@
 
 Four ways to run these skills on OpenAI's stack. The content is provider-neutral markdown; these are the assembly mechanics. See [generic.md](generic.md) for the underlying pattern.
 
+## 0. Pre-built bundles (fastest path)
+
+`python3 scripts/build_bundles.py` generates per-persona knowledge bundles under `dist/`: a full variant and a `-gpt20` variant capped at 20 files for Custom GPT knowledge limits (SKILL.md files and linked context packs are kept; deep reference files are dropped first, and every bundle's `MANIFEST.md` lists what was omitted and where to find it). Use the bundle's `agents__<persona>.md` as the Instructions text and upload the rest as knowledge files.
+
 ## 1. Custom GPTs
 
 Build one GPT per role or engagement type, not one giant GPT for the whole repo.
