@@ -17,7 +17,7 @@ import shutil
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE_SRC = os.path.join(REPO_ROOT, "site-src")
 
-CONTENT_DIRS = ("skills", "context", "workflows", "agents", "templates", "docs", "examples")
+CONTENT_DIRS = ("skills", "context", "workflows", "agents", "templates", "branding", "docs", "examples")
 ROOT_FILES = ("README.md", "AGENTS.md", "CLAUDE.md", "CONTRIBUTING.md",
               "CHANGELOG.md", "SECURITY.md", "LICENSE", "llms.txt")
 

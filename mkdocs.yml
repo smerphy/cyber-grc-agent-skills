@@ -52,6 +52,10 @@ nav:
       - Incident notification decision: examples/incident-notification-decision.md
       - Gap assessment excerpt: examples/gap-assessment-excerpt.md
       - Vendor SOC 2 review: examples/vendor-soc2-review.md
+  - Branding:
+      - Overview: branding/README.md
+      - Brand profile: branding/brand-profile.md
+      - Consulting-classic style: branding/styles/consulting-classic.md
   - Reference:
       - Agent instructions (AGENTS.md): AGENTS.md
       - Glossary: context/glossary.md

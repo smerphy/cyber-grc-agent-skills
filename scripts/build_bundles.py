@@ -49,7 +49,7 @@ def parse_recommended_skills(persona_path):
 
 
 def linked_repo_files(md_path):
-    """Repo files (context/, templates/) directly linked from a markdown file."""
+    """Repo files (context/, templates/, branding/) directly linked from a markdown file."""
     out = []
     base = os.path.dirname(md_path)
     with open(md_path, encoding="utf-8") as f:
@@ -60,7 +60,7 @@ def linked_repo_files(md_path):
             continue
         resolved = os.path.normpath(os.path.join(base, target))
         rel = os.path.relpath(resolved, REPO_ROOT)
-        if rel.startswith(("context" + os.sep, "templates" + os.sep)) and os.path.isfile(resolved):
+        if rel.startswith(("context" + os.sep, "templates" + os.sep, "branding" + os.sep)) and os.path.isfile(resolved):
             out.append(rel)
     return out
 

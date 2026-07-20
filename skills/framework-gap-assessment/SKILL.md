@@ -137,6 +137,7 @@ Pass/fail before delivery:
 - [../../context/frameworks/pci-dss-4.md](../../context/frameworks/pci-dss-4.md)
 - [../../context/crosswalks/framework-crosswalk.md](../../context/crosswalks/framework-crosswalk.md)
 - [../../context/risk-scoring.md](../../context/risk-scoring.md)
+- [../../branding/brand-profile.md](../../branding/brand-profile.md) — apply the brand profile and its report style (default: consulting-classic) when formatting the gap report for stakeholders
 - Related skills: [../control-mapping/SKILL.md](../control-mapping/SKILL.md), [../control-testing/SKILL.md](../control-testing/SKILL.md), [../risk-assessment/SKILL.md](../risk-assessment/SKILL.md), [../iso27001-readiness/SKILL.md](../iso27001-readiness/SKILL.md), [../soc2-readiness/SKILL.md](../soc2-readiness/SKILL.md), [../grc-metrics-reporting/SKILL.md](../grc-metrics-reporting/SKILL.md), [../exception-management/SKILL.md](../exception-management/SKILL.md)
 
 ---

@@ -46,7 +46,7 @@ REQUIRED_SECTIONS = (
     "Quality checklist",
     "References",
 )
-LINK_DIRS = ("skills", "workflows", "context", "docs", "agents", "templates")
+LINK_DIRS = ("skills", "workflows", "context", "docs", "agents", "templates", "branding")
 DESC_MIN, DESC_MAX = 100, 1024
 MAX_BODY_LINES = 450  # body must be strictly less than this
 

@@ -1,6 +1,6 @@
 # Quarterly Security & Risk Report — Board / Risk Committee
 
-**How to use:** Target length when rendered: 4-6 pages plus appendices. Write for directors, not practitioners: business consequences, trends, and decisions — no tool names, no CVE lists, no acronym soup. Every metric shown must have a target and a trend; every red item must have an owner and a date. Metric selection and definitions: [../skills/grc-metrics-reporting/SKILL.md](../skills/grc-metrics-reporting/SKILL.md) and its [metric catalog](../skills/grc-metrics-reporting/references/metric-catalog.md). Delete guidance in *italics* before issuing.
+**How to use:** Target length when rendered: 4-6 pages plus appendices. Write for directors, not practitioners: business consequences, trends, and decisions — no tool names, no CVE lists, no acronym soup. Every metric shown must have a target and a trend; every red item must have an owner and a date. Metric selection and definitions: [../skills/grc-metrics-reporting/SKILL.md](../skills/grc-metrics-reporting/SKILL.md) and its [metric catalog](../skills/grc-metrics-reporting/references/metric-catalog.md). Format the issued report per [../branding/brand-profile.md](../branding/brand-profile.md) (default style: consulting-classic — answer-first, action titles, decisions-requested up front). Delete guidance in *italics* before issuing.
 
 **Reporting period:** [Qn YYYY] · **Prepared by:** [CISO] · **Date:** [YYYY-MM-DD] · **Classification:** [e.g., Board confidential]
 

@@ -29,7 +29,7 @@ import deadline_calc  # noqa: E402
 
 PROTOCOL_VERSION = "2024-11-05"
 SERVER_INFO = {"name": "cyber-grc", "version": "1.2.0"}
-CONTENT_DIRS = ("skills", "context", "workflows", "agents", "templates", "docs", "examples")
+CONTENT_DIRS = ("skills", "context", "workflows", "agents", "templates", "branding", "docs", "examples")
 ALLOWED_EXT = (".md", ".csv", ".txt", ".json")
 
 TOOLS = [

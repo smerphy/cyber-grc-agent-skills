@@ -34,6 +34,14 @@ packs, workflows, or templates, PATCH for corrections and clarifications.
 - **Greybeard persona** (`agents/greybeard.md`): senior technical reviewer —
   fatal-flaw hunting on architectures, control designs, and DR claims, with
   layered explanation of complex technical issues for any audience.
+- **Branding layer** (`branding/`): user-editable `brand-profile.md` (logo,
+  colors, fonts, tone, classification markings) applied to formatted
+  stakeholder deliverables; `branding/assets/` for logo files; default
+  report style spec `branding/styles/consulting-classic.md` — answer-first
+  pyramid structure, action titles, SCR executive summary, exhibit
+  conventions. Wired into the board-report template, the reporting and
+  gap-assessment skills, AGENTS.md operating rules, and the tooling
+  (validator link checks, docs site, bundles, MCP server).
 
 ## [1.1.0] — 2026-07
 

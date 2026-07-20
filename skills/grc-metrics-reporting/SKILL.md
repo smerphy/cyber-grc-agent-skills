@@ -155,6 +155,7 @@ Gaming risk: revoking only IdP/SSO while local accounts persist → counter-metr
 - [../control-testing/SKILL.md](../control-testing/SKILL.md) — source of control pass-rate data
 - [../third-party-risk-assessment/SKILL.md](../third-party-risk-assessment/SKILL.md) — source of vendor metrics
 - [../exception-management/SKILL.md](../exception-management/SKILL.md) — source of exception-load metrics
+- [../../branding/brand-profile.md](../../branding/brand-profile.md) — apply the brand profile and its report style (default: consulting-classic) when formatting the board report
 
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.
