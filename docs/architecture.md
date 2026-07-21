@@ -53,6 +53,7 @@ Why this format:
 | `context/glossary.md`, `context/risk-scoring.md` | Shared terminology and scoring method notes |
 | `workflows/` | Multi-phase playbooks that chain several skills with decision gates |
 | `templates/` | Deliverable skeletons (risk register, DPIA, policy, workpapers) |
+| `branding/` | Report design: user-editable brand profile plus report style specs (default: consulting-classic) |
 | `docs/` | Human-facing documentation: this file plus per-provider integration guides |
 | `scripts/` | Contributor tooling — currently the validator |
 
@@ -85,7 +86,7 @@ This separation is what keeps 17 skills and ~20 context packs from becoming 17 c
 - **Relative paths only.** From a `SKILL.md`: `../../context/regulations/gdpr.md` for context, `../control-testing/SKILL.md` for a sibling skill, `references/question-bank.md` for its own references. Absolute paths and bare filenames that guess at location are rejected by the validator.
 - **Link, don't duplicate.** If a fact lives in a context pack, link to it. Duplication is how regulatory content rots.
 - **Every skill's References section** lists, in order: its own `references/` files, then context files, then related skills. "When to use" must name the better skill for adjacent tasks — e.g. a skill's own `SKILL.md` saying "for X, use `[control-mapping](../control-mapping/SKILL.md)` instead" (a path relative to that skill's directory, per the rule above).
-- All relative links across `skills/`, `workflows/`, `context/`, `docs/`, `agents/`, and `templates/` are checked by CI; a broken link fails the build.
+- All relative links across `skills/`, `workflows/`, `context/`, `docs/`, `agents/`, `templates/`, and `branding/` are checked by CI; a broken link fails the build.
 
 ## Provider neutrality
 

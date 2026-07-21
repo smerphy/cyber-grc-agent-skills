@@ -34,6 +34,13 @@ packs, workflows, or templates, PATCH for corrections and clarifications.
 - **Greybeard persona** (`agents/greybeard.md`): senior technical reviewer —
   fatal-flaw hunting on architectures, control designs, and DR claims, with
   layered explanation of complex technical issues for any audience.
+- **15 new workflows** (workflows now cover the full security-review and
+  GRC process space, 8 → 23): security design review, cloud migration
+  review, penetration test management, M&A security due diligence,
+  internal audit engagement, control assurance cycle, finding remediation,
+  regulatory exam management, exception lifecycle, quarterly board
+  reporting, incident response tabletop, BC/DR exercise cycle, privacy
+  program review, vendor offboarding, customer assurance response.
 - **Branding layer** (`branding/`): user-editable `brand-profile.md` (logo,
   colors, fonts, tone, classification markings) applied to formatted
   stakeholder deliverables; `branding/assets/` for logo files; default

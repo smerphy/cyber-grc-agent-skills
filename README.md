@@ -17,7 +17,7 @@ agents/       7 persona system prompts (GRC analyst, compliance officer, risk ma
 skills/       21 task skills, each a SKILL.md procedure + references/ deep material
 context/      Shared knowledge packs: 19 frameworks, 26 regulation files, crosswalks,
               glossary, risk-scoring methods
-workflows/    8 multi-step playbooks chaining skills with decision gates
+workflows/    23 multi-step playbooks chaining skills with decision gates
 templates/    11 deliverable skeletons (risk register, DPIA, SoA, workpapers, ...)
 branding/     Report design and brand identity: editable brand profile (logo, colors,
               fonts, tone) + report style specs (default: consulting-classic)
@@ -152,7 +152,16 @@ Full rationale: [docs/architecture.md](docs/architecture.md).
 
 ## Workflows
 
-For multi-phase engagements, `workflows/` chains skills with explicit decision gates: [new-regulation impact assessment](workflows/new-regulation-impact-assessment.md), [annual risk assessment](workflows/annual-risk-assessment.md), [vendor onboarding](workflows/vendor-onboarding.md), [audit readiness](workflows/audit-readiness.md), [incident regulatory response](workflows/incident-regulatory-response.md), [policy lifecycle](workflows/policy-lifecycle.md), [certification readiness](workflows/certification-readiness.md), and [AI system intake](workflows/ai-system-intake.md).
+For multi-phase engagements, `workflows/` chains skills with explicit decision gates, named roles per step, outputs, and failure modes:
+
+| Domain | Workflows |
+|---|---|
+| Risk & governance cycles | [annual risk assessment](workflows/annual-risk-assessment.md) · [quarterly board reporting](workflows/board-reporting-cycle.md) · [exception lifecycle](workflows/exception-lifecycle.md) · [policy lifecycle](workflows/policy-lifecycle.md) |
+| Security review | [security design review](workflows/security-design-review.md) · [cloud migration review](workflows/cloud-migration-review.md) · [penetration test management](workflows/penetration-test-management.md) · [M&A security due diligence](workflows/ma-security-due-diligence.md) |
+| Assurance & audit | [audit readiness](workflows/audit-readiness.md) · [internal audit engagement](workflows/internal-audit-engagement.md) · [control assurance cycle](workflows/control-assurance-cycle.md) · [finding remediation](workflows/finding-remediation.md) · [certification readiness](workflows/certification-readiness.md) · [regulatory exam management](workflows/regulatory-exam-management.md) |
+| Third parties & customers | [vendor onboarding](workflows/vendor-onboarding.md) · [vendor offboarding](workflows/vendor-offboarding.md) · [customer assurance response](workflows/customer-assurance-response.md) |
+| Incident & resilience | [incident regulatory response](workflows/incident-regulatory-response.md) · [incident response tabletop](workflows/incident-response-tabletop.md) · [BC/DR exercise cycle](workflows/bcdr-exercise-cycle.md) |
+| Regulatory & privacy | [new-regulation impact assessment](workflows/new-regulation-impact-assessment.md) · [privacy program review](workflows/privacy-program-review.md) · [AI system intake](workflows/ai-system-intake.md) |
 
 ## Advanced tooling
 
