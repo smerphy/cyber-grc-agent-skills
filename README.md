@@ -1,6 +1,6 @@
 # Cyber GRC Agent Skills
 
-[![validate](https://github.com/smerphy/Cyber-GRC-Agent-Skills/actions/workflows/validate.yml/badge.svg)](https://github.com/smerphy/Cyber-GRC-Agent-Skills/actions/workflows/validate.yml)
+[![validate](https://github.com/smerphy/cyber-grc-agent-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/smerphy/cyber-grc-agent-skills/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Content: verified sources](https://img.shields.io/badge/content-primary--sourced-blue)](CONTRIBUTING.md)
 
@@ -69,15 +69,15 @@ scripts/      Validator, installer, bundle builder, deadline calculator,
 **As a plugin** (recommended — one command, includes the personas as agents):
 
 ```
-/plugin marketplace add smerphy/Cyber-GRC-Agent-Skills
+/plugin marketplace add smerphy/cyber-grc-agent-skills
 /plugin install cyber-grc@cyber-grc-skills
 ```
 
 **Or with the install script** (copy or symlink individual skills):
 
 ```bash
-git clone https://github.com/smerphy/Cyber-GRC-Agent-Skills.git
-cd Cyber-GRC-Agent-Skills
+git clone https://github.com/smerphy/cyber-grc-agent-skills.git
+cd cyber-grc-agent-skills
 scripts/install.sh --list                                  # see what's available
 scripts/install.sh --user risk-assessment soc2-readiness   # a curated few, user scope
 scripts/install.sh --project --link                        # everything, symlinked, project scope

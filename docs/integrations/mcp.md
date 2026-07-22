@@ -11,7 +11,7 @@ Clone the repo, then register the server in your client's MCP config (see [.mcp.
   "mcpServers": {
     "cyber-grc": {
       "command": "python3",
-      "args": ["/absolute/path/to/Cyber-GRC-Agent-Skills/scripts/mcp_server.py"]
+      "args": ["/absolute/path/to/cyber-grc-agent-skills/scripts/mcp_server.py"]
     }
   }
 }

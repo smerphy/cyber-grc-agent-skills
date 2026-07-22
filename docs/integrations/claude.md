@@ -9,7 +9,7 @@ Claude Code natively understands the Agent Skills format used by `skills/`: each
 **Plugin install** (simplest — the repo is a Claude Code plugin; brings all skills, and the personas in `agents/` become invocable agents):
 
 ```
-/plugin marketplace add smerphy/Cyber-GRC-Agent-Skills
+/plugin marketplace add smerphy/cyber-grc-agent-skills
 /plugin install cyber-grc@cyber-grc-skills
 ```
 
@@ -26,22 +26,22 @@ The manual equivalents:
 **Per-project install** (recommended — skills travel with the repo you're working in):
 
 ```bash
-git clone https://github.com/<org>/Cyber-GRC-Agent-Skills.git
+git clone https://github.com/<org>/cyber-grc-agent-skills.git
 mkdir -p /path/to/your-project/.claude/skills
-cp -r Cyber-GRC-Agent-Skills/skills/* /path/to/your-project/.claude/skills/
+cp -r cyber-grc-agent-skills/skills/* /path/to/your-project/.claude/skills/
 ```
 
 **Per-user install** (available in every project):
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -r Cyber-GRC-Agent-Skills/skills/* ~/.claude/skills/
+cp -r cyber-grc-agent-skills/skills/* ~/.claude/skills/
 ```
 
 **Symlink instead of copy** to pick up `git pull` updates automatically:
 
 ```bash
-for d in /path/to/Cyber-GRC-Agent-Skills/skills/*/; do
+for d in /path/to/cyber-grc-agent-skills/skills/*/; do
   ln -s "$d" ~/.claude/skills/"$(basename "$d")"
 done
 ```
@@ -75,7 +75,7 @@ Assemble the three layers into a request: persona as the system prompt, skill bo
 import anthropic
 from pathlib import Path
 
-repo = Path("Cyber-GRC-Agent-Skills")
+repo = Path("cyber-grc-agent-skills")
 persona = (repo / "agents/risk-manager.md").read_text()
 skill = (repo / "skills/risk-assessment/SKILL.md").read_text()
 context = (repo / "context/risk-scoring.md").read_text()
@@ -111,7 +111,7 @@ Any MCP-capable Claude surface (Claude Code, Claude Desktop, API with MCP connec
 
 ```bash
 # Example: reference filesystem server, scoped to the repo clone
-npx -y @modelcontextprotocol/server-filesystem /path/to/Cyber-GRC-Agent-Skills
+npx -y @modelcontextprotocol/server-filesystem /path/to/cyber-grc-agent-skills
 ```
 
 Register it in your client's MCP config (e.g. Claude Desktop's `claude_desktop_config.json` or `claude mcp add` in Claude Code), then instruct the agent — or let the root `CLAUDE.md`/`AGENTS.md` instruct it — to route via frontmatter descriptions and follow relative links on demand. Scope the server to the repo directory only; read-only is sufficient.

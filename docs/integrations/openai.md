@@ -36,7 +36,7 @@ from pathlib import Path
 from openai import OpenAI
 
 client = OpenAI()
-repo = Path("Cyber-GRC-Agent-Skills")
+repo = Path("cyber-grc-agent-skills")
 
 # One-time: build the vector store from skills + context + templates
 paths = [p for d in ("skills", "context", "templates", "workflows")
@@ -93,8 +93,8 @@ If the skill's procedure links a `references/` file you did not paste, the model
 The repo root contains an [AGENTS.md](../../AGENTS.md) following the open AGENTS.md convention. Coding/CLI agents that honor it (OpenAI Codex, and other tools adopting the convention) automatically read it when operated inside a clone of this repo, and receive the layer model, the skill-routing rule, and the accuracy rules with no further setup:
 
 ```bash
-git clone https://github.com/<org>/Cyber-GRC-Agent-Skills.git
-cd Cyber-GRC-Agent-Skills
+git clone https://github.com/<org>/cyber-grc-agent-skills.git
+cd cyber-grc-agent-skills
 codex   # or any AGENTS.md-aware agent; then just describe the GRC task
 ```
 

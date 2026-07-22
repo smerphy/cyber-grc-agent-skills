@@ -1,8 +1,8 @@
 site_name: Cyber GRC Agent Skills
 site_description: Portable, provider-neutral AI agent skills for cyber governance, risk & compliance.
-site_url: https://smerphy.github.io/Cyber-GRC-Agent-Skills/
-repo_url: https://github.com/smerphy/Cyber-GRC-Agent-Skills
-repo_name: smerphy/Cyber-GRC-Agent-Skills
+site_url: https://smerphy.github.io/cyber-grc-agent-skills/
+repo_url: https://github.com/smerphy/cyber-grc-agent-skills
+repo_name: smerphy/cyber-grc-agent-skills
 edit_uri: edit/main/
 
 docs_dir: site-src

@@ -65,7 +65,7 @@ packs, workflows, or templates, PATCH for corrections and clarifications.
   21 skills total; personas updated to recommend them.
 - **Claude Code plugin packaging** (`.claude-plugin/plugin.json` +
   `marketplace.json`): install everything with
-  `/plugin marketplace add smerphy/Cyber-GRC-Agent-Skills` then
+  `/plugin marketplace add smerphy/cyber-grc-agent-skills` then
   `/plugin install cyber-grc@cyber-grc-skills`.
 - **Install script** (`scripts/install.sh`): copy or symlink any subset of
   skills into project or user scope.
