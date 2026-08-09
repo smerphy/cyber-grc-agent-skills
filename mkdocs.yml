@@ -65,5 +65,7 @@ nav:
       - Breach notification timelines: context/crosswalks/breach-notification-timelines.md
       - Framework crosswalk: context/crosswalks/framework-crosswalk.md
       - Jurisdiction index: context/regulations/other-jurisdictions.md
+  - Blog:
+      - Introducing Cyber GRC Agent Skills: docs/blog/introducing-cyber-grc-agent-skills.md
   - Contributing: CONTRIBUTING.md
   - Changelog: CHANGELOG.md
