@@ -10,6 +10,7 @@ This repository is a library of portable AI agent skills for cyber Governance, R
 | Skills | `skills/<name>/SKILL.md` | Step-by-step procedures for a specific GRC task | Load when the task matches the skill's `description` frontmatter |
 | Skill references | `skills/<name>/references/` | Deep supporting material (question banks, rubrics, worked examples) | Load on demand from links in the SKILL.md — not up front |
 | Context packs | `context/` | Framework and regulation knowledge (NIST CSF 2.0, ISO 27001, GDPR, NIS2, DORA, EU AI Act, …) | Load the specific file a skill links to |
+| Internal overlay | `context/internal/` | The user organization's own facts: org profile, risk appetite, policy index, control catalog, system inventory | Check when a skill asks for organizational inputs — see rule 8 |
 | Workflows | `workflows/` | Multi-step playbooks chaining several skills with decision gates | Load for multi-phase engagements (audit readiness, incident regulatory response, …) |
 | Templates | `templates/` | Deliverable skeletons (risk register, DPIA, SoA, workpapers, …) | Load when producing the corresponding deliverable |
 | Branding | `branding/` | Report design and brand identity: user's logo/colors/fonts in `brand-profile.md`, report style specs in `styles/` (default: consulting-classic) | Load `brand-profile.md` before producing any formatted stakeholder deliverable |
@@ -23,6 +24,7 @@ This repository is a library of portable AI agent skills for cyber Governance, R
 5. **Evidence over assertion.** When assessing controls or compliance, tie every conclusion to named evidence. "No evidence provided" is a finding, not a pass.
 6. **Stay within the skill's output format.** Each skill defines its deliverable structure and quality checklist — run the checklist before presenting results.
 7. **Brand formatted deliverables.** Before producing a report, deck, or board pack for stakeholders, read `branding/brand-profile.md` and apply the selected style spec (default: `branding/styles/consulting-classic.md`) with the profile's overrides. Never invent brand elements for `DEFAULT` fields, and never strip verification footers or evidence citations for layout reasons. Working artifacts (registers, workpapers, logs) keep their native template formats.
+8. **Respect the internal overlay's status marker.** When a skill needs organizational inputs (risk appetite, applicable regulators, policy or control inventories), check the matching file in `context/internal/`. A file marked `Status: FILLED` is organizational fact, subject to its update date. A file marked `Status: TEMPLATE` provides **no facts** — its example rows are illustrative; treat the input as not provided and ask the user or flag the gap. Never cite template examples as the organization's actual position.
 
 ## Validation
 

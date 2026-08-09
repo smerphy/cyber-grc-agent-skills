@@ -106,6 +106,7 @@ Full method with worked example: [references/mapping-method.md](references/mappi
 - [../../context/frameworks/soc2-tsc.md](../../context/frameworks/soc2-tsc.md)
 - [../../context/frameworks/nist-800-53.md](../../context/frameworks/nist-800-53.md)
 - [../../context/frameworks/pci-dss-4.md](../../context/frameworks/pci-dss-4.md)
+- [../../context/internal/control-catalog.md](../../context/internal/control-catalog.md) — the organization's internal control set and existing mappings, if filled in (respect the status marker)
 - Related skills: [../framework-gap-assessment/SKILL.md](../framework-gap-assessment/SKILL.md), [../control-testing/SKILL.md](../control-testing/SKILL.md), [../audit-preparation/SKILL.md](../audit-preparation/SKILL.md), [../soc2-readiness/SKILL.md](../soc2-readiness/SKILL.md), [../iso27001-readiness/SKILL.md](../iso27001-readiness/SKILL.md)
 
 ---

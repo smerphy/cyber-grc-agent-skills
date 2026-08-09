@@ -51,6 +51,7 @@ Why this format:
 | `context/regulations/` | Regulation knowledge packs (GDPR, NIS2, DORA, EU AI Act, HIPAA, SOX, SEC, GLBA, US state privacy, other jurisdictions) |
 | `context/crosswalks/` | Cross-framework mappings and the breach-notification deadline matrix |
 | `context/glossary.md`, `context/risk-scoring.md` | Shared terminology and scoring method notes |
+| `context/internal/` | The user organization's own facts (org profile, risk appetite, policy index, control catalog, system inventory) — fill-in overlay with a TEMPLATE/FILLED status marker |
 | `workflows/` | Multi-phase playbooks that chain several skills with decision gates |
 | `templates/` | Deliverable skeletons (risk register, DPIA, policy, workpapers) |
 | `branding/` | Report design: user-editable brand profile plus report style specs (default: consulting-classic) |

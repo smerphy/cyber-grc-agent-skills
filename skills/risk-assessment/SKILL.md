@@ -161,6 +161,7 @@ Deliverable = (a) assessment summary, (b) register entries.
 - [../../templates/risk-register.csv](../../templates/risk-register.csv) — register template matching the output schema
 - [../../context/risk-scoring.md](../../context/risk-scoring.md) — matrix design, FAIR overview, CVSS caveats, aggregation pitfalls
 - [../../context/glossary.md](../../context/glossary.md) — term definitions (inherent, residual, appetite, tolerance)
+- [../../context/internal/risk-appetite.md](../../context/internal/risk-appetite.md) and [../../context/internal/system-inventory.md](../../context/internal/system-inventory.md) — the organization's appetite statements, thresholds, and system criticality, if filled in (respect the status marker)
 - Related skills: [exception-management](../exception-management/SKILL.md), [third-party-risk-assessment](../third-party-risk-assessment/SKILL.md), [framework-gap-assessment](../framework-gap-assessment/SKILL.md), [control-testing](../control-testing/SKILL.md), [grc-metrics-reporting](../grc-metrics-reporting/SKILL.md), [dpia-privacy-assessment](../dpia-privacy-assessment/SKILL.md)
 
 ---

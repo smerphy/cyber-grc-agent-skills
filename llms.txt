@@ -18,6 +18,7 @@ Load a persona from agents/ as the system prompt, the matching skills/<name>/SKI
 - [Framework crosswalk](context/crosswalks/framework-crosswalk.md)
 - [Glossary](context/glossary.md)
 - [Branding and report styles (brand profile + consulting-classic default)](branding/README.md)
+- [Internal context overlay (org profile, risk appetite, policies, controls — respect the TEMPLATE/FILLED status marker)](context/internal/README.md)
 
 ## Integration guides
 

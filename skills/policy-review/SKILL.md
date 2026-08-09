@@ -101,6 +101,7 @@ Assess whether a policy (or policy set) would survive an audit and actually gove
 - [../framework-gap-assessment/SKILL.md](../framework-gap-assessment/SKILL.md) — when gaps are in controls, not words
 - [../control-testing/SKILL.md](../control-testing/SKILL.md) — testing whether stated controls operate
 - [../audit-preparation/SKILL.md](../audit-preparation/SKILL.md) — pre-audit use of review results
+- [../../context/internal/policy-index.md](../../context/internal/policy-index.md) — the organization's policy estate with owners and review dates, if filled in (respect the status marker)
 
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

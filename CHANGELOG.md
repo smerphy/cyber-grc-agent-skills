@@ -41,6 +41,15 @@ packs, workflows, or templates, PATCH for corrections and clarifications.
   regulatory exam management, exception lifecycle, quarterly board
   reporting, incident response tabletop, BC/DR exercise cycle, privacy
   program review, vendor offboarding, customer assurance response.
+- **Internal context overlay** (`context/internal/`): fill-in packs for the
+  organization's own facts — organization profile, risk appetite and
+  acceptance authority matrix, policy index, control catalog, system
+  inventory — with a TEMPLATE/FILLED status marker so agents can never
+  mistake unfilled examples for organizational fact (AGENTS.md rule 8).
+  Consuming skills (risk-assessment, exception-management,
+  regulatory-applicability, control-mapping, policy-review) reference the
+  overlay; validator link-checks it but exempts it from
+  regulatory-content footer rules.
 - **Branding layer** (`branding/`): user-editable `brand-profile.md` (logo,
   colors, fonts, tone, classification markings) applied to formatted
   stakeholder deliverables; `branding/assets/` for logo files; default

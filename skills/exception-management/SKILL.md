@@ -151,6 +151,7 @@ Deliverables: (a) completed assessment and recommendation, (b) exception registe
 - [../../templates/exception-request.md](../../templates/exception-request.md) — intake form template
 - [../../context/risk-scoring.md](../../context/risk-scoring.md) — scoring methodology for residual risk
 - [../../context/glossary.md](../../context/glossary.md) — exception, waiver, risk acceptance, compensating control definitions
+- [../../context/internal/risk-appetite.md](../../context/internal/risk-appetite.md) — the organization's acceptance authority matrix and appetite thresholds, if filled in (respect the status marker)
 - Related skills: [risk-assessment](../risk-assessment/SKILL.md), [policy-review](../policy-review/SKILL.md), [control-testing](../control-testing/SKILL.md), [control-mapping](../control-mapping/SKILL.md), [audit-preparation](../audit-preparation/SKILL.md), [grc-metrics-reporting](../grc-metrics-reporting/SKILL.md), [regulatory-applicability](../regulatory-applicability/SKILL.md)
 
 ---

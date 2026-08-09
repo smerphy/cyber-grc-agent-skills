@@ -430,8 +430,13 @@ def main():
                     link_count += check_links(os.path.join(root, fname), errors)
 
     # 3. Context pack checks (footer, review date, primary sources).
+    # context/internal/ is exempt: it holds the user's organization-specific
+    # overlay (org profile, risk appetite, ...), not reviewed regulatory content.
     context_dir = os.path.join(REPO_ROOT, "context")
+    internal_dir = os.path.join(context_dir, "internal")
     for root, _dirs, files in os.walk(context_dir):
+        if root == internal_dir or root.startswith(internal_dir + os.sep):
+            continue
         for fname in sorted(files):
             if fname.endswith(".md"):
                 context_count += 1

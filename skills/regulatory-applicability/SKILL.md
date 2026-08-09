@@ -113,6 +113,7 @@ Follow the table with:
 - [../incident-regulatory-reporting/SKILL.md](../incident-regulatory-reporting/SKILL.md) — consumes this register at incident time.
 - [../framework-gap-assessment/SKILL.md](../framework-gap-assessment/SKILL.md) — assess posture against regimes found applicable.
 - [../regulatory-horizon-scanning/SKILL.md](../regulatory-horizon-scanning/SKILL.md) — keep the register current as law changes.
+- [../../context/internal/organization-profile.md](../../context/internal/organization-profile.md) — the organization's entities, footprint, sectors, and regulators, if filled in (respect the status marker); record applicability conclusions back into it.
 
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.

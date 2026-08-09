@@ -16,7 +16,8 @@ agents/       7 persona system prompts (GRC analyst, compliance officer, risk ma
               technical reviewer)
 skills/       21 task skills, each a SKILL.md procedure + references/ deep material
 context/      Shared knowledge packs: 19 frameworks, 26 regulation files, crosswalks,
-              glossary, risk-scoring methods
+              glossary, risk-scoring methods — plus internal/, a fill-in overlay
+              for your org's own facts (profile, risk appetite, policies, controls)
 workflows/    23 multi-step playbooks chaining skills with decision gates
 templates/    11 deliverable skeletons (risk register, DPIA, SoA, workpapers, ...)
 branding/     Report design and brand identity: editable brand profile (logo, colors,
@@ -144,6 +145,7 @@ flowchart LR
 - **Three layers.** Personas define *who the agent is*, skills define *how a task is done*, context/templates define *what it needs to know and produce*. Compose them per task instead of one monolithic prompt.
 - **Progressive disclosure.** Each `SKILL.md` stays small enough to load whole; depth (question banks, rubrics, per-regime detail) lives in `references/` and `context/` files loaded on demand. This keeps token cost proportional to the task.
 - **Provider-neutral content.** No tool syntax, no vendor-specific markup anywhere in `skills/`, `context/`, `workflows/`, `agents/`, `templates/`, or `branding/`. Provider specifics are quarantined in `docs/integrations/`.
+- **Bring your own context.** Half of GRC work is organizational fact, not regulatory knowledge. [context/internal/](context/internal/README.md) is a fill-in overlay — org profile, risk appetite and acceptance authority, policy index, control catalog, system inventory — that skills consume instead of re-interviewing you every session. A status marker per file tells agents whether contents are fact or unfilled template, so an empty overlay can never masquerade as your risk position.
 - **Branded output.** Stakeholder-facing reports are formatted per [branding/brand-profile.md](branding/brand-profile.md) — drop in your logo, colors, fonts, and tone, and every skill that produces a report applies them. The default style, [consulting-classic](branding/styles/consulting-classic.md), is a top-tier strategy-consulting format: answer-first pyramid structure, action titles, a one-page SCR executive summary, and disciplined exhibits. Three alternates ship alongside it: [assurance-formal](branding/styles/assurance-formal.md) (audit-house rated findings), [modern-minimal](branding/styles/modern-minimal.md) (TL;DR-first tech-doc style), and [regulator-submission](branding/styles/regulator-submission.md) (numbered-paragraph filings).
 - **Anti-fabrication by construction.** Skills instruct the agent to tie conclusions to evidence, flag uncertainty, and never invent citations or compliance status. Every framework and regulation pack ends with a **Primary sources** section linking the official text (links verified at review time), plus a `Last reviewed` date and verification footer.
 - **Validated.** `python3 scripts/validate_skills.py` checks skill frontmatter and sections, every cross-file link, verification footers and review dates, primary-source presence, workflow/persona headers, and CSV integrity; it runs in CI on every PR. `--stale N` reports packs due for re-review.
