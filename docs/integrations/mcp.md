@@ -30,6 +30,7 @@ Clone the repo, then register the server in your client's MCP config (see [.mcp.
 | `get_file` | Any content file by repo-relative path (`context/regulations/gdpr.md`, `templates/risk-register.csv`, …) |
 | `search` | Case-insensitive text search across skills, context, workflows, templates, personas, docs, examples |
 | `compute_deadlines` | Concrete notification deadlines from incident timestamps, honoring per-regime clock-start semantics — wraps [`scripts/deadline_calc.py`](../../scripts/deadline_calc.py) and [`data/breach-timelines.json`](../../data/breach-timelines.json); call with no arguments to list regime ids |
+| `crosswalk_lookup` | Locate a control id (`A.8.8`, `CC6.2`, `AC-2`, `Req 8`, `PR.AA`) or a security domain across ISO 27001, NIST CSF 2.0, CIS v8, SOC 2, 800-53, and PCI DSS v4 — wraps [`scripts/crosswalk_query.py`](../../scripts/crosswalk_query.py) and [`data/control-crosswalk.json`](../../data/control-crosswalk.json); domain-level navigation, not clause-level equivalence; call with no arguments to list frameworks and domains |
 
 Example `compute_deadlines` call an agent might make during an incident:
 

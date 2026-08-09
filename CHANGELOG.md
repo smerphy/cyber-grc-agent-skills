@@ -41,6 +41,13 @@ packs, workflows, or templates, PATCH for corrections and clarifications.
   regulatory exam management, exception lifecycle, quarterly board
   reporting, incident response tabletop, BC/DR exercise cycle, privacy
   program review, vendor offboarding, customer assurance response.
+- **Machine-readable control crosswalk**: `data/control-crosswalk.json` —
+  the domain-level framework crosswalk (ISO 27001, NIST CSF 2.0, CIS v8,
+  SOC 2, 800-53, PCI DSS v4) as structured data, validator-synced with the
+  markdown tables; `scripts/crosswalk_query.py` locates any control id
+  (ranges expanded) or domain across all six, and the MCP server exposes
+  it as a `crosswalk_lookup` tool. Every output carries the
+  domain-level-only caveat.
 - **Internal context overlay** (`context/internal/`): fill-in packs for the
   organization's own facts — organization profile, risk appetite and
   acceptance authority matrix, policy index, control catalog, system

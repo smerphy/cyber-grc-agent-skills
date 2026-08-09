@@ -2,7 +2,7 @@
 """MCP (Model Context Protocol) server for the Cyber GRC Agent Skills library.
 
 Exposes the repository to any MCP-speaking client (Claude Desktop, Claude
-Code, Cursor, ...) as five tools over stdio JSON-RPC:
+Code, Cursor, ...) as six tools over stdio JSON-RPC:
 
   list_skills        - skill names + trigger descriptions
   get_skill          - full SKILL.md (optionally a reference file) for one skill
@@ -10,6 +10,8 @@ Code, Cursor, ...) as five tools over stdio JSON-RPC:
   search             - case-insensitive text search across the content dirs
   compute_deadlines  - regulatory notification deadlines from incident
                        timestamps (wraps scripts/deadline_calc.py)
+  crosswalk_lookup   - locate a control id or domain across the six core
+                       frameworks (wraps scripts/crosswalk_query.py)
 
 Stdlib only. Register it from a client config (see .mcp.json.example):
 
@@ -25,6 +27,7 @@ import sys
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import crosswalk_query  # noqa: E402
 import deadline_calc  # noqa: E402
 
 PROTOCOL_VERSION = "2024-11-05"
@@ -82,6 +85,18 @@ TOOLS = [
                 "when": {"type": "object",
                          "description": "clock-start timestamps, e.g. {\"awareness\": \"2026-07-14T06:40Z\", \"materiality_determination\": \"2026-07-16T17:00Z\"}",
                          "additionalProperties": {"type": "string"}},
+            },
+        },
+    },
+    {
+        "name": "crosswalk_lookup",
+        "description": "Locate a control identifier (e.g. A.8.8, CC6.2, AC-2, 'Req 8', PR.AA) or a security domain across ISO 27001, NIST CSF 2.0, CIS v8, SOC 2, NIST 800-53, and PCI DSS v4. Domain-level navigation, not clause-level equivalence. Call with no arguments to list frameworks and domains.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "ref": {"type": "string", "description": "control identifier to locate"},
+                "framework": {"type": "string", "description": "optional framework key to scope ref lookup: iso27001, csf2, cis8, soc2, sp80053, pcidss4"},
+                "domain": {"type": "string", "description": "fuzzy domain name lookup, e.g. vulnerability"},
             },
         },
     },
@@ -171,12 +186,39 @@ def tool_compute_deadlines(args):
     return deadline_calc.render(rows, when)
 
 
+def tool_crosswalk_lookup(args):
+    data = crosswalk_query.load()
+    fw = args.get("framework")
+    if fw and fw not in data["frameworks"]:
+        raise ValueError(f"unknown framework '{fw}' — one of: {', '.join(data['frameworks'])}")
+    out = []
+    if args.get("ref"):
+        hits = crosswalk_query.find_by_ref(data, args["ref"], fw)
+        if not hits:
+            out.append(f"No domain covers '{args['ref']}'" + (f" in {fw}" if fw else "") + ".")
+        seen = set()
+        for fw_key, domain in hits:
+            if domain["id"] not in seen:
+                seen.add(domain["id"])
+                out.append(crosswalk_query.render_domain(data, domain, highlight=fw_key))
+    if args.get("domain"):
+        matches = crosswalk_query.find_domains(data, args["domain"])
+        if not matches:
+            out.append(f"No domain matches '{args['domain']}'.")
+        out.extend(crosswalk_query.render_domain(data, d) for d in matches)
+    if not out:
+        out.append(crosswalk_query.render_list(data))
+    out.append(crosswalk_query.CAVEAT)
+    return "\n\n".join(out)
+
+
 HANDLERS = {
     "list_skills": tool_list_skills,
     "get_skill": tool_get_skill,
     "get_file": tool_get_file,
     "search": tool_search,
     "compute_deadlines": tool_compute_deadlines,
+    "crosswalk_lookup": tool_crosswalk_lookup,
 }
 
 

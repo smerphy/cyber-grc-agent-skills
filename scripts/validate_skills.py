@@ -375,7 +375,68 @@ def check_data_layer(errors):
                     errors.setdefault(rel, []).append(
                         f"regime '{rid}' ('{regime.get('name')}') not found in the markdown matrix "
                         f"(context/crosswalks/breach-notification-timelines.md) — keep them in sync")
+        if fname == "control-crosswalk.json":
+            check_control_crosswalk(rel, payload, errors)
     return count
+
+
+def check_control_crosswalk(rel, payload, errors):
+    """control-crosswalk.json: schema sanity, pack refs, and name-level sync
+    with context/crosswalks/framework-crosswalk.md so the two never drift."""
+    fw_keys = set(payload.get("frameworks", {}))
+    for key, meta in payload.get("frameworks", {}).items():
+        pack = meta.get("pack")
+        if not pack or not os.path.isfile(os.path.join(REPO_ROOT, pack)):
+            errors.setdefault(rel, []).append(f"framework '{key}' pack does not exist: {pack}")
+
+    md_path = os.path.join(REPO_ROOT, "context", "crosswalks", "framework-crosswalk.md")
+    md_text, md_row_count = "", None
+    if os.path.isfile(md_path):
+        with open(md_path, encoding="utf-8") as f:
+            md_text = f.read()
+        table1 = md_text.split("## Table 1", 1)[-1].split("## ", 1)[0]
+        md_row_count = sum(
+            1 for line in table1.splitlines()
+            if line.startswith("| ") and not line.startswith("| Domain")
+            and not line.startswith("|--") and not line.startswith("| ---")
+        )
+        md_text = md_text.lower()
+
+    seen_ids = set()
+    domains = payload.get("domains", [])
+    for domain in domains:
+        did = domain.get("id", "")
+        if did in seen_ids:
+            errors.setdefault(rel, []).append(f"duplicate domain id: {did}")
+        seen_ids.add(did)
+        for key in ("id", "name", "mappings"):
+            if not domain.get(key):
+                errors.setdefault(rel, []).append(f"domain '{did}' missing '{key}'")
+        for fw_key, cell in (domain.get("mappings") or {}).items():
+            if fw_key not in fw_keys:
+                errors.setdefault(rel, []).append(
+                    f"domain '{did}' maps unknown framework key '{fw_key}'")
+            if not isinstance(cell.get("refs"), list):
+                errors.setdefault(rel, []).append(
+                    f"domain '{did}' mapping '{fw_key}' missing 'refs' list")
+        missing_fw = fw_keys - set(domain.get("mappings") or {})
+        if missing_fw:
+            errors.setdefault(rel, []).append(
+                f"domain '{did}' has no mapping for: {', '.join(sorted(missing_fw))}")
+        name = (domain.get("name") or "").lower()
+        if md_text and name and name not in md_text:
+            errors.setdefault(rel, []).append(
+                f"domain '{did}' ('{domain.get('name')}') not found in "
+                f"context/crosswalks/framework-crosswalk.md — keep them in sync")
+    if md_row_count is not None and md_row_count != len(domains):
+        errors.setdefault(rel, []).append(
+            f"markdown Table 1 has {md_row_count} domain rows but JSON has "
+            f"{len(domains)} domains — keep them in sync")
+    for derived in payload.get("derived_frameworks", []):
+        pack = derived.get("pack")
+        if not pack or not os.path.isfile(os.path.join(REPO_ROOT, pack)):
+            errors.setdefault(rel, []).append(
+                f"derived framework '{derived.get('id')}' pack does not exist: {pack}")
 
 
 def months_old(year, month, today=None):
