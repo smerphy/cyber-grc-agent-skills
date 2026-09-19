@@ -1,0 +1,166 @@
+# Canada: PIPEDA, Quebec Law 25, Alberta/BC PIPA, Bill C-8 (CCSPA) and OSFI B-13
+
+## At a glance
+
+| Attribute | Detail |
+|---|---|
+| Federal privacy instrument | Personal Information Protection and Electronic Documents Act (PIPEDA), S.C. 2000, c. 5, Part 1 and Schedule 1 (10 fair-information principles from CSA Model Code CAN/CSA-Q830-96); Breach of Security Safeguards Regulations, SOR/2018-64 (in force 1 November 2018) |
+| Provincial private-sector laws | Quebec: Act respecting the protection of personal information in the private sector, CQLR c. P-39.1, as overhauled by Law 25 (S.Q. 2021, c. 25). Alberta: Personal Information Protection Act, S.A. 2003, c. P-6.5. British Columbia: Personal Information Protection Act, S.B.C. 2003, c. 63. All three are "substantially similar" to PIPEDA and displace it for intra-provincial activity |
+| Regulators | Office of the Privacy Commissioner of Canada (OPC); Commission d'accès à l'information du Québec (CAI); OIPC Alberta; OIPC British Columbia. Financial sector: OSFI (Guideline B-13, incident reporting advisory). Critical infrastructure: Communications Security Establishment (CSE) plus six sector regulators under the CCSPA |
+| Federal cyber statute | Bill C-8, An Act respecting cyber security (S.C. 2026, c. 9) — royal assent 15 June 2026. Part 1 amends the Telecommunications Act; Part 2 enacts the Critical Cyber Systems Protection Act (CCSPA), which comes into force by order in council |
+| Breach clocks | PIPEDA: report to OPC and notify individuals "as soon as feasible" after determining a breach creating a real risk of significant harm (RROSH); keep records of every breach 24 months. Quebec: notify CAI and individuals "promptly" where risk of serious injury; register kept at least 5 years. Alberta: notify Commissioner "without unreasonable delay". BC: no statutory breach-notification duty in the Act as consolidated to 15 September 2026. OSFI: 24 hours. CCSPA: period set by regulation, not exceeding 72 hours, to CSE |
+| Penalty ceilings | PIPEDA offences: fine up to C$10,000 (summary) / C$100,000 (indictable). Quebec AMPs: up to C$10,000,000 or 2% of worldwide turnover; penal fines up to C$25,000,000 or 4% of worldwide turnover (doubled for repeat). Alberta/BC offences: up to C$100,000 for organizations. CCSPA AMPs: up to C$15,000,000 per violation for non-individuals; Telecommunications Act AMPs up to C$10,000,000 (C$15,000,000 subsequent) |
+| Private right of action | Quebec s. 93.1: punitive damages of at least C$1,000 for intentional or grossly negligent infringement. BC s. 57: damages after a final Commissioner order or conviction. PIPEDA: Federal Court application after an OPC report (s. 14) |
+| Federal reform status | Bill C-27 (CPPA / AIDA) died when the 44th Parliament's session ended 6 January 2025; no successor privacy bill confirmed as of September 2026 (verify). PIPEDA consolidation is current to 21 July 2026 and carries not-yet-in-force "data mobility" provisions added by S.C. 2026, c. 3 |
+
+## What it is
+
+Canada has no single privacy or cyber statute. **PIPEDA** governs personal information handled in the course of commercial activity, and the employee information of federal works, undertakings and businesses (banks, telecoms, airlines, railways, etc.). Its substantive rules are ten Schedule 1 principles (accountability, identifying purposes, consent, limiting collection, limiting use/disclosure/retention, accuracy, safeguards, openness, individual access, challenging compliance), given legal force by s. 5. The **Digital Privacy Act** (S.C. 2015, c. 32) added Division 1.1 — mandatory breach reporting, notification and record-keeping — in force with SOR/2018-64 on 1 November 2018.
+
+Where a province has enacted "substantially similar" legislation, the Governor in Council exempts organizations from PIPEDA for collection, use and disclosure **within that province** (s. 26(2)(b)). Quebec, Alberta and BC hold that status for their general private-sector laws; New Brunswick, Newfoundland and Labrador, Nova Scotia and Ontario hold it for personal health information laws only. PIPEDA continues to apply to cross-border flows, to federal works, undertakings and businesses everywhere, and in the three territories.
+
+**Quebec's Law 25** (Bill 64, assented 22 September 2021) rewrote P-39.1 into the most GDPR-like regime in North America, phased in over three anniversaries (2022, 2023, 2024) and backed by administrative monetary penalties and penal fines scaled to worldwide turnover. The federal cyber layer sits alongside: **Bill C-8** creates a critical-infrastructure regime (CCSPA) for federally regulated vital services, and **OSFI Guideline B-13** plus the OSFI incident-reporting advisory set the operative technology and cyber expectations for federally regulated financial institutions (FRFIs).
+
+## Who it covers / Scope
+
+| Instrument | Applicability test | Notable exclusions / limits |
+|---|---|---|
+| PIPEDA Part 1 (s. 4) | Every organization, for personal information collected, used or disclosed in the course of **commercial activities**; plus employee/applicant information of a **federal work, undertaking or business** | Government institutions under the Privacy Act; individuals acting for personal or domestic purposes; intra-provincial activity in Quebec, Alberta and BC (s. 26(2)(b) exemption orders); Schedule 4 adds named bodies (e.g., World Anti-Doping Agency) for specified information |
+| Quebec P-39.1 (s. 1) | Any person collecting, holding, using or communicating personal information **in the course of carrying on an enterprise** (Civil Code art. 1525), whatever the medium; also professional orders and political parties to the extent other Acts provide. The Act states no establishment or residency test; its reach to enterprises outside Quebec handling Quebec residents' data is a matter of interpretation and CAI practice (verify case by case) | Journalistic, historical or genealogical material; Divisions II–III do not apply to information that is public by law or to business-contact information about a person's duties within an enterprise |
+| Alberta PIPA (s. 4, s. 56) | Organizations in Alberta; **non-profit organizations** only for their commercial activities (s. 56(3)) | Public bodies (s. 4(2)) and the exclusions listed in s. 4(3); regulations may defer or exempt non-profits |
+| BC PIPA (s. 3) | Every organization in BC for personal information in its custody or control | Personal/domestic purposes; journalistic, artistic or literary purposes; information to which PIPEDA applies; information under the BC Freedom of Information and Protection of Privacy Act; court documents and other listed exclusions (s. 3(2)) |
+| CCSPA (ss. 2, 6–7, Schedules 1–2) | **Designated operators**: members of a class of operators that the Governor in Council establishes by order for a **vital service or vital system** listed in Schedule 1: telecommunications services; interprovincial or international pipeline and power line systems; nuclear energy systems; federally regulated transportation systems; banking systems; clearing and settlement systems | Schedule 2 (classes of operators and their regulators) was enacted empty — nothing is in scope until the Governor in Council fills it by order and Part 2 is brought into force |
+| OSFI B-13 and incident advisory | All FRFIs: banks, foreign bank branches, foreign insurance branches, life and fraternal insurers, P&C insurers, trust and loan companies | Provincially regulated credit unions and insurers fall under provincial supervisors |
+
+## Core obligations
+
+### PIPEDA safeguards and breach regime (Division 1.1, ss. 10.1–10.3; SOR/2018-64)
+
+| Provision | Requirement |
+|---|---|
+| Schedule 1, Principle 7 (4.7) | Security safeguards **appropriate to the sensitivity** of the information; protect against loss or theft and unauthorized access, disclosure, copying, use or modification, regardless of format; physical, organizational and technological measures; staff awareness (4.7.1–4.7.4) |
+| s. 2 definition | "Breach of security safeguards" = loss of, unauthorized access to or unauthorized disclosure of personal information resulting from a breach of the 4.7 safeguards **or from a failure to establish them** |
+| s. 10.1(1)–(2) | Report to the OPC any breach involving personal information **under the organization's control** if it is reasonable to believe it creates a **real risk of significant harm (RROSH)**; prescribed form, **as soon as feasible** after determining the breach occurred |
+| s. 10.1(3)–(6) | Notify affected individuals (unless prohibited by law), conspicuously and directly, as soon as feasible; content must let the individual understand the significance and take steps to reduce harm |
+| s. 10.1(7)–(8) | Significant harm includes bodily harm, humiliation, reputational or relationship damage, loss of employment/business/professional opportunities, financial loss, identity theft, credit-record effects, property damage or loss. RROSH factors: **sensitivity** and **probability of misuse** |
+| s. 10.2 | Notify other organizations or government institutions that may reduce or mitigate the harm |
+| s. 10.3; Reg. s. 6 | Keep a record of **every** breach (RROSH or not) for **24 months** after determining it occurred; provide to OPC on request; record must let the OPC verify compliance with reporting and notification duties |
+| Reg. ss. 2–5 | OPC report content: circumstances and cause, date/period, information involved, number affected, harm-reduction steps, individual-notification steps, contact person; new information may be added later. Individual notice content mirrors this plus steps individuals can take. Indirect (public) notification only where direct notice would cause further harm, undue hardship, or contact details are missing |
+| OPC guidance (2018) | The **principal organization**, not its processor, is treated as having control and therefore reports; the principal must impose contractual breach-handling duties on processors. Record minimum: date, circumstances, nature of information, whether reported/notified, and reasoning where RROSH was not found |
+
+Other Part 1 duties relevant to security programs: accountability (Principle 4.1), limiting use, disclosure and retention (4.5), openness (4.8), individual access (4.9), OPC complaint investigation, compliance agreements (s. 17.1), audits on reasonable grounds (s. 18) and Federal Court orders and damages after a complaint (ss. 14–16).
+
+### Quebec P-39.1 after Law 25
+
+| Section | Requirement |
+|---|---|
+| 3.1 | The person with highest authority is the **person in charge of protection of personal information** (delegable in writing); title and contact details published on the website |
+| 3.2 | Governance policies and practices covering retention/destruction, roles across the information life cycle, and complaint handling; proportionate to the enterprise; approved by the person in charge |
+| 3.3–3.4 | **Privacy impact assessment** for any project to acquire, develop or overhaul an information system or electronic service-delivery system involving personal information |
+| 3.5–3.8 | Confidentiality incident (unauthorized access, use or communication, or loss or other breach): take reasonable measures to reduce injury and prevent recurrence; where a **risk of serious injury**, **promptly** notify the CAI and affected persons; may notify third parties that can reduce the risk; keep a **register of confidentiality incidents**; risk assessed on sensitivity, anticipated consequences and likelihood of injurious use, consulting the person in charge |
+| Regulation respecting confidentiality incidents (CQLR c. A-2.1, r. 3.1, O.C. 1761-2022) | CAI notice content (11 items, including date of awareness, number of persons and how many reside in Quebec, serious-injury reasoning, notification timing, remediation, and whether another jurisdiction's regulator was notified); individual-notice content; public notice permitted in the same circumstances as PIPEDA or where speed is needed; register contents; register kept **at least 5 years** after awareness |
+| 4.1 | Consent of the holder of parental authority for children under 14 unless collection is clearly for the minor's benefit |
+| 8, 8.1, 8.2 | Transparency at collection; prior notice of technology that identifies, locates or profiles; clear-language confidentiality policy published on the website |
+| 9.1 | Technological products or services offered to the public must default to the **highest level of confidentiality** |
+| 10 | Security measures reasonable given sensitivity, purpose, quantity, distribution and medium |
+| 12.1 | Decisions based exclusively on automated processing: inform the person, and on request give the information used, the reasons and principal factors, and the right to correction; opportunity to make observations to a human reviewer |
+| 17 | **Before communicating personal information outside Quebec** (including to a processor): PIA covering sensitivity, purposes, protection measures and the destination's legal framework; communicate only if adequate protection; written agreement reflecting the assessment |
+| 23 | Destroy or anonymize information once purposes are achieved (subject to statutory retention); anonymization regulation applies |
+| 27 | Access; since 22 September 2024, **portability** of computerized information collected from the person in a structured, commonly used technological format |
+| 28.1 | Right to cessation of dissemination / de-indexing where dissemination contravenes the law or causes serious injury |
+
+### Alberta and BC PIPA
+
+| Topic | Alberta PIPA | BC PIPA |
+|---|---|---|
+| Safeguards | s. 34: reasonable security arrangements against unauthorized access, collection, use, disclosure, copying, modification, disposal or destruction | s. 34: reasonable security arrangements against the same risks |
+| Breach notification | s. 34.1: notify the Commissioner **without unreasonable delay** of any loss of or unauthorized access to or disclosure of personal information where a reasonable person would consider there is a **real risk of significant harm**; s. 37.1: Commissioner may **require** individual notification in a prescribed form and time. Reg. AR 366/2003 s. 19 lists notice content (including risk assessment and estimated number at RROSH); s. 19.1 requires direct notification to individuals | No mandatory breach-notification provision in the Act as consolidated to 15 September 2026 (verify for later amendments) |
+| Retention | s. 35: retain only as long as reasonably required; then destroy or de-identify | s. 35 |
+| Policies | s. 6: reasonable policies and practices; where a service provider outside Canada is used, policies must disclose the countries involved | s. 5: policies and practices |
+
+### Bill C-8 / Critical Cyber Systems Protection Act (S.C. 2026, c. 9, Part 2)
+
+| Section | Requirement for designated operators |
+|---|---|
+| 9–12 | Within **90 days** of joining a class of operators (order published in Canada Gazette, Part II), establish a **cyber security program** for critical cyber systems covering identification and management of organizational and **supply-chain / third-party** risks, protection, detection and minimization of impact; notify the regulator immediately on establishment and provide the program within the same 90 days (extensions at the regulator's discretion); implement and maintain it |
+| 13–14 | Review annually (or on prescribed dates), complete within 60 days, notify the regulator within 30 days whether changes were made; notify material changes in ownership/control or supply chain and whether the program changed |
+| 15 | Mitigate identified supply-chain and third-party risks as soon as identified; CSE may issue mitigation guidelines referencing international standards such as ISO supplier-relationship guidance |
+| 17–18.1 | Report a **cyber security incident** (anything that interferes or may interfere with the continuity or security of a vital service/system or the confidentiality, integrity or availability of a critical cyber system) to the **CSE** within the period prescribed by regulation, **not to exceed 72 hours**; immediately notify the appropriate regulator and give it a copy. PIPEDA obligations are unaffected |
+| 20–21 (cyber security directions) | Governor in Council may, by order, direct a designated operator or class to comply with measures to protect a critical cyber system; directions must be reasonable in scope and substance, cannot require decoding of encrypted private communications, and must be complied with (s. 20(4)) |
+| Regulators (Schedule 2) | Minister of Industry, Minister of Transport, Superintendent of Financial Institutions, Bank of Canada, Canadian Energy Regulator, Canadian Nuclear Safety Commission — mapped to classes once the Governor in Council populates Schedule 2 |
+| Part 1 (Telecommunications Act) | Governor in Council and Minister of Industry may order telecommunications service providers to do or refrain from anything necessary to secure the Canadian telecommunications system; AMPs up to C$10,000,000 and C$15,000,000 for subsequent contraventions |
+
+### OSFI Guideline B-13 and incident reporting (FRFIs)
+
+- **B-13 Technology and Cyber Risk Management** (issued 31 July 2022; effective **1 January 2024**): three domains — governance and risk management; technology operations and resilience; cyber security — each with an outcome and numbered principles. Expectations include board/senior-management accountability, technology asset management, incident and problem management (Principle 10), intelligence-led threat assessment and testing (penetration testing, red teaming), cryptography and key management, defence-in-depth, and employee testing. Read with B-10 (Third-Party Risk Management, 30 April 2023), E-21 and the Cyber Security Self-Assessment Tool (updated 3 November 2025 and aligned to B-13).
+- **Technology and Cyber Security Incident Reporting Advisory** (dated and effective 13 August 2021): report any incident with an impact, or potential impact, on operations, confidentiality, integrity or availability to OSFI's Technology Risk Division **and** the Lead Supervisor **within 24 hours, or sooner if possible**, using the OSFI incident reporting form; regular (e.g., daily) updates until resolved; post-incident review and lessons learned. Reporting triggers include third-party breaches at material providers, DR activation, incidents escalated to the board, incidents reported to the OPC, the Cyber Centre or law enforcement, and cyber-insurance claims. Failure to report can lead to enhanced supervision, watch-listing or staging.
+
+## Enforcement and penalties
+
+| Regime | Mechanism | Ceiling |
+|---|---|---|
+| PIPEDA | OPC investigates complaints, may audit (s. 18), enter compliance agreements (s. 17.1), and publish findings; complainant may apply to the Federal Court, which can order corrected practices, published notices and damages including for humiliation (ss. 14, 16). OPC does not fine; it refers possible offences to the Attorney General of Canada. Offence (s. 28) for **knowingly** failing to report, notify or keep records (ss. 10.1, 10.3(1)), contravening s. 8(8) or s. 27.1(1), or obstructing the Commissioner | C$10,000 summary conviction; C$100,000 indictable |
+| Quebec | **Administrative monetary penalties** imposed by a CAI-designated person after a notice of non-compliance (ss. 90.1–90.17), with review and Court of Québec appeal; 2-year limitation; CAI must publish its AMP framework (s. 90.2). **Penal offences** (s. 91) for unlawful collection/use, failure to report incidents, failure to take s. 10 security measures, re-identification, obstruction; CAI prosecutes; 5-year limitation; fines doubled for subsequent offences; directors/officers who ordered or consented are parties (s. 93); s. 92.3 sentencing factors | AMP: C$50,000 (natural person); **C$10,000,000 or 2% of worldwide turnover** for the preceding fiscal year, whichever is greater. Penal: C$5,000–C$100,000 (natural person); **C$15,000–C$25,000,000 or 4% of worldwide turnover**, whichever is greater |
+| Alberta PIPA | Commissioner orders; s. 59 offences include failure to give s. 34.1 breach notice and obstruction | C$10,000 (individual); C$100,000 (organization) |
+| BC PIPA | Commissioner orders; s. 56 offences (deception, evasion of access requests, obstruction, non-compliance with orders); s. 57 damages action once an order or conviction is final | C$10,000 (individual); C$100,000 (organization) |
+| CCSPA | Regulators have entry/inspection powers and may order internal audits; AMPs (ss. 88–135) with a due-diligence defence and Transportation Appeal Tribunal review for transport-sector penalties; directors and officers who directed or acquiesced are parties (s. 93); offences (s. 137) for failing to establish or implement a program (ss. 9(1), 12), to mitigate supply-chain risk (s. 15) or to comply with a direction (s. 20(4)), among others | AMP: C$500,000 (individual) / **C$15,000,000** (other) per violation; offences: court-discretion fines, imprisonment up to 2 years less a day (summary) or 5 years (indictment) for individuals |
+| OSFI | Supervisory, not penal: failure to report can lead to enhanced monitoring, watch-listing or staging | n/a |
+
+## Timeline and status
+
+| Date | Event |
+|---|---|
+| 13 April 2000 | PIPEDA assented (S.C. 2000, c. 5) |
+| 1 November 2018 | PIPEDA Division 1.1 (mandatory breach reporting) and SOR/2018-64 in force |
+| 22 September 2021 | Quebec Law 25 (S.Q. 2021, c. 25) assented |
+| 22 September 2022 | Law 25 phase 1: person in charge (s. 3.1), confidentiality-incident duties and register (ss. 3.5–3.8), commercial-transaction disclosures (s. 18.4), regulation-making powers |
+| 22 September 2023 | Law 25 phase 2 (default date): governance policies, PIAs, transparency, privacy by default, automated decisions, transfer PIAs, AMPs and new penal fines |
+| 22 September 2024 | Law 25 phase 3: data portability (s. 27, third paragraph) |
+| 16 June 2022 – 6 January 2025 | Bill C-27 (CPPA, Personal Information and Data Protection Tribunal Act, AIDA) introduced; stalled in committee; died when the session ended |
+| 18 June 2025 | Bill C-8 introduced (a reintroduction of federal cyber-security legislation that lapsed in the previous Parliament — verify lineage); Commons committee amended it (report 11 March 2026); Senate passed without amendment 4 June 2026 |
+| 15 June 2026 | Bill C-8 royal assent — S.C. 2026, c. 9. CCSPA (Part 2) comes into force by order in council; five-year statutory review |
+| 1 January 2024 | OSFI B-13 effective; OSFI incident advisory in effect since 13 August 2021 |
+| 21 July 2026 | PIPEDA consolidation date; S.C. 2026, c. 3, ss. 389–391 (Division 1.2, data-mobility framework, ss. 10.4–10.5) enacted but **not in force** |
+| September 2026 | No CCSPA commencement order, Schedule 2 designation order or CCSPA regulations confirmed at time of review (verify); no federal successor to the CPPA confirmed (verify); Alberta PIPA consolidation current to 1 September 2025; BC PIPA current to 15 September 2026 |
+
+## Key obligations for security/GRC teams
+
+1. **Map which law governs each data flow** — PIPEDA for cross-border, federal works and territories; P-39.1 / Alberta PIPA / BC PIPA for intra-provincial processing — and record the basis in the applicability register. See [../../skills/regulatory-applicability/SKILL.md](../../skills/regulatory-applicability/SKILL.md).
+2. **Run one breach-assessment framework with three thresholds**: PIPEDA/Alberta RROSH (sensitivity x probability of misuse) and Quebec "risk of serious injury" (sensitivity, anticipated consequences, likelihood of injurious use, with mandatory consultation of the person in charge). Pre-build OPC, CAI and Alberta notice templates from the regulation content lists. See [../../skills/incident-regulatory-reporting/SKILL.md](../../skills/incident-regulatory-reporting/SKILL.md) and [../crosswalks/breach-notification-timelines.md](../crosswalks/breach-notification-timelines.md).
+3. **Keep a single incident register** that satisfies PIPEDA (all breaches, 24 months) and Quebec (register contents per A-2.1, r. 3.1, kept 5 years); log the "no RROSH / no serious injury" reasoning for every unreported incident. Use [../../templates/incident-regulatory-notification-log.md](../../templates/incident-regulatory-notification-log.md).
+4. **Name and publish the Quebec person in charge**, adopt approved governance policies (s. 3.2), and embed **PIAs** into project intake for any system change and for every transfer outside Quebec (s. 17), with written agreements reflecting the assessment. See [../../skills/dpia-privacy-assessment/SKILL.md](../../skills/dpia-privacy-assessment/SKILL.md) and [../../templates/dpia-template.md](../../templates/dpia-template.md).
+5. **Processor contracts**: because the principal organization reports under PIPEDA, contracts must require processors to detect, escalate and document breaches on your clock; Quebec s. 17 adds the transfer PIA and written agreement, and s. 18.3 requires written mandates specifying confidentiality measures, purpose limitation, non-retention after expiry, and prompt notice of any confidentiality violation to the person in charge. See [../../skills/third-party-risk-assessment/SKILL.md](../../skills/third-party-risk-assessment/SKILL.md).
+6. **Evidence "safeguards appropriate to sensitivity"** (PIPEDA 4.7, Quebec s. 10, PIPA s. 34) through a data classification tied to control baselines; Quebec s. 91(4) makes inadequate security a penal offence. See [../../skills/control-mapping/SKILL.md](../../skills/control-mapping/SKILL.md).
+7. **Automated decisions and profiling**: inventory systems making decisions based exclusively on automated processing (Quebec s. 12.1) and tracking/profiling technologies (s. 8.1); wire notices and human-review paths into the AI governance process. See [../../skills/ai-governance/SKILL.md](../../skills/ai-governance/SKILL.md).
+8. **FRFIs**: align the technology and cyber risk framework to B-13's three domains, run the OSFI self-assessment, and rehearse the 24-hour OSFI notification in parallel with OPC/CAI notifications. See [../../skills/framework-gap-assessment/SKILL.md](../../skills/framework-gap-assessment/SKILL.md).
+9. **Vital-service operators**: monitor CCSPA commencement, Schedule 2 designation orders and regulations; pre-draft the cyber security program (90-day clock), the supply-chain risk register and the 72-hour-maximum CSE reporting path. See [../../skills/regulatory-horizon-scanning/SKILL.md](../../skills/regulatory-horizon-scanning/SKILL.md).
+
+## Interplay
+
+- **GDPR**: Law 25 borrows GDPR mechanics (PIAs, privacy by default, automated-decision transparency, portability, turnover-based fines) but remains consent-centred (ss. 8–8.3, 12–14) with no general legitimate-interest basis; a GDPR Art. 35 DPIA template covers Quebec ss. 3.3 and 17 with a Quebec-specific transfer analysis. See [gdpr.md](gdpr.md) (and the EU international-transfers pack, where present) for the EU-side transfer analysis.
+- **US state privacy laws**: Quebec's portability, de-indexing and automated-decision rights resemble the CCPA/CPRA family; breach-notification content is similar but US statutes carry fixed day-counts while PIPEDA/Quebec use "as soon as feasible" / "promptly". See [us-state-privacy.md](us-state-privacy.md).
+- **Sector overlays**: a Canadian bank incident can trigger OSFI (24 h), OPC (as soon as feasible), CAI (promptly, for Quebec residents), the Cyber Centre and, once in force, CCSPA reporting to CSE (72 h max) — different regulators, different content, parallel clocks. Cross-listed issuers add SEC Form 8-K Item 1.05 — see [sec-cyber-disclosure.md](sec-cyber-disclosure.md). Health custodians in Ontario, NB, NS and NL follow provincial health-privacy laws instead of PIPEDA — compare [hipaa.md](hipaa.md) for the US analogue.
+- **EU NIS2 / DORA**: the CCSPA is Canada's structural analogue to NIS2's essential-entity regime (designated operators, programs, supply-chain duties, incident reporting to a national CSIRT, director liability) and B-13/B-10 map to DORA's ICT risk and third-party pillars. See [nis2.md](nis2.md) and [dora.md](dora.md).
+- **Frameworks**: B-13's governance / operations and resilience / cyber security domains and the CCSPA program elements (identify, protect, detect, minimize impact) align naturally with NIST CSF 2.0 functions and ISO/IEC 27001 Annex A; the CSE's supply-chain guidance is to reference ISO supplier-relationship standards. See [../frameworks/nist-csf-2.md](../frameworks/nist-csf-2.md) and [../frameworks/iso-27001-2022.md](../frameworks/iso-27001-2022.md).
+- Summary-level coverage of Canada alongside other non-EU/US regimes: [other-jurisdictions.md](other-jurisdictions.md).
+
+## Primary sources
+
+- PIPEDA, S.C. 2000, c. 5 (consolidated to 2026-07-21) — legal text: https://laws-lois.justice.gc.ca/eng/acts/P-8.6/FullText.html
+- Breach of Security Safeguards Regulations, SOR/2018-64 — legal text: https://laws-lois.justice.gc.ca/eng/regulations/SOR-2018-64/FullText.html
+- OPC, "What you need to know about mandatory reporting of breaches of security safeguards" — regulator guidance: https://www.priv.gc.ca/en/privacy-topics/privacy-breaches/respond-to-a-privacy-breach-at-your-business/gd_pb_201810/
+- OPC, "Provincial laws that may apply instead of PIPEDA" — regulator guidance: https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/r_o_p/prov-pipeda/
+- Quebec, Act respecting the protection of personal information in the private sector, CQLR c. P-39.1 (consolidated to 10 June 2026) — legal text: https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1
+- Quebec, Regulation respecting confidentiality incidents, CQLR c. A-2.1, r. 3.1 — legal text: https://www.legisquebec.gouv.qc.ca/en/document/cr/A-2.1,%20r.%203.1
+- Quebec, Law 25 (S.Q. 2021, c. 25) annual statute, s. 175 coming-into-force schedule — legal text: https://www.publicationsduquebec.gouv.qc.ca/fileadmin/Fichiers_client/lois_et_reglements/LoisAnnuelles/en/2021/2021C25A.PDF
+- Alberta, Personal Information Protection Act, S.A. 2003, c. P-6.5 (consolidated to 1 September 2025) — legal text: https://kings-printer.alberta.ca/documents/Acts/P06P5.pdf ; Regulation AR 366/2003: https://kings-printer.alberta.ca/documents/Regs/2003_366.pdf
+- British Columbia, Personal Information Protection Act, S.B.C. 2003, c. 63 (current to 15 September 2026) — legal text: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/03063_01
+- Bill C-8 (45-1), royal-assent text, S.C. 2026, c. 9 — legal text: https://www.parl.ca/DocumentViewer/en/45-1/bill/C-8/royal-assent ; LEGISinfo status: https://www.parl.ca/legisinfo/en/bill/45-1/c-8
+- Bill C-27 (44-1) LEGISinfo status (session ended 6 January 2025): https://www.parl.ca/legisinfo/en/bill/44-1/c-27
+- OSFI Guideline B-13, Technology and Cyber Risk Management — regulator guidance: https://www.osfi-bsif.gc.ca/en/guidance/guidance-library/technology-cyber-risk-management ; final-guideline letter (effective date): https://www.osfi-bsif.gc.ca/en/guidance/guidance-library/osfi-releases-final-guideline-b-13-technology-cyber-risk-management-letter-2022
+- OSFI Technology and Cyber Security Incident Reporting Advisory — regulator guidance: https://www.osfi-bsif.gc.ca/en/guidance/guidance-library/technology-cyber-security-incident-reporting
+- OSFI Guideline B-10, Third-Party Risk Management — regulator guidance: https://www.osfi-bsif.gc.ca/en/guidance/guidance-library/third-party-risk-management-guideline
+- Not verified in this review: any CCSPA commencement order or regulations; any successor federal privacy bill; CAI's published AMP framework; OIPC BC breach guidance (referenced from memory, marked verify).
+
+---
+**Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

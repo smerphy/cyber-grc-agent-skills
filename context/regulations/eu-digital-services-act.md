@@ -1,0 +1,162 @@
+# EU Digital Services Act (Regulation (EU) 2022/2065, "DSA")
+
+## At a glance
+
+| Attribute | Detail |
+|---|---|
+| Instrument | Regulation (EU) 2022/2065 of 19 October 2022 on a Single Market for Digital Services (OJ L 277, 27.10.2022) — directly applicable, no transposition; amends the e-Commerce Directive 2000/31/EC |
+| Key dates | Entry into force 16 November 2022; general application 17 February 2024; VLOP/VLOSE obligations apply four months after the Commission notifies a designation decision (Arts. 33(6), 92, 93) |
+| Regulators | National Digital Services Coordinators (DSCs) for all intermediaries (Member State of main establishment leads, Art. 56); the European Commission supervises and enforces the VLOP/VLOSE-specific obligations directly; European Board for Digital Services (Art. 61) coordinates |
+| Who is covered | Providers of intermediary services (mere conduit, caching, hosting) offered to recipients in the EU, wherever the provider is established (Art. 2(1)); obligations stack by tier up to very large online platforms (VLOPs) and very large online search engines (VLOSEs) with 45 million+ average monthly active EU recipients (Art. 33) |
+| Structure | 93 articles: Ch. I general; Ch. II liability exemptions (Arts. 4–10); Ch. III due-diligence obligations in five cumulative tiers (Arts. 11–43) plus Section 6 on standards, codes of conduct and crisis protocols (Arts. 44–48); Ch. IV implementation, cooperation, penalties and enforcement (Arts. 49–88); Ch. V final provisions |
+| Penalties | Fines up to 6 % of worldwide annual turnover; up to 1 % for incorrect/incomplete information or refusing an inspection; periodic penalty payments up to 5 % of average daily worldwide turnover per day (Arts. 52, 74, 76) |
+| Assessment model | VLOPs/VLOSEs: annual systemic-risk assessment (Art. 34), mitigation (Art. 35), mandatory annual independent audit with a positive / positive-with-comments / negative opinion (Art. 37 + Delegated Regulation (EU) 2024/436), a compliance function reporting to the management body (Art. 41), and semi-annual transparency reports (Art. 42). No certification scheme |
+| Secondary rules | Delegated Regulation 2023/1127 (supervisory fee); Delegated Regulation 2024/436 (audits); Implementing Regulation 2024/2835 (transparency-report templates, mandatory from 1 July 2025); Delegated Regulation 2025/2050 (researcher data access, in force 29 October 2025); Commission guidelines on elections (April 2024) and protection of minors (14 July 2025) |
+| Neighbours | Digital Markets Act (gatekeepers), GDPR (Art. 2(4)(g) — DSA is without prejudice to it), AI Act (AI Office now oversees AI systems embedded in VLOPs/VLOSEs), Platform-to-Business Regulation 2019/1150, AVMSD, Terrorist Content Online Regulation 2021/784 |
+
+## What it is
+
+The DSA is the EU's horizontal rulebook for online intermediaries. It keeps the e-Commerce Directive's conditional liability exemptions for mere-conduit, caching and hosting services (Arts. 4–6) and its ban on general monitoring obligations (Art. 8), but adds a graduated set of **due-diligence obligations** that grow with the provider's role and reach: every intermediary, then hosting services, then online platforms, then online marketplaces, and finally VLOPs and VLOSEs. Article 1(2) frames it as three things — a liability framework, tailored due-diligence duties, and a cooperation/enforcement architecture.
+
+For security and GRC teams the significant part is the VLOP/VLOSE layer (Ch. III, Section 5). It imports familiar assurance machinery — risk assessment, risk mitigation, internal compliance function, management-body accountability, independent audit with a formal opinion, regulator data access — and applies it to *systemic risks* (illegal content, fundamental rights, civic discourse and elections, public security, public health, minors, gender-based violence). The Commission has used exactly these provisions in its first fines: risk-assessment and mitigation failures (Arts. 34–35), deceptive interface design (Art. 25), ad-repository deficiencies (Art. 39) and blocked researcher access (Art. 40).
+
+## Who it covers / Scope
+
+| Tier | Test (Art. 3 definitions) | Applicable section | Notable exemptions |
+|---|---|---|---|
+| Intermediary service | Information society service that is a mere conduit, caching or hosting service, offered to recipients established or located in the EU (Art. 2(1)); a non-EU provider is in scope if it has a "substantial connection to the Union" — establishment, a significant number of EU recipients, or targeting of EU Member States (Art. 3(d)–(e)) | Arts. 11–15 | Transparency reporting (Art. 15) does not apply to micro or small enterprises (Recommendation 2003/361/EC) unless designated a VLOP (Art. 15(2)) |
+| Hosting service | Stores information provided by, and at the request of, a recipient (Art. 3(g)(iii)) | + Arts. 16–18 | — |
+| Online platform | Hosting service that also disseminates information to the public at the recipient's request, unless that is a minor and purely ancillary feature (Art. 3(i)) | + Arts. 19–28 | Section 3 (except Art. 24(3)) does not apply to micro/small enterprises, with a 12-month grace after losing that status; the exemption never applies to designated VLOPs (Art. 19) |
+| Online marketplace | Online platform allowing consumers to conclude distance contracts with traders | + Arts. 29–32 | Same micro/small carve-out (Art. 29) |
+| VLOP / VLOSE | Online platform or search engine with average monthly active EU recipients of 45 million or more, **and** designated by Commission decision (Art. 33(1), (4)); the threshold is re-based to 10 % of EU population by delegated act if population moves 5 % or more (Art. 33(2)) | + Arts. 33–43 (all lower tiers also apply) | Designation ends after an uninterrupted year below the threshold (Art. 33(5)) |
+
+Scope mechanics worth knowing:
+
+- **User-number publication (Art. 24(2)–(3)):** every online platform and search engine, whatever its size, had to publish average monthly active EU recipients by 17 February 2023 and at least every six months since, and must supply updated figures to the DSC of establishment or the Commission on request. The Commission has not adopted the optional Art. 33(3) methodology delegated act; its January 2023 guidance and the General Court's 3 September 2025 *Zalando* judgment (T-348/23, dismissing the challenge to designation) are the operative references (secondary sources).
+- **Designation procedure (Art. 33(4)–(6)):** the Commission designates on the provider's own figures or other information, giving 10 working days for views when it relies on other information; obligations bite four months after notification; the list is published in the Official Journal.
+- **Legal representative (Art. 13):** non-EU providers offering services in the EU must appoint a legal representative in a Member State, who can be held liable for non-compliance; the appointment does not create an EU establishment.
+- **Designated population:** first designations 25 April 2023 (17 VLOPs, 2 VLOSEs). The Commission list updated 31 August 2026 shows 28 designated services — 25 VLOPs and 3 VLOSEs — including marketplaces, app stores, social networks, adult-content sites, a map service, an encyclopaedia, and, since 31 August 2026, a generative-AI assistant's search function designated as a VLOSE.
+
+## Core obligations
+
+### All tiers (cumulative)
+
+| Article | Obligation | GRC relevance |
+|---|---|---|
+| 9–10 | Act on authority orders against illegal content and orders to provide information; inform the authority of effect given | Legal-request intake process, logging and metrics (order counts and median response times feed Art. 15 reports) |
+| 11–12 | Single electronic point of contact for authorities/Commission/Board and a separate one for recipients (not solely automated) | Public, maintained contact records; language coverage |
+| 13 | Legal representative for non-EU providers, notified to the DSC | Entity mapping; representative liability |
+| 14 | Terms and conditions must disclose content-moderation policies, tools, algorithmic decision-making and human review; act diligently, objectively and proportionately when enforcing them; VLOPs/VLOSEs must publish a machine-readable summary and versions in the official languages of every Member State where they offer the service (Art. 14(5)–(6)) | Policy governance; change notification to users |
+| 15 | Annual machine-readable transparency report: orders received, notices, own-initiative moderation, complaints, and use of automated means with accuracy indicators and error rates | Data pipeline and evidence retention; templates fixed by Implementing Regulation 2024/2835 |
+| 16–17 | Hosting: notice-and-action mechanism; notices confer actual knowledge; statement of reasons for every restriction | Ticketing, SLA and audit trail |
+| 18 | Hosting: promptly inform law enforcement (or Europol) on suspicion of a criminal offence threatening life or safety | Escalation playbook; the DSA's closest analogue to a mandatory incident report — no fixed clock, "promptly" |
+| 20–23 | Platforms: internal complaint handling for at least six months after a decision; certified out-of-court dispute settlement; priority handling of trusted-flagger notices; suspension of repeat abusers after warning | Case-management controls; Art. 24(1) metrics |
+| 24(5) | Platforms submit every statement of reasons, without personal data, to the Commission's public database | Data-minimisation control on outbound feeds |
+| 25 | No deceptive or manipulative interface design (dark patterns) — basis of the first DSA fine | UX review gate; overlaps with UCPD and GDPR, which take precedence where they apply (Art. 25(2)) |
+| 26–28 | Ad labelling and targeting-parameter disclosure; recommender-system main parameters in T&Cs; no profiling-based ads to known minors; "appropriate and proportionate" privacy, safety and security measures for minors (Commission guidelines of 14 July 2025) | Ad-tech and recommender documentation; age-assurance design |
+| 30–32 | Marketplaces: trader traceability — collect identity, contact, registration and self-certification data before onboarding and make best efforts, via official databases or supporting documents, to assess that it is reliable and complete (Art. 30(1)–(2)); compliance-by-design interfaces; informing purchasers of illegal products | Onboarding controls and record retention |
+
+### VLOP / VLOSE layer (Chapter III, Section 5)
+
+| Article | Obligation | Specifics |
+|---|---|---|
+| 34 Risk assessment | Diligently identify, analyse and assess systemic risks stemming from the design, functioning or use of the service, including algorithmic systems | Due by the date obligations start applying, then **at least annually** and before deploying functionalities likely to have a critical impact on risk. Four risk categories: illegal content; fundamental rights (dignity, privacy, data protection, expression and media pluralism, non-discrimination, rights of the child, consumer protection); civic discourse, elections and public security; gender-based violence, public health, minors, physical and mental well-being. Must weigh recommender and algorithmic design, moderation systems, T&C enforcement, ad systems, data practices, and intentional manipulation (inauthentic/automated use), with regional and linguistic specifics. **Supporting documents retained at least three years** and produced on request (Art. 34(3)) |
+| 35 Mitigation | Reasonable, proportionate and effective measures tailored to each identified risk | Menu in Art. 35(1)(a)–(k): design/interface changes, T&C changes, moderation resourcing and speed, testing and adapting algorithmic and recommender systems, ad-system changes, reinforcing internal processes/testing/documentation/supervision, trusted-flagger cooperation, codes and crisis protocols, awareness measures, child-protection tools including age verification and parental controls, and prominent labelling of synthetic or manipulated media. Board/Commission publish annual systemic-risk reports (35(2)); Commission may issue guidelines (35(3)) |
+| 36 Crisis response | On a Board recommendation the Commission may require VLOPs/VLOSEs to assess their contribution to a serious threat to public security or public health, apply specific measures, and report | Decisions limited to three months, extendable by at most three months (36(3)(c), 36(8)(b)); choice of measures stays with the provider (36(5)) |
+| 37 Independent audit | Annual audit, at the provider's expense, of all Chapter III obligations plus code-of-conduct and crisis-protocol commitments | Auditor independence: no related non-audit services 12 months before or after; no more than 10 consecutive years; no contingent fees; proven risk-management and technical expertise (37(3)). Report contents fixed in 37(4); opinion is positive / positive with comments / negative; provider must adopt an **audit implementation report within one month** of receiving non-positive recommendations (37(6)) |
+| 38 Recommenders | At least one option per recommender system not based on GDPR-defined profiling | — |
+| 39 Ad repository | Public, searchable, API-accessible repository of every ad, kept until one year after last display, with payer, targeting parameters and reach | Second ground of the December 2025 fine |
+| 40 Data access | Provide DSC/Commission with data needed to monitor compliance; explain the design, logic, functioning and testing of algorithmic systems (40(3)); provide vetted researchers data on reasoned DSC request (40(4)); give researchers access to publicly accessible data, real-time where technically possible (40(12)) | Provider may ask the DSC to amend a request within 15 days on grounds of no access or significant security/trade-secret vulnerability; DSC decides within 15 days (40(5)–(6)). Vetting conditions in 40(8). Delegated Regulation (EU) 2025/2050 sets the procedure and creates the Commission-hosted DSA data access portal |
+| 41 Compliance function | Independent compliance function with one or more compliance officers; head is an independent senior manager reporting directly to the management body, not removable without its approval; name notified to the DSC and Commission | Tasks: cooperate with regulators; ensure Art. 34 risks are identified and Art. 35 measures taken; organise and supervise the Art. 37 audit; advise management and staff; monitor compliance and code commitments. Management body must define and be accountable for governance of the function, approve and review risk strategies **at least annually**, and allocate adequate resources (41(5)–(7)) |
+| 42 Transparency | Art. 15 reports within two months of the application date and then at least every six months, with moderation headcount and qualifications per EU language and accuracy indicators per language | Within **three months** of receiving each audit report, publish the risk-assessment results, mitigation measures, audit report and audit implementation report; confidential or security-sensitive content may be removed from the public version but the full version goes to the DSC and Commission (42(4)–(5)) |
+| 43 Supervisory fee | Annual fee charged by the Commission per designated service, capped at 0.05 % of worldwide annual net income | Methodology in Delegated Regulation 2023/1127; the General Court annulled the 2024 fee decisions for two providers on 10 September 2025 (T-55/24, T-58/24) for putting methodology in individual decisions rather than a delegated act, with effects maintained for up to 12 months (secondary sources) |
+
+### Audit mechanics — Delegated Regulation (EU) 2024/436
+
+Adopted 20 October 2023, published 2 February 2024 (in force 20 days later). It turns Art. 37 into something recognisably close to an assurance engagement:
+
+- **Reasonable level of assurance** — "high but not absolute" — for every audited obligation (Arts. 2(13), 3(1)); the audit period runs continuously from the previous audit; a first audit covers the period starting four months after designation notification and must report within a year of that start (Art. 3(3)).
+- **Provider inputs (Art. 5):** before any procedure, hand the auditor descriptions of internal controls per obligation with indicators, measurements and benchmarks; any preliminary inherent/control-risk analysis; decision structures including the compliance function; relevant IT systems, data sources and algorithmic-system explanations; then grant access to data (including personal data), test environments, personnel, premises and relevant sub-contractors.
+- **Engagement letter (Art. 7):** written agreement listing every audited obligation, responsibilities, data-access procedures, timeframe and dispute mechanism, annexed to the report.
+- **Method (Arts. 8–12):** audit-risk analysis (inherent, control, detection) updated during the audit; defined audit criteria and materiality thresholds per obligation; tests and substantive analytical procedures of internal controls and, where there are reasonable doubts, of algorithmic systems; sampling without provider interference; per-obligation conclusions rolled into an overall opinion (any negative conclusion makes the opinion negative).
+- **Specific procedures for Arts. 34 and 35 (Arts. 13–14):** verify risk identification incl. regional/linguistic aspects, probability/severity analysis, sources used, testing of assumptions with impacted groups, timeliness, pre-deployment assessments of critical functionalities, three-year document preservation, compliance-officer and management-body involvement (Art. 41(3), (6), (7)), and whether each Art. 35(1) measure was considered.
+- **Templates:** Annex I (audit report) and Annex II (audit implementation report) are mandatory.
+
+## Enforcement and penalties
+
+| Mechanism | Detail |
+|---|---|
+| Competence | DSC of the Member State of main establishment for all providers (Art. 56(1)); the Commission supervises and enforces the VLOP/VLOSE-specific obligations directly, using investigative powers (requests for information, interviews, inspections — Arts. 67–69) even before opening proceedings (Art. 65) |
+| National penalties (Art. 52) | Member States set penalties; caps harmonised at 6 % of worldwide annual turnover for substantive breaches, 1 % for information/inspection failures, and periodic penalties of 5 % of average daily worldwide turnover per day |
+| Commission fines (Arts. 73–74) | Non-compliance decision after preliminary findings and right to be heard; fines up to 6 % of total worldwide annual turnover for intentional or negligent infringement, non-compliance with interim measures, or breach of binding commitments |
+| Periodic penalties (Art. 76) | Up to 5 % of average daily worldwide turnover per day to compel information, inspections, interim measures, commitments or compliance with a decision |
+| Enhanced supervision (Art. 75) | For Section 5 breaches the decision requires an action plan that must include a commitment to an independent audit under Art. 37(3)–(4) of the remedial measures; Board opinion within one month, Commission decision on sufficiency within a further month; the provider then reports audit results |
+| Interim measures and commitments (Arts. 70–71) | Proportionate temporary measures where there is a risk of serious damage; commitments can be made binding |
+| Last resort | Temporary restriction of access to the service via the DSC and a national judicial order where infringement persists, causes serious harm and entails criminal offences threatening life or safety (Commission enforcement page) |
+| Track record | First requests for information October 2023; first proceedings December 2023. First non-compliance decision **5 December 2025: X, EUR 120 million** (deceptive verification design, deficient ad repository, blocked researcher access). **28 May 2026: Temu, EUR 200 million** (Art. 34 risk assessment based on sector-generic rather than service-specific evidence, underestimating illegal-product exposure, ignoring recommender amplification). **20 July 2026: AliExpress, EUR 550 million** (Arts. 34–35 — failure to assess moderation staffing and overestimating detection effectiveness), the largest DSA fine to date. Preliminary findings against a video platform on minors' account safety issued 24 July 2026; several other proceedings open |
+
+## Timeline and status
+
+| Date | Event |
+|---|---|
+| 19 Oct 2022 / 27 Oct 2022 | Adoption / publication in OJ L 277 |
+| 16 Nov 2022 | Entry into force; early application of Arts. 24(2)–(3), (6), 33(3)–(6), 37(7), 40(13), 43 and Ch. IV Sections 4–6 (Art. 93(2)); five-year delegation of powers starts (Art. 87(2)) |
+| 17 Feb 2023 | First user-number publications due (Art. 24(2)) |
+| 2 Mar 2023 | Delegated Regulation 2023/1127 on supervisory fees adopted |
+| 25 Apr 2023 | First designations (17 VLOPs, 2 VLOSEs); obligations applied from late August 2023 |
+| 20 Oct 2023 / 2 Feb 2024 | Delegated Regulation 2024/436 on audits adopted / published |
+| 17 Feb 2024 | General application to all intermediaries; DSCs operational; national penalty regimes apply |
+| Apr 2024 | Commission guidelines on mitigating systemic risks to electoral processes |
+| 4 Nov 2024 | Implementing Regulation 2024/2835 on transparency-report templates; templates mandatory from 1 July 2025, yearly period 1 Jan–31 Dec (half-yearly for VLOPs/VLOSEs), publication within two months of period end, five-year retention |
+| 2 Jul 2025 / 9 Oct 2025 / 29 Oct 2025 | Delegated Regulation 2025/2050 on researcher data access adopted / published / in force; DSA data access portal launched |
+| 14 Jul 2025 | Commission guidelines on protection of minors (Art. 28(4)) |
+| 3 and 10 Sep 2025 | General Court: designation upheld in *Zalando*; supervisory-fee decisions annulled in two cases (effects maintained up to 12 months) |
+| 17 Nov 2025 | Commission's Art. 91(1) report on the Art. 33 designation threshold and interaction with other EU law, with a Staff Working Document (secondary summaries report it finds the DSA largely complements other EU acts) |
+| 5 Dec 2025 | First fine (X, EUR 120 million) |
+| 28 May 2026 / 20 Jul 2026 | Fines against Temu (EUR 200 million) and AliExpress (EUR 550 million) |
+| 27 Jul 2026 | AI Omnibus in force: AI Office oversight extended to AI systems embedded in VLOPs/VLOSEs |
+| 31 Aug 2026 | Latest designations (two platforms, one VLOSE); 28 designated services in total |
+| 18 Feb 2027 | Deadline for Commission report on effects on SMEs (Art. 91(1)) |
+| 17 Nov 2027, then every 5 years | Full evaluation (Art. 91(2)) |
+
+**Pending as of September 2026:** no amendment to the DSA text has been adopted. The Commission's "Digital Omnibus" package (proposed 19 November 2025) affects the DSA only indirectly — the data/cyber omnibus proposal would repeal the Platform-to-Business Regulation as largely covered by the DSA/DMA and remains under negotiation (verify current status). A Digital Fairness Act proposal addressing consumer-facing design practices is expected to overlap with Arts. 25–28 (verify). The Art. 33(3) user-counting methodology delegated act has not been adopted.
+
+## Key obligations for security/GRC teams
+
+1. **Classify each service against the tier table** (intermediary / hosting / platform / marketplace / VLOP-VLOSE), confirm micro/small status under Recommendation 2003/361/EC, and track the six-monthly Art. 24(2) user-number publication as a controlled disclosure. See [../../skills/regulatory-applicability/SKILL.md](../../skills/regulatory-applicability/SKILL.md).
+2. **Run the Art. 34 assessment as a governed risk process**: service-specific evidence (testing, mystery shopping, incident data, researcher findings), probability and severity scoring, regional/linguistic breakdown, a pre-deployment gate for critical-impact features, and a three-year evidence archive. The 2026 fines turned on generic, unsupported assessments. See [../../skills/risk-assessment/SKILL.md](../../skills/risk-assessment/SKILL.md) and [../risk-scoring.md](../risk-scoring.md).
+3. **Treat Art. 35 measures as controls with owners, KPIs and test evidence**, mapped one-to-one to the risks in the assessment, so the auditor can trace risk to mitigation to result. See [../../skills/control-testing/SKILL.md](../../skills/control-testing/SKILL.md).
+4. **Prepare for the annual audit as an assurance engagement**: internal-control descriptions per obligation, benchmarks and measurements, algorithmic-system explanations, an engagement letter listing every audited obligation, and a one-month turnaround for the audit implementation report. See [../../skills/audit-preparation/SKILL.md](../../skills/audit-preparation/SKILL.md), [../../templates/audit-evidence-request-list.md](../../templates/audit-evidence-request-list.md) and [../../workflows/audit-readiness.md](../../workflows/audit-readiness.md).
+5. **Stand up the Art. 41 compliance function** with documented independence, direct management-body reporting, at-least-annual board approval of risk strategies, and minutes evidencing board time on systemic risk. See [../../skills/grc-metrics-reporting/SKILL.md](../../skills/grc-metrics-reporting/SKILL.md) and [../../templates/grc-board-report.md](../../templates/grc-board-report.md).
+6. **Engineer the disclosure pipelines**: Implementing Regulation 2024/2835 templates for Arts. 15/24/42, statements of reasons to the Commission database (no personal data), the Art. 39 ad repository with API, and Art. 40 data-access interfaces with security review of what is exposed. See [../../skills/policy-authoring/SKILL.md](../../skills/policy-authoring/SKILL.md) for the T&C and moderation-policy documentation Art. 14 requires.
+7. **Wire Art. 18 into incident response**: a "promptly" escalation path to law enforcement for life/safety threats, plus Art. 36 crisis-response playbooks (three-month decision cycles). See [../../skills/incident-regulatory-reporting/SKILL.md](../../skills/incident-regulatory-reporting/SKILL.md).
+8. **Govern algorithmic and AI systems** — recommender parameters (Arts. 27, 38), synthetic-media labelling (Art. 35(1)(k)), explanations on demand (Art. 40(3)) and the AI Office's new oversight of AI in VLOPs/VLOSEs. See [../../skills/ai-governance/SKILL.md](../../skills/ai-governance/SKILL.md).
+9. **Assess auditors and data-access counterparts as third parties**: auditor independence tests (12-month non-audit blackout, 10-year rotation, no contingent fees) and security/confidentiality terms for researcher data sharing. See [../../skills/third-party-risk-assessment/SKILL.md](../../skills/third-party-risk-assessment/SKILL.md).
+10. **Track secondary rules, guidelines and case law** — audits, data access, fee methodology, minors and election guidelines, Board systemic-risk reports — via [../../skills/regulatory-horizon-scanning/SKILL.md](../../skills/regulatory-horizon-scanning/SKILL.md) and [../../workflows/new-regulation-impact-assessment.md](../../workflows/new-regulation-impact-assessment.md).
+
+## Interplay
+
+- **GDPR** — the DSA is without prejudice to GDPR and ePrivacy (Art. 2(4)(g)). Art. 25 dark-pattern rules yield to GDPR where it applies; Art. 28(2) and Art. 38 borrow GDPR's profiling definition; statements-of-reasons submissions (Art. 24(5)) and Art. 40 data sharing must be engineered for data minimisation, and Delegated Regulation 2025/2050 conditions researcher access on GDPR compliance. See [gdpr.md](gdpr.md).
+- **AI Act** — recommender and generative-AI features on VLOPs/VLOSEs are assessed under Art. 34 and, since the AI Omnibus entered into force on 27 July 2026, AI systems embedded in designated services fall under AI Office supervision; align the DSA risk assessment with AI Act risk management to avoid duplicate evidence sets. See [eu-ai-act.md](eu-ai-act.md).
+- **NIS2 / DORA** — the DSA has no cybersecurity-incident reporting duty; a platform that is also a NIS2 essential/important entity (e.g., cloud, data-centre, online marketplace, search engine and social-network providers are NIS2 Annex sectors) reports security incidents under NIS2, while DSA Art. 18 covers criminal threats to life or safety. See [nis2.md](nis2.md) and, for financial-sector platforms, [dora.md](dora.md).
+- **Digital Markets Act** — gatekeeper obligations run in parallel; the same services are frequently designated under both, with separate Commission proceedings.
+- **Assurance frameworks** — the Art. 37 audit borrows the vocabulary of reasonable assurance, materiality, inherent/control/detection risk and control testing; an ISO 27001 ISMS or SOC 2 control environment supplies reusable control descriptions for the Art. 5 auditor pack, but neither substitutes for the DSA audit. See [../frameworks/iso-27001-2022.md](../frameworks/iso-27001-2022.md) and [../frameworks/soc2-tsc.md](../frameworks/soc2-tsc.md).
+- **Breach clocks** — for how Art. 18's "promptly" compares with GDPR's 72 hours and NIS2's 24/72-hour stages, see [../crosswalks/breach-notification-timelines.md](../crosswalks/breach-notification-timelines.md).
+
+## Primary sources
+
+- Regulation (EU) 2022/2065 (DSA), official text via the Publications Office (CELEX 32022R2065) — legal text.
+- Commission Delegated Regulation (EU) 2024/436 on the performance of audits (CELEX 32024R0436) — legal text.
+- Commission Delegated Regulation (EU) 2025/2050 on data sharing with vetted researchers (CELEX 32025R2050) — legal text.
+- Commission Implementing Regulation (EU) 2024/2835 on transparency-report templates (CELEX 32024R2835) — legal text.
+- Commission Delegated Regulation (EU) 2023/1127 on supervisory fees (CELEX 32023R1127) — legal text.
+- European Commission, "The Digital Services Act" policy page, https://digital-strategy.ec.europa.eu/en/policies/digital-services-act — regulator guidance.
+- European Commission, "DSA: Very large online platforms and search engines", https://digital-strategy.ec.europa.eu/en/policies/dsa-vlops — regulator guidance.
+- European Commission, "Supervision of the designated very large online platforms and search engines under DSA" (list updated 31 August 2026), https://digital-strategy.ec.europa.eu/en/policies/list-designated-vlops-and-vloses — regulator guidance.
+- European Commission, "The enforcement framework under the Digital Services Act", https://digital-strategy.ec.europa.eu/en/policies/dsa-enforcement — regulator guidance.
+- European Commission, "Guidelines under the Digital Services Act", https://digital-strategy.ec.europa.eu/en/policies/dsa-guidelines — regulator guidance.
+- European Commission news: fine of X (5 December 2025), fine of Temu (28 May 2026), fine of AliExpress (20 July 2026), delegated act on data access (2 July 2025), AI Omnibus entry into force (27 July 2026), Art. 91 report page (17 November 2025) — all on digital-strategy.ec.europa.eu — regulator guidance.
+- Secondary (law-firm and academic summaries) for the General Court judgments of 3 and 10 September 2025 and the Digital Omnibus proposals; the judgments themselves were not fetched.
+
+---
+**Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.
