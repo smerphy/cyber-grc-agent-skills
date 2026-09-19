@@ -1,0 +1,128 @@
+# NERC Critical Infrastructure Protection Reliability Standards (NERC CIP)
+
+## At a glance
+
+| Attribute | Detail |
+|---|---|
+| Instrument | NERC Reliability Standards CIP-002 through CIP-015, mandatory in the US under Federal Power Act §215 (16 U.S.C. §824o) once approved by FERC; each standard is a separate document with its own version, requirements (R#), measures (M#), violation risk factors and violation severity levels |
+| Regulator / enforcer | FERC (approves standards, oversees penalties); NERC as the certified Electric Reliability Organization (ERO); six Regional Entities act as Compliance Enforcement Authority (CEA) under delegation (§215(e)(4)) — collectively the "ERO Enterprise" |
+| Status (September 2026) | Currently enforceable set: CIP-002-5.1a, -003-9, -004-7, -005-7, -006-6, -007-6, -008-6, -009-6, -010-4, -011-3, -012-2, -013-2, -014-3. Successor versions already approved with future effective dates: virtualization package (July 1, 2028), CIP-015-1 INSM (October 1, 2028), CIP-014-4 (October 1, 2028), CIP-003-11 (July 1, 2029), CIP-015-2 (October 1, 2029) |
+| Who is covered | Users, owners and operators of the Bulk Electric System registered in NERC functional roles (BA, DP with qualifying assets, GO, GOP, RC, TO, TOP); FERC estimated ~1,673 unique US entities subject to CIP (Order No. 919) |
+| Structure | CIP-002 categorizes BES Cyber Systems as high / medium / low impact; CIP-003 to CIP-011 and CIP-013/-015 apply graduated controls by impact rating; CIP-012 covers inter-Control-Center links; CIP-014 is physical security of critical transmission |
+| Incident clocks | CIP-008-6 R4: notify E-ISAC and NCCIC (or successor) within **1 hour** of determining a Reportable Cyber Security Incident; by **end of next calendar day** for an attempt to compromise; updates within 7 calendar days |
+| Penalties | FPA §316A: up to $1,000,000 per violation per day, inflation-adjusted to **$1,584,648 per violation per day** (18 CFR §385.1602(d), eCFR as of September 2026); penalties can also include non-monetary sanctions |
+| Assessment model | Not a certification. ERO Enterprise Compliance Monitoring and Enforcement Program (CMEP): compliance audits, self-certifications, spot checks, compliance investigations, self-reports, complaints; evidence retained for three calendar years |
+| Neighbours | Sector-specific and mandatory; sits alongside NIST CSF/SP 800-53 (voluntary), SEC cyber disclosure (public utilities), state PUC rules, Canadian provincial adoption of NERC standards, and NRC 10 CFR 73.54 for nuclear (exempt from CIP) |
+
+## What it is
+
+NERC CIP is the only mandatory, penalty-backed cybersecurity regime for the North American bulk power grid. The Energy Policy Act of 2005 added §215 to the Federal Power Act, giving FERC jurisdiction over the ERO and "all users, owners and operators of the bulk-power system" and requiring them to comply with FERC-approved reliability standards (16 U.S.C. §824o(b)(1)). The definition of "reliability standard" expressly includes "cybersecurity protection", and "reliable operation" includes withstanding "a cybersecurity incident" (§824o(a)(3)–(4)). Standards are drafted by NERC through stakeholder drafting teams, adopted by the NERC Board, filed with FERC, and become mandatory on FERC approval; FERC cannot rewrite a standard but can remand it or direct NERC to develop a new or modified one (§824o(d)(4)–(5)).
+
+The CIP family has evolved through a series of FERC orders: Order No. 706 (2008) approved version 1; Order No. 791 (2013) approved version 5, which introduced the high/medium/low impact model still in use; Order No. 822 (2016) approved the revised set; Order No. 829 (2016) directed supply chain standards, approved as CIP-013-1 in Order No. 850 (2018); Order No. 848 (2018) directed broader incident reporting (CIP-008-6); Order No. 887 (2023) directed internal network security monitoring (CIP-015-1, approved by Order No. 907 in 2025); and Orders No. 918 and 919 (March 2026) approved the low-impact and virtualization rewrites now in their implementation period. The result is a moving target: at any time several standards have an enforceable version and an approved successor with a future effective date.
+
+## Who it covers / Scope
+
+- **Functional entities** (CIP-002-5.1a §4.1): Balancing Authority, Generator Owner, Generator Operator, Reliability Coordinator, Transmission Owner, Transmission Operator, Interchange Coordinator/Authority, and Distribution Providers only if they own qualifying UFLS/UVLS systems (≥300 MW automatic shedding), Remedial Action Schemes, transmission Protection Systems, or Cranking Paths for Blackstart Resources.
+- **Facilities**: all BES Facilities of the entities above. The statute excludes "facilities used in the local distribution of electric energy" (§824o(a)(1)); the standards additionally exempt Cyber Systems at facilities regulated by the Canadian Nuclear Safety Commission, systems regulated by the NRC under a 10 CFR §73.54 cyber security plan, and communication links between discrete Electronic Security Perimeters (CIP-015-1 §4.2.3).
+- **Impact rating** (CIP-002-5.1a Attachment 1) drives everything downstream:
+
+| Rating | Criteria (summarized) |
+|---|---|
+| High | BES Cyber Systems at Control Centers of a Reliability Coordinator; of a Balancing Authority for ≥3,000 MW aggregate generation in one Interconnection; of a Transmission Operator or Generator Operator controlling medium-impact assets (criteria 1.1–1.4) |
+| Medium | Generation ≥1,500 MW aggregate at one plant; reactive resources ≥1,000 MVAR; Transmission ≥500 kV; 200–499 kV stations with "aggregate weighted value" >3,000; IROL-critical facilities; nuclear plant interface facilities; RAS/SPS whose loss causes IROL violations; UFLS/UVLS ≥300 MW; other Control Centers (GOP ≥1,500 MW, all TOP, BA ≥1,500 MW) (criteria 2.1–2.13) |
+| Low | All remaining BES Cyber Systems at Control Centers, transmission stations, generation resources, restoration facilities (Blackstart/Cranking Paths), SPS and DP Protection Systems (criteria 3.1–3.6) |
+
+- A "BES Cyber System" is one whose loss, compromise or misuse could adversely impact reliable operation **within 15 minutes** — the 15-minute test is what keeps corporate IT and most business systems out of scope. Associated systems carry obligations too: EACMS (electronic access control or monitoring), PACS (physical access control) and PCAs (protected cyber assets sharing an ESP).
+- **Canada**: NERC standards become enforceable through provincial regulators (Alberta, British Columbia, Manitoba, New Brunswick, Nova Scotia, Ontario, Québec each maintain their own adopted set on NERC's site); versions and effective dates differ from the US list below — check the provincial register.
+
+## Core obligations
+
+Currently enforceable versions, key requirements and cadences (extracted from the standards' text):
+
+| Standard | Subject | Key requirements and clocks |
+|---|---|---|
+| CIP-002-5.1a | BES Cyber System categorization | Identify and categorize high/medium/low BES Cyber Systems; review and CIP Senior Manager approval at least every 15 calendar months |
+| CIP-003-9 | Security management controls | R1 policies approved by CIP Senior Manager every 15 calendar months; R3 named CIP Senior Manager; R4 documented delegations; R2 low-impact cyber security plan(s) per Attachment 1: awareness (15 months), physical access, electronic access controls, incident response (test every 36 calendar months), Transient Cyber Asset/removable media malware controls (Section 5), and — new in -9 — Section 6 vendor electronic remote access (methods to determine, disable, and detect malicious inbound/outbound communications) |
+| CIP-004-7 | Personnel and training | Awareness program; role-based training before access and every 15 calendar months; personnel risk assessments; access authorization and quarterly/15-month verifications; revocation clocks (removal actions within 24 hours of termination, related tasks within 30 calendar days, shared-account password changes within 10 calendar days); R6 BCSI access management (effective January 1, 2024) |
+| CIP-005-7 | Electronic Security Perimeter | Routable connectivity only through identified Electronic Access Points; malicious-communications detection; all Interactive Remote Access via an Intermediate System with multi-factor authentication; methods to determine and disable active vendor remote access sessions (R2.4–2.5); R3 vendor remote access management for EACMS and PACS |
+| CIP-006-6 | Physical security of BES Cyber Systems | Physical Security Perimeters, two or more physical access controls for high impact, monitoring/alerting, logging, visitor control, PACS maintenance and testing |
+| CIP-007-6 | System security management | Ports and services; security patch management — evaluate new patches at least every 35 calendar days and apply or create a mitigation plan within 35 calendar days of evaluation; malicious code prevention; security event monitoring and log review; system access controls; password parameters reviewed every 15 calendar months |
+| CIP-008-6 | Incident reporting and response | R1 plan with criteria to evaluate and define "attempts to compromise" (Part 1.2.1); R2 test plan every 15 calendar months; R3 update within 90 calendar days of test or actual incident; R4 notify E-ISAC and NCCIC (or successor) — initial notification within one hour of determining a Reportable Cyber Security Incident, by end of next calendar day for an attempt to compromise, updates within 7 calendar days; content: functional impact, attack vector, level of intrusion achieved or attempted. Applies to high and medium impact BCS and their EACMS |
+| CIP-009-6 | Recovery plans | Backup and restore processes; test recovery plans every 15 calendar months; full operational exercise or representative restore test every 36 calendar months; update within 90 calendar days |
+| CIP-010-4 | Configuration change management and vulnerability assessment | Baseline configurations; authorize, test and verify changes; monitor for unauthorized baseline changes; paper or active vulnerability assessment every 15 calendar months and active assessment every 36 calendar months (high impact); software integrity/authenticity verification (supply chain); Transient Cyber Asset controls (Attachment 1) |
+| CIP-011-3 | Information protection | Identify BES Cyber System Information (BCSI), protect it in storage, transit and use (including with vendors/third-party storage); R2 asset reuse and disposal. Revised with CIP-004-7 effective January 1, 2024 to accommodate third-party (cloud) BCSI storage with access controls |
+| CIP-012-2 | Communications between Control Centers | Protect confidentiality, integrity and availability of Real-time Assessment and Real-time monitoring data in transit between Control Centers; effective July 1, 2026 |
+| CIP-013-2 | Supply chain risk management | Documented plan(s) for high and medium impact BCS and their EACMS/PACS: procurement risk assessment (R1.1); contract-stage processes for vendor incident notification and coordination, revocation of vendor access, vulnerability disclosure, software integrity/authenticity verification, and vendor-initiated remote access (R1.2.1–1.2.6); implement (R2); CIP Senior Manager review every 15 calendar months (R3) |
+| CIP-014-3 | Physical security (transmission) | Transmission Owners' risk assessment of critical stations/substations and their primary control centers every 30 (or 60) calendar months, unaffiliated third-party verification, threat/vulnerability evaluation and physical security plan |
+
+Governance features that cut across the standards: a named **CIP Senior Manager** with overall authority; the **15-calendar-month** review cycle for policies, categorization, training and plans; **CIP Exceptional Circumstances** as the only built-in excuse for some parts; and the **Technical Feasibility Exception (TFE)** process in the NERC Rules of Procedure (Appendix 4D) for legacy equipment that cannot meet a requirement, which the virtualization revisions partly replace with a "per system capability" exception (see Timeline).
+
+## Enforcement and penalties
+
+- **Authority**: the ERO may impose a penalty after notice and opportunity for hearing, files the record with FERC, and the penalty takes effect no earlier than the 31st day after filing; FERC may review on its own motion or on application within 30 days (§824o(e)(1)–(2)). FERC may also act directly (§824o(e)(3)). Penalties must "bear a reasonable relation to the seriousness of the violation" and account for timely remediation (§824o(e)(6)).
+- **Ceiling**: FPA §316A (16 U.S.C. §825o-1(b)) — not more than $1,000,000 for each day the violation continues, adjusted for inflation under 18 CFR §385.1602(d) to **$1,584,648 per violation, per day** (eCFR, September 2026). Multi-standard, multi-year findings compound; large settlements in the sector have run into the eight figures — quote a current NERC Notice of Penalty rather than a remembered figure.
+- **CMEP mechanics** (each standard's Section C): the Regional Entity is the CEA; monitoring methods are Compliance Audit, Self-Certification, Spot Checking, Compliance Investigation, Self-Reporting and Complaint; entities keep evidence for **three calendar years** (longer if non-compliant, until mitigation is complete and approved); each requirement carries a Violation Risk Factor (Lower/Medium/High) and Violation Severity Levels used in penalty determination. Lower-risk issues are commonly resolved through streamlined dispositions (compliance exceptions, find-fix-track) rather than penalties — see the ERO Enterprise CMEP practice guides for current thresholds (not fetched for this pack).
+- **Self-reporting** and mitigation-plan quality are the main levers on penalty outcomes: the statute itself directs consideration of "efforts of such person to remedy the violation in a timely manner".
+
+## Timeline and status
+
+| Date | Event |
+|---|---|
+| 8 Aug 2005 | Energy Policy Act adds FPA §215; FERC certifies NERC as ERO (2006) |
+| 18 Jan 2008 | Order No. 706 approves CIP-002-1 to CIP-009-1 (73 FR 7368) |
+| 22 Nov 2013 | Order No. 791 approves CIP version 5 (78 FR 72756) — high/medium/low impact model |
+| 21 Jan 2016 | Order No. 822 approves revised CIP standards incl. CIP-006-6, -007-6, -009-6 (effective July 1, 2016) |
+| 21 Jul 2016 | Order No. 829 directs supply chain standards (81 FR 49878) |
+| 19 Jul 2018 | Order No. 848 directs expanded incident reporting (83 FR 36727) → CIP-008-6, effective Jan 1, 2021 |
+| 18 Oct 2018 | Order No. 850 approves CIP-013-1, CIP-005-6, CIP-010-3 (83 FR 53992); successors CIP-013-2/-005-7/-010-4 effective Oct 1, 2022 |
+| 19 Jan 2023 | Order No. 887 (88 FR 8354) directs INSM standard within 15 months and a low-impact study within 12 months |
+| 16 Mar 2023 | FERC approves CIP-003-9 (Docket RD23-3-000) — low-impact vendor remote access; **effective April 1, 2026** |
+| 1 Jan 2024 | CIP-004-7 and CIP-011-3 effective (BCSI/cloud package, Docket RD21-6-000) |
+| 23 May 2024 | FERC approves CIP-012-2 (RD24-3-000); effective July 1, 2026 |
+| 26 Jun 2025 | Order No. 907 (90 FR 28889, effective Sept 2, 2025) approves CIP-015-1 INSM; directs extension to EACMS/PACS outside the ESP within 12 months. CIP-015-1 effective **October 1, 2028** |
+| 18 Sep 2025 | Order No. 912 (90 FR 45661, effective Nov 24, 2025) directs new supply chain standards within 18 months: maximum interval between procurement risk assessment and deployment, periodic reassessment, and extension of SCRM to PCAs; declines to mandate vendor-data validation; terminates the RM20-19 national-security equipment inquiry |
+| 19 Mar 2026 | Order No. 919 (91 FR 13957, effective May 26, 2026) approves 11 virtualization-revised standards (CIP-002-7, -003-10, -004-8, -005-8, -006-7.1, -007-7.1, -008-7.1, -009-7.1, -010-5, -011-4.1, -013-3), 4 new definitions (Cyber System, Management Interface, Shared Cyber Infrastructure, Virtual Cyber Asset) and 18 revised definitions; effective **July 1, 2028** (later of April 1, 2026 or first calendar quarter 24 months after the order), with early adoption permitted; directs NERC to develop criteria and ERO reporting for the "per system capability" exception |
+| 19 Mar 2026 | Order No. 918 (91 FR 13952, effective May 26, 2026) approves CIP-003-11 — low-impact electronic access: permit only necessary access, detect malicious communications, authenticate users, protect credentials in transit, determine/disable vendor access; supersedes CIP-003-10; effective **July 1, 2029**. CIP-002-8 (revised Control Center definition) approved concurrently, effective July 1, 2028 |
+| 10 Aug 2026 | FERC approves CIP-015-2 (RD26-6-000), effective October 1, 2029, superseding CIP-015-1 — content not reviewed for this pack; expected to implement the Order No. 907 EACMS/PACS directive (verify) |
+| 10 Sep 2026 | FERC approves CIP-014-4 (RD26-9-000), effective October 1, 2028 (content not reviewed; verify) |
+| Pending | NERC filing in response to Order No. 912 (due ~March 2027); NERC cloud/virtualization follow-on work (Project 2016-02 completed with Order 919; the separate cloud-services project is in development — verify current status) |
+
+Practical consequence: between now and mid-2029 an entity must run the current versions, prepare for the July 2028 virtualization cut-over (new glossary terms change what an "asset" is), stand up INSM by October 2028, and re-baseline low-impact sites for CIP-003-11 by July 2029.
+
+## Key obligations for security/GRC teams
+
+1. **Confirm registration and impact ratings** — the functional-entity registration and the CIP-002 categorization (with 15-minute impact analysis and the Attachment 1 thresholds) define the entire compliance scope; re-run on asset changes and at least every 15 months. See [../../skills/regulatory-applicability/SKILL.md](../../skills/regulatory-applicability/SKILL.md).
+2. **Maintain a version-aware standards register** — track for each CIP standard the enforceable version, approved successor, effective date and early-adoption decision (this pack's Timeline table is a starting point). See [../../skills/regulatory-horizon-scanning/SKILL.md](../../skills/regulatory-horizon-scanning/SKILL.md).
+3. **Wire the CIP-008-6 clocks into incident response** — pre-defined "attempt to compromise" criteria, a decision record of the determination time, and E-ISAC/CISA notification templates carrying functional impact, attack vector and intrusion level; log every notification. See [../../skills/incident-regulatory-reporting/SKILL.md](../../skills/incident-regulatory-reporting/SKILL.md), [../../templates/incident-regulatory-notification-log.md](../../templates/incident-regulatory-notification-log.md) and [../crosswalks/breach-notification-timelines.md](../crosswalks/breach-notification-timelines.md).
+4. **Run the calendar-driven controls as a program** — 35-day patch evaluation, 15-month reviews/tests/assessments, 36-month active vulnerability assessments and recovery exercises, 24-hour/30-day revocation; missed cadences are the most common audit findings. See [../../skills/control-testing/SKILL.md](../../skills/control-testing/SKILL.md).
+5. **Build CIP-013 into procurement and contracts** — R1.2 vendor obligations (incident notice, access revocation, vulnerability disclosure, software integrity, remote access) plus the coming Order No. 912 requirements on reassessment intervals and PCAs. See [../../skills/third-party-risk-assessment/SKILL.md](../../skills/third-party-risk-assessment/SKILL.md) and [../../templates/vendor-security-questionnaire.md](../../templates/vendor-security-questionnaire.md).
+6. **Prepare INSM (CIP-015-1) by October 2028** — risk-based selection of network data feeds inside ESPs for high and medium-with-ERC systems, anomaly detection and evaluation methods, retention and integrity protection of monitoring data; plan for the EACMS/PACS extension in CIP-015-2.
+7. **Plan the 2028 virtualization transition** — map existing Cyber Assets to the new Cyber System / Virtual Cyber Asset / Shared Cyber Infrastructure / Management Interface definitions; decide on early adoption; replace TFE reliance with documented "per system capability" rationale once NERC's criteria exist. See [../../skills/exception-management/SKILL.md](../../skills/exception-management/SKILL.md).
+8. **Keep audit-grade evidence for three calendar years** — dated artifacts per requirement part, mapped to VRF/VSL; use the CMEP monitoring methods as the audit model. See [../../skills/audit-preparation/SKILL.md](../../skills/audit-preparation/SKILL.md) and [../../templates/audit-evidence-request-list.md](../../templates/audit-evidence-request-list.md).
+9. **Govern through the CIP Senior Manager** — documented delegations, 15-month policy approvals, board-level reporting of self-reports, mitigation plans and penalty exposure at $1.58M/day/violation. See [../../skills/grc-metrics-reporting/SKILL.md](../../skills/grc-metrics-reporting/SKILL.md) and [../../skills/policy-authoring/SKILL.md](../../skills/policy-authoring/SKILL.md).
+
+## Interplay
+
+- **NIST CSF 2.0 / SP 800-53**: FERC and NERC cite NIST publications throughout the orders (e.g., SP 800-215 on east-west traffic in Order No. 907), but CIP is prescriptive and auditable where NIST is descriptive; use CSF/800-53 as the enterprise frame and map CIP requirement parts as the evidence layer. See [../frameworks/nist-csf-2.md](../frameworks/nist-csf-2.md), [../frameworks/nist-800-53.md](../frameworks/nist-800-53.md) and [../../skills/control-mapping/SKILL.md](../../skills/control-mapping/SKILL.md).
+- **ISO/IEC 27001**: an ISMS can host the CIP program, but ISO certification is not recognized as CIP compliance; the 15-minute BES impact test differs from ISO's business-impact scoping. See [../frameworks/iso-27001-2022.md](../frameworks/iso-27001-2022.md).
+- **SEC cybersecurity disclosure**: a Reportable Cyber Security Incident at a listed utility may also be a "material" incident for Form 8-K purposes — one-hour E-ISAC notice and four-business-day SEC disclosure run on different triggers. See [sec-cyber-disclosure.md](sec-cyber-disclosure.md).
+- **Nuclear**: NRC-regulated systems under a 10 CFR §73.54 cyber security plan are exempt from CIP; the boundary between plant and switchyard must be documented.
+- **State regulators**: §215 preserves state authority over safety, adequacy and reliability where not inconsistent with a reliability standard (§824o(i)(3)); several PUCs impose additional cyber obligations on distribution utilities, which CIP does not reach.
+- **Cloud and third parties**: CIP-004-7/CIP-011-3 opened the door to BCSI in third-party storage; the virtualization package and the pending NERC cloud project address hosting BES Cyber Systems themselves — until those land, cloud-hosted BCS remain difficult to evidence under the ESP model. Compare the outsourcing regimes in [dora.md](dora.md) and [other-jurisdictions.md](other-jurisdictions.md).
+
+## Primary sources
+
+- 16 U.S.C. §824o (FPA §215, electric reliability) — statutory text via Cornell LII: https://www.law.cornell.edu/uscode/text/16/824o
+- 16 U.S.C. §825o-1 (FPA §316A, civil penalties) — https://www.law.cornell.edu/uscode/text/16/825o-1
+- 18 CFR §385.1602 (inflation-adjusted civil penalties) — eCFR: https://www.ecfr.gov/current/title-18/section-385.1602
+- NERC Reliability Standards — US effective-date status workbook (standard versions, approval and effective dates): https://www.nerc.com/globalassets/align-reports/us-effective-date-status---functional-applicability.xlsx and the CIP listing https://www.nerc.com/standards/reliability-standards/cip (JavaScript-rendered; the workbook was used for dates)
+- NERC standard texts (legal text): CIP-002-5.1a, CIP-003-9, CIP-003-11, CIP-004-7, CIP-005-7, CIP-006-6, CIP-007-6, CIP-008-6, CIP-009-6, CIP-010-4, CIP-011-3, CIP-012-2, CIP-013-2, CIP-014-3, CIP-015-1 at https://www.nerc.com/pa/Stand/Reliability%20Standards/<standard>.pdf (e.g. https://www.nerc.com/pa/Stand/Reliability%20Standards/CIP-008-6.pdf). CIP-002-8, CIP-014-4 and CIP-015-2 were not retrievable at that path.
+- FERC Order No. 907 (CIP-015-1), 90 FR 28889: https://www.federalregister.gov/documents/2025/07/02/2025-12309
+- FERC Order No. 912 (supply chain directives), 90 FR 45661: https://www.federalregister.gov/documents/2025/09/23/2025-18394
+- FERC Order No. 918 (CIP-003-11), 91 FR 13952: https://www.federalregister.gov/documents/2026/03/24/2026-05711
+- FERC Order No. 919 (virtualization standards), 91 FR 13957: https://www.federalregister.gov/documents/2026/03/24/2026-05716
+- Federal Register index entries (titles, dates, dockets) for Orders No. 706, 791, 822, 829, 848, 850, 887 and 893 — https://www.federalregister.gov/ (FERC agency search)
+- Not fetched: NERC Rules of Procedure / CMEP practice guides and Sanction Guidelines (nerc.com pages returned 404 at the URLs tried); FERC approved-standards page (403).
+
+---
+**Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

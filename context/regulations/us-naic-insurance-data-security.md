@@ -1,0 +1,143 @@
+# NAIC Insurance Data Security Model Law (Model #668) and state insurance cybersecurity laws
+
+## At a glance
+
+| Attribute | Detail |
+|---|---|
+| Instrument | NAIC Insurance Data Security Model Law (MO-668), 13 sections; a *model* — binding only as enacted by each state (e.g., S.C. Code §§ 38-99-10 to -100; Va. Code §§ 38.2-621 to -629) |
+| Publisher / regulator | National Association of Insurance Commissioners (NAIC) drafts; each state insurance department (Commissioner/Director) enforces its own enactment |
+| Status & key dates | Adopted by NAIC Executive Committee/Plenary 4th quarter 2017 (drafted 2016–17, working-group adoption 7 Aug 2017); technical edit 2025; South Carolina first enactment (Act 171 of 2018, effective 1 Jan 2019); newest enactments Alaska and Missouri (2026) |
+| State adoption | NAIC "Model Adoption" column, Summer 2026 state page: 27 states plus Puerto Rico (Tennessee "portions of model"); California, New York, Texas and others listed only as "related activity" |
+| Who is covered | "Licensees": any person licensed, authorized, registered (or required to be) under the state's insurance laws — insurers, producers/agencies and every other insurance licensee; excludes out-of-state purchasing groups and risk retention groups and out-of-state-domiciled assuming insurers (§3I) |
+| Structure | §4 information security program (risk assessment, safeguards, board oversight, third-party oversight, incident response plan, annual certification); §5 investigation; §6 notification; §7 commissioner powers; §8 confidentiality; §9 exceptions; §10 penalties; §13 phase-in |
+| Incident clock | Notify the Commissioner "as promptly as possible but in no event later than 72 hours" after determining a Cybersecurity Event occurred (§6A); consumer notice under the state's general breach statute (§6C). State variants differ (Virginia: 3 business days) |
+| Annual filing | Domestic insurers certify §4 compliance to the domiciliary Commissioner by 15 February; supporting records kept 5 years (§4I) |
+| Penalties / enforcement | §10 defers to the state's general insurance penalty statute; §7 examination and investigation powers; no private right of action created (§2B) |
+| Certifiable? | No third-party certification. Self-certification to the domiciliary regulator plus regulator examination; §9 deems HIPAA-compliant licensees to meet §4 on written certification |
+| Neighbours | Drafted to mirror NYDFS 23 NYCRR Part 500 — drafting note: a licensee compliant with Part 500 (as effective 1 March 2017) is intended to be compliant with the model; sits beside GLBA safeguards, HIPAA, state breach-notification laws; companion NAIC AI Model Bulletin (Dec 2023) and Colorado 3 CCR 702-10 for insurer AI governance |
+
+## What it is
+
+Model #668 is the US state-insurance-sector cybersecurity statute. The NAIC's Cybersecurity (EX) Working Group (formed 2014) began drafting in early 2016 after Congress introduced a federal Data Security Act (H.R. 2205) that regulators wanted to pre-empt with an insurance-specific standard; it had first considered amending four privacy models (#670, #672, #673, #680) and chose a single new law instead. After three contested drafts, the New York Superintendent urged the group at the 2017 Spring National Meeting to adopt New York's Part 500 as the model, and the fourth draft imported Part 500's core: the same nonpublic-information definition, a similar cybersecurity-event definition, risk-assessment-driven safeguards, third-party oversight, an incident response plan, an annual certification, and the small-licensee and affiliate exceptions. The NAIC added a HIPAA exception that Part 500 lacks and delegated consumer notice to each state's existing breach law rather than creating insurance-specific consumer-notice rules.
+
+A model law has no force of its own. What binds a licensee is the enacting state's statute (and any implementing regulation), and each enactment departs from the model in clocks, thresholds, exceptions and certification mechanics. Compliance programs therefore have to be built on the *domiciliary* state's version plus every other state where the licensee holds consumers' nonpublic information above the notification threshold. The project history records no NAIC accreditation standard tied to the model.
+
+## Who it covers / Scope
+
+| Test | Detail |
+|---|---|
+| Licensee (§3I) | Any Person licensed, authorized to operate, or registered — or required to be — under the state's insurance laws. Reaches producers and agencies, not only carriers (§6A refers to a producer's home state). Excluded: purchasing groups and risk retention groups chartered and licensed in another state; a licensee acting as an assuming insurer domiciled in another jurisdiction |
+| Nonpublic Information (§3K) | (1) business information whose tampering or disclosure would materially harm the licensee; (2) consumer identifiers combined with SSN, driver's licence/ID number, account or card number, security/access code or password, or biometric records; (3) health information (except age or gender) created by or derived from a health-care provider or consumer about health condition, care provided, or payment |
+| Consumer (§3C) | An individual resident of the state — applicants, policyholders, insureds, beneficiaries, claimants, certificate holders — whose NPI the licensee holds |
+| Cybersecurity Event (§3D) | Unauthorized access to, disruption or misuse of an information system or information stored on it. Excludes acquisition of *encrypted* NPI where the key is not also compromised, and events where the licensee determines the NPI was not used or released and has been returned or destroyed |
+| Third-Party Service Provider (§3P) | A non-licensee that contracts with a licensee to maintain, process, store or otherwise access NPI while providing services |
+| Exception: small licensee (§9A(1)) | Fewer than 10 employees *including independent contractors* — exempt from §4 (the program) only; §5 investigation and §6 notification still apply. Virginia's enactment has no headcount exception |
+| Exception: HIPAA (§9A(2)) | A HIPAA-covered licensee maintaining a HIPAA information security program is deemed to meet §4 if compliant and it files a written certification. Virginia extends the deeming to investigation and consumer notice and requires the licensee to protect non-HIPAA NPI to the same standard |
+| Exception: covered by another licensee (§9A(3)) | Employees, agents, representatives or designees who are themselves licensees need not run their own program where the other licensee's program covers them |
+| Exception: GLBA affiliate (Virginia only, § 38.2-629A(3)) | A licensee affiliated with a depository institution that complies with the federal Interagency Guidelines is deemed to meet the program section on validated documentation |
+| Loss of exception (§9B) | 180 days to comply after ceasing to qualify |
+
+## Core obligations
+
+### Information security program (§4)
+
+| Provision | Requirement |
+|---|---|
+| §4A Program | Comprehensive *written* program, based on the licensee's Risk Assessment, with administrative, technical and physical safeguards, scaled to size, complexity, activities (including third-party use) and data sensitivity |
+| §4B Objectives | Protect NPI confidentiality/security and information systems; protect against threats and unauthorized access; minimize consumer harm; define and periodically re-evaluate an NPI retention schedule and destruction mechanism |
+| §4C Risk Assessment | Designate the responsible employee, affiliate or vendor; identify reasonably foreseeable internal and external threats (including at third parties); assess likelihood and damage; assess sufficiency of controls across training, systems (network/software design, classification, governance, storage, transmission, disposal) and attack detection/prevention/response; implement safeguards and **assess effectiveness of key controls at least annually** |
+| §4D Risk Management | Design the program to mitigate identified risks and select from an enumerated menu (which measures are "appropriate" is the licensee's documented call): access controls limited to Authorized Individuals; asset/data/personnel/device/facility inventory by business importance; physical access restriction; encryption (or equivalent) of NPI in transit over external networks and on laptops/portable media; secure development for in-house apps and testing of externally developed apps; change control aligned to the program; effective controls "which may include" multi-factor authentication; regular testing and monitoring for attacks and intrusions; audit trails able to detect events and reconstruct material financial transactions; environmental-hazard protection; secure disposal in any format. Plus: cyber risk in enterprise risk management; threat-intelligence awareness and safe sharing; awareness training refreshed for assessed risks |
+| §4E Board oversight | If there is a board: board or committee requires executive management to run the program and to report **in writing at least annually** on overall program status and compliance, and on material matters — risk assessment, risk-management and control decisions, third-party arrangements, testing results, cybersecurity events or violations and management's response, and recommended changes. Delegation to others does not remove executive oversight |
+| §4F Third parties | Due diligence in selecting service providers; contractually require them to implement appropriate administrative, technical and physical measures for the systems and NPI they access or hold. Model gives a further year (two years from effective date) to implement this subsection (§13) |
+| §4G Adjustment | Monitor and adjust the program for technology change, data sensitivity, threats, and business change (M&A, JVs, outsourcing, system changes) |
+| §4H Incident response plan | Written plan to respond to and recover from events affecting confidentiality, integrity or availability of NPI, systems, or business operations, covering: internal response process; plan goals; roles, responsibilities and decision authority; internal/external communications and information sharing; remediation of identified weaknesses; documentation and reporting; post-event plan revision |
+| §4I Annual certification | Each *domestic insurer* files a written compliance statement with its domiciliary Commissioner by **15 February**; keeps all supporting records, schedules and data for **5 years**; documents identified areas needing material improvement and the remediation planned and under way, available for inspection |
+
+### Investigation and notification (§§5–6)
+
+| Duty | Detail |
+|---|---|
+| Investigate (§5) | Prompt investigation (directly or via a designated vendor) once an event "has or may have occurred": determine whether an event occurred, its nature and scope, the NPI involved, and take reasonable measures to restore system security. For third-party-hosted events, perform these steps or confirm and document that the provider did. Retain event records **at least 5 years** and produce on demand |
+| Notify Commissioner (§6A) | ≤ **72 hours** from *determination* that an event occurred, if either: (1) the state is the insurer's domicile or the producer's home state; or (2) the licensee reasonably believes NPI of **≥ 250 consumers** resident in the state is involved *and* the event either must be reported to any government, self-regulatory or supervisory body under state or federal law, or has a reasonable likelihood of materially harming any resident consumer or any material part of the licensee's normal operations |
+| Notice content (§6B) | As much as possible, electronically as directed, with a continuing duty to update: event date; how information was exposed (including third-party roles); how discovered; recovery of data; source identity; police/regulator notifications and dates; specific data types; compromise period; number of state consumers affected (best estimate, updated); internal-review results on control lapses; remediation; copy of privacy policy and consumer-notification plan; authorized contact |
+| Consumers (§6C) | Comply with the state's general breach-notification statute and send the Commissioner a copy of the consumer notice whenever §6A notice is required |
+| Third-party events (§6D) | Treated as the licensee's own event; the clock starts the day after the provider notifies the licensee or the licensee otherwise gains actual knowledge, whichever is sooner. Contracts may allocate who performs investigation and notice, but not remove the duty |
+| Reinsurers (§6E) | An assuming insurer with no direct consumer relationship notifies affected ceding insurers and its domiciliary Commissioner within 72 hours of its determination (or of receiving notice from its third party); ceding insurers with the consumer relationship handle consumer notice |
+| Producers of record (§6F) | Insurers notify producers of record for affected consumers as soon as practicable as directed by the Commissioner (excused where producer-of-record data is missing) |
+| Confidentiality (§8) | Certification, most notice content and examination material are confidential and privileged, exempt from open-records laws, subpoena and civil discovery; regulators may share with other regulators, the NAIC and law enforcement under written confidentiality |
+
+### How enactments diverge from the model (verified examples)
+
+| State (citation, year per NAIC) | Divergence from the model text |
+|---|---|
+| South Carolina (S.C. Code §§ 38-99-10 to -100; Act 171 of 2018, eff. 1 Jan 2019) | First enactment; near-verbatim. Program due 1 July 2019, third-party oversight 1 July 2020; 72-hour clock; 250-consumer threshold; 15 Feb certification; penalties via § 38-2-10 |
+| Virginia (Va. Code §§ 38.2-621 to -629, 2020 c. 264) | Commissioner notice "no later than **three business days**" from determination; second trigger is ≥ 250 resident consumers *or* notice required to another body (no material-harm limb); no fewer-than-10-employee exception; extra GLBA depository-affiliate exception; HIPAA deeming covers investigation and consumer notice; third-party duties from 1 July 2022; certification from 2023 by 15 Feb; law-enforcement delay permitted |
+| Tennessee (Tenn. Code §§ 56-2-1001 to -1011, 2021) | Listed by the NAIC as adopting "portions of model" |
+| Ohio (Ohio Rev. Code §§ 3965.01 to .11, 2018/2019), Michigan (MCL §§ 500.550 to .565, 2018/2021) | Early adopters listed in the Model Adoption column; verify local clocks and exemption thresholds against the current state text (not retrievable when this pack was written) |
+
+Other states in the NAIC Model Adoption column (Summer 2026 page, with the years the NAIC records): Alabama (2019), Alaska (2026), Connecticut (2020/2021), Delaware (2019), Hawaii (2021), Illinois (2024), Indiana (2020), Iowa (2021/2022), Kentucky (2022/2023), Louisiana (2020), Maine (2021/2025), Maryland (2022), Minnesota (2021), Mississippi (2019), Missouri (2026), New Hampshire (2019/2020), North Dakota (2021/2025), Oklahoma (2024/2025), Pennsylvania (2023), Rhode Island (2024/2025), Vermont (2023), Wisconsin (2021), and Puerto Rico (Rule 108, 2025). New York is listed as "related activity" only, via 23 NYCRR Part 500.
+
+## Enforcement and penalties
+
+- **No fixed penalty schedule.** §10 refers violations to the enacting state's general insurance penalty statute (South Carolina: § 38-2-10). Sanctions therefore vary by state and follow ordinary insurance-code enforcement: administrative fines, corrective orders, and licence action.
+- **Examination and investigation (§7).** The Commissioner may examine and investigate any licensee under the state's examination statutes and "take action that is necessary or appropriate" to enforce the act; §4I documentation of remediation is explicitly inspectable.
+- **No private right of action (§2B).** The act neither creates nor curtails private claims; plaintiffs in state negligence suits can still cite the statute as a standard of care.
+- **Certification exposure.** The 15 February statement is signed by the insurer; a false or unsupported certification is the most direct route to an enforcement finding, which is why §4I requires five years of supporting evidence.
+
+## Timeline and status
+
+| Date | Event |
+|---|---|
+| 2014 | NAIC Executive Committee creates the Cybersecurity (EX) Task Force / Working Group |
+| Apr and Dec 2015 | NAIC adopts *Principles for Effective Cybersecurity* and *Roadmap for Cybersecurity Consumer Protections* |
+| 2 Mar 2016 | First draft of Model #668 exposed; single-model approach chosen 4 Apr 2016 |
+| Apr 2017 | New York proposes adopting Part 500 as the model; fourth draft rebuilt on Part 500 |
+| 7–8 Aug 2017 | Working Group and Innovation and Technology (EX) Task Force adopt the model (Summer National Meeting) |
+| 4Q 2017 | Executive Committee and Plenary adopt by conference call |
+| 2018–2019 | South Carolina enacts (Act 171, eff. 1 Jan 2019); Ohio, Michigan, Mississippi, Alabama, Delaware, New Hampshire follow |
+| 2020–2023 | Virginia, Louisiana, Indiana, Connecticut, Hawaii, Iowa, Maine, Minnesota, North Dakota, Tennessee, Wisconsin, Kentucky, Maryland, Vermont, Pennsylvania |
+| 4 Dec 2023 | NAIC adopts the *Model Bulletin: Use of Artificial Intelligence Systems by Insurers* |
+| 2024–2025 | Illinois, Oklahoma, Rhode Island, Puerto Rico enact; NAIC records a 2025 technical edit to the model; AI Model Law request for information (comments received 3 Jul 2025) |
+| 2026 | Alaska and Missouri enact; NAIC Summer 2026 state page lists 27 states plus Puerto Rico in the Model Adoption column |
+| 31 Aug 2026 | NAIC AI bulletin implementation map: 26 jurisdictions (25 states plus DC) have adopted the bulletin, from Alaska (1 Feb 2024) to Mississippi (22 Jul 2026); Colorado, California, New York and Texas listed with their own AI guidance or rules |
+| Pending (Sept 2026) | NAIC AI Systems Evaluation Tool v4.0 (regulator exam guide; 12-state pilot) with AI Risk Evaluation Supplement v5.0 exposed to 29 Sep 2026; Third-Party Data and Models (H) Working Group's *Regulatory Framework for Third-Party Data and Model Vendors* (P&C pricing and underwriting) exposed to 5 Aug 2026; reformed Cybersecurity (H) Working Group holding sessions on cyber claims data and frontier-AI security risks |
+
+**AI governance layer.** The 2023 Model Bulletin is regulator guidance, not new law: it rests on existing unfair trade practices, unfair claims settlement, corporate governance annual disclosure (CGAD), rating and market-conduct statutes and states it does not prescribe specific practices. It expects every authorized insurer to run a written **AIS Program** covering governance (senior-management accountability to the board or a committee; committees, lines of defence, escalation, training), risk management and internal controls (model inventories, data lineage/quality/bias analysis, validation and drift monitoring, protection of NPI and of the models themselves, retention), and third-party AI/data (due diligence, audit-rights and regulator-cooperation clauses, verification), proportionate to the degree of potential consumer harm; it may adopt the NIST AI RMF 1.0 and may sit inside ERM. Section 4 lists what examiners may request. **Colorado** went further by rule: SB21-169 (signed 6 Jul 2021) and Regulation 10-1-1 (3 CCR 702-10, effective 13 Nov 2023, amended effective 15 Oct 2025) impose governance and risk-management framework requirements on life, private passenger auto and health benefit plan insurers' use of external consumer data and information sources, algorithms and predictive models, and require insurers that do *not* use such data or models to file an officer-signed attestation to that effect via SERFF by **1 December** each year; quantitative-testing rules for life underwriting remained at draft stage as of the Division's last posting (verify).
+
+## Key obligations for security/GRC teams
+
+1. **Map licences to enactments.** List every state licence held by every entity (carriers, agencies, TPAs, adjusters), identify the domiciliary/home state for each, and record that state's clock, threshold, exceptions and certification date — the model is only a template. See [../../skills/regulatory-applicability/SKILL.md](../../skills/regulatory-applicability/SKILL.md).
+2. **Anchor the program on a documented risk assessment** (§4C) with an annual key-control effectiveness test; auditors and examiners read the §4D menu against it. See [../../skills/risk-assessment/SKILL.md](../../skills/risk-assessment/SKILL.md) and [../../skills/control-testing/SKILL.md](../../skills/control-testing/SKILL.md).
+3. **Decide and document the §4D(2) control selections** — encryption in transit and on portable media, MFA, audit trails, secure development — and treat any deferred control as a formal exception. See [../../skills/exception-management/SKILL.md](../../skills/exception-management/SKILL.md).
+4. **Build the annual written board report** (§4E) and the 15 February certification package (§4I) as one evidence set with five-year retention; log remediation plans for known material gaps rather than certifying around them. See [../../skills/grc-metrics-reporting/SKILL.md](../../skills/grc-metrics-reporting/SKILL.md) and [../../skills/audit-preparation/SKILL.md](../../skills/audit-preparation/SKILL.md).
+5. **Third-party programme (§4F, §5C, §6D):** due diligence at selection, contractual security measures, investigation confirmation rights, and a notice clause fast enough to meet a 72-hour (or 3-business-day) regulator clock that starts the day after the provider tells you. See [../../skills/third-party-risk-assessment/SKILL.md](../../skills/third-party-risk-assessment/SKILL.md).
+6. **Wire the §6 determination test into incident triage:** record the *determination* timestamp, run the domicile and 250-consumer tests per state, and pre-build the 13-item regulator notice plus the consumer-notice copy. See [../../skills/incident-regulatory-reporting/SKILL.md](../../skills/incident-regulatory-reporting/SKILL.md) and [../../templates/incident-regulatory-notification-log.md](../../templates/incident-regulatory-notification-log.md).
+7. **Keep the §4H incident response plan and §5D event records** current and retained five years; post-event plan revision is a statutory step, so evidence it.
+8. **Stand up an AIS Program** where the state has issued the AI bulletin or Colorado's rule applies: model inventory, bias/drift testing, third-party AI clauses, board-accountable ownership. See [../../skills/ai-governance/SKILL.md](../../skills/ai-governance/SKILL.md).
+9. **Watch the NAIC exposure calendar** (AI evaluation tool, third-party data/model framework, any post-RFI AI model law) and new enactments each session. See [../../skills/regulatory-horizon-scanning/SKILL.md](../../skills/regulatory-horizon-scanning/SKILL.md).
+
+## Interplay
+
+- **NYDFS Part 500:** the model was rebuilt on the 2017 Part 500 and its drafting note treats Part 500 compliance as model compliance. Part 500 has since been amended (2023) and is now stricter in places (24-hour extortion-payment notice, 15 April certification-or-acknowledgment, Class A duties); a Part 500 program is therefore a safe superset for the model, but the reverse is not true. See [us-nydfs-part-500.md](us-nydfs-part-500.md).
+- **GLBA / FTC Safeguards:** the NAIC considered amending its Standards for Safeguarding Consumer Information Model Regulation (#673) before writing #668, and Virginia's exception for affiliates of depository institutions complying with the GLBA Interagency Guidelines shows how enactments reconcile the two regimes; check which safeguards regime each group entity answers to. See [glba-ftc-safeguards.md](glba-ftc-safeguards.md).
+- **HIPAA:** health insurers and other HIPAA-covered licensees can be deemed compliant with §4 on certification, but §5–§6 investigation and regulator notice still apply under the model text (Virginia is the exception that deems those too). See [hipaa.md](hipaa.md).
+- **State breach-notification statutes:** consumer notice is delegated to the general state law, so a single event runs on the insurance regulator's 72-hour clock *and* the consumer/AG clocks of every affected state. See [us-state-breach-notification-laws.md](us-state-breach-notification-laws.md) and [../crosswalks/breach-notification-timelines.md](../crosswalks/breach-notification-timelines.md).
+- **AI regimes:** the NAIC bulletin, Colorado 3 CCR 702-10 and state privacy-law profiling/ADMT rules overlap; life and health insurance risk assessment and pricing is an Annex III high-risk use case under the EU AI Act for groups operating there. See [eu-ai-act.md](eu-ai-act.md) and [us-state-privacy.md](us-state-privacy.md).
+- **Frameworks:** §4D(2)(b)'s inventory language and the §4 lifecycle track the NIST CSF Identify/Protect/Detect/Respond structure; a CSF 2.0 or ISO 27001 control set mapped to §4 satisfies examiners' evidence requests. See [../frameworks/nist-csf-2.md](../frameworks/nist-csf-2.md), [../frameworks/iso-27001-2022.md](../frameworks/iso-27001-2022.md) and [../../skills/control-mapping/SKILL.md](../../skills/control-mapping/SKILL.md).
+- **SEC and DORA:** SEC-registered insurers add Form 8-K materiality analysis on top of §6 ([sec-cyber-disclosure.md](sec-cyber-disclosure.md)); EU insurance undertakings in the same group are DORA financial entities ([dora.md](dora.md)).
+
+## Primary sources
+
+- NAIC, Insurance Data Security Model Law (MO-668), model text — https://content.naic.org/sites/default/files/model-law-668.pdf (legal/model text)
+- NAIC, Model #668 state action page, Summer 2026 edition (ST-668) — https://content.naic.org/sites/default/files/model-law-state-page-668.pdf (publisher adoption table)
+- NAIC, Model #668 project history (PH-668, 2017) — https://content.naic.org/sites/default/files/model-laws-project-history-668.pdf (publisher document)
+- NAIC, Model Bulletin: Use of Artificial Intelligence Systems by Insurers (adopted 4 Dec 2023) — https://content.naic.org/sites/default/files/inline-files/2023-12-4%20Model%20Bulletin_Adopted_0.pdf (regulator guidance)
+- NAIC, Implementation of NAIC Model Bulletin adoption map (status as of 31 Aug 2026) — https://content.naic.org/sites/default/files/legal-adoption-map-ai-model-bulletin.pdf (publisher page)
+- NAIC, Big Data and Artificial Intelligence (H) Working Group; Third-Party Data and Models (H) Working Group; Cybersecurity and Artificial Intelligence topic pages — https://content.naic.org/committees/h/big-data-artificial-intelligence-wg , https://content.naic.org/committees/h/third-party-data-models-wg , https://content.naic.org/cipr-topics/cybersecurity , https://content.naic.org/cipr-topics/artificial-intelligence (regulator pages)
+- South Carolina Code of Laws, Title 38, Chapter 99 (Insurance Data Security Act) — https://www.scstatehouse.gov/code/t38c099.php (legal text)
+- Code of Virginia, Title 38.2, Chapter 6, Article 2 (Insurance Data Security Act) — https://law.lis.virginia.gov/vacodefull/title38.2/chapter6/article2/ (legal text)
+- Colorado Division of Insurance, SB21-169 implementation page (Regulation 10-1-1, attestation guidance) — https://doi.colorado.gov/for-consumers/sb21-169-protecting-consumers-from-unfair-discrimination-in-insurance-practices (regulator guidance)
+- Not reachable when this pack was written: Ohio Rev. Code Chapter 3965 (codes.ohio.gov) and Michigan MCL 500.550–500.565 (legislature.mi.gov); their details above are limited to the NAIC state-page citations.
+
+---
+**Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

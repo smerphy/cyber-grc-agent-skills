@@ -1,0 +1,142 @@
+# Saudi Arabia: Personal Data Protection Law (PDPL), NCA Cybersecurity Controls and SAMA Cyber Security Framework
+
+## At a glance
+
+| Attribute | Detail |
+|---|---|
+| Instruments | **PDPL** — Royal Decree M/19 (9/2/1443H), amended by Royal Decree M/148 (5/9/1444H), plus Implementing Regulation and Regulation on Personal Data Transfer Outside the Kingdom (v2.0, August 2024). **NCA controls** — ECC-2:2024, CCC-2:2024, DCC-1:2022, CSCC-1:2019, OTCC-1:2022, NCNICC-1:2025 (plus TCC and social-media-account controls). **SAMA Cyber Security Framework** — Circular 381000091275 of 24 May 2017 (in force). **CST Cybersecurity Regulatory Framework** — Decision 424/1442 of 15 September 2020 |
+| Regulators | Saudi Data & AI Authority (**SDAIA**) for PDPL; National Cybersecurity Authority (**NCA**) for national cybersecurity controls; Saudi Central Bank (**SAMA**) for financial institutions; Communications, Space & Technology Commission (**CST**) for ICT/telecom licensees |
+| Status and key dates | PDPL in force 14 September 2023 (Art. 43: 720 days after Official Gazette publication); one-year transition ended 14 September 2024; SDAIA issued 48 enforcement decisions in the year to early 2026. ECC-2:2024 supersedes ECC-1:2018; CCC-2:2024 supersedes CCC-1:2020; NCNICC-1:2025 extends mandatory NCA controls to non-CNI private companies |
+| Who is covered | PDPL: any processing of personal data in the Kingdom, and processing of Kingdom residents' data from abroad (extraterritorial). NCA ECC family: government agencies and affiliates, plus private entities owning/operating/hosting Critical National Infrastructure (CNI); NCNICC: other private entities. SAMA CSF: banks, insurers, financing companies, credit bureaus, FMI, PSPs |
+| Breach / incident clocks | PDPL: SDAIA within **72 hours** of awareness (IR Art. 24), data subjects **without undue delay**; NCA ECC 2-13-3-3: report incidents to NCA; SAMA CSF 3.3.15: inform SAMA IT Risk Supervision **immediately** for medium/high incidents, formal report after operations resume |
+| Penalties | PDPL Art. 36: warning or fine up to **SAR 5,000,000**, doubled for repeat violations; Art. 35: criminal — up to **2 years' imprisonment and/or SAR 3,000,000** for disclosing sensitive data with intent to harm or gain; Art. 38 publication of decisions; Art. 40 civil compensation |
+| Assessment model | PDPL: SDAIA supervision, National Register of Controllers, licensed accreditation/audit bodies (Art. 33). NCA: self-assessment, compliance-tool reports and field audits; ECC is a prerequisite for CCC/DCC/CSCC/OTCC. SAMA: periodic self-assessment reviewed and audited by SAMA against a 0–5 maturity model |
+| Language | NCA control documents: Arabic text is binding; official English translations published. SDAIA: official English versions of the law, regulations, rules and guides. SAMA CSF: English on the SAMA Rulebook. NCNICC-1:2025: only an Arabic official text located |
+
+## What it is
+
+Saudi Arabia runs three parallel regimes that a security/GRC programme must reconcile. The **PDPL** is a GDPR-style omnibus privacy law: consent-based by default, with data-subject rights, controller/processor duties, a national controller register, DPO rules, impact assessments, a 72-hour breach clock and a transfer regime built on adequacy, standard contractual clauses (SCCs), binding common rules (BCRs) and accreditation certificates. Royal Decree M/148 (2023) rewrote the original 2021 text before it commenced; the Implementing Regulation and Transfer Regulation were published in September 2023 and the Transfer Regulation was re-issued as v2.0 in August 2024.
+
+The **NCA** is the national cybersecurity regulator (Royal Decree 6801, 11/2/1439H). High Order 57231 (10/11/1439H) requires all government agencies to abide by NCA policies, frameworks, standards and controls. The **Essential Cybersecurity Controls (ECC)** are the baseline; sector- and technology-specific control sets (cloud, data, critical systems, OT) are explicit extensions that presuppose ECC compliance. NCNICC-1:2025 is the first NCA control set aimed at private companies that are not CNI.
+
+The **SAMA Cyber Security Framework** (2017) is a principle-based, maturity-scored framework for SAMA-regulated financial institutions ("Member Organizations"); it supersedes SAMA's earlier cybersecurity circulars and is complemented by the Cyber Resilience Fundamental Requirements (CRFR, 1 January 2022) for new entrants and sandbox participants. The PDPL itself (Art. 30(1)) preserves SAMA's powers alongside SDAIA's.
+
+## Who it covers / Scope
+
+| Regime | Applicability test | Notes |
+|---|---|---|
+| PDPL (Art. 2) | Any processing of personal data of individuals that takes place in the Kingdom by any means, **including processing of Kingdom residents' data by any party outside the Kingdom**; covers data of the deceased where identifiable | Excludes purely personal or family use (IR Art. 2 defines it; publishing to the public is not family use). Art. 33(4): SDAIA sets tools to monitor foreign controllers/processors |
+| ECC-2:2024 | Government agencies (ministries, authorities, establishments) and their affiliated companies inside and outside the Kingdom; **all private-sector entities owning, operating or hosting CNI** | Other entities "strongly encouraged"; IR Art. 23(b) makes NCA controls the PDPL security baseline for entities obliged to follow them |
+| CCC-2:2024 | Cloud Service Providers (CSPs) serving in-scope tenants; Cloud Service Tenants (CSTs) = government agencies and CNI private entities using or planning cloud | CSPs serving only individuals or non-CNI private entities are outside scope; NCA page states the 2024 update reflects data-localization requirements |
+| DCC-1:2022 | Same government + CNI population; all physical and digital data, structured and unstructured | Data classified into four SDAIA levels: Public, Confidential, Secret, Top Secret |
+| CSCC-1:2019 | Systems the organisation deems "critical" under NCA criteria (national security, reputation, loss >0.01% of GDP, >5% of population affected, loss of life, Secret/Top Secret disclosure, vital-sector impact) | Government and private organisations owning/operating such systems; Royal Decree 7732 (12/2/1440H) reinforces the mandate |
+| OTCC-1:2022 | Industrial control systems in critical facilities owned/operated by government or CNI private organisations, in the Kingdom or abroad | Three facility criticality levels drive control applicability |
+| NCNICC-1:2025 | Private-sector entities not classified as CNI; Category A (>250 FTE or revenue >SAR 200m) vs Category B (6–249 FTE or SAR 3m–200m revenue) (verify — thresholds taken from a law-firm summary of the Arabic text) | Extends mandatory NCA controls beyond government and CNI |
+| SAMA CSF | All banks, insurance/reinsurance companies, financing companies, credit bureaus and financial market infrastructure regulated by SAMA; Rulebook scope also lists payment systems/PSPs and the regulatory sandbox | Non-bank exclusions: subdomains 3.2.3, 3.3.12, 3.3.13 (with PCI/SWIFT/MFA carve-backs); 3.1.2 mandatory where applicable |
+| CST CRF | Organisations licensed or registered by CST in the ICT sector | Framework PDF not retrieved; see Primary sources |
+
+## Core obligations
+
+### PDPL — controller duties (Law + Implementing Regulation)
+
+| Topic | Provision | Requirement |
+|---|---|---|
+| Security | Law Art. 19; IR Art. 23 | Organisational, administrative and technical measures, including during transfer; adopt NCA controls/standards, or recognised cybersecurity best practice if not NCA-obligated |
+| Breach notification | Law Art. 20; IR Art. 24 | Notify SDAIA within **72 hours** of becoming aware, where the breach potentially harms data or data subjects or conflicts with their rights; content: description, time/date/circumstances and awareness time, data categories and (approximate) numbers, risks and mitigations, whether data subjects were told, contact details. Missing information may follow "as soon as possible" with justification. Notify **data subjects without undue delay** in plain language where damage or prejudice is likely. Keep copies and corrective-action records. Without prejudice to NCA reporting duties. Submitted via the National Data Governance Platform (Breach Incidents Procedural Guide, Oct 2024) |
+| Impact assessment | Law Art. 22; IR Art. 25 | Written assessment for sensitive data; combining/linking datasets; large-scale processing of persons lacking capacity, constant monitoring, new technologies or automated decisions; products/services likely to cause serious privacy harm. Eight mandatory elements; copy to processors; re-run if harm indicated |
+| Processors | Law Art. 8; IR Art. 17 | Select processors with sufficient guarantees; contract must cover purpose, categories, duration, breach notification to controller without undue delay, foreign-law exposure, subcontractor identification; prior controller acceptance of sub-processors; periodic compliance assessment; a processor that departs from instructions is treated as a controller |
+| Records of processing | Law Art. 31; IR Art. 33 | Written RoPA kept throughout processing and **five years** after it ends; minimum content includes DPO details, purposes, categories, retention, recipients, cross-border transfers and security measures; available to SDAIA on request |
+| DPO | Law Art. 30(2); IR Art. 32; DPO Rules v1.0 (Aug 2024) | Mandatory for public entities processing at large scale, controllers whose core activities involve regular and systematic monitoring, and controllers whose core activities involve sensitive data. May be an executive, employee or external contractor; appointment in writing; contact details filed with SDAIA via the platform immediately on appointment/change; tasks include SDAIA liaison, breach notification, DSR handling, RoPA upkeep, reviewing breach-response plans |
+| National Register | Law Art. 30(4)(c); IR Art. 34; Register Rules (2024) | Registration on the National Data Governance Platform is mandatory for public entities, controllers whose main activity is personal-data processing, controllers processing sensitive data, and individuals processing beyond personal use; registration certificate valid up to five years, SDAIA gives 30 days' expiry notice and a 5-day post-expiry grace period before platform access requires a renewal request; separate rules promised for foreign controllers |
+| Cross-border transfers | Law Art. 29; Transfer Regulation v2.0 | Permitted purposes: Kingdom's agreements/interests, obligations to which the data subject is party, other purposes in the Regulation (central processing, service to the data subject, research). Conditions: no prejudice to national security, adequate protection level per SDAIA's published list (reviewed every four years), data minimisation. Exemptions rely on appropriate safeguards — SCCs, BCRs or accreditation certificates — and require a documented transfer risk assessment (Art. 7); onward transfers stay in scope (Art. 5); SDAIA may revoke exemptions (Art. 6) |
+| Data-subject rights | Law Art. 4, 21; IR Arts. 3–8 | Rights to be informed, access, obtain a copy, correct and destroy; response periods and methods set in the Regulation |
+| Sector overlays | IR Arts. 26–27 | Health data: also apply Ministry of Health requirements and controls; credit data: additional controls under IR Art. 27 |
+
+### NCA control sets — structure and prerequisites
+
+| Control set | Structure | Compliance mechanics |
+|---|---|---|
+| ECC-2:2024 | 4 main domains (Governance; Defense; Resilience; Third-Party and Cloud), 28 subdomains, **108 main controls, 92 subcontrols**; subdomains include risk management (1-5), compliance with laws (1-7), periodic review and audit (1-8), IAM (2-2), cryptography (2-8), backup (2-9), vulnerability management (2-10), penetration testing (2-11), logging and monitoring (2-12), incident and threat management (2-13, incl. 2-13-3-3 reporting incidents to NCA), BCM resilience (3-1), third-party (4-1) and cloud (4-2) | Continuous compliance under NCA Statute Art. 10(3) and High Order 57231; NCA evaluates via self-assessment, compliance-tool reports and field audits; ECC-2:2024 Assessment and Compliance Tool |
+| CCC-2:2024 | 4 domains, 24 subdomains; CSP: 37 main controls / 94 subcontrols; CST: 18 main controls / 26 subcontrols; controls tagged P (provider) or T (tenant); levels in Annex A | Extension of ECC — CSPs and CSTs must comply with both; NCA grants a compliance period on scoping-in; self-assessment or external assessment |
+| DCC-1:2022 | 3 domains, 11 subdomains, 19 main controls, 47 subcontrols across the data lifecycle | ECC compliance is a prerequisite; self-assessment and/or external assessment |
+| CSCC-1:2019 | 4 domains, 21 subdomains, 32 main controls, 73 subcontrols | Identify critical systems using NCA criteria, comply within the NCA-defined period, then continuously; self-assessment and/or on-site audit |
+| OTCC-1:2022 | 4 domains, 23 subdomains, 47 main controls, 122 subcontrols; Level 1 facilities apply 151 controls/subcontrols, Level 2 117, Level 3 56 | ECC compliance is a prerequisite; OTCC Assessment and Compliance Tool |
+| NCNICC-1:2025 | Three components (governance, defense, third-party/cloud); Category A: all 65 main controls; Category B: 26 mandatory controls in 13 sub-components, remainder recommended (verify — counts from a law-firm summary; official text located in Arabic only) | Mandatory for in-scope private entities; NCA may impose additional controls |
+
+### SAMA Cyber Security Framework — key mechanics
+
+- Four domains: Leadership and Governance (3.1), Risk Management and Compliance (3.2), Operations and Technology (3.3), Third Party Cyber Security (3.4); each subdomain states a principle, objective and mandated control considerations.
+- Principle-based with a formal **waiver** process (Appendix D) where a control consideration cannot be implemented; compensating controls and internal risk acceptance expected first.
+- **Maturity model 0–5**; levels 3–5 require all criteria of lower levels; self-assessment questionnaire reviewed and audited by SAMA and benchmarked across Member Organizations.
+- Incident management (3.3.15): designated team, certified forensic capacity, incident classification, repository; **inform SAMA IT Risk Supervision immediately** for medium/high incidents, obtain SAMA no-objection before media interaction, and submit a formal post-incident report (root cause, impact, costs) after operations resume.
+- Cloud (3.4.3): risk assessment and due diligence on the CSP, **SAMA approval before using cloud services or signing the contract**, contractual security requirements; not applicable to private cloud.
+- Independent cyber security audits (3.2.5) against generally accepted standards and the Framework.
+
+## Enforcement and penalties
+
+| Regime | Mechanism | Sanctions |
+|---|---|---|
+| PDPL administrative (Art. 36; Committee Rules of Procedure) | Committees of at least three members (technical specialist and legal advisor) appointed by SDAIA's president; decisions approved by the president; respondent has **5 days** to respond to allegations, parties notified within 15 days of approval, **60 days** to appeal to SDAIA, with onward recourse to the competent court | Warning; fine up to **SAR 5m**, doubled for repeat violations (capped at twice the statutory maximum); publication of the decision at the violator's expense once final |
+| PDPL criminal (Art. 35) | Public Prosecution investigates; competent court decides | Up to **2 years' imprisonment** and/or fine up to **SAR 3m** for disclosing or publishing sensitive data with intent to harm or gain; fine doubled on recidivism |
+| PDPL other | Art. 37 inspection powers and seizure of tools; Art. 38 confiscation of proceeds; Art. 39 disciplinary action for public employees; Art. 40 court compensation for material or moral damage | SDAIA reported 48 enforcement decisions in the year to early 2026 (secondary source) |
+| NCA | Compliance monitoring under NCA Statute Art. 10(3); self-assessment, compliance tools, field audits | NCA documents do not set monetary penalties; non-compliance is a regulatory and (for government/CNI) mandate breach (verify sanction mechanics) |
+| SAMA | Supervisory review and audit of self-assessments; waiver regime | Supervisory measures under SAMA's sectoral powers (verify) |
+
+## Timeline and status
+
+| Date | Event |
+|---|---|
+| 9/2/1443H (2021) | PDPL issued by Royal Decree M/19 |
+| 5/9/1444H (2023) | Amended by Royal Decree M/148 before commencement |
+| 7 September 2023 | Implementing Regulation and Transfer Regulation published (secondary source) |
+| 14 September 2023 | PDPL and Implementing Regulation in force (Law Art. 43; IR Art. 38) |
+| August 2024 | DPO Appointment Rules v1.0 and Transfer Regulation v2.0 carry an August 2024 document date; National Register rules issued in the same period (exact issue dates: verify) |
+| 14 September 2024 | One-year transition period ends; active enforcement begins |
+| October 2024 | Personal Data Breach Incidents Procedural Guide (Issue 1.0) |
+| 27 April – 27 May 2025 | SDAIA public consultation on draft amendments to the Implementing Regulation (simplified privacy-notice language, DPO documentation and platform notification, register triggers extended to transfer-exemption users and data of persons lacking capacity, 10-business-day response to SDAIA requests, removal of the 90-day complaint bar). As of September 2026 the Implementing Regulation published on SDAIA's site remains the 2023 text — treat the amendments as pending (verify) |
+| ECC-1:2018 → ECC-2:2024; CCC-1:2020 → CCC-2:2024 | Current NCA baselines; NCA pages updated July 2025 and June 2026 |
+| Early 2026 | SDAIA announces 48 PDPL enforcement decisions (secondary source); NCNICC-1:2025 published for the non-CNI private sector by March 2026 (exact issue date: verify) |
+| 24 May 2017 / 1 January 2022 | SAMA CSF circular / CRFR — both listed "In-Force" on the SAMA Rulebook |
+
+## Key obligations for security/GRC teams
+
+1. **Determine which regimes bind you**: PDPL applies to almost everyone (including foreign controllers of residents' data); confirm CNI/government status for ECC, sector for SAMA/CST, and NCNICC category by headcount/revenue. See [../../skills/regulatory-applicability/SKILL.md](../../skills/regulatory-applicability/SKILL.md).
+2. **Register and appoint**: enrol on the National Data Governance Platform if a registration trigger applies, appoint and file a DPO where IR Art. 32 applies, and calendar the five-year certificate renewal (SDAIA's expiry notice arrives 30 days out; access lapses five days after expiry without a renewal request).
+3. **Wire the 72-hour clock into incident response**: pre-build the SDAIA notification content, the data-subject notice, and parallel NCA (ECC 2-13-3-3) and SAMA (immediate notice, no-objection for media, post-incident report) channels. See [../../skills/incident-regulatory-reporting/SKILL.md](../../skills/incident-regulatory-reporting/SKILL.md), [../crosswalks/breach-notification-timelines.md](../crosswalks/breach-notification-timelines.md) and [../../templates/incident-regulatory-notification-log.md](../../templates/incident-regulatory-notification-log.md).
+4. **Adopt NCA controls as the PDPL security baseline** (IR Art. 23); run an ECC-2:2024 gap assessment first, since every other NCA control set presupposes it. See [../../skills/framework-gap-assessment/SKILL.md](../../skills/framework-gap-assessment/SKILL.md) and [../../skills/control-mapping/SKILL.md](../../skills/control-mapping/SKILL.md).
+5. **Run impact assessments and transfer risk assessments** for sensitive data, dataset linking, monitoring, new technologies, automated decisions and any transfer relying on SCCs/BCRs/certificates. See [../../skills/dpia-privacy-assessment/SKILL.md](../../skills/dpia-privacy-assessment/SKILL.md).
+6. **Remediate processor and cloud contracts**: IR Art. 17 clauses, sub-processor approval, CCC tenant controls, and SAMA pre-approval for cloud use. See [../../skills/third-party-risk-assessment/SKILL.md](../../skills/third-party-risk-assessment/SKILL.md).
+7. **Maintain the RoPA** for the processing period plus five years, with transfer and security-measure descriptions, ready for SDAIA request.
+8. **Evidence continuous compliance**: NCA self-assessment tool outputs, SAMA maturity self-assessments and independent audits, penetration-test and vulnerability records under ECC 2-10/2-11. See [../../skills/control-testing/SKILL.md](../../skills/control-testing/SKILL.md).
+9. **Prepare for enforcement procedure**: 5-day response and 60-day appeal windows require a named representative, power of attorney and platform access in advance; report metrics to the board. See [../../skills/grc-metrics-reporting/SKILL.md](../../skills/grc-metrics-reporting/SKILL.md).
+10. **Track pending change**: the 2025 draft Implementing Regulation amendments and new NCA control editions. See [../../skills/regulatory-horizon-scanning/SKILL.md](../../skills/regulatory-horizon-scanning/SKILL.md).
+
+## Interplay
+
+- **PDPL vs GDPR**: same 72-hour regulator clock and "without undue delay" to individuals, but PDPL's trigger is potential harm rather than risk to rights; consent is the default basis with narrower legitimate-interest use; transfers need an SDAIA adequacy finding or SCCs/BCRs/certificates and a documented risk assessment. See [gdpr.md](gdpr.md).
+- **PDPL vs NCA**: IR Art. 23 imports NCA controls into the privacy law for obligated entities and IR Art. 24(4) preserves separate NCA incident reporting — one breach can trigger SDAIA, NCA and SAMA notifications with different content and clocks.
+- **NCA vs SAMA/CST**: financial institutions face SAMA CSF plus NCA controls where they are CNI; telecom licensees face CST CRF plus NCA; SAMA's cloud pre-approval and CCC tenant controls overlap on the same contracts.
+- **NCA vs international frameworks**: ECC's domain model maps naturally to ISO/IEC 27001 Annex A and NIST CSF 2.0 functions; CCC was mapped by NCA against FedRAMP, C5, MTCS, CCM and ISO 27001. See [../frameworks/iso-27001-2022.md](../frameworks/iso-27001-2022.md), [../frameworks/nist-csf-2.md](../frameworks/nist-csf-2.md) and [../crosswalks/framework-crosswalk.md](../crosswalks/framework-crosswalk.md). SAMA CSF cites NIST, ISF, ISO, Basel and PCI as sources; PCI DSS remains mandatory for cardholder-data environments (see [../frameworks/pci-dss-4.md](../frameworks/pci-dss-4.md)).
+- **Regional context**: compare the UAE and other Gulf regimes in [other-jurisdictions.md](other-jurisdictions.md); EU financial-sector equivalents in [dora.md](dora.md).
+
+## Primary sources
+
+- SDAIA — Personal Data Protection Law (official English, amended text): https://sdaia.gov.sa/en/SDAIA/about/Documents/Personal%20Data%20English%20V2-23April2023-%20Reviewed-.pdf (legal text)
+- SDAIA — Implementing Regulation of the PDPL: https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf (legal text)
+- SDAIA — Regulation on Personal Data Transfer Outside the Kingdom, v2.0 August 2024: https://sdaia.gov.sa/Documents/RegulationonPersonalDataEN.pdf (legal text)
+- SDAIA — Rules for Appointing Personal Data Protection Officer: https://sdaia.gov.sa/en/SDAIA/about/Documents/RulesforAppointingPersonalDataProtectionOfficer.pdf (regulator rules)
+- SDAIA — Rules Governing the National Register of Controllers: https://sdaia.gov.sa/Documents/TheRulesGoverningTheNationalRegisterOfControllersWithinTheKingdomPublicEN.pdf (regulator rules)
+- SDAIA — Rules of Procedure on Committees for Reviewing Violations: https://sdaia.gov.sa/en/SDAIA/about/Documents/CommitteeWorkingRules.pdf (regulator rules)
+- SDAIA — Personal Data Breach Incidents Procedural Guide (Oct 2024): https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataBreachIncidents.pdf (regulator guidance)
+- SDAIA — Laws and Regulations index: https://sdaia.gov.sa/en/SDAIA/about/Pages/RegulationsAndPolicies.aspx (publisher page)
+- NCA — ECC-2:2024 (English): https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf and page https://nca.gov.sa/en/regulatory-documents/controls-list/ecc/ (publisher document)
+- NCA — CCC-2:2024 (English): https://cdn.nca.gov.sa/api/files/public/upload/6d5408a3-d8e6-4e96-963b-2c7198e5b7c2_CCC-2-2024-EN-.pdf and page https://nca.gov.sa/en/regulatory-documents/controls-list/ccc/ (publisher document)
+- NCA — CCC-1:2020 (superseded, English): https://nca.gov.sa/ccc-en.pdf; DCC-1:2022: https://cdn.nca.gov.sa/api/public/cms/files/1c2cfb9c-7788-4549-9f29-f337500f1787_Data-Cybersecurity-Controls-.pdf; CSCC-1:2019: https://cdn.nca.gov.sa/api/public/cms/files/f15af01c-dc59-4281-95e2-03a770655937_Critical-Systems-Cybersecurity-Controls.pdf; OTCC-1:2022: https://nca.gov.sa/otcc_en.pdf (publisher documents)
+- NCA — NCNICC-1:2025 (Arabic official text): https://cdn.nca.gov.sa/api/files/public/upload/721bed5c-5304-497c-a5ac-a92a049e6306_NCNICC-AR-.pdf; English draft on the consultation platform could not be retrieved
+- NCA — Regulatory documents list: https://nca.gov.sa/en/regulatory-documents/ (publisher page)
+- SAMA Rulebook — Cyber Security Framework (Circular 381000091275): https://rulebook.sama.gov.sa/en/cyber-security-framework-2 and Cyber Resilience section https://rulebook.sama.gov.sa/en/entiresection/4498 (regulator text); the sama.gov.sa PDF link returned an error page
+- CST — Cybersecurity Regulatory Framework page (Decision 424/1442): https://www.cst.gov.sa/en/regulations-and-licenses/regulations/Document-413 (publisher page; framework PDF not retrievable)
+- Secondary: Latham & Watkins, "Active Enforcement of Saudi Arabia Privacy Regime" (15 May 2026); Bird & Bird, consultation on draft Implementing Regulation changes (8 May 2025); CMS, NCNICC-1:2025 note (27 March 2026); A&O Shearman, regulations published 7 September 2023; IAPP, PDPL first anniversary (26 September 2025)
+
+---
+**Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.
