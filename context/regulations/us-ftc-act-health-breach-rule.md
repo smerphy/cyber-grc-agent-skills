@@ -6,11 +6,11 @@
 |---|---|
 | Instruments | Section 5 of the Federal Trade Commission Act, 15 U.S.C. § 45 (unfair or deceptive acts or practices — "UDAP"); Health Breach Notification Rule ("HBNR"), 16 CFR Part 318, implementing § 13407 of the American Recovery and Reinvestment Act of 2009 (authority: 42 U.S.C. §§ 17937 and 17953) |
 | Regulator | Federal Trade Commission (FTC), Bureau of Consumer Protection; civil-penalty suits filed by the Department of Justice on the FTC's behalf; state attorneys general joined the Premom HBNR matter |
-| Status and key dates | Section 5: in force since 1914, unfairness test codified at § 45(n). HBNR: original rule 74 FR 42980 (25 Aug 2009), applies to breaches discovered on or after 24 Sep 2009; amended rule 89 FR 47028 (30 May 2024), effective **29 July 2024**; FTC rescinded its 2021 health-app policy statement on 9 Sep 2026 as superseded by the 2024 amendments |
+| Status and key dates | Section 5: in force since 1914, unfairness test codified at § 45(n). HBNR: original rule 74 FR 42962 (25 Aug 2009), applies to breaches discovered on or after 24 Sep 2009 (16 CFR 318.8); amended rule 89 FR 47028 (30 May 2024), effective **29 July 2024**; FTC rescinded its 2021 health-app policy statement on 9 Sep 2026 as superseded by the 2024 amendments |
 | Who is covered | Section 5: essentially every business "in or affecting commerce" except banks, savings and loan institutions, federal credit unions, common carriers, air carriers and packers/stockyards (§ 45(a)(2)). HBNR: non-HIPAA vendors of personal health records (PHRs), PHR related entities and their third party service providers, foreign or domestic, holding data on US citizens or residents |
 | Core requirements | Section 5: no deceptive security/privacy claims; no "unfair" security failures (substantial, unavoidable, unoffset consumer injury). HBNR: notify individuals, the FTC and (≥500 residents of a state) the media of any unauthorized acquisition — including unauthorized disclosure — of unsecured PHR identifiable health information |
 | Breach clocks | HBNR: without unreasonable delay and no later than **60 calendar days** after discovery (individuals, media, service-provider-to-vendor notice); FTC notice at the same time for ≥500 individuals, or an annual log within 60 days of year-end for <500 |
-| Penalties | No civil penalty for a first-time Section 5(a) violation; consent or litigated order, then up to **$53,088 per violation** (16 CFR 1.98, adjusted 17 Jan 2025) for order violations under § 45(l). HBNR violations are Section 18 rule violations: **up to $53,088 per violation** from the first offense (§ 45(m)(1)(A)) |
+| Penalties | No civil penalty for a first-time Section 5(a) violation; consent or litigated order, then up to **$53,088 per violation** (16 CFR 1.98, adjusted 17 Jan 2025 and held at that level for 2026) for order violations under § 45(l). HBNR violations are Section 18 rule violations: **up to $53,088 per violation** from the first offense (§ 45(m)(1)(A)) |
 | Order model | 20-year consent orders mandating a written information security program, board reporting, annual risk assessment, MFA, testing, biennial independent assessments, annual executive certification and incident reports to the FTC |
 | Certifiable? | No. Compliance is evidenced by a reasonable, documented security program and truthful representations; FTC business guidance ("Start with Security", HBNR compliance guide) is the practical yardstick |
 | Neighbours | GLBA Safeguards Rule (16 CFR Part 314) for non-bank financial institutions — see [glba-ftc-safeguards.md](glba-ftc-safeguards.md); HHS Breach Notification Rule for HIPAA entities — see [hipaa.md](hipaa.md); COPPA; state UDAP, breach-notification and consumer-health-data laws |
@@ -38,7 +38,7 @@ The HBNR is the FTC's one health-specific rule. Congress created it in 2009 to c
 Key definitional levers after the 2024 amendments:
 
 - **PHR identifiable health information** is information relating to health condition, care or payment that identifies (or could reasonably identify) the individual and is created or received by a "covered health care provider", health plan, employer or clearinghouse — and "covered health care provider" now includes **any entity furnishing "health care services or supplies"**, defined as *any online service* (website, app, connected device) with mechanisms to track diseases, conditions, diagnoses, treatment, medications, vital signs, symptoms, bodily functions, fitness, fertility, sexual health, sleep, mental health, genetic information or diet. Information provided by the individual themselves counts.
-- **Multiple sources**: the FTC's guidance treats an app that can take user input *and* sync with a tracker or an API as drawing from multiple sources even if some users never connect the second source.
+- **Multiple sources**: the definition turns on *technical capacity*, and the FTC's compliance guidance treats an app that takes user input *and* can sync with a fitness tracker, or pull data through an API, as drawing on multiple sources.
 - **Unsecured** means not protected by the technologies in HHS's guidance under 42 U.S.C. § 17932(h)(2) — in practice, not encrypted or destroyed. A lost laptop holding only encrypted PHRs is not a reportable breach. Paper-only breaches are outside the rule.
 - **Exclusions**: HIPAA covered entities, and any entity *to the extent* it acts as a HIPAA business associate. An organisation can be a business associate for one product and a PHR vendor for another, in which case both the HHS and FTC rules apply to the respective data sets.
 
@@ -92,12 +92,12 @@ Recurring add-ons: data-minimisation and public retention schedules (Drizly, Che
 | Consumer redress | § 19, 15 U.S.C. § 57b | Refunds, rescission, damages after a rule violation or a final litigated order; no punitive damages |
 | Civil penalties for rule violations | § 45(m)(1)(A); 16 CFR 318.7 | HBNR and other rules treated as Section 18 rules: up to **$53,088 per violation** with actual or fairly implied knowledge; each day of a continuing violation is a separate violation; court weighs culpability, history, ability to pay and effect on the business |
 | Civil penalties for order violations | § 45(l) | Up to **$53,088 per violation**, per day for continuing violations, recovered by DOJ |
-| Penalties after a litigated order against another company | § 45(m)(1)(B) | Available where a company had actual knowledge that a practice was already held unfair or deceptive in a litigated (not consent) order — the statutory footing for the FTC's "Notices of Penalty Offenses" practice (verify) |
+| Penalties after a litigated order against another company | § 45(m)(1)(B) | Available where a company had actual knowledge that a practice was already held unfair or deceptive in a litigated (not consent) cease-and-desist order — the statutory footing for the FTC's "Notices of Penalty Offenses" practice |
 | Individual liability | Complaint naming officers | Drizly (2022–23) bound the CEO personally with obligations that travel to future employers |
 
-The $53,088 figure is the inflation-adjusted maximum in 16 CFR 1.98 for penalties assessed after 17 Jan 2025 and remains the figure in the eCFR as of September 2026; FTC press releases quoted $46,517 (2022) and $51,744 (2024) for earlier years — always check the current § 1.98 table.
+The $53,088 figure is the inflation-adjusted maximum in 16 CFR 1.98 for penalties assessed after 17 Jan 2025 (90 FR 5580); on 15 Sep 2026 the FTC gave notice that amounts stay unchanged for 2026 at the 2025 levels (91 FR 58446), so $53,088 is the figure in the eCFR as of September 2026. Earlier years were $46,517 (2022, 87 FR 1070) and $51,744 (2024, 89 FR 1445) — always check the current § 1.98 table.
 
-**HBNR enforcement record:** GoodRx (1 Feb 2023, N.D. Cal.; first HBNR action; $1.5M penalty; permanent ban on sharing health data for advertising; consent, retention-schedule and privacy-programme terms) and Easy Healthcare/Premom (17 May 2023, N.D. Ill.; $100,000 federal penalty plus $100,000 to Connecticut, DC and Oregon; SDK disclosures to AppsFlyer, Google, Umeng and Jiguang). Both were unauthorized-disclosure cases; neither involved an intrusion.
+**HBNR enforcement record:** GoodRx (1 Feb 2023, N.D. Cal.; first HBNR action; $1.5M penalty; permanent ban on sharing health data for advertising; consent, retention-schedule and privacy-programme terms) and Easy Healthcare/Premom (17 May 2023, N.D. Ill.; $100,000 federal penalty plus $100,000 to Connecticut, DC and Oregon; SDK disclosures to AppsFlyer, Google, Umeng and Jiguang). Both were unauthorized-disclosure cases; neither involved an intrusion, and they remain the only HBNR enforcement actions as of September 2026.
 
 ## Timeline and status
 
@@ -105,8 +105,8 @@ The $53,088 figure is the inflation-adjusted maximum in 16 CFR 1.98 for penaltie
 |---|---|
 | 26 Sep 1914 | FTC Act enacted (38 Stat. 719); § 45(a)(1) now declares unfair or deceptive acts or practices unlawful |
 | 17 Dec 1980 | FTC Policy Statement on Unfairness (three-part test), later codified at § 45(n) |
-| 25 Aug 2009 | HBNR final rule published (74 FR 42980); applies to breaches discovered on or after 24 Sep 2009 |
-| 26 Jun 2012 → 24 Aug 2015 | *FTC v. Wyndham*: complaint (D.N.J.), motion to dismiss denied 7 Apr 2014, affirmed by the Third Circuit; stipulated order 11 Dec 2015 |
+| 25 Aug 2009 | HBNR final rule published (74 FR 42962; Part 318 text at 74 FR 42980); applies to breaches discovered on or after 24 Sep 2009 |
+| 26 Jun 2012 → 24 Aug 2015 | *FTC v. Wyndham*: complaint filed 26 Jun 2012 (case later docketed in D.N.J. as 2:13-cv-01887), motion to dismiss denied 7 Apr 2014, affirmed by the Third Circuit 24 Aug 2015; stipulated order 11 Dec 2015 |
 | 29 Jul 2016 → 6 Jun 2018 | *LabMD*: Commission opinion and final order; vacated by the Eleventh Circuit for lack of specificity |
 | 22 May 2020 | FTC request for comment on HBNR as part of periodic rule review |
 | 22 Apr 2021 | *AMG Capital*: Supreme Court holds § 13(b) does not authorise equitable monetary relief |
@@ -119,13 +119,15 @@ The $53,088 figure is the inflation-adjusted maximum in 16 CFR 1.98 for penaltie
 | 30 May 2024 / 29 Jul 2024 | Amended HBNR published (89 FR 47028) / effective |
 | 1 Feb / 20 May 2024 | Blackbaud order proposed / finalised |
 | 15 Jan / 21 May 2025 | GoDaddy order proposed / finalised (independent assessor, 20-year term) |
-| 17 Jan 2025 | Civil-penalty maximums adjusted to $53,088 (90 FR 5581) |
-| 16 Dec 2025 | Illusory Systems (Nomad) proposed order — $186M theft attributed to unreasonable security; company must return recovered funds |
+| 17 Jan 2025 | Civil-penalty maximums adjusted to $53,088 (90 FR 5580) |
+| 1 Dec 2025 | Illuminate Education proposed order (data-security programme, data minimisation, deletion) |
+| 16 Dec 2025 | Illusory Systems (Nomad) proposed order — $186M theft attributed to unreasonable security; company must return recovered funds; still awaiting final Commission approval as of September 2026 |
 | 6 Feb 2026 | Second RANSOMWARE Act report: 90+ data-security actions to date |
-| 5 Jun 2026 | Illuminate Education order finalised (10.1M students' data; data minimisation, retention schedule, FTC notice of breaches reported elsewhere) |
-| 9 Sep 2026 | FTC rescinds the 2021 health-app policy statement as obsolete because the 2024 rule text itself covers apps and devices — **the rule is unchanged** |
+| 5 Jun 2026 | Illuminate Education order finalised as modified after public comment (10.1M students' data; retention schedule; FTC notice of breaches reported elsewhere) |
+| 9 Sep 2026 | FTC rescinds the 2021 health-app policy statement as obsolete because the 2024 rule text itself covers health apps and connected devices — **the rule is unchanged** |
+| 15 Sep 2026 | FTC notice: civil-penalty maximums unchanged for 2026; 2025 levels ($53,088) continue to apply (91 FR 58446) |
 
-**Status as of September 2026.** Section 5 enforcement continues under Chairman Andrew Ferguson, with 2–0 and 3–0 Commission votes on 2025–2026 security orders; the substantive order template (programme, assessor, certification, incident reports) is unchanged from 2022–2024. The 2022 Commercial Surveillance ANPR has produced **no notice of proposed rulemaking**; treat it as dormant and check the FTC's current regulatory agenda before citing it as pending. The amended HBNR is in force with no further amendment proposed; the FTC's "Complying with FTC's Health Breach Notification Rule" guidance (July 2024, penalty figure updated January 2025) is the operative compliance reference.
+**Status as of September 2026.** Section 5 enforcement continues under Chairman Andrew Ferguson, with unanimous 2–0 Commission votes on the 2025–2026 security matters (Illusory Systems, Illuminate); the substantive order template (programme, assessor, certification, incident reports) is unchanged from 2022–2024. The 2022 Commercial Surveillance ANPR has produced **no notice of proposed rulemaking**; treat it as dormant and check the FTC's current regulatory agenda before citing it as pending. The amended HBNR is in force, with no further amendment or rulemaking published since 2024 and no change to Part 318 in the eCFR; withdrawal of the 2021 policy statement (part of a wider clear-out of guidance documents) removed a guidance layer, not an obligation. The FTC's "Complying with FTC's Health Breach Notification Rule" guidance (July 2024, penalty figure updated January 2025) is the operative compliance reference.
 
 ## Key obligations for security/GRC teams
 
@@ -151,20 +153,24 @@ The $53,088 figure is the inflation-adjusted maximum in 16 CFR 1.98 for penaltie
 
 ## Primary sources
 
-- 15 U.S.C. § 45 (Section 5 of the FTC Act) — legal text, via the Legal Information Institute mirror of the U.S. Code: https://www.law.cornell.edu/uscode/text/15/45
-- 15 U.S.C. § 53(b) and § 57b (Sections 13(b) and 19) — legal text: https://www.law.cornell.edu/uscode/text/15/53 and https://www.law.cornell.edu/uscode/text/15/57b
+- 15 U.S.C. § 45 (Section 5 of the FTC Act) — legal text (U.S. Code, 2023 edition, govinfo): https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap2-subchapI-sec45.htm
+- 15 U.S.C. § 53 and § 57b (Sections 13(b) and 19) — legal text (govinfo): https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap2-subchapI-sec53.htm and https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap2-subchapI-sec57b.htm
 - 16 CFR Part 318, Health Breach Notification Rule — legal text (eCFR, current as of September 2026): https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-318
-- 16 CFR 1.98, civil-penalty inflation adjustments (90 FR 5581) — legal text (eCFR): https://www.ecfr.gov/current/title-16/section-1.98
+- 16 CFR 1.98, civil-penalty maximums — legal text (eCFR, Part 1 Subpart L): https://www.ecfr.gov/current/title-16/chapter-I/subchapter-A/part-1/subpart-L
+- Adjustments to Civil Penalty Amounts, 90 FR 5580 (17 Jan 2025) and Civil Penalty Inflation Adjustments, 91 FR 58446 (15 Sep 2026, amounts unchanged for 2026) — Federal Register: https://www.federalregister.gov/documents/2025/01/17/2025-01361/adjustments-to-civil-penalty-amounts and https://www.federalregister.gov/documents/2026/09/15/2026-18853/civil-penalty-inflation-adjustments
 - Health Breach Notification Rule, final rule, 89 FR 47028 (30 May 2024, effective 29 Jul 2024) — Federal Register: https://www.federalregister.gov/documents/2024/05/30/2024-10855/health-breach-notification-rule
 - Health Breach Notification Rule NPRM, 88 FR 37819 (9 Jun 2023) — Federal Register: https://www.federalregister.gov/documents/2023/06/09/2023-12148/health-breach-notification-rule
 - Trade Regulation Rule on Commercial Surveillance and Data Security, ANPR 87 FR 51273 (22 Aug 2022) and extension 87 FR 63738 (20 Oct 2022) — Federal Register: https://www.federalregister.gov/documents/2022/08/22/2022-17752/trade-regulation-rule-on-commercial-surveillance-and-data-security
 - FTC, Health Breach Notification Rule page (rule history, press releases) — regulator page: https://www.ftc.gov/legal-library/browse/rules/health-breach-notification-rule
 - FTC, Complying with FTC's Health Breach Notification Rule (July 2024; penalty figure updated Jan 2025) — regulator guidance: https://www.ftc.gov/business-guidance/resources/complying-ftcs-health-breach-notification-rule-0
 - FTC, Policy Statement on Unfairness (17 Dec 1980) — regulator policy: https://www.ftc.gov/legal-library/browse/ftc-policy-statement-unfairness
+- FTC, "FTC Withdraws Obsolete Policy Statement" (9 Sep 2026, rescinding the 2021 health-app policy statement) — regulator press release: https://www.ftc.gov/news-events/news/press-releases/2026/09/ftc-withdraws-obsolete-policy-statement
+- *In re GoDaddy Inc.*, Decision and Order (finalised 21 May 2025) — order text used for the consent-order programme table: https://www.ftc.gov/system/files/ftc_gov/pdf/2023133_godaddy_decisionandorder.pdf
+- *FTC v. Wyndham Worldwide Corp.*, FTC case page (complaint 26 Jun 2012; Third Circuit opinion 24 Aug 2015; stipulated order 11 Dec 2015) — regulator case record: https://www.ftc.gov/legal-library/browse/cases-proceedings/1023142-wyndham-worldwide-corporation
 - FTC press releases and case pages — regulator records: GoodRx (1 Feb 2023), Easy Healthcare/Premom (17 May 2023), Drizly (24 Oct 2022; final 10 Jan 2023), Chegg (31 Oct 2022; final 27 Jan 2023), Blackbaud (1 Feb 2024; final 20 May 2024), GoDaddy (15 Jan 2025; final 21 May 2025, Decision and Order PDF), Illusory Systems (16 Dec 2025), Illuminate Education (5 Jun 2026), RANSOMWARE Act report (6 Feb 2026), rescission of the 2021 health-app policy statement (9 Sep 2026), LabMD and Wyndham case pages — all under https://www.ftc.gov/
 - *LabMD, Inc. v. FTC*, No. 16-16270 (11th Cir. 6 Jun 2018) — court opinion: https://media.ca11.uscourts.gov/opinions/pub/files/201616270.pdf
 - *AMG Capital Management v. FTC*, No. 19-508 (U.S. 22 Apr 2021) — court opinion: https://www.supremecourt.gov/opinions/20pdf/19-508_l6gn.pdf
-- Not fetched: the Third Circuit's *Wyndham* opinion itself (date and holding taken from the FTC case page) and the GoodRx/Premom stipulated orders (terms taken from FTC press releases).
+- Not fetched: the Third Circuit's *Wyndham* opinion itself (date and holding taken from the FTC case page) and the GoodRx, Premom, Drizly, Blackbaud, Illusory Systems and Illuminate order documents (terms taken from the FTC press releases and case pages listed above).
 
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

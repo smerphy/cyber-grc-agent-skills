@@ -6,10 +6,10 @@
 |---|---|
 | Instrument / citation | *NIST Privacy Framework: A Tool for Improving Privacy through Enterprise Risk Management, Version 1.0* — NIST Cybersecurity White Paper (CSWP) 10, 16 January 2020. Update: *NIST Privacy Framework 1.1*, CSWP 40 Initial Public Draft (IPD), 14 April 2025 |
 | Publisher | US National Institute of Standards and Technology (NIST), Information Technology Laboratory / Applied Cybersecurity Division |
-| Legal status | Voluntary. The document states it "does not have the force and effect of law" and is not meant to bind the public. No US federal or state law mandates it by name in any source fetched for this pack |
+| Legal status | Voluntary. The title page states the contents "do not have the force and effect of law and are not meant to bind the public in any way". NIST's FAQ confirms that using the Framework does not ensure compliance with any law or regulation |
 | Current version | 1.0 remains the only final version. 1.1 IPD public comment closed 13 June 2025; NIST's project page (updated 1 April 2026) lists the final 1.1 as "coming soon"; the CSRC publication list still shows only the IPD (checked September 2026) |
 | Who it is for | Any organization, any size, sector, technology, law or jurisdiction; any role in the data processing ecosystem (controller/processor-type roles included) |
-| Structure | Three components: **Core** (Functions → Categories → Subcategories), **Profiles** (Current / Target; 1.1 adds Organizational and Community Profiles), **Implementation Tiers** (1–4). PF 1.0 Core: 5 Functions, 18 Categories, 100 Subcategories. PF 1.1 IPD Core: 5 Functions, 20 Categories, ~102 active Subcategories (with numbering gaps) |
+| Structure | Three components: **Core** (Functions → Categories → Subcategories), **Profiles** (Current / Target; 1.1 adds Organizational and Community Profiles), **Implementation Tiers** (1–4). PF 1.0 Core: 5 Functions, 18 Categories, 100 Subcategories. PF 1.1 IPD Core: 5 Functions, 20 Categories, 103 active Subcategories (numbering gaps remain where outcomes were withdrawn or relocated) |
 | Certifiable? | No. No NIST certification, accreditation or conformance scheme; use is self-assessed via Profiles and Tiers |
 | Penalties | None — not a legal instrument. Relevance to enforcement is indirect (evidence of a reasonable privacy program; crosswalks to laws) |
 | Relationship to neighbours | Modeled on and designed to be used with the NIST Cybersecurity Framework (CSF); 1.1 realigns to CSF 2.0. Points to SP 800-53 for privacy controls, NIST IR 8062 / PRAM for privacy engineering and risk assessment, and (in 1.1) the AI RMF 1.0 for AI risk |
@@ -91,7 +91,7 @@ The draft states the PF can be used to manage privacy risk arising from data pro
 - **No certification.** There is no accredited scheme, no NIST-recognized assessor, and no "PF-certified" claim that carries formal weight. "Aligned with the NIST Privacy Framework" is a self-attestation; evidence is the Profile pair, the gap analysis and the action plan.
 - **Ready, Set, Go** (NIST's program method): *Ready* — use Identify-P and Govern-P to establish context, values, risk tolerance and run privacy risk assessments; *Set* — complete Current and Target Profiles, list gaps, prioritize actions; *Go* — implement, monitor and update Profiles as risk changes.
 - **Typical evidence set**: data map and processing inventory; privacy risk assessment records (PRAM worksheets or equivalent); Current/Target Profile workbook (NIST publishes the Core as XLSX/DOCX and in its Cybersecurity and Privacy Reference Tool); Tier self-assessment with rationale; requirements-to-controls traceability; ecosystem Profiles exchanged with suppliers or customers; periodic Current Profile refresh.
-- **Informative references** (NIST's official crosswalk repository, updated February 2026) include NIST-authored mappings to the CSF, to SP 800-53 Rev. 5 (joint PF/CSF crosswalk), to the Fair Information Practice Principles and to the AICPA 2017 Trust Services Criteria, plus contributor-submitted crosswalks to GDPR, CCPA/CPRA regulations, VCDPA, LGPD, India's DPDP Act and Rules, ISO/IEC 27701 and the IAPP CIPM body of knowledge. Contributor crosswalks are not NIST-validated: treat them as starting points and re-verify against the current law or standard edition.
+- **Informative references** (NIST's crosswalk repository, page updated 9 February 2026) are grouped as *Frameworks* — crosswalks published without a contributor byline to the Cybersecurity Framework, to SP 800-53 Rev. 5 (the joint PF and CSF crosswalk), to the Fair Information Practice Principles, to the AICPA 2017 Trust Services Criteria and to the IAPP CIPM body of knowledge; *Standards* — ISO/IEC 27701 (contributed by Microsoft); and *Laws and Regulations* — contributor crosswalks to GDPR, CCPA, CCPA/CPRA, VCDPA, LGPD and India's DPDP Act 2023 and Rules 2025. NIST's FAQ states that NIST "is not an authoritative source for crosswalks between the Privacy Framework and laws and regulations", so treat the legal mappings as starting points and re-verify against the current law or standard edition.
 - **Buying and third-party decisions**: a Target Profile becomes a prioritized privacy requirement list for procurement; a supplier's Current Profile is its evidence of contractual conformance; residual gaps are managed as accepted risk or mitigations.
 
 ## Timeline and status
@@ -105,11 +105,11 @@ The draft states the PF can be used to manage privacy risk arising from data pro
 | 25 January 2024 | NIST announces the 1.1 update and a joint-frameworks Data Governance and Management (DGM) Profile |
 | 18 June 2024 | PF 1.1 Concept Paper and DGM Profile Concept Paper published |
 | 25–26 June 2024 | "Ready, Set, Update!" public workshop (PF 1.1 + DGM Profile) |
-| September 2024 | DGM Profile Working Session 1 |
+| 10–12 September 2024 | DGM Profile Working Session 1 (data governance and management activities) |
 | 14 April 2025 | **PF 1.1 Initial Public Draft** (CSWP 40 ipd) released; comment period to 13 June 2025 |
 | 13 June 2025 | PF 1.1 IPD comment period closed |
-| 14 May 2026 | DGM Profile Working Session 2 (mappings); DGM Profile IPD date "TBD" as of the June 2026 page update |
-| As of September 2026 | **PF 1.1 final not yet published**: NIST's 1.1 page (updated 1 April 2026) shows "Coming soon"; CSRC lists CSWP 40 only as a draft. PF 1.0 remains the authoritative Core |
+| 14 May 2026 | DGM Profile Working Session 2 (activities, mappings and discussion); DGM Profile Initial Public Draft date still listed as "TBD" (project page updated 24 June 2026) |
+| As of September 2026 | **PF 1.1 final not yet published**: NIST's 1.1 page (updated 1 April 2026) shows "Coming soon"; CSRC lists CSWP 40 only as an Initial Public Draft, and no CSWP 40 final record exists. The IPD itself refers to a further "PF 1.1 Final Draft", so at least one more comment round is likely before a final. PF 1.0 (CSWP 10) remains the authoritative Core |
 
 Open questions NIST put to reviewers in the IPD (which may change the final text): whether to publish Implementation Examples (possibly built from the NIST Privacy Workforce Taxonomy task statements); whether to renumber Subcategories to remove the gaps created by withdrawals and relocations; and whether to move further content (e.g., appendices) out of the PDF to the website. Programs built on the 1.1 IPD identifiers should expect identifier changes in the final.
 
@@ -118,7 +118,7 @@ Open questions NIST put to reviewers in the IPD (which may change the final text
 The PF imposes no legal obligations; the following are the program actions it structures.
 
 1. **Decide which version to anchor on.** Build or maintain Profiles on PF 1.0 identifiers today and keep the 1.0→1.1 mapping workbook at hand; re-baseline once 1.1 is final. See [../../skills/framework-gap-assessment/SKILL.md](../../skills/framework-gap-assessment/SKILL.md).
-2. **Build the data map and processing inventory first** (ID.IM-P) — it is the prerequisite for every other Function and doubles as the GDPR Art. 30 record and the DPIA description of processing. See [../../skills/dpia-privacy-assessment/SKILL.md](../../skills/dpia-privacy-assessment/SKILL.md) and [../../templates/dpia-template.md](../../templates/dpia-template.md).
+2. **Build the data map and processing inventory first** (ID.IM-P) — it is the prerequisite for every other Function and supplies the description of processing that a GDPR Art. 30 record or a DPIA needs. NIST's FAQ points organizations doing DPIAs or PIAs at the ID.RA-P Category and Subcategory CM.AW-P1 rather than at any PF-specific assessment format. See [../../skills/dpia-privacy-assessment/SKILL.md](../../skills/dpia-privacy-assessment/SKILL.md) and [../../templates/dpia-template.md](../../templates/dpia-template.md).
 3. **Run privacy risk assessments with an explicit model** (ID.RA-P): enumerate problematic data actions, score likelihood and impact to individuals, then internalize to organizational impact; reuse the organization's risk-scoring scale. See [../../skills/risk-assessment/SKILL.md](../../skills/risk-assessment/SKILL.md) and [../risk-scoring.md](../risk-scoring.md).
 4. **Set governance and accountability outcomes** (GV.PO-P, GV.RM-P; GV.RR-P and GV.OV-P in 1.1): named executive ownership of privacy risk, privacy values and policies, risk tolerance, board-level reporting. See [../../skills/policy-authoring/SKILL.md](../../skills/policy-authoring/SKILL.md) and [../../skills/grc-metrics-reporting/SKILL.md](../../skills/grc-metrics-reporting/SKILL.md).
 5. **Use Profiles as the crosswalk hub.** Map legal obligations (GDPR, US state privacy laws, sectoral rules) to Subcategories once, then reuse the Target Profile for gap assessments, audits and vendor questionnaires. See [../../skills/control-mapping/SKILL.md](../../skills/control-mapping/SKILL.md) and [../../skills/regulatory-applicability/SKILL.md](../../skills/regulatory-applicability/SKILL.md).
@@ -146,15 +146,17 @@ The PF imposes no legal obligations; the following are the program actions it st
 
 - NIST Privacy Framework Version 1.0 (CSWP 10), 16 January 2020 — official text (PDF): https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf
 - NIST Privacy Framework 1.1 Initial Public Draft (CSWP 40 ipd), 14 April 2025 — official draft text (PDF): https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.40.ipd.pdf
+- CSRC publication record for CSWP 10 (confirms publication date 16 January 2020): https://csrc.nist.gov/pubs/cswp/10/nist-privacy-framework-version-10/final
 - CSRC publication record for CSWP 40 ipd (dates, comment period): https://csrc.nist.gov/pubs/cswp/40/nist-privacy-framework-11/ipd
 - CSRC CSWP publication list (confirms no final CSWP 40 as of September 2026): https://csrc.nist.gov/publications/cswp
 - NIST Privacy Framework program page (publisher page): https://www.nist.gov/privacy-framework
-- Privacy Framework 1.1 project page (timeline, "coming soon" status; updated 1 April 2026): https://www.nist.gov/privacy-framework/privacy-framework-version-11
+- Privacy Framework 1.1 project page (timeline, "coming soon" status; updated 1 April 2026): https://www.nist.gov/privacy-framework/new-projects/privacy-framework-version-11
 - Using Privacy Framework 1.1 (publisher guidance: informative references, accountability, Ready/Set/Go, SDLC, ecosystem, buying decisions): https://www.nist.gov/privacy-framework/using-privacy-framework-11
 - Resource Repository — Crosswalks (publisher page; updated 9 February 2026): https://www.nist.gov/privacy-framework/resource-repository/browse/crosswalks
 - Data Governance and Management Profile project page (updated 24 June 2026): https://www.nist.gov/privacy-framework/new-projects/data-governance-and-management-profile
 - NIST Privacy Framework Newsroom (publication history): https://www.nist.gov/privacy-framework/newsroom
-- Not fetched (404 at time of writing): NIST PF FAQs page and the PF 1.0→1.1 Core mapping page; the mapping content above is taken from Table 2 of the 1.1 IPD itself.
+- Privacy Framework FAQs (publisher guidance: voluntary status, compliance limits, crosswalk authority, DPIA/PIA use; updated 29 August 2025): https://www.nist.gov/privacy-framework/frequently-asked-questions
+- Mapping of PF 1.0 Core to PF 1.1 Core (publisher download page for the mapping workbook): https://www.nist.gov/document/pf-11-10-core-mapping
 
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

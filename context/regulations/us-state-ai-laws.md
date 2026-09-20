@@ -4,14 +4,14 @@
 
 | Attribute | Detail |
 |---|---|
-| Instruments | Colorado C.R.S. 6-1-1701 et seq. (SB 24-205 as repealed and reenacted by SB 26-189; HB 26-1263 chatbots); Texas Bus. & Com. Code chs. 551–554 (HB 149, TRAIGA); California 11 CCR §§ 7001 et seq. (CPPA ADMT / risk-assessment / cybersecurity-audit regulations), Bus. & Prof. Code § 22757.10 et seq. (SB 53, TFAIA), Civil Code §§ 3110–3111 (AB 2013), Civil Rights Council FEHA regulations on automated-decision systems; Utah Code Title 13 chs. 72 and 75 (SB 149 of 2024, SB 226 of 2025); Illinois P.A. 103-0804 (HB 3773) (verify); NYC Admin. Code §§ 20-870–872 and 6 RCNY § 5-300 et seq. (Local Law 144 of 2021) |
+| Instruments | Colorado C.R.S. 6-1-1701 et seq. (SB 24-205 as repealed and reenacted by SB 26-189; HB 26-1263 chatbots); Texas Bus. & Com. Code chs. 551–554 (HB 149, TRAIGA); California 11 CCR §§ 7001 et seq. (CPPA ADMT / risk-assessment / cybersecurity-audit regulations), Bus. & Prof. Code § 22757.10 et seq. (SB 53, TFAIA), Civil Code §§ 3110–3111 (AB 2013), Civil Rights Council FEHA regulations on automated-decision systems; Utah Code Title 13 chs. 72 and 75 (SB 149 of 2024, SB 226 of 2025); Illinois P.A. 103-0804 (HB 3773) (verify); NYC Admin. Code §§ 20-870 to 20-874 and 6 RCNY §§ 5-300 to 5-304 (Local Law 144 of 2021) |
 | Regulators | State attorneys general (Colorado, Texas, California for SB 53); California Privacy Protection Agency (ADMT/audit regs); California Office of Emergency Services (SB 53 incident intake); Utah Division of Consumer Protection; NYC Department of Consumer and Worker Protection (DCWP) |
 | Status (Sep 2026) | Texas TRAIGA in force since 1 Jan 2026; CPPA regs effective 1 Jan 2026 with ADMT compliance by 1 Jan 2027; Colorado ADMT Act effective 1 Jan 2027 (rules in formal rulemaking, comments to 26 Oct 2026); NYC LL 144 enforced since 5 Jul 2023; Utah in force (chapter 72 sunsets 1 Jul 2027 unless extended) |
 | Who is covered | Developers and deployers of systems used in *consequential* / *significant* decisions (education, employment, housing, credit, insurance, health care, government services); frontier-model developers (SB 53); generative-AI developers (AB 2013); employers using AI in hiring (Illinois, NYC, California FEHA regs); anyone doing business in Texas (TRAIGA) |
-| Model | No federal AI statute; a patchwork of state consumer-protection style laws with AG enforcement, cure periods, and safe harbours for recognised risk frameworks (NIST AI RMF, ISO/IEC 42001) |
+| Model | No federal AI statute; a patchwork of state consumer-protection style laws with AG enforcement and cure periods. Only Texas gives an express statutory defence for substantial compliance with a recognised AI risk framework; Colorado's 2026 rewrite dropped the ISO/IEC 42001 / NIST AI RMF affirmative defence |
 | Penalties | Texas: $10,000–$12,000 (curable) / $80,000–$200,000 (uncurable) / $2,000–$40,000 per day continuing; SB 53: up to $1,000,000 per violation; Colorado: Colorado Consumer Protection Act remedies; Utah: up to $2,500 per violation; NYC: $500 first, $500–$1,500 subsequent |
 | Private right of action | None created by Colorado, Texas, or SB 53 (SB 53 adds whistleblower actions); existing discrimination and consumer-protection claims survive |
-| Federal overlay | Senate struck the proposed 10-year state-law moratorium from H.R. 1 on 1 Jul 2025 (99–1); Executive Order 14365 (11 Dec 2025) directs an AI Litigation Task Force to challenge "onerous" state AI laws and seeks preemptive federal legislation |
+| Federal overlay | Senate struck H.R. 1's artificial-intelligence section — the proposed moratorium on state AI laws — on 1 Jul 2025 (S.Amdt. 2814, 99–1); Executive Order 14365 (11 Dec 2025) directs an AI Litigation Task Force to challenge "onerous" state AI laws, conditions BEAD non-deployment funds on states avoiding them, and seeks preemptive federal legislation |
 | Closest analogue | EU AI Act high-risk deployer duties (notice, human oversight, impact assessment) — see [eu-ai-act.md](eu-ai-act.md) |
 
 ## What it is
@@ -41,7 +41,7 @@ Colorado illustrates the volatility: SB 24-205 (signed 17 May 2024) was the firs
 |---|---|
 | 6-1-1702 Developer documentation | From 1 Jan 2027, give each deployer: intended and known harmful uses; categories of training data (incl. personal data) to the extent known; known limitations and circumstances in which the ADMT should not be used; instructions for use, monitoring and meaningful human review; information the deployer needs for its own disclosures. Notify deployers of material updates within a reasonable time (public release notes plus direct notice suffice). Retain compliance records (version identifiers, changelogs, update notices) for at least 3 years |
 | 6-1-1703 Deployer records | Retain records demonstrating compliance for at least 3 years after the consequential decision |
-| 6-1-1704 Deployer disclosures | Clear and conspicuous notice before using covered ADMT in a consequential decision (public posting option); post-adverse-outcome disclosure of the ADMT's role (bill summary: within 30 days); AG must adopt rules on content of post-adverse disclosures by 1 Jan 2027; a notice that complies with the federal adverse-action laws specified in 6-1-1704(6) may carry a brief statement that covered ADMT was used |
+| 6-1-1704 Deployer disclosures | Clear and conspicuous notice before using covered ADMT in a consequential decision (public posting option); post-adverse-outcome disclosure of the ADMT's role, the inputs relied on and the consumer's rights within 30 days of the decision (6-1-1704(3)); AG must adopt rules on the content of post-adverse disclosures on or before 1 Jan 2027; a notice that complies with the federal adverse-action laws specified in 6-1-1704(6) may carry a brief statement that covered ADMT was used |
 | 6-1-1705 Consumer rights | On request after an adverse outcome: instructions to obtain and correct factually incorrect or materially inaccurate personal data (specified Colorado Privacy Act exceptions do not limit this correction right) and an opportunity for meaningful human review and reconsideration "to the extent commercially reasonable" |
 | 6-1-1707 Liability allocation | Fault allocated between developer and deployer; no joint and several liability; compliance with 6-1-1702 is relevant to developer fault |
 | HB 26-1263 Chatbot Safety Act | Operators of conversational AI services must estimate user age, disclose AI nature, protect minors (no engagement rewards, sexual content, or simulated emotional dependence), run suicide/self-harm protocols, file an annual AG report, and not present outputs as licensed professional services; effective 1 Jan 2027 |
@@ -77,7 +77,7 @@ The repealed SB 24-205 architecture (reasonable care to avoid algorithmic discri
 | Instrument | Duty |
 |---|---|
 | Utah ch. 75 (SB 226, effective 7 May 2025) | Disclose generative-AI use on a clear and unambiguous request; regulated occupations must prominently disclose (verbally at the start of a verbal interaction, in writing before a written one) for *high-risk AI interactions* involving sensitive information such as health, financial or biometric data; safe harbour for systems that self-disclose at the outset. Ch. 72 (SB 149, effective 1 May 2024) created the Office of AI Policy and a regulatory learning laboratory; sunset extended to 1 Jul 2027 |
-| Illinois P.A. 103-0804 (HB 3773) | Amends the Illinois Human Rights Act to bar employers from using AI that has a discriminatory effect on protected classes in employment decisions, bars use of zip codes as a proxy, and requires notice to employees of AI use; effective 1 Jan 2026 (verify — official text not retrievable at time of writing) |
+| Illinois P.A. 103-0804 (HB 3773) | Amends the Illinois Human Rights Act to bar employers from using AI that has a discriminatory effect on protected classes in employment decisions, bars use of zip codes as a proxy for a protected class, and requires notice to employees of AI use; reported effective 1 Jan 2026 — **none of this row is verified**, because the Illinois General Assembly site could not be reached in this review (verify) |
 | NYC LL 144 (enforced from 5 Jul 2023) | No AEDT use unless an independent auditor completed a **bias audit within one year** of use, computing selection-rate impact ratios by sex, race/ethnicity and intersectional categories (categories under 2% may be excluded with justification); historical data required, test data only if historical data is insufficient; publish a summary of results; give candidates and employees notice at least **10 business days** before use |
 
 ## Enforcement and penalties
@@ -95,7 +95,7 @@ The repealed SB 24-205 architecture (reasonable care to avoid algorithmic discri
 
 | Date | Event |
 |---|---|
-| 11 Dec 2021 / 1 Jan 2023 / 5 Jul 2023 | NYC LL 144 enacted / effective / DCWP enforcement begins (DCWP final rule effective 5 Jul 2023) |
+| 11 Dec 2021 / 1 Jan 2023 / 5 Jul 2023 | NYC LL 144 enacted / effective / DCWP enforcement begins under the 6 RCNY final rule |
 | 1 May 2024 | Utah AI Policy Act (SB 149) effective |
 | 17 May 2024 | Colorado SB 24-205 signed (original start 1 Feb 2026) |
 | 28 Sep 2024 | California AB 2013 signed (Ch. 817) |
@@ -103,19 +103,21 @@ The repealed SB 24-205 architecture (reasonable care to avoid algorithmic discri
 | 1 Jul 2025 | US Senate adopts S.Amdt. 2814 (99–1) striking the state-AI-law moratorium from H.R. 1 |
 | 24 Jul / 22 Sep 2025 | CPPA Board adopts ADMT, risk-assessment and cybersecurity-audit regulations / OAL approves; effective 1 Jan 2026 |
 | 28 Aug 2025 | Colorado SB 25B-004 signed, delaying SB 24-205 to 30 Jun 2026 |
-| 29 Sep 2025 | California SB 53 (TFAIA) signed (Ch. 138); operative 1 Jan 2026 under California's default commencement rule (verify) |
+| 29 Sep 2025 | California SB 53 (TFAIA) signed (Ch. 138); the act carries no operative-date clause, so it took effect 1 Jan 2026 under California's default commencement rule |
 | 1 Oct 2025 | California Civil Rights Council ADS employment regulations effective |
 | 11 Dec 2025 | Executive Order 14365 "Ensuring a National Policy Framework for Artificial Intelligence" |
 | 1 Jan 2026 | Texas TRAIGA effective; AB 2013 documentation deadline; Illinois P.A. 103-0804 effective (verify) |
 | 14 May 2026 | Colorado SB 26-189 signed — repeals and reenacts Part 17 as the ADMT Act |
-| 2 Jun 2026 | Executive Order 14409 "Promoting Advanced Artificial Intelligence Innovation and Security" (content not reviewed here) |
+| 2 Jun 2026 | Executive Order 14409 "Promoting Advanced Artificial Intelligence Innovation and Security" — federal AI and cybersecurity directives to federal agencies; it does not address state AI laws |
+| 1 Jul 2026 | Colorado HB 26-1263 (Chatbot Safety Act) signed |
+| 7 Jul 2026 | FTC publishes a **proposed** policy statement on suppression of accuracy in AI systems (the EO 14365 § 7 deliverable, Matter No. P264200), arguing that state laws compelling untruthful model outputs are impliedly preempted by FTC Act § 5; comments closed 31 Jul 2026 |
 | 11 Aug 2026 | Colorado AG files proposed ADMT and Chatbot Safety rules; written comments accepted to 26 Oct 2026, revised draft by 23 Sep 2026 |
 | 1 Sep 2026 | Texas AG complaint mechanism due online |
-| 1 Jan 2027 | Colorado ADMT Act and Chatbot Safety Act apply; CPPA ADMT compliance deadline; Colorado AG rules due; SB 53 OES annual incident reporting begins |
+| 1 Jan 2027 | Colorado ADMT Act and Chatbot Safety Act apply; CPPA ADMT compliance deadline; Colorado AG rules due; California OES and the AG begin annual public reports on SB 53 critical safety incidents and covered-employee reports |
 | 31 Dec 2027 / 1 Apr 2028 | CPPA: legacy risk assessments completed / first risk-assessment submissions and first cybersecurity-audit reports (largest businesses) |
 | 1 Jan 2030 | Colorado cure-period provision repealed |
 
-Pending: Connecticut and Maryland have debated comprehensive algorithmic-discrimination bills in 2024–2026 sessions; no enacted comprehensive statute was confirmed in this review (verify). EO 14365 tasked Commerce with identifying "onerous" state laws, the FCC with a possible preemptive disclosure standard, and the FTC with a policy statement; watch for litigation against Colorado and California and for a federal preemption bill.
+Pending as of September 2026: Colorado's ADMT and Chatbot Safety rules are still in formal rulemaking; the FTC deliverable is a proposed, not final, policy statement; and neither the Commerce evaluation of "onerous" state laws (EO 14365 § 4) nor an FCC reporting/disclosure proceeding (§ 6) could be found published (verify). Other states — Connecticut and Maryland among them — have debated comprehensive algorithmic-discrimination bills, but no further enacted comprehensive state AI statute was verified in this review (verify). Watch for AI Litigation Task Force suits against Colorado and California and for a federal preemption bill.
 
 ## Key obligations for security/GRC teams
 
@@ -123,7 +125,7 @@ Pending: Connecticut and Maryland have debated comprehensive algorithmic-discrim
 2. **Build one intake/assessment record per system** that satisfies the CPPA risk assessment (§ 7152), Colorado deployer records (3 years), NYC bias-audit evidence and EU AI Act FRIA where relevant — do not run four parallel assessments. See [../../skills/ai-governance/SKILL.md](../../skills/ai-governance/SKILL.md) and [../../skills/dpia-privacy-assessment/SKILL.md](../../skills/dpia-privacy-assessment/SKILL.md).
 3. **Demand developer documentation in contracts**: Colorado 6-1-1702 content, model/dataset cards, update notices, AB 2013 training-data summaries, and audit cooperation for NYC bias audits. See [../../skills/third-party-risk-assessment/SKILL.md](../../skills/third-party-risk-assessment/SKILL.md).
 4. **Stand up notice, correction, human-review and opt-out workflows** with clocks: NYC 10 business days pre-use; Colorado post-adverse disclosure and human review; CPPA pre-use notice, opt-out and access.
-5. **Adopt a recognised AI risk framework** (NIST AI RMF and its Generative AI Profile, ISO/IEC 42001): Texas makes substantial compliance a defence, and Colorado's AG rulemaking and enforcement discretion will weigh it. See [../../skills/ai-governance/SKILL.md](../../skills/ai-governance/SKILL.md).
+5. **Adopt a recognised AI risk framework** (NIST AI RMF and its Generative AI Profile, ISO/IEC 42001): Texas makes substantial compliance an express defence (§ 552.105(e)); Colorado's 2026 rewrite deleted the equivalent affirmative defence, so there a framework is evidence of diligence, not a statutory shield. See [../../skills/ai-governance/SKILL.md](../../skills/ai-governance/SKILL.md).
 6. **Wire SB 53 incident clocks into incident response** if you train frontier models: 15 days to OES, 24 hours to authorities for imminent physical danger; protect unreleased model weights as a named control objective. See [../../skills/incident-regulatory-reporting/SKILL.md](../../skills/incident-regulatory-reporting/SKILL.md).
 7. **Plan CPPA cybersecurity-audit readiness** now: scope the audit to the 2027 period, appoint an independent auditor, and prepare the executive certification. See [../../skills/control-testing/SKILL.md](../../skills/control-testing/SKILL.md).
 8. **Track legislative and rulemaking change monthly** — Colorado rules, EO 14365 follow-on actions and federal preemption bills can change obligations within a quarter. See [../../skills/regulatory-horizon-scanning/SKILL.md](../../skills/regulatory-horizon-scanning/SKILL.md) and [../../workflows/new-regulation-impact-assessment.md](../../workflows/new-regulation-impact-assessment.md).
@@ -150,9 +152,11 @@ Pending: Connecticut and Maryland have debated comprehensive algorithmic-discrim
 - California Civil Rights Council rulemaking actions (regulator page): https://calcivilrights.ca.gov/civilrightscouncil/rulemaking-actions/ (final ADS regulation PDF is image-only; content summarised from the modified text and the council page)
 - Utah SB 149 (2024) and SB 226 (2025) enrolled texts (legal text): https://le.utah.gov/~2024/bills/sbillenr/SB0149.pdf ; https://le.utah.gov/~2025/bills/sbillenr/SB0226.pdf
 - NYC DCWP AEDT page, final rule and FAQ (regulator guidance): https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page ; https://rules.cityofnewyork.us/wp-content/uploads/2023/04/DCWP-NOA-for-Use-of-Automated-Employment-Decisionmaking-Tools-2.pdf ; https://www.nyc.gov/assets/dca/downloads/pdf/about/DCWP-AEDT-FAQ.pdf ; Local Law 144 legislative record: https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=4344524&GUID=B051915D-A9AC-451E-81F8-6596032FA3F9
-- Executive Order 14365 (Federal Register): https://www.federalregister.gov/documents/2025/12/16/2025-23092/ensuring-a-national-policy-framework-for-artificial-intelligence
-- US Senate roll-call votes, 119th Congress 1st session (vote 363 on S.Amdt. 2814): https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_1.xml
-- Illinois P.A. 103-0804 (HB 3773): https://www.ilga.gov/legislation/publicacts/fulltext.asp?Name=103-0804 — **could not be fetched**; Illinois details above are unverified
+- Executive Order 14365 "Ensuring a National Policy Framework for Artificial Intelligence" (legal text): https://www.govinfo.gov/content/pkg/FR-2025-12-16/html/2025-23092.htm ; Federal Register landing page: https://www.federalregister.gov/documents/2025/12/16/2025-23092/ensuring-a-national-policy-framework-for-artificial-intelligence
+- Executive Order 14409 "Promoting Advanced Artificial Intelligence Innovation and Security" (legal text): https://www.govinfo.gov/content/pkg/FR-2026-06-05/html/2026-11415.htm
+- FTC, proposed "Policy Statement Concerning the Suppression of Accuracy in Artificial Intelligence Systems", 7 Jul 2026 (regulator document): https://www.govinfo.gov/content/pkg/FR-2026-07-07/html/2026-13628.htm
+- US Senate roll-call vote 363 of the 119th Congress, 1st session, on S.Amdt. 2814 (official record): https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00363.xml
+- Illinois P.A. 103-0804 (HB 3773): https://www.ilga.gov/Legislation/PublicActs/View/103-0804 — **could not be fetched in this review** (the site was unreachable); all Illinois details above are unverified
 
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

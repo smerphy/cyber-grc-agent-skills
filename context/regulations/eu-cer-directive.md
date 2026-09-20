@@ -33,7 +33,7 @@ An organisation is in scope only once a Member State identifies it as a critical
 | (b) Territorial nexus | The entity operates, and its critical infrastructure is located, on the territory of that Member State |
 | (c) Significant disruptive effect | An incident would have significant disruptive effects on that service or on dependent services in other Annex sectors, judged against the Art. 7(1) criteria: number of users; cross-sector dependency; degree and duration of impact on economic and societal activities, environment, public safety or health; market share; geographic area including cross-border impact and isolation (islands, remote, mountainous areas); availability of alternatives |
 
-Member States must also apply the outcomes of their national risk assessment and strategy, and may set thresholds for the Art. 7(1) criteria, which they report to the Commission (Art. 7(2)(c)). The Commission's September 2025 guidelines (C(2025) 6094) structure the test as a five-question flow (sector/category → essential service → territory → significant disruptive effect → exclusions) and give practical guidance per criterion.
+Member States must also apply the outcomes of their national risk assessment and strategy, and may set thresholds for the Art. 7(1) criteria, which they report to the Commission (Art. 7(2)(c)). The Commission's September 2025 guidelines (C(2025) 6094) restate the three criteria as cumulative and set out five steps to consider — sector/category, essential service, territory, significant disruptive effect, exclusions — which Member States may take in any order, with practical guidance per criterion.
 
 ### Annex sectors, subsectors and categories of entity
 
@@ -49,7 +49,7 @@ Member States must also apply the outcomes of their national risk assessment and
 | 8 | Digital infrastructure | IXPs; DNS service providers (excluding root name servers); TLD registries; cloud computing, data centre and CDN providers; trust service providers; public electronic communications networks and publicly available electronic communications services (definitions cross-referenced to NIS2 Art. 6, eIDAS and the EECC) |
 | 9 | Public administration | Public administration entities of central governments as defined by national law (Art. 2(10) definition excludes judiciary, parliaments, central banks) |
 | 10 | Space | Operators of ground-based infrastructure supporting space-based services (excluding public electronic communications network providers) |
-| 11 | Food | Food businesses (Reg. 178/2002 Art. 3(2)) engaged exclusively in logistics and wholesale distribution and large-scale industrial production and processing |
+| 11 | Production, processing and distribution of food | Food businesses (Reg. 178/2002 Art. 3(2)) engaged exclusively in logistics and wholesale distribution and large-scale industrial production and processing |
 
 ### Exclusions and carve-outs
 
@@ -112,7 +112,7 @@ The Chapter III clock and the NIS2 clock differ: NIS2 requires an early warning 
 |---|---|---|
 | Delegated Regulation (EU) 2023/2450 | 25 July 2023 (OJ L, 30.10.2023) — binding | Non-exhaustive list of essential services per Annex sector/subsector, used for national risk assessments and identification |
 | Communication C(2025) 6094 — guidelines under Arts. 5(5), 6(6) and 7(3) | 11 September 2025 | Voluntary common template for reporting national risk-assessment outcomes; step-by-step identification methodology; guidance on each Art. 7(1) significance criterion (users, dependency, impact, market share, geography, alternatives) and thresholds |
-| Communication C/2026/3712 — guidelines under Art. 13(5) | 10 July 2026 (OJ C, 13.7.2026) | Non-exhaustive catalogue of resilience-enhancing measures in seven domains (A general considerations, B prevention, C physical protection, D response/resistance/mitigation, E recovery, F employee security management, G awareness), mirroring Art. 13(1)(a)–(f); includes drone-threat considerations flagged under the EU Action Plan on Drone and Counter-Drone Security |
+| Communication C/2026/3712 — guidelines under Art. 13(5) | 10 July 2026 (OJ C, 13.7.2026) | Non-exhaustive catalogue of resilience-enhancing measures in seven domains (A general considerations, B prevention, C physical protection, D response/resistance/mitigation, E recovery, F employee security management, G awareness), mirroring Art. 13(1)(a)–(f); includes drone detection, mitigation and counter-drone cooperation measures, identified as a key action under the EU Action Plan on Drone and Counter-Drone Security (COM(2026) 81 final, 11 February 2026) |
 
 ## Enforcement and penalties
 
@@ -126,7 +126,7 @@ The Chapter III clock and the NIS2 clock differ: NIS2 requires an early warning 
 | Penalties (Art. 22) | Purely national: "effective, proportionate and dissuasive"; no EU minimum or maximum fine. Amounts, personal liability of managers and criminal sanctions therefore vary by Member State and must be checked in each transposing act |
 | Commission review (Art. 25) | Report on Member State compliance by 17 July 2027; first functioning review (including whether to amend the Annex) by 17 June 2029 |
 
-Enforcement against Member States is separate: the Commission sent letters of formal notice for non-transposition in November 2024 (to 24 Member States, per secondary reports — verify), reasoned opinions in July 2025, and in its April 2026 infringement cycle referred Bulgaria, France, Luxembourg, the Netherlands, Poland, Spain and Sweden to the Court of Justice, requesting financial sanctions.
+Enforcement against Member States is separate: for non-transposition the Commission sent letters of formal notice in November 2024 and reasoned opinions in July 2025, and on 29 April 2026 referred Bulgaria, France, Luxembourg, the Netherlands, Poland, Spain and Sweden to the Court of Justice, asking the Court to impose financial sanctions on each of them (IP/26/910).
 
 ## Timeline and status
 
@@ -139,19 +139,19 @@ Enforcement against Member States is separate: the Commission sent letters of fo
 | 17 Oct 2024 | Transposition deadline; penalties to be notified (Art. 22) |
 | 18 Oct 2024 | National measures apply; Directive 2008/114/EC repealed |
 | Nov 2024 | Letters of formal notice to Member States that had not notified transposition |
-| 17 Jan 2025 | First CERG biennial work programme due (Art. 19(4)) |
+| 17 Jan 2025 | First CERG biennial work programme due (Art. 19(4)); a 2025–2026 CERG work programme is published on the Commission's CER page |
 | Jul 2025 | Reasoned opinions to remaining non-transposing Member States |
 | 11 Sep 2025 | Commission guidelines on identification and risk-assessment reporting template, C(2025) 6094 |
 | 17 Jan 2026 | Deadline for national strategies and Member State risk assessments |
-| Apr 2026 | Commission refers seven Member States (BG, FR, LU, NL, PL, ES, SE) to the CJEU with a request for financial sanctions |
+| 29 Apr 2026 | Commission refers seven Member States (BG, FR, LU, NL, PL, ES, SE) to the CJEU with a request for financial sanctions |
 | 10 Jul 2026 | Commission guidelines on resilience measures, C/2026/3712 (published OJ C 13 Jul 2026) |
-| 17 Jul 2026 | Deadline for identifying critical entities; notifications to entities within 1 month; entity risk assessment due 9 months and Chapter III obligations 10 months after notification (so mid-2027 for entities notified on time) |
+| 17 Jul 2026 | Deadline for identifying critical entities; notifications to entities within 1 month; entity risk assessment due 9 months and Chapter III obligations 10 months after notification (so May–June 2027 for entities notified on time) |
 | 17 Jan 2027 | Commission summary report to CERG on strategies and risk assessments (Art. 19(7)) |
 | 17 Jul 2027 | Commission report on Member State compliance (Art. 25) |
 | 17 Jul 2028 | First biennial single-point-of-contact summary reports on incident notifications (Art. 9(3)) |
 | 17 Jun 2029 | First periodic review of the directive, including possible Annex changes (Art. 25) |
 
-**Status as of September 2026.** The directive itself is unamended; no proposal to amend it has been identified. Transposition is uneven: the Commission states that "most Member States have notified complete transposition", while seven were referred to the Court in April 2026. National laws differ on designation mechanics (some Member States are reported to use self-assessment/registration rather than pure designation — e.g. Germany's KRITIS-Dachgesetz in force since March 2026 per secondary sources (verify)), penalty levels and incident-reporting portals. Implementing acts under Art. 13(6) (technical and methodological specifications for resilience measures) and Art. 18(6) (advisory-mission procedures) had not been located as adopted at the time of writing (verify). Identification decisions were due 17 July 2026, so the first wave of Chapter III obligations lands around May 2027 for entities notified in July 2026 — later in Member States that missed the deadline.
+**Status as of September 2026.** The directive is in force and unamended: EUR-Lex holds no consolidated version and no corrigendum, and no amending proposal has been identified. Transposition is uneven — the Commission stated in April 2026 that "most Member States have notified complete transposition", while seven were referred to the Court of Justice. National laws differ on designation mechanics, penalty levels and incident-reporting portals: Germany's KRITIS-Dachgesetz of 11 March 2026 (BGBl. 2026 I Nr. 66), in force 17 March 2026 and already amended by the Act of 21 July 2026, works by operator self-registration with the federal civil-protection office rather than pure designation, and runs the 9-month and 10-month clocks from registration. No implementing act under Art. 13(6) (technical and methodological specifications for resilience measures) or Art. 18(6) (advisory-mission procedures) is listed on the Commission's CER page as of September 2026 — both remain pending (verify). Identification decisions were due 17 July 2026 and notifications within one month of identification, so the first wave of Chapter III obligations falls due around May–June 2027 for entities notified on time, later where Member States missed the deadline.
 
 ## Key obligations for security/GRC teams
 
@@ -183,9 +183,9 @@ Enforcement against Member States is separate: the Commission sent letters of fo
 - Commission Communication C/2026/3712 — guidelines on Art. 13(5) resilience measures (regulator guidance, OJ C 13.7.2026, CELEX 52026XC03712): https://eur-lex.europa.eu/eli/C/2026/3712/oj
 - DG Migration and Home Affairs, "Critical infrastructure resilience at EU-level" (regulator page: timeline, CERG, guidelines): https://home-affairs.ec.europa.eu/policies/internal-security/counter-terrorism-and-radicalisation/protection/critical-infrastructure-resilience-eu-level_en
 - Commission news, 11 September 2025 (identification guidelines) and 10 July 2026 (resilience-measures guidelines): https://home-affairs.ec.europa.eu/news/commission-adopts-guidelines-enhance-resilience-critical-entities-eu-2025-09-11_en and https://home-affairs.ec.europa.eu/news/commission-issues-guidance-strengthen-resilience-critical-infrastructure-2026-07-10_en
-- Commission press release IP/26/910, April 2026 infringement cycle — referral of seven Member States to the CJEU (regulator page): https://ec.europa.eu/commission/presscorner/detail/en/ip_26_910
+- Commission press release IP/26/910 of 29 April 2026 — referral of seven Member States to the CJEU for failure to transpose (regulator page): https://ec.europa.eu/commission/presscorner/detail/en/ip_26_910
 - Council Recommendation C/2024/4371 of 25 June 2024 on the Critical Infrastructure Blueprint (legal text, OJ C 5.7.2024, CELEX 32024H04371): https://eur-lex.europa.eu/eli/C/2024/4371/oj
-- Secondary (transposition status only, not fetched in full): DLA Piper Privacy Matters, July 2026, on the designation deadline and NIS2 consequence; German KRITIS-Dachgesetz commentary for the March 2026 entry into force.
+- Germany, KRITIS-Dachgesetz of 11 March 2026 (national transposing act; example of a self-registration model): https://www.gesetze-im-internet.de/kritisdachg/
 
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

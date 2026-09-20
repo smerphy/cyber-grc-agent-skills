@@ -55,14 +55,15 @@ Wallet use is voluntary and non-use may not restrict access to public or private
 | Service | Key rule | Implementing act (all "laying down rules for the application of Regulation (EU) No 910/2014") |
 |---|---|---|
 | Qualified certificates for signatures/seals | Annexes I and III; mutual recognition (Art. 24a) | IR 2025/1943 (29 Sept 2025) |
-| Validation and preservation | Arts. 32, 32a, 33, 34, 40, 40a | IR 2025/1945 (validation, 29 Sept 2025); preservation and validation-service acts listed as adopted on the Commission overview (numbers not verified here) |
+| Validation and preservation | Arts. 32, 32a, 33, 34, 40, 40a | IR 2025/1945 (validation of qualified signatures/seals), IR 2025/1942 (qualified validation services), IR 2025/1946 (qualified preservation services) — all of 29 Sept 2025 |
 | Remote QSCD/QSealCD management (new qualified service) | Arts. 29a, 39a; transitional until 21 May 2026 (Art. 51(3)) | IR 2025/1567 (applies 19 August 2027) |
 | Qualified electronic time stamps | Art. 42 | IR 2025/1929 (29 Sept 2025) |
 | Qualified electronic registered delivery | Art. 44 | IR 2025/1944 (29 Sept 2025) |
 | Qualified website authentication certificates (QWACs) | Annex IV; browser recognition (Art. 45(1a)); no other mandatory requirements (45(1b)) | IR 2025/2527 (applies 6 January 2027) |
-| Electronic attestations of attributes (EAA/QEAA) | Legal effect equal to paper attestations for QEAA and public-sector authentic-source attestations (Art. 45b); Annex V/VII requirements; Annex VI attributes verifiable against authentic sources within 24 months of the wallet acts (Art. 45e) | IR 2025/1569 (Arts. 6–9 apply 19 August 2026); amendment out for feedback in 2026 |
+| Electronic attestations of attributes (EAA/QEAA) | Legal effect equal to paper attestations for QEAA and public-sector authentic-source attestations (Art. 45b); Annex V/VII requirements; Annex VI attributes verifiable against authentic sources within 24 months of the wallet acts (Art. 45e) | IR 2025/1569 (Arts. 6–9 apply 19 August 2026), amended by IR 2026/1735 of 15 July 2026 (its Art. 1(3) applies 1 January 2027) |
 | Qualified electronic archiving (new) | Durability and legibility beyond technological validity, integrity, automated integrity report signed/sealed by the provider (Art. 45j) | IR 2025/2532 (16 Dec 2025) |
 | Qualified electronic ledgers (new) | Presumption of unique sequential chronological ordering and integrity (Art. 45k(2)); created by QTSPs, origin established, changes immediately detectable (Art. 45l) | IR 2025/2531 (16 Dec 2025) |
+| Advanced electronic signatures and seals | Reference formats and methods Member States must recognise in public services (Arts. 27, 37; acts under 27(5), 37(5)) | IR 2026/248 (2 Feb 2026; Arts. 1(1) and 3(1) apply 23 February 2027) |
 | Trusted lists | Art. 22 | Implementing Decision 2025/2164 (new list-format version, applies 29 April 2026) |
 
 ### European Digital Identity Wallet
@@ -74,7 +75,7 @@ Wallet use is voluntary and non-use may not restrict access to public or private
 | Privacy | Provider may not collect unnecessary usage data or combine wallet data with other services; logical separation where other services are offered (Art. 5a(14)); no tracking, linking or correlation of transactions by attestation providers or others unless the user authorises; unlinkability techniques (5a(16)); GDPR compliance must be demonstrated (5a(17)) |
 | Certification | By Member-State-designated CABs (Art. 5c(1)); cybersecurity-relevant parts under Cybersecurity Act schemes, remainder under national schemes built to IR 2024/2981 (5c(2)–(3)); valid up to 5 years with vulnerability assessment every 2 years, cancelled if vulnerabilities are not remedied in time (5c(4)); Commission publishes the list of certified wallets in the OJ (Art. 5d; IR 2025/849) |
 | Security breach | Member State must suspend provision and use without undue delay where the wallet, its validation mechanism or its eID scheme is breached or partly compromised; withdraw if severity justifies; withdraw and revoke if not remedied within 3 months; inform users, single points of contact, relying parties and the Commission (Art. 5e). IR 2025/847: suspension/withdrawal information within 24 hours; assessment criteria include unavailability > 12 consecutive hours or > 16 hours in a calendar week and > 1 % of users or relying parties impacted; notifications via ENISA's CIRAS (Art. 10, applies 7 May 2026) |
-| Relying-party registration | Register in the Member State of establishment with name/registration number, contacts, intended use and the data to be requested; request nothing beyond what is registered; identify to the user; keep registration current (Art. 5b). IR 2025/848 (applies 24 December 2026) adds wallet-relying-party access certificates (issued only to registered parties) and registration certificates describing the attributes the party may request |
+| Relying-party registration | Register in the Member State of establishment with name/registration number, contacts, intended use and the data to be requested; request nothing beyond what is registered; identify to the user; keep registration current (Art. 5b). IR 2025/848 (applies 24 December 2026) adds wallet-relying-party access certificates (issued only to registered parties) and registration certificates describing the attributes the party may request; amended by IR 2026/1730 of 15 July 2026 |
 | Supervision | Wallet supervisory bodies with ex ante/ex post powers, on-site inspection, orders to suspend or cease provision, suspension of relying-party registrations for illegal or fraudulent use, duty to inform NIS2 authorities of significant breaches and DPAs of personal data breaches (Art. 46a); annual activity report by 31 March (46a(6), 46b(6); IR 2025/1571); Member-State statistics incl. a summary of significant security incidents and data breaches by 31 March each year (Art. 48a) |
 
 ## Enforcement and penalties
@@ -89,18 +90,19 @@ Wallet use is voluntary and non-use may not restrict access to public or private
 
 | Date | Event |
 |---|---|
-| 1 July 2016 | Original eIDAS (910/2014) applied |
+| 1 July 2016 | Original eIDAS (910/2014) applied (Art. 52(2)) |
 | 20 May 2024 | Regulation (EU) 2024/1183 entered into force (OJ L, 30.4.2024); corrigendum published OJ L, 9.4.2025 |
 | 18 October 2024 | NIS2 Art. 42 deleted eIDAS Art. 19; TSP cyber-risk and incident-reporting duties move to NIS2 Art. 21/23 |
 | 24 December 2024 | First wallet implementing package in force (OJ 4.12.2024): IR 2024/2977 (PID and attestations), 2024/2979 (integrity and core functionalities), 2024/2980 (notifications to the Commission), 2024/2981 (certification), 2024/2982 (protocols and interfaces) — starts the 24/36-month clocks |
 | 7 May 2025 | OJ publication of IR 2025/846 (cross-border identity matching), 2025/847 (wallet security breaches), 2025/848 (relying-party registration), 2025/849 (list of certified wallets) |
-| 21 May 2025 | Level-1 deadline for most trust-service implementing acts (Arts. 19a(2), 20(4), 21(4), 24(5), 45(2), 45j(2), 45l(3) etc.) — largely met late: July 2025 (IR 2025/1566–1572), September 2025 (2025/1929, 1943, 1944, 1945), October 2025 (2025/2160, 2162; Decision 2025/2164), December 2025 (2025/2527, 2530, 2531, 2532) |
-| 21 May 2026 | Transitional cut-offs (Art. 51): legacy qualified certificates for natural persons cease to count; remote-device management without qualified status ends; QTSPs qualified before 20 May 2024 must have filed a conformity report proving Art. 24(1)–(1b) compliance. Commission review report due (Art. 49(1)) — no published report located as of September 2026 (verify) |
+| 21 May 2025 | Level-1 deadline for most trust-service implementing acts (Arts. 19a(2), 20(4), 21(4), 24(5), 45(2), 45j(2), 45l(3) etc.) — largely met late: July 2025 (IR 2025/1566–1572), September 2025 (2025/1929, 1942–1946), October 2025 (2025/2160, 2162; Decision 2025/2164), December 2025 (2025/2527, 2530, 2531, 2532) |
+| 3 February 2026 | IR 2026/248 (formats of advanced electronic signatures and seals) published; its Arts. 1(1) and 3(1) apply from 23 February 2027 |
 | 8 April 2026 | IR 2026/798 (remote onboarding of wallet users) published |
-| April 2026 | ENISA public consultation (to 30 April 2026) on the draft candidate EU Digital Wallet cybersecurity certification scheme; adoption status thereafter not verified |
-| 22 July 2026 | IR 2026/1731 (15 July 2026) amending the four 2024 wallet acts' standards and specifications (Art. 3(4) applies 11 August 2028); draft amendments to IR 2025/848 and 2025/1569 closed public feedback on 5 March 2026 |
+| April 2026 | ENISA public consultation (to 30 April 2026) on the draft candidate EU Digital Identity Wallet cybersecurity certification scheme; the scheme had not been confirmed as adopted as of September 2026 (verify) |
+| 21 May 2026 | Transitional cut-offs (Art. 51): legacy qualified certificates for natural persons cease to count (51(2)); remote-device management without qualified status ends (51(3)); QTSPs qualified before 20 May 2024 must have filed a conformity report proving Art. 24(1)–(1b) compliance (51(4)). Commission review report due (Art. 49(1)) — no published report located as of September 2026 (verify) |
+| 22 July 2026 | OJ publication of three amending acts of 15 July 2026: IR 2026/1731 (the four 2024 wallet acts' standards and specifications; its Art. 3(4) applies 11 August 2028), IR 2026/1730 (amending IR 2025/848) and IR 2026/1735 (amending IR 2025/1569) |
 | 19 August 2026 | IR 2025/1572 (qualified-service initiation formats) and IR 2025/1569 Arts. 6–9 apply |
-| 24 December 2026 | Wallet provision deadline; IR 2025/846 and 2025/848 apply; Annex VI authentic-source verification due (Art. 45e(1)). Press reporting of 16 September 2026 indicates only 3 of 27 Member States have launched wallets and most will miss the date (secondary source) |
+| 24 December 2026 | Wallet provision deadline; IR 2025/846 and 2025/848 apply; Annex VI authentic-source verification due (Art. 45e(1)). No amendment postponing this date had entered into force as of September 2026: the consolidated 910/2014 text still carries 18 October 2024 as its last amendment, and the Commission's own pages still state the end-2026 deadline. Rollout is reported to be behind schedule in most Member States (verify) |
 | 6 January 2027 | IR 2025/2527 (QWAC reference standards) applies |
 | 21 May 2027 | Legacy secure signature creation devices cease to count as qualified devices (Art. 51(1)) |
 | 19 August 2027 | IR 2025/1566 and 2025/1567 apply |
@@ -117,7 +119,7 @@ Wallet use is voluntary and non-use may not restrict access to public or private
 6. **Regulated private sectors (banking, telecoms, energy, health, etc.)**: plan wallet acceptance for strong-authentication flows by 24 December 2027; align with existing customer-authentication controls. Financial entities should reconcile with [dora.md](dora.md) ICT-change and third-party processes.
 7. **Privacy by design**: wallet-related processing must demonstrably comply with GDPR (Art. 5a(17)); run a DPIA for wallet, attestation or relying-party integrations. See [../../skills/dpia-privacy-assessment/SKILL.md](../../skills/dpia-privacy-assessment/SKILL.md) and [gdpr.md](gdpr.md).
 8. **Vendor diligence on trust services**: verify qualified status on the national trusted list rather than on marketing claims; the list is constitutive. See [../../skills/third-party-risk-assessment/SKILL.md](../../skills/third-party-risk-assessment/SKILL.md).
-9. **Horizon-scan the implementing-act pipeline** — acts were still being amended in July 2026 and the ENISA wallet certification scheme was in consultation in April 2026. See [../../skills/regulatory-horizon-scanning/SKILL.md](../../skills/regulatory-horizon-scanning/SKILL.md).
+9. **Horizon-scan the implementing-act pipeline** — three amending acts were adopted on 15 July 2026 and the ENISA wallet certification scheme was still in consultation in April 2026. See [../../skills/regulatory-horizon-scanning/SKILL.md](../../skills/regulatory-horizon-scanning/SKILL.md).
 
 ## Interplay
 
@@ -130,15 +132,19 @@ Wallet use is voluntary and non-use may not restrict access to public or private
 
 ## Primary sources
 
-- Regulation (EU) 2024/1183 — official legal text (Publications Office, CELEX 32024R1183): https://eur-lex.europa.eu/eli/reg/2024/1183/oj — fetched
-- Consolidated Regulation (EU) No 910/2014 as of 18.10.2024 incl. 2024/1183 and corrigendum (CELEX 02014R0910-20241018) — legal text — fetched
-- Directive (EU) 2022/2555 (NIS2), Arts. 3 and 42 and Annex I — legal text (CELEX 32022L2555) — fetched
-- Commission Implementing Regulations (EU) 2024/2977, 2024/2979, 2024/2980, 2024/2981, 2024/2982; 2025/846, 2025/847, 2025/848, 2025/849; 2025/1566–1572; 2025/1929, 2025/1943, 2025/1944, 2025/1945; 2025/2160, 2025/2162; 2025/2527, 2025/2530, 2025/2531, 2025/2532; 2026/798; 2026/1731; Implementing Decision (EU) 2025/2164 — legal texts (Publications Office, CELEX 3YYYYRNNNN) — fetched
-- Commission, "The European Digital Identity Regulation" implementing-acts overview (updated 22 July 2026): https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931811/The+European+Digital+Identity+Regulation — regulator guidance — fetched
+- Regulation (EU) 2024/1183 establishing the European Digital Identity Framework — legal text: https://eur-lex.europa.eu/eli/reg/2024/1183/oj — fetched
+- Consolidated Regulation (EU) No 910/2014 (version of 18.10.2024, incorporating 2024/1183 and the corrigendum of 9.4.2025) — legal text, the basis for all article references above: https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18 — fetched
+- Directive (EU) 2022/2555 (NIS2), Arts. 3, 23 and 42 and Annex I — legal text: https://eur-lex.europa.eu/eli/dir/2022/2555/oj — fetched
+- December 2024 wallet package: Implementing Regulations (EU) 2024/2977, 2024/2979, 2024/2980, 2024/2981, 2024/2982 — legal texts, e.g. certification act: https://eur-lex.europa.eu/eli/reg_impl/2024/2981/oj — fetched
+- May 2025 wallet acts: Implementing Regulations (EU) 2025/846, 2025/847, 2025/848, 2025/849 — legal texts, e.g. security breaches: https://eur-lex.europa.eu/eli/reg_impl/2025/847/oj — fetched
+- July 2025 trust-service acts: Implementing Regulations (EU) 2025/1566 to 2025/1572 — legal texts, e.g. initiation of qualified trust services: https://eur-lex.europa.eu/eli/reg_impl/2025/1572/oj — fetched
+- September–December 2025 trust-service acts: Implementing Regulations (EU) 2025/1929, 2025/1942 to 2025/1946, 2025/2160, 2025/2162, 2025/2527, 2025/2530, 2025/2531, 2025/2532 — legal texts, e.g. QTSP requirements: https://eur-lex.europa.eu/eli/reg_impl/2025/2530/oj — fetched
+- Implementing Decision (EU) 2025/2164 (trusted-list format) — legal text: https://eur-lex.europa.eu/eli/dec_impl/2025/2164/oj — fetched
+- 2026 acts: Implementing Regulations (EU) 2026/248, 2026/798, 2026/1730, 2026/1731, 2026/1735 — legal texts, e.g. the wallet standards amendment: https://eur-lex.europa.eu/eli/reg_impl/2026/1731/oj — fetched
+- Commission, "The European Digital Identity Regulation" implementing-acts overview (last updated 22 July 2026): https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931811/The+European+Digital+Identity+Regulation — regulator guidance — fetched
 - Commission, "Questions & Answers on Trust Services under the European Digital Identity Regulation": https://digital-strategy.ec.europa.eu/en/faqs/questions-answers-trust-services-under-european-digital-identity-regulation — regulator guidance — fetched
 - Commission, "European Digital Identity (EUDI) Regulation" and "eIDAS Regulation" policy pages: https://digital-strategy.ec.europa.eu/en/policies/eudi-regulation and https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation — regulator guidance — fetched
 - ENISA, "ENISA advances the certification of EU Digital Wallets" (3 April 2026): https://www.enisa.europa.eu/news/enisa-advances-the-certification-of-eu-digital-wallets — regulator guidance — fetched
-- Euronews, "EU digital wallet: 24 of 27 members will miss the deadline" (16 September 2026) — secondary source for rollout status only — fetched
 
 ---
 **Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.
