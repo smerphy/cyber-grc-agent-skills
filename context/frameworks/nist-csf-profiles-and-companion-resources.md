@@ -53,7 +53,7 @@ Five steps: **1 Scope the Profile** → **2 Gather needed information** → **3 
 
 A Community Profile is a published baseline of CSF outcomes addressing shared interests across many organizations — a sector, subsector, technology or threat type. Per CSWP 32, one **should** contain, per included Subcategory: a **priority level** (e.g. 1/2/3 or Low/Moderate/High), a **rationale** explaining the community-specific threat or challenge that justifies the priority, and applicable **Informative References/Mappings**. It **may** add *Considerations* and *Implementation Examples*. There is no mandated format.
 
-Lifecycle: **Plan** (audience, scope, participants, references, content) → **Develop** (prioritize, align to CSF outcomes, document, gather feedback, inform the community) → **Use** (collaborate/coordinate, assess current state) → **Maintain** (measure impact, monitor and feed back changes).
+Lifecycle: **Plan** (audience, scope, participants, references, content) → **Develop** (prioritize, align to CSF outcomes, document, gather feedback, inform the community) → **Use** (collaborate/coordinate, assess current state) → **Maintain** (measure impact, monitor and feed back, update, retire).
 
 An organization consumes a Community Profile by copying it into an Organizational Profile as the basis of its Target Profile, then adapting — adjusting priorities, adding organization-specific Subcategories, references or implementation guidance.
 
@@ -64,13 +64,13 @@ An organization consumes a Community Profile by copying it into an Organizationa
 | Incident Response | NIST SP 800-61 Rev. 3 | Final, April 2025 (supersedes SP 800-61 Rev. 2, 2012) |
 | Ransomware Risk Management | NIST IR 8374 Rev. 1 | Final, June 2026 — CSF 2.0 rewrite superseding IR 8374 (Feb 2022, CSF 1.1) |
 | Manufacturing | NIST IR 8183 Rev. 2 | Initial public draft, 29 Sept 2025 (comments closed 17 Nov 2025); Rev. 1 (Oct 2020) is CSF 1.1-based |
-| Genomic Data | NIST IR 8467 | Second public draft, 16 Dec 2024 (comments closed 30 Jan 2025) |
+| Genomic Data | NIST IR 8467 | Second public draft, 16 Dec 2024 (comments closed 30 Jan 2025); first joint CSF and Privacy Framework Community Profile |
 | Federal agency O-RAN deployment | NIST IR 8623 | Initial public draft, 17 Sept 2026; comments due 2 Nov 2026 |
 | Cyber AI; Transit; Foundational PNT; Semiconductor manufacturing | NIST / NCCoE projects | Listed on the NIST Profiles page; check the project page for current draft state |
 | Financial Sector CSF Profile; Financial Sector Cloud Services Profile | Cyber Risk Institute (CRI) | CRI Profile v2.2 — CSF 2.0-aligned, 318 diagnostic statements, ~40 regulatory/standards mappings, impact tiers (Tier 1–Tier 4) set by a nine-question impact assessment |
 | Cloud Security | Cloud Security Alliance, based on CCM v4 | Third-party published |
 | Internet Routing | CableLabs | Third-party published |
-| Telecommunications Sector, v1.0 and v2.0 | Seemless Transition / Trusted Cyber Annex | Third-party published, sold commercially |
+| Telecommunications Sector, v1.0 and v2.0 | Seemless Transition / Trusted Cyber Annex | Third-party published; distributed through commercial storefronts |
 
 No US healthcare/public-health (HPH) Community Profile is listed on the NIST page as of September 2026 (verify separately whether HHS 405(d) HICP or the HPH performance goals are being restated as a CSF Community Profile).
 
@@ -78,7 +78,7 @@ No US healthcare/public-health (HPH) Community Profile is listed on the NIST pag
 
 SP 1347 names three access routes, in increasing order of granularity: **CPRT** (the Cybersecurity and Privacy Reference Tool — browse, search and export NIST reference data as XLSX/JSON rather than PDF), the **CSF 2.0 Reference Tool** (filter the CSF Core and attach selected references), and the **OLIR** Informative Reference Catalog (individual reference documents, Derived Relationship Mappings, and a cross-reference comparison report between two references).
 
-References published against CSF 2.0 include ISO/IEC 27001:2022, PCI DSS 4.0.1, CIS Controls 8.1, NIST SP 800-53 Rev. 5, SP 800-171 Rev. 3, SP 800-81r3, NICE Framework v2.0.0, OWASP LLM Top 10 v2.0, CRI Profile v2.0, CSA Cloud Controls Matrix v4.0, the Secure Controls Framework, the UK Cyber Governance Code of Practice, and a growing set of vendor submissions.
+References published against CSF 2.0 include ISO/IEC 27001:2022, PCI DSS 4.0.1, CIS Controls 8.1, NIST SP 800-53 Rev. 5, SP 800-171 Rev. 3, SP 800-81r3, NICE Framework v2.0.0, OWASP LLM Top 10 v2.0, CRI Profile v2.0, CSA Cloud Controls Matrix v4.0, the Secure Controls Framework, the Cyber Governance Code of Practice, and a growing set of vendor submissions.
 
 **Governance caveats, stated by NIST and worth quoting to stakeholders:** references are produced by NIST *and non-NIST* entities; NIST performs only limited conformance testing against IR 8278A Rev. 1; NIST performs **no correctness testing** on non-NIST submissions; a catalog listing does **not** imply NIST endorsement; each submission runs a 30-day public comment period before being published as final. Section 2.3.1 of IR 8278 Rev. 1 covers unilateral mappings and NIST's role.
 
@@ -86,7 +86,7 @@ SP 1347 also addresses tool-assisted mapping directly: exports are structured, s
 
 ### ERM integration (IR 8286 series)
 
-The IR 8286 series is the bridge between CSF outcomes and an enterprise risk register, and it was substantially refreshed in 2025: IR 8286 Rev. 1 (Dec 2025, superseding the Oct 2020 original), IR 8286A Rev. 1 (Dec 2025, risk identification and analysis), IR 8286B-upd1 (Feb 2025, prioritisation and risk response selection), IR 8286C Rev. 1 (Dec 2025, cybersecurity risk registers rolled up into the enterprise risk portfolio), IR 8286D-upd1 (Feb 2025, business impact analysis informing prioritisation). SP 1303 is the two-page entry point. See [risk-assessment](../../skills/risk-assessment/SKILL.md) and [risk-register-guide.md](../../templates/risk-register-guide.md).
+The IR 8286 series is the bridge between CSF outcomes and an enterprise risk register, and it was substantially refreshed in 2025: IR 8286 Rev. 1 (Dec 2025, superseding the Oct 2020 original), IR 8286A Rev. 1 (Dec 2025, risk identification and analysis), IR 8286B-upd1 (Feb 2025, prioritisation and risk response selection), IR 8286C Rev. 1 (Dec 2025, cybersecurity risk registers rolled up into the enterprise risk portfolio), IR 8286D-upd1 (Feb 2025, business impact analysis informing prioritisation). SP 1303 is the short entry point (8 pages). See [risk-assessment](../../skills/risk-assessment/SKILL.md) and [risk-register-guide.md](../../templates/risk-register-guide.md).
 
 ## Assessment, certification and evidence
 
@@ -100,7 +100,7 @@ The IR 8286 series is the bridge between CSF outcomes and an enterprise risk reg
 
 | Date | Event |
 |---|---|
-| Feb 2024 | CSF 2.0 published; SP 1299, SP 1300, SP 1301 and CSWP 32 ipd issued the same day; IR 8278 Rev. 1 published |
+| Feb 2024 | CSF 2.0 (CSWP 29) published 26 Feb, with SP 1301 and CSWP 32 ipd the same day; SP 1299 and SP 1300 the same month; IR 8278 Rev. 1 and IR 8278A Rev. 1 published |
 | Feb–May 2024 | CSWP 32 ipd public comment period (closed 3 May 2024); no final issued since |
 | Oct 2024 | SP 1302 (Tiers), SP 1303 (ERM), SP 1305 (C-SCRM) finalised |
 | Apr 2025 | SP 800-61 Rev. 3 published as a CSF 2.0 Community Profile for incident response |
@@ -108,6 +108,7 @@ The IR 8286 series is the bridge between CSF outcomes and an enterprise risk reg
 | Sept 2025 | IR 8183 Rev. 2 (CSF 2.0 Manufacturing Profile) initial public draft |
 | Feb 2026 | Two-year anniversary of CSF 2.0 |
 | Mar 2026 | SP 1308 (Cybersecurity, ERM and Workforce Management) finalised |
+| Jun 2026 | IR 8374 Rev. 1 (Ransomware Risk Management) finalised as a CSF 2.0 Community Profile, superseding IR 8374 (Feb 2022) |
 | Aug 2026 | SP 1347 (Informative References QSG) finalised; SP 1353 ipd released 19 August |
 | Sept–Nov 2026 | IR 8623 (O-RAN) draft open 17 Sept–2 Nov; SP 1353 comments close 15 Oct |
 
@@ -128,7 +129,7 @@ The IR 8286 series is the bridge between CSF outcomes and an enterprise risk reg
 - **CSF 2.0 core** — this pack is the companion layer; Functions, Categories, Tiers and the 1.1→2.0 changes are in [nist-csf-2.md](nist-csf-2.md).
 - **Control frameworks reached through Informative References** — [ISO/IEC 27001:2022](iso-27001-2022.md), [NIST SP 800-53](nist-800-53.md), [CIS Controls v8/v8.1](cis-controls-v8.md), [PCI DSS 4.x](pci-dss-4.md), the CSA Cloud Controls Matrix, NIST SP 800-171. CSF is the practical hub taxonomy: map once to CSF, reach the rest.
 - **Incident response** — SP 800-61 Rev. 3 is simultaneously the IR handbook and a CSF Community Profile; it is the successor to the long-standing NIST incident-handling guide. It informs, but does not satisfy, regulatory notification clocks ([breach-notification-timelines.md](../crosswalks/breach-notification-timelines.md)).
-- **Supply chain** — SP 1305 is the two-page entry point above NIST SP 800-161 Rev. 1, the detailed C-SCRM guidance.
+- **Supply chain** — SP 1305 is the short (7-page) entry point above NIST SP 800-161 Rev. 1, the detailed C-SCRM guidance.
 - **AI** — SP 1353 (draft) covers using AI *to run* CSF analysis; governing AI systems themselves belongs to the NIST AI RMF and ISO/IEC 42001. The NIST Cyber AI Profile is listed as a Community Profile in development.
 - **Financial services** — the CRI Profile is the sector's CSF-derived assessment vehicle and maps to regulatory expectations including EU requirements; see [dora.md](../regulations/dora.md).
 - **Risk quantification** — the IR 8286 series is a register-and-roll-up model, not a quantification method; pair it with a quantification method such as FAIR where monetary figures are required.
