@@ -21,7 +21,7 @@ roles:
 ## Trigger
 
 - Annual policy program kickoff on the governance calendar.
-- Off-cycle triggers for individual policies: a [new regulation](new-regulation-impact-assessment.md) imposes documentation obligations; an audit finding cites a policy defect; an incident exposes a policy gap; a major technology or organizational change invalidates policy content.
+- Off-cycle triggers for individual policies: a [new regulation](new-regulation-impact-assessment.md) imposes documentation obligations — entry into a new market brings a whole jurisdiction's set with it, so check the [global jurisdiction index](../context/regulations/other-jurisdictions.md) rather than waiting for a single instrument to surface; an audit finding cites a policy defect; an incident exposes a policy gap; a major technology or organizational change invalidates policy content.
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ roles:
 ### 2. Policy review — grc-analyst per policy; owner consulted
 
 - **Skill:** [policy-review](../skills/policy-review/SKILL.md)
-- **Inputs:** current policy text; change drivers since last review (regulatory changes, audit findings, incidents, org/tech changes); exception register entries against this policy; framework requirements the policy supports.
+- **Inputs:** current policy text; change drivers since last review (regulatory changes, audit findings, incidents, org/tech changes); exception register entries against this policy; framework requirements the policy supports (the pack for each is in [../context/frameworks/](../context/frameworks/), and the [framework crosswalk](../context/crosswalks/framework-crosswalk.md) shows where one policy statement carries several frameworks' requirements at once).
 - **Actions:** review each policy for: accuracy (does it describe how things actually work), completeness (does it cover current obligations — check against mapped framework controls), enforceability (are its "musts" testable and actually enforced), clarity and audience fit, and internal consistency with sibling policies. Classify the outcome: reaffirm as-is / minor edit / substantive revision / retire and merge.
 - **Outputs:** review memo per policy with classification and change list.
 - **Decision gate:** substantive revisions and retirements proceed to step 3. Reaffirmations and minor edits skip to step 5 with an abbreviated approval.

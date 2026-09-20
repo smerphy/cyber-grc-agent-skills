@@ -31,6 +31,7 @@ roles:
 - Current control inventory or statement of applicability (any format; a spreadsheet is fine).
 - Entity facts: legal entities, jurisdictions of establishment and operation, sector classifications, headcount/revenue, data categories processed, customer base geography.
 - A named accountable owner (typically the compliance officer) and a decision forum that can accept residual risk or fund remediation.
+- The knowledge layer as a starting reference set, not as the source of truth: route by country from the [global jurisdiction index](../context/regulations/other-jurisdictions.md), find the regime or framework pack from the [context pack index](../context/README.md), and use [../context/crosswalks/](../context/crosswalks/) for side-by-side deadline and control comparisons. Each pack points at the official text; the official text governs.
 
 ## Steps
 
@@ -38,7 +39,7 @@ roles:
 
 - **Skill:** [regulatory-horizon-scanning](../skills/regulatory-horizon-scanning/SKILL.md)
 - **Inputs:** the scan alert; official source text (act, directive, final rule, guidance).
-- **Actions:** verify against the official publication, not secondary commentary. Record: instrument name, issuing authority, publication date, entry-into-force date, and any phased application dates. Classify as new obligation / amendment / guidance / enforcement signal.
+- **Actions:** verify against the official publication, not secondary commentary. Record: instrument name, issuing authority, publication date, entry-into-force date, and any phased application dates. Classify as new obligation / amendment / guidance / enforcement signal. Check whether the library already holds a pack for the instrument ([context pack index](../context/README.md)); where it does, its at-a-glance table and primary-sources list shorten confirmation — but the pack carries a last-reviewed date, so re-verify anything date- or threshold-sensitive.
 - **Outputs:** confirmed regulation record with dates and source citation.
 - **Decision gate:** if the instrument is draft-stage with no fixed dates, park it on the horizon watchlist with a re-review date and stop here. Proceed only for adopted text or drafts with high adoption probability and near-term dates.
 
@@ -46,7 +47,7 @@ roles:
 
 - **Skill:** [regulatory-applicability](../skills/regulatory-applicability/SKILL.md)
 - **Inputs:** confirmed regulation record; entity facts from prerequisites.
-- **Actions:** walk the regulation's scope tests (entity type, sector, thresholds, territorial scope, data or activity triggers) per legal entity. Where scope is genuinely ambiguous, document the ambiguity and escalate to legal counsel rather than guessing.
+- **Actions:** walk the regulation's scope tests (entity type, sector, thresholds, territorial scope, data or activity triggers) per legal entity. Start from the jurisdiction's row in the [global jurisdiction index](../context/regulations/other-jurisdictions.md) — it names the core instruments and the regulator per country and routes to the pack carrying the scope provisions. Where scope is genuinely ambiguous, document the ambiguity and escalate to legal counsel rather than guessing.
 - **Outputs:** applicability memo per entity: in scope / out of scope / ambiguous-pending-counsel, with the specific scope provision cited for each conclusion.
 - **Decision gate:** if all entities are out of scope, record the memo (it is audit evidence of diligence), set a re-check trigger for business changes, and close the workflow.
 
@@ -61,7 +62,7 @@ roles:
 
 - **Skill:** [control-mapping](../skills/control-mapping/SKILL.md)
 - **Inputs:** obligations register; current control inventory; existing framework mappings (see [framework crosswalk](../context/crosswalks/framework-crosswalk.md)).
-- **Actions:** for each obligation, identify existing controls that fully, partially, or nowhere satisfy it. Reuse existing mappings — a mature ISO 27001 or NIST CSF 2.0 program will already cover much of any security-flavored regulation; the delta is usually in reporting, governance, and documentation obligations.
+- **Actions:** for each obligation, identify existing controls that fully, partially, or nowhere satisfy it. Reuse existing mappings — a mature ISO 27001 or NIST CSF 2.0 program will already cover much of any security-flavored regulation; the delta is usually in reporting, governance, and documentation obligations. Read the pack's interplay section before mapping: where the new instrument overlaps one the organization already meets, the honest answer is often a documentation delta rather than a new control.
 - **Outputs:** obligation-to-control map with coverage rating (full / partial / none) per obligation.
 
 ### 5. Gap assessment — grc-analyst, reviewed by compliance-officer
@@ -116,4 +117,4 @@ roles:
 - **One-and-done.** Treating the assessment as complete forever. Amendments, delegated acts, and regulator guidance keep arriving — feed the regulation back into the horizon-scanning watchlist with a review cadence.
 
 ---
-**Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.
+**Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

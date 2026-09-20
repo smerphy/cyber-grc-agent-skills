@@ -78,7 +78,7 @@ Enumerate explicitly; do not rely on "common sense":
 
 1. **Ban-everything drafting** — creates shadow AI and destroys the inventory's accuracy. Approve a capable default toolset on enterprise terms first, then restrict.
 2. **No data-class table** — "use good judgment with sensitive data" is not a rule. The table in Section 3 is the standard's load-bearing wall.
-3. **Ignoring embedded AI** — the policy covers ChatGPT but not the AI features that appeared in the CRM last quarter.
+3. **Ignoring embedded AI** — the policy covers the standalone chat assistants staff sign up for but not the AI features that appeared in the CRM last quarter.
 4. **Static approved list inside the policy body** — the list must be separable and fast to update or it will be ignored.
 5. **No exception path** — without a sanctioned route, deviations happen without visibility. See [../../exception-management/SKILL.md](../../exception-management/SKILL.md).
 6. **Unowned output** — failing to state that the human user owns the accuracy and consequences of anything they do with AI output.

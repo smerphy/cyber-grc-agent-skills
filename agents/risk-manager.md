@@ -77,5 +77,11 @@ then the method. Push back on both alarmism and false comfort; your credibility 
 | Risk reporting, KRIs, appetite dashboards | [../skills/grc-metrics-reporting/SKILL.md](../skills/grc-metrics-reporting/SKILL.md) |
 | Emerging regulatory risk | [../skills/regulatory-horizon-scanning/SKILL.md](../skills/regulatory-horizon-scanning/SKILL.md) |
 | Control effectiveness evidence for residual ratings | [../skills/control-testing/SKILL.md](../skills/control-testing/SKILL.md) |
+| Risk process and method standards | [../context/frameworks/iso-31000-27005-risk-management.md](../context/frameworks/iso-31000-27005-risk-management.md), [../context/frameworks/nist-rmf-800-37-800-30.md](../context/frameworks/nist-rmf-800-37-800-30.md) |
+| Quantification where loss data exists | [../context/frameworks/fair-cyber-risk-quantification.md](../context/frameworks/fair-cyber-risk-quantification.md) |
+| Rolling cyber risk into enterprise risk and internal control | [../context/frameworks/coso-internal-control-erm.md](../context/frameworks/coso-internal-control-erm.md) |
+| Threat realism for scenario likelihood | [../context/frameworks/mitre-attack-threat-informed-defense.md](../context/frameworks/mitre-attack-threat-informed-defense.md) |
+| Disruption and continuity impact | [../context/frameworks/iso-22301-business-continuity.md](../context/frameworks/iso-22301-business-continuity.md) |
+| Supply chain and concentration risk | [../context/frameworks/nist-800-161-cscrm.md](../context/frameworks/nist-800-161-cscrm.md) |
 | Framework context for control-based mitigation claims | [../context/frameworks/nist-csf-2.md](../context/frameworks/nist-csf-2.md), [../context/crosswalks/framework-crosswalk.md](../context/crosswalks/framework-crosswalk.md) |
-| Regulatory impact parameters | relevant files in [../context/regulations/](../context/regulations/) |
+| Regulatory impact parameters | relevant files in [../context/regulations/](../context/regulations/); route by country from [../context/regulations/other-jurisdictions.md](../context/regulations/other-jurisdictions.md), and take notification clocks from [../context/crosswalks/breach-notification-timelines.md](../context/crosswalks/breach-notification-timelines.md) rather than estimating them |

@@ -25,7 +25,7 @@ roles:
 
 ## Prerequisites
 
-- A pre-built applicability profile: which regimes apply to this organization (from [regulatory-applicability](../skills/regulatory-applicability/SKILL.md)), with per-regime notification criteria, deadlines, competent authorities, and filing channels. Building this during a live incident is the single most common cause of missed deadlines — see the [breach notification timeline matrix](../context/crosswalks/breach-notification-timelines.md).
+- A pre-built applicability profile: which regimes apply to this organization (from [regulatory-applicability](../skills/regulatory-applicability/SKILL.md)), with per-regime notification criteria, deadlines, competent authorities, and filing channels. Building this during a live incident is the single most common cause of missed deadlines — see the [breach notification timeline matrix](../context/crosswalks/breach-notification-timelines.md), which compares the clocks across regimes, and route to the per-regime pack behind each row by country from the [global jurisdiction index](../context/regulations/other-jurisdictions.md).
 - Contact sheet: regulators' filing portals/addresses, external counsel, cyber insurer notification requirements, and internal escalation chain including disclosure committee members for public companies.
 - A decision log template and a named scribe.
 
@@ -46,7 +46,7 @@ This workflow runs **alongside** technical IR, consuming its outputs (facts, sco
 
 - **Skill:** [regulatory-applicability](../skills/regulatory-applicability/SKILL.md) (incident-scoped pass) plus [incident-regulatory-reporting](../skills/incident-regulatory-reporting/SKILL.md)
 - **Inputs:** applicability profile; current facts.
-- **Actions:** determine which regimes this specific incident could engage: personal data breach regimes (GDPR Art. 33/34, US state breach laws, HIPAA, others), operational/sectoral regimes (NIS2, DORA, GLBA/FTC Safeguards), securities disclosure (SEC 8-K Item 1.05 for material incidents), and contractual duties (customer contracts, cyber insurance, vendor DPAs where we are the processor — processor-to-controller notification duties run fast). Record "could engage / cannot engage / unknown" per regime with rationale in the decision log. Re-run this step every time facts change materially.
+- **Actions:** determine which regimes this specific incident could engage: personal data breach regimes ([GDPR](../context/regulations/gdpr.md) Art. 33/34, [US state breach laws](../context/regulations/us-state-breach-notification-laws.md), [HIPAA](../context/regulations/hipaa.md), and the privacy regimes of every other jurisdiction touched — route from the [global jurisdiction index](../context/regulations/other-jurisdictions.md)), operational/sectoral regimes ([NIS2](../context/regulations/nis2.md) as transposed nationally ([national law](../context/regulations/eu-nis2-implementing-and-transposition.md)), [DORA](../context/regulations/dora.md) with its [technical standards](../context/regulations/eu-dora-technical-standards.md), [GLBA/FTC Safeguards](../context/regulations/glba-ftc-safeguards.md), [CIRCIA](../context/regulations/us-circia.md), the [US banking notification rules](../context/regulations/us-banking-incident-notification-third-party.md), [NYDFS Part 500](../context/regulations/us-nydfs-part-500.md)), securities disclosure ([SEC 8-K Item 1.05](../context/regulations/sec-cyber-disclosure.md) for material incidents), and contractual duties (customer contracts, cyber insurance, vendor DPAs where we are the processor — processor-to-controller notification duties run fast). Record "could engage / cannot engage / unknown" per regime with rationale in the decision log. Re-run this step every time facts change materially.
 - **Outputs:** engaged-regime list, logged with rationale.
 
 ### 3. Notification decision table — compliance-officer chairs; counsel advises
@@ -61,7 +61,7 @@ This workflow runs **alongside** technical IR, consuming its outputs (facts, sco
 
 - **Skill:** [incident-regulatory-reporting](../skills/incident-regulatory-reporting/SKILL.md) (deadline tracker)
 - **Inputs:** decision table.
-- **Actions:** maintain a single visible tracker of every live clock with its anchor event: e.g., NIS2 early warning 24h and incident notification 72h from awareness, plus final report at one month; GDPR Art. 33 within 72h of awareness (phased/supplemented filing permitted); SEC 8-K Item 1.05 four business days from materiality determination; individual notification duties (GDPR Art. 34 "without undue delay" where high risk; state laws vary). Set internal deadlines at 50-75% of the legal deadline. Review the tracker at every IR sync.
+- **Actions:** maintain a single visible tracker of every live clock with its anchor event: e.g., NIS2 early warning 24h and incident notification 72h from awareness, plus final report at one month; GDPR Art. 33 within 72h of awareness (phased/supplemented filing permitted); SEC 8-K Item 1.05 four business days from materiality determination; individual notification duties (GDPR Art. 34 "without undue delay" where high risk; state laws vary). Set internal deadlines at 50-75% of the legal deadline. Review the tracker at every IR sync. The [breach notification timeline matrix](../context/crosswalks/breach-notification-timelines.md) holds the per-regime clocks and the clock-start traps side by side; the regime's own pack holds the content requirements and filing channel for the notification itself.
 - **Outputs:** live deadline tracker with owner per deadline.
 
 ### 5. Notification drafting and filing — privacy-officer (data regimes) / compliance-officer (sectoral, securities); counsel reviews
@@ -100,11 +100,11 @@ This workflow runs **alongside** technical IR, consuming its outputs (facts, sco
 
 - **Waiting for perfect facts.** "We'll notify when forensics is done" — forensics takes weeks; most clocks run in hours or days. File preliminary, supplement later.
 - **Clock-anchor confusion.** Measuring deadlines from incident confirmation or containment instead of awareness, or missing that SEC's clock runs from the materiality determination — and that delaying the determination itself is not a lawful strategy.
-- **Regime tunnel vision.** Handling GDPR and forgetting processor contractual duties, state AGs, sector regulators, the insurer's notice-of-circumstance window, or securities disclosure.
+- **Regime tunnel vision.** Handling GDPR and forgetting processor contractual duties, state AGs, sector regulators, the insurer's notice-of-circumstance window, or securities disclosure. The same blindness applies geographically: an incident touching users outside the EU and US engages regimes whose clocks are shorter than GDPR's. Walk the [global jurisdiction index](../context/regulations/other-jurisdictions.md) against the affected-jurisdiction list rather than working from memory.
 - **Inconsistent narratives.** Press release says "no customer data affected" while a filing says "investigation ongoing." Regulators and plaintiffs collect these deltas. One fact set, one approval path for all outbound statements.
 - **No decision log, reconstructed later.** Retrospective logs are visibly retrospective and forfeit the credibility a contemporaneous record buys in enforcement.
 - **Undetermined-forever.** Threshold calls parked as "monitoring" without a re-review time until the deadline lapses. The step 3 gate exists for this.
 - **Regulatory track blocking IR** (or vice versa). Containment delayed for a notification wording debate, or IR wiping systems the regulatory track needed evidenced. Parallel tracks, explicit syncs.
 
 ---
-**Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.
+**Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

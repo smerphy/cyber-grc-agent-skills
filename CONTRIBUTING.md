@@ -34,6 +34,28 @@ Pre-PR checklist for a new skill:
 - [ ] Verification footer present if the file contains regulatory/framework specifics
 - [ ] Related skills' References sections updated to point back where it helps routing
 
+## Adding a context pack
+
+A context pack is one instrument — a law, rule, framework, standard or scheme — in one file: `context/regulations/<kebab-name>.md` for a legal instrument, `context/frameworks/<kebab-name>.md` for a framework or assurance scheme. No frontmatter; the file opens with its own H1 giving the instrument's full name and citation. Packs hold facts; the procedure that uses them stays in a skill.
+
+1. Required sections, in this order: `## At a glance` (attribute/detail table), `## What it is`, `## Who it covers / Scope`, `## Core obligations` (a framework uses `## Structure and requirements`), `## Enforcement and penalties` (a framework uses `## Assessment, certification and evidence`), `## Timeline and status`, `## Key obligations for security/GRC teams`, `## Interplay`, `## Primary sources`, then the verification footer. What belongs in each: [docs/architecture.md](docs/architecture.md).
+2. **Primary sources only.** Every specific traces to the official text or its publisher — the official journal or statute book, the regulator's own guidance, the standards body's page — and `## Primary sources` lists that official URL. Where an official page could not be retrieved and a secondary source carried the point, say so on that line. Trade press, vendor blogs and consultancy summaries are not sources for a citation, a deadline or a threshold.
+3. **Verification footer, always.** Close with the standard footer shown in the next section, carrying the current `Last reviewed: YYYY-MM`. State time-sensitive facts as of that date ("no final rule published as of ...") rather than as open-ended present tense.
+4. **Length: roughly 90–200 lines.** That is the band the existing packs sit in. If an instrument overruns it, split by layer — the level-1 instrument and its technical standards or national transpositions become separate packs that cross-link — rather than one sprawling file.
+5. **Wire it in, or it will not be found.** Add a row to the index [context/README.md](context/README.md); add a country row to the jurisdiction index [context/regulations/other-jurisdictions.md](context/regulations/other-jurisdictions.md) if the pack covers a jurisdiction not already routed; add the clock to [context/crosswalks/breach-notification-timelines.md](context/crosswalks/breach-notification-timelines.md) if the regime carries a notification deadline, or a column/row to [context/crosswalks/framework-crosswalk.md](context/crosswalks/framework-crosswalk.md) if it is a control framework; and link the pack from the skills whose procedures need it.
+6. **Link, don't restate.** Neighbouring regimes get a relative link in `## Interplay`, not a second summary. Relative paths only — the validator checks every one.
+
+Pre-PR checklist for a new pack:
+
+- [ ] `python3 scripts/validate_skills.py` passes from the repo root
+- [ ] Every required section present, in order, with the heading spelled as above
+- [ ] Every citation, deadline, threshold and penalty figure verified against the official text
+- [ ] `## Primary sources` lists official URLs; any secondary source flagged as such
+- [ ] Verification footer present with the current `Last reviewed` date
+- [ ] Index, jurisdiction index and crosswalk rows added where applicable
+- [ ] No licensed standard text reproduced verbatim (see scope boundaries below)
+- [ ] Provider-neutral: no tool names, no XML tags, no vendor-specific markup
+
 ## Updating regulatory or framework content
 
 Files under `context/` (and any file citing article numbers, deadlines, control counts, or penalties) follow a strict currency discipline:

@@ -47,8 +47,9 @@ Why this format:
 | `agents/` | Persona files: system-prompt role definitions (GRC analyst, compliance officer, risk manager, internal auditor, privacy officer, AI governance lead) |
 | `skills/<name>/SKILL.md` | One procedure per skill, in the format above |
 | `skills/<name>/references/` | Deep supporting material for that skill only |
-| `context/frameworks/` | Framework knowledge packs (NIST CSF 2.0, ISO 27001:2022, CIS v8, SOC 2, NIST 800-53, PCI DSS v4) |
-| `context/regulations/` | Regulation knowledge packs (GDPR, NIS2, DORA, EU AI Act, HIPAA, SOX, SEC, GLBA, US state privacy, other jurisdictions) |
+| `context/README.md` | Index of all 105 context packs, grouped by region and framework family — the way into the knowledge layer |
+| `context/frameworks/` | 40 framework and standard packs: the NIST family, ISO/IEC, audit and attestation schemes, payments and financial sector, cloud and government assurance, OT, and threat-informed baselines |
+| `context/regulations/` | 65 regulation packs: EU, UK, US federal and state, Asia-Pacific, the Americas, rest of Europe, Middle East and Africa, plus the global jurisdiction index in `other-jurisdictions.md` |
 | `context/crosswalks/` | Cross-framework mappings and the breach-notification deadline matrix |
 | `context/glossary.md`, `context/risk-scoring.md` | Shared terminology and scoring method notes |
 | `workflows/` | Multi-phase playbooks that chain several skills with decision gates |
@@ -71,7 +72,37 @@ A working session is assembled top-down: pick one persona, load the skill matchi
 - Skills contain **no framework fact dumps** — they link to `context/` instead of restating control counts or article numbers. One-line anchors (e.g. "NIS2 requires a 24-hour early warning") are fine when they drive a decision step; the authoritative detail lives in the context pack.
 - Context packs contain **no procedures** — they are reference material, deliberately reusable by every skill.
 
-This separation is what keeps 17 skills and ~20 context packs from becoming 17 copies of the same GDPR summary — and what keeps a regulatory change a one-file fix.
+This separation is what keeps 17 skills and 105 context packs from becoming 17 copies of the same GDPR summary — and what keeps a regulatory change a one-file fix.
+
+## Context pack structure
+
+A context pack is one instrument — a law, rule, framework, standard or scheme — in one file: `context/regulations/<name>.md` for a legal instrument, `context/frameworks/<name>.md` for a framework or assurance scheme. The library holds 105 of them. A pack has no frontmatter, starts with its own H1 (the instrument's full name plus its citation, e.g. "EU Data Act (Regulation (EU) 2023/2854)"), and contains facts only — the procedure that uses those facts belongs in a skill.
+
+Every pack follows the same section set, in this order:
+
+| Section | Contents |
+|---|---|
+| `## At a glance` | Attribute/detail table: instrument and citation, regulator or publisher, status and key dates, who is covered, structure, penalties or assessment model, relationship to neighbouring regimes |
+| `## What it is` | What the instrument does and why it exists |
+| `## Who it covers / Scope` | The coverage tests, including extraterritorial reach, thresholds and exclusions |
+| `## Core obligations` | The substantive duties, cited. Frameworks use `## Structure and requirements` instead |
+| `## Enforcement and penalties` | Who enforces, on what evidence, with what consequences. Frameworks use `## Assessment, certification and evidence` |
+| `## Timeline and status` | In-force dates, phase-ins, pending amendments and open items, stated as of the review date |
+| `## Key obligations for security/GRC teams` | What a practitioner actually has to do — the bridge to the skills layer |
+| `## Interplay` | How the instrument stacks with neighbouring regimes and frameworks, linking to their packs |
+| `## Primary sources` | The official texts the pack was written from, each with its URL. Required |
+| Verification footer | The standard footer with `Last reviewed: YYYY-MM`. Required |
+
+Packs in the library run roughly 90–200 lines. When an instrument does not fit, split it by layer — DORA and its RTS/ITS technical standards, NIS2 and its implementing regulation plus national transposition, are separate packs that cross-link — rather than writing one sprawling file.
+
+### Entry points into the knowledge layer
+
+An agent reaches a pack through one of four routes, so a new pack is wired into the relevant ones or it will not be found:
+
+- [`context/README.md`](../context/README.md) — the index: one row per pack, grouped by region and framework family.
+- [`context/regulations/other-jurisdictions.md`](../context/regulations/other-jurisdictions.md) — the global jurisdiction index: one row per country giving core law(s), regulator and headline breach clock, routing to the pack that holds the detail.
+- [`context/crosswalks/breach-notification-timelines.md`](../context/crosswalks/breach-notification-timelines.md) and [`context/crosswalks/framework-crosswalk.md`](../context/crosswalks/framework-crosswalk.md) — the deadline matrix and the domain-level control mapping. A regime with a notification clock, or a framework with a control set, belongs in the relevant one.
+- The skills themselves: a skill's `## References` section and its `references/` files link the packs its procedure needs — for example the jurisdiction-ordered applicability trees in [`skills/regulatory-applicability/references/applicability-decision-trees.md`](../skills/regulatory-applicability/references/applicability-decision-trees.md), which answer "in scope or not" and then hand off to the pack for the substance.
 
 ## Naming conventions
 
@@ -104,6 +135,8 @@ Regulations and frameworks change; a skills library that silently goes stale is 
 3. **Skill versions.** `metadata.version` in skill frontmatter follows semver: patch for wording fixes, minor for added steps/references, major for a changed output format or procedure restructure.
 4. **Precision or nothing.** A specific citation (article, section, deadline, count) appears only when verified against the official text. When uncertain, the obligation is described generically with no invented citation — an unsourced "Art. 34(7)" is a defect, not a detail.
 5. **No licensed standard text.** Paid standards (ISO 27001/27002, PCI DSS) are summarized at domain level — structure, themes, control intent — never reproduced verbatim. See the scope boundaries in [CONTRIBUTING.md](../CONTRIBUTING.md).
+6. **Primary sources, not secondary.** Every context pack ends with a `## Primary sources` list of the official texts it was written from — the official journal or statute book, the regulator's own guidance, the standards body's page — each with its URL. Where an official source could not be retrieved and a secondary one carried a point, the list says so on that line. Trade press, vendor blogs and consultancy summaries are not sources for a specific.
+7. **Every fact traceable.** A reader must be able to get from any specific in a pack to the source that supports it: the citation in the body, the source in the `## Primary sources` list, the date in the footer. Facts that cannot make that trip are stated generically or left out.
 
 ## Validation
 

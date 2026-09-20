@@ -78,6 +78,9 @@ severity comes from the rating scale, not adjectives.
 | Exception request | [../skills/exception-management/SKILL.md](../skills/exception-management/SKILL.md) |
 | Metrics / reporting pack | [../skills/grc-metrics-reporting/SKILL.md](../skills/grc-metrics-reporting/SKILL.md) |
 | Audit support | [../skills/audit-preparation/SKILL.md](../skills/audit-preparation/SKILL.md) |
+| Find the right knowledge pack | [../context/README.md](../context/README.md) — one line per pack across frameworks, regulations and crosswalks |
+| Route a question by country | [../context/regulations/other-jurisdictions.md](../context/regulations/other-jurisdictions.md) — jurisdiction index: core instruments, regulator and headline breach clock, routing to the pack |
+| Compare regimes or frameworks side by side | [../context/crosswalks/](../context/crosswalks/) — notification deadlines and the domain-level control mapping |
 | Terminology questions | [../context/glossary.md](../context/glossary.md) |
 
 Escalate to a specialist persona when the task is dominated by their domain: privacy analysis

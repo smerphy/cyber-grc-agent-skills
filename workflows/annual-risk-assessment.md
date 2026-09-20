@@ -26,7 +26,7 @@ roles:
 ## Prerequisites
 
 - Last year's risk register, risk assessment report, and treatment plan status.
-- Current risk appetite statement and scoring methodology (see [risk scoring](../context/risk-scoring.md)); if none exists, establish the methodology first via [risk-assessment](../skills/risk-assessment/SKILL.md) before workshops begin.
+- Current risk appetite statement and scoring methodology (see [risk scoring](../context/risk-scoring.md)); if none exists, establish the methodology first via [risk-assessment](../skills/risk-assessment/SKILL.md) before workshops begin. The method standards behind it sit in the framework packs: [ISO 31000 and ISO/IEC 27005](../context/frameworks/iso-31000-27005-risk-management.md) for the process, [FAIR](../context/frameworks/fair-cyber-risk-quantification.md) where loss data supports quantification, [NIST SP 800-37 / 800-30](../context/frameworks/nist-rmf-800-37-800-30.md) where the organization runs the federal process, and [COSO ERM](../context/frameworks/coso-internal-control-erm.md) where cyber risk must roll into an enterprise framework.
 - Asset, system, and data inventories at whatever maturity exists; incident history for the period; recent audit, penetration test, and [control testing](../skills/control-testing/SKILL.md) results.
 - Executive sponsorship and workshop time committed by business and technology leaders — book calendars before starting step 1.
 
@@ -35,7 +35,7 @@ roles:
 ### 1. Context refresh — risk-manager
 
 - **Skill:** [risk-assessment](../skills/risk-assessment/SKILL.md) (context establishment step)
-- **Inputs:** prior-year register; org changes (M&A, new products, new geographies, restructures); threat intelligence summaries; regulatory changes from [horizon scanning](../skills/regulatory-horizon-scanning/SKILL.md).
+- **Inputs:** prior-year register; org changes (M&A, new products, new geographies, restructures); threat intelligence summaries; regulatory changes from [horizon scanning](../skills/regulatory-horizon-scanning/SKILL.md). Where the year brought new geographies or new regulated activities, check what that pulls into scope from the [global jurisdiction index](../context/regulations/other-jurisdictions.md) before assuming the obligation set is unchanged.
 - **Actions:** document what changed since last year in business context, technology estate, threat landscape, and obligations. Refresh the crown-jewels list. Confirm the scoring methodology and appetite statement are still endorsed by leadership — do not change scales mid-cycle without recalibrating prior scores.
 - **Outputs:** context memo (2-4 pages); confirmed methodology; workshop scope list.
 
@@ -43,7 +43,7 @@ roles:
 
 - **Skill:** [risk-assessment](../skills/risk-assessment/SKILL.md) (scenario development step)
 - **Inputs:** context memo; prior-year risks; incident history; industry loss events.
-- **Actions:** draft candidate risk scenarios per workshop (8-15 each is workable), pre-populated with last year's scores and any evidence gathered since. Write scenarios as event chains (threat actor + method + asset + consequence), not control-failure statements. Prepare a facilitation pack: scales, appetite thresholds, prior scores, and prompts for what is missing.
+- **Actions:** draft candidate risk scenarios per workshop (8-15 each is workable), pre-populated with last year's scores and any evidence gathered since. Write scenarios as event chains (threat actor + method + asset + consequence), not control-failure statements; [MITRE ATT&CK and threat-informed defense](../context/frameworks/mitre-attack-threat-informed-defense.md) is the reference for making the method step of the chain resemble how intrusions actually proceed. Prepare a facilitation pack: scales, appetite thresholds, prior scores, and prompts for what is missing.
 - **Outputs:** per-workshop scenario packs; workshop schedule with named attendees.
 
 ### 3. Risk identification and analysis workshops — risk-manager (facilitates), business/technology owners (assess)

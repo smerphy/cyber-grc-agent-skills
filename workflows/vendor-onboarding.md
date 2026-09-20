@@ -37,14 +37,14 @@ roles:
 
 - **Skill:** [third-party-risk-assessment](../skills/third-party-risk-assessment/SKILL.md) (intake questionnaire)
 - **Inputs:** business owner's description of the use case.
-- **Actions:** capture the facts that drive tiering: what service, what data categories and volumes the vendor will store/process/access, integration and network access model, user population, business process supported, and whether the vendor uses subprocessors. Verify answers against the actual solution design, not the sales deck. If personal data is involved, flag for the privacy-officer (DPA, transfer mechanism, and possible [DPIA screening](../skills/dpia-privacy-assessment/SKILL.md)).
+- **Actions:** capture the facts that drive tiering: what service, what data categories and volumes the vendor will store/process/access, integration and network access model, user population, business process supported, and whether the vendor uses subprocessors. Verify answers against the actual solution design, not the sales deck. If personal data is involved, flag for the privacy-officer (DPA, transfer mechanism — see [EU international transfers](../context/regulations/eu-gdpr-international-transfers.md), and the [US DOJ data security program](../context/regulations/us-doj-bulk-data-rule.md) where the arrangement could give a country of concern access to bulk US sensitive personal data — and possible [DPIA screening](../skills/dpia-privacy-assessment/SKILL.md)).
 - **Outputs:** completed intake record in the vendor inventory.
 
 ### 2. Tiering — grc-analyst, tier confirmed by risk-manager
 
 - **Skill:** [third-party-risk-assessment](../skills/third-party-risk-assessment/SKILL.md) (tiering step)
 - **Inputs:** intake record; tiering criteria.
-- **Actions:** apply the tiering rubric mechanically; document the driving factor. Typical result: Tier 1 (critical) / Tier 2 (high) / Tier 3 (medium) / Tier 4 (low). Regulated contexts may force a floor — e.g., an ICT provider supporting a critical function under DORA, or a subprocessor of regulated data, cannot tier below Tier 2 (high).
+- **Actions:** apply the tiering rubric mechanically; document the driving factor. Typical result: Tier 1 (critical) / Tier 2 (high) / Tier 3 (medium) / Tier 4 (low). Regulated contexts may force a floor — e.g., an ICT provider supporting a critical function under [DORA](../context/regulations/dora.md) (register-of-information and contractual content requirements sit in its [technical standards](../context/regulations/eu-dora-technical-standards.md)), a service provider in scope of the [US banking third-party and notification rules](../context/regulations/us-banking-incident-notification-third-party.md), or a subprocessor of regulated data, cannot tier below Tier 2 (high).
 - **Outputs:** assigned tier with rationale.
 - **Decision gate:** Tier 4 (low) vendors with no sensitive data and no access skip to step 6 with a lightweight terms check. Everything else proceeds to step 3.
 
@@ -52,7 +52,7 @@ roles:
 
 - **Skill:** [third-party-risk-assessment](../skills/third-party-risk-assessment/SKILL.md)
 - **Inputs:** tier; vendor-provided evidence (questionnaire responses, SOC 2 report, ISO 27001 certificate, penetration test summary, security whitepaper).
-- **Actions:** scale depth to tier. Tier 3 (medium): questionnaire plus certificate validation. Tier 2 (high): full questionnaire, SOC 2 Type II report review (read the exceptions, the CUECs, and the scope — a certificate logo is not assurance; see [SOC 2 TSC](../context/frameworks/soc2-tsc.md)), subprocessor list review. Tier 1 (critical): all of the above plus architecture review, resilience/exit analysis, and a call with the vendor's security team. Check the assessed scope actually covers the service being bought.
+- **Actions:** scale depth to tier. Tier 3 (medium): questionnaire plus certificate validation. Tier 2 (high): full questionnaire, SOC 2 Type II report review (read the exceptions, the CUECs, and the scope — a certificate logo is not assurance; see [SOC 2 TSC](../context/frameworks/soc2-tsc.md)), subprocessor list review. Tier 1 (critical): all of the above plus architecture review, resilience/exit analysis, and a call with the vendor's security team. Check the assessed scope actually covers the service being bought. Read each attestation against what it is actually an opinion on: [SOC 1 / ISAE 3402](../context/frameworks/soc1-isae3402-soc-reports.md) where the service touches financial reporting rather than security, [ISO 27017/27018](../context/frameworks/iso-27017-27018-cloud.md) and [CSA CCM, CAIQ and STAR](../context/frameworks/csa-ccm-star.md) for cloud-specific coverage and shared-responsibility boundaries, and the scheme's own pack where the vendor claims [FedRAMP](../context/frameworks/fedramp.md), [HITRUST](../context/frameworks/hitrust-csf.md), [TISAX](../context/frameworks/tisax-vda-isa.md), [BSI C5](../context/frameworks/germany-bsi-it-grundschutz-c5.md) or [Cyber Essentials](../context/frameworks/uk-cyber-essentials-ncsc-caf.md) — the packs state what each one certifies, attests or merely self-declares.
 - **Outputs:** assessment report with findings rated by severity, and complementary user entity controls we must operate.
 
 ### 4. Findings disposition and contract requirements — grc-analyst with legal, risk-manager on severity calls
@@ -96,7 +96,7 @@ roles:
 - **Tier inflation avoidance.** Business owners minimizing intake answers to land a lower tier. Spot-check intake facts against the solution design; make re-tiering on discovery automatic.
 - **Orphan acceptances.** Risk acceptances with no expiry or review trigger that outlive the people who signed them. Step 5 requires time-bounding; step 6's reassessment cadence enforces revisits.
 - **Onboarding-only program.** Vendors assessed once and never again while their subprocessors, breaches, and scope drift accumulate. Step 6 is the whole point — a vendor program without monitoring is a point-in-time photo album.
-- **Fourth-party blindness.** Never asking about subprocessors, then being surprised when the vendor's vendor causes the breach.
+- **Fourth-party blindness.** Never asking about subprocessors, then being surprised when the vendor's vendor causes the breach. [NIST SP 800-161 C-SCRM](../context/frameworks/nist-800-161-cscrm.md) is the reference for extending the program past the first tier.
 
 ---
-**Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.
+**Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

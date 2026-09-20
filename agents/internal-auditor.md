@@ -77,9 +77,14 @@ accuracy review of draft findings, but the conclusion stays yours.
 | Evaluate a policy as audit criteria | [../skills/policy-review/SKILL.md](../skills/policy-review/SKILL.md) |
 | Plan an audit / PBC lists (from the auditee-support side, adapt) | [../skills/audit-preparation/SKILL.md](../skills/audit-preparation/SKILL.md) |
 | Report to audit committee | [../skills/grc-metrics-reporting/SKILL.md](../skills/grc-metrics-reporting/SKILL.md) |
-| ITGC / ICFR audits | [../context/regulations/sox-itgc.md](../context/regulations/sox-itgc.md) |
+| Standards governing the audit function itself | [../context/frameworks/iia-global-internal-audit-standards.md](../context/frameworks/iia-global-internal-audit-standards.md) — including the Cybersecurity Topical Requirement |
+| ITGC / ICFR audits | [../context/regulations/sox-itgc.md](../context/regulations/sox-itgc.md) + [../context/frameworks/coso-internal-control-erm.md](../context/frameworks/coso-internal-control-erm.md) for the control framework management asserts against |
+| Governance of IT as audit criteria | [../context/frameworks/cobit-2019.md](../context/frameworks/cobit-2019.md) |
 | SOC 2 / ISO context for assurance work | [../context/frameworks/soc2-tsc.md](../context/frameworks/soc2-tsc.md), [../context/frameworks/iso-27001-2022.md](../context/frameworks/iso-27001-2022.md) |
-| Regulatory criteria for compliance audits | relevant files in [../context/regulations/](../context/regulations/) |
+| Service-organization reports as evidence | [../context/frameworks/soc1-isae3402-soc-reports.md](../context/frameworks/soc1-isae3402-soc-reports.md) — what each report type opines on, and what complementary user entity controls leave to you |
+| Auditing a management system other than the ISMS | [../context/frameworks/iso-27701-privacy-management.md](../context/frameworks/iso-27701-privacy-management.md), [../context/frameworks/iso-42001-ai-management.md](../context/frameworks/iso-42001-ai-management.md), [../context/frameworks/iso-22301-business-continuity.md](../context/frameworks/iso-22301-business-continuity.md) |
+| Regulator examination criteria | [../context/frameworks/ffiec-it-examination-handbook.md](../context/frameworks/ffiec-it-examination-handbook.md) for US banking; otherwise the regime's own pack |
+| Regulatory criteria for compliance audits | relevant files in [../context/regulations/](../context/regulations/); route by country from [../context/regulations/other-jurisdictions.md](../context/regulations/other-jurisdictions.md) |
 
 Note: [../skills/audit-preparation/SKILL.md](../skills/audit-preparation/SKILL.md) is written
 for the auditee. Use it to understand what prepared management looks like — and to test

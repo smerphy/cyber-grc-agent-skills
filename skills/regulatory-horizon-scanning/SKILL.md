@@ -69,9 +69,12 @@ Ask for these before starting; proceed with stated assumptions if unavailable an
    applicability register plus roadmap signals. Topics typically include: cybersecurity
    regulation, privacy/data protection, incident/breach reporting, AI governance, operational
    resilience, sector rules (financial services, health, critical infrastructure), securities
-   disclosure, and the voluntary frameworks the org certifies against (ISO, SOC 2, PCI DSS —
-   framework revisions are horizon events too). Explicitly record what is OUT of scope so the
-   register's silence is meaningful.
+   disclosure, product security, and the voluntary frameworks the org certifies against (ISO,
+   SOC 2, PCI DSS — a new edition of a standard the org certifies against, or a draft revision
+   of one it maps to, is a horizon event too: see
+   [../../context/frameworks/iso-27701-privacy-management.md](../../context/frameworks/iso-27701-privacy-management.md)
+   and [../../context/frameworks/nist-privacy-framework.md](../../context/frameworks/nist-privacy-framework.md)).
+   Explicitly record what is OUT of scope so the register's silence is meaningful.
 
 2. **Select authoritative sources.** For each watchlist cell, pick primary sources (official
    journals, regulator sites, standards bodies) and optionally secondary aggregators for early
@@ -95,7 +98,9 @@ Ask for these before starting; proceed with stated assumptions if unavailable an
      transition periods, and staged applicability (many regimes phase obligations — capture
      each phase as its own date). Distinguish "in force" from "applicable" from "enforced."
      If a date is not yet fixed (transposition pending, rulemaking open), record the range and
-     the trigger event.
+     the trigger event. The timeline-and-status section of the relevant context pack gives the
+     phases as recorded at that pack's last-reviewed date — a starting point for the entry, never
+     a substitute for re-verifying against the primary source.
    - **Obligations delta:** compare the new obligations against the current compliance
      baseline. The delta — not the regulation's full text — drives effort. A regime that
      mirrors ISO 27001 controls the org already runs is low-delta even if the regulation is
@@ -161,12 +166,13 @@ Ask for these before starting; proceed with stated assumptions if unavailable an
 > Status: In force; obligations apply in phases. Key dates: prohibitions and AI literacy applied
 > from 2 Feb 2025; GPAI obligations from 2 Aug 2025; most high-risk (Annex III) obligations
 > apply from 2 Aug 2026; extended transition applies to high-risk AI embedded in regulated
-> products (verified against EUR-Lex, 2026-07). Applicability: In — org deploys a hiring-
+> products (verified against EUR-Lex, 2026-09). Applicability: In — org deploys a hiring-
 > screening model (Annex III candidate). Delta: no conformity assessment process, no technical
 > documentation per Annex IV, no registration; risk-management system partially covered by
-> existing model governance. Impact: **High** — mandatory obligations, material delta, deadline
-> inside 6 months. Urgency: **Act now.** Owner: AI Governance Lead. Actions: classification
-> confirmed 2026-06; gap assessment underway via ai-governance skill; next review 2026-08-01.
+> existing model governance. Impact: **High** — mandatory obligations, material delta, and the
+> Annex III application date has passed, so the delta is a live compliance gap rather than
+> roadmap work. Urgency: **Act now.** Owner: AI Governance Lead. Actions: classification
+> confirmed 2026-06; gap assessment underway via ai-governance skill; next review 2026-10-01.
 
 **Stakeholder brief** — per cycle, max 2 pages:
 1. Register movement since last cycle (new / band changes / closed).
@@ -194,11 +200,20 @@ Ask for these before starting; proceed with stated assumptions if unavailable an
 - [references/impact-triage.md](references/impact-triage.md) — full triage rubric and example horizon register entries.
 - [../../context/crosswalks/breach-notification-timelines.md](../../context/crosswalks/breach-notification-timelines.md) — deadline matrix for regimes already in force.
 - [../../context/crosswalks/framework-crosswalk.md](../../context/crosswalks/framework-crosswalk.md) — for obligations-delta comparisons.
-- [../../context/regulations/eu-ai-act.md](../../context/regulations/eu-ai-act.md), [../../context/regulations/nis2.md](../../context/regulations/nis2.md), [../../context/regulations/dora.md](../../context/regulations/dora.md) — recent regimes commonly on horizon registers.
+- **EU regimes with phased or pending obligations:** [eu-ai-act.md](../../context/regulations/eu-ai-act.md) · [eu-cyber-resilience-act.md](../../context/regulations/eu-cyber-resilience-act.md) · [eu-data-act.md](../../context/regulations/eu-data-act.md) · [eu-ehds.md](../../context/regulations/eu-ehds.md) · [eu-eidas2.md](../../context/regulations/eu-eidas2.md) · [eu-cer-directive.md](../../context/regulations/eu-cer-directive.md) · [eu-digital-services-act.md](../../context/regulations/eu-digital-services-act.md) · [eu-cybersecurity-act.md](../../context/regulations/eu-cybersecurity-act.md) · [eu-gdpr-international-transfers.md](../../context/regulations/eu-gdpr-international-transfers.md) · [eu-eprivacy.md](../../context/regulations/eu-eprivacy.md)
+- **EU baselines and their implementing layers:** [gdpr.md](../../context/regulations/gdpr.md) · [nis2.md](../../context/regulations/nis2.md) · [eu-nis2-implementing-and-transposition.md](../../context/regulations/eu-nis2-implementing-and-transposition.md) · [dora.md](../../context/regulations/dora.md) · [eu-dora-technical-standards.md](../../context/regulations/eu-dora-technical-standards.md)
+- **UK:** [uk-nis-cyber-security-resilience.md](../../context/regulations/uk-nis-cyber-security-resilience.md) · [uk-data-protection.md](../../context/regulations/uk-data-protection.md) · [uk-financial-operational-resilience.md](../../context/regulations/uk-financial-operational-resilience.md) · [uk-psti-product-security.md](../../context/regulations/uk-psti-product-security.md)
+- **US federal and sector:** [us-circia.md](../../context/regulations/us-circia.md) · [sec-cyber-disclosure.md](../../context/regulations/sec-cyber-disclosure.md) · [us-sec-reg-sp-reg-sci.md](../../context/regulations/us-sec-reg-sp-reg-sci.md) · [us-banking-incident-notification-third-party.md](../../context/regulations/us-banking-incident-notification-third-party.md) · [us-nydfs-part-500.md](../../context/regulations/us-nydfs-part-500.md) · [us-naic-insurance-data-security.md](../../context/regulations/us-naic-insurance-data-security.md) · [us-doj-bulk-data-rule.md](../../context/regulations/us-doj-bulk-data-rule.md) · [us-fisma-federal-cyber.md](../../context/regulations/us-fisma-federal-cyber.md) · [nerc-cip.md](../../context/regulations/nerc-cip.md) · [us-tsa-transportation-cyber.md](../../context/regulations/us-tsa-transportation-cyber.md) · [us-fda-medical-device-cybersecurity.md](../../context/regulations/us-fda-medical-device-cybersecurity.md) · [glba-ftc-safeguards.md](../../context/regulations/glba-ftc-safeguards.md) · [us-ftc-act-health-breach-rule.md](../../context/regulations/us-ftc-act-health-breach-rule.md)
+- **US state:** [us-state-privacy.md](../../context/regulations/us-state-privacy.md) · [us-state-breach-notification-laws.md](../../context/regulations/us-state-breach-notification-laws.md) · [us-state-ai-laws.md](../../context/regulations/us-state-ai-laws.md) · [us-biometric-privacy-laws.md](../../context/regulations/us-biometric-privacy-laws.md)
+- **Product and sector security regimes:** [eu-product-security-red-machinery.md](../../context/regulations/eu-product-security-red-machinery.md) · [automotive-un-r155-iso-21434.md](../../context/regulations/automotive-un-r155-iso-21434.md)
+- **Asia-Pacific:** [china-pipl-dsl-csl.md](../../context/regulations/china-pipl-dsl-csl.md) · [japan-appi-cyber.md](../../context/regulations/japan-appi-cyber.md) · [south-korea-pipa.md](../../context/regulations/south-korea-pipa.md) · [india-dpdp-cert-in.md](../../context/regulations/india-dpdp-cert-in.md) · [singapore-pdpa-cybersecurity.md](../../context/regulations/singapore-pdpa-cybersecurity.md) · [southeast-asia-privacy-regimes.md](../../context/regulations/southeast-asia-privacy-regimes.md) · [hong-kong-pdpo-critical-infrastructure.md](../../context/regulations/hong-kong-pdpo-critical-infrastructure.md) · [australia-privacy-act.md](../../context/regulations/australia-privacy-act.md) · [australia-soci-cyber-security-act.md](../../context/regulations/australia-soci-cyber-security-act.md) · [australia-apra-cps-234-230.md](../../context/regulations/australia-apra-cps-234-230.md) · [new-zealand-privacy-act.md](../../context/regulations/new-zealand-privacy-act.md)
+- **Americas, Middle East, Africa:** [canada-pipeda-law-25.md](../../context/regulations/canada-pipeda-law-25.md) · [brazil-lgpd.md](../../context/regulations/brazil-lgpd.md) · [latin-america-privacy-regimes.md](../../context/regulations/latin-america-privacy-regimes.md) · [saudi-arabia-pdpl-nca.md](../../context/regulations/saudi-arabia-pdpl-nca.md) · [uae-data-protection-cyber.md](../../context/regulations/uae-data-protection-cyber.md) · [israel-privacy-protection-law.md](../../context/regulations/israel-privacy-protection-law.md) · [switzerland-fadp-isa.md](../../context/regulations/switzerland-fadp-isa.md) · [south-africa-popia.md](../../context/regulations/south-africa-popia.md) · [africa-privacy-regimes.md](../../context/regulations/africa-privacy-regimes.md) · [other-jurisdictions.md](../../context/regulations/other-jurisdictions.md)
+- **Frameworks whose revisions are horizon events:** [iso-27001-2022.md](../../context/frameworks/iso-27001-2022.md) · [iso-27701-privacy-management.md](../../context/frameworks/iso-27701-privacy-management.md) · [iso-42001-ai-management.md](../../context/frameworks/iso-42001-ai-management.md) · [nist-csf-2.md](../../context/frameworks/nist-csf-2.md) · [nist-csf-profiles-and-companion-resources.md](../../context/frameworks/nist-csf-profiles-and-companion-resources.md) · [nist-privacy-framework.md](../../context/frameworks/nist-privacy-framework.md) · [nist-ai-rmf.md](../../context/frameworks/nist-ai-rmf.md) · [nist-800-53.md](../../context/frameworks/nist-800-53.md) · [nist-800-171-cmmc.md](../../context/frameworks/nist-800-171-cmmc.md) · [fedramp.md](../../context/frameworks/fedramp.md) · [pci-dss-4.md](../../context/frameworks/pci-dss-4.md) · [pci-other-standards.md](../../context/frameworks/pci-other-standards.md) · [cis-controls-v8.md](../../context/frameworks/cis-controls-v8.md) · [soc2-tsc.md](../../context/frameworks/soc2-tsc.md) · [uk-cyber-essentials-ncsc-caf.md](../../context/frameworks/uk-cyber-essentials-ncsc-caf.md) · [iec-62443-ot-security.md](../../context/frameworks/iec-62443-ot-security.md)
 - [../regulatory-applicability/SKILL.md](../regulatory-applicability/SKILL.md) — baseline applicability (prerequisite).
 - [../framework-gap-assessment/SKILL.md](../framework-gap-assessment/SKILL.md) — formal gap scoping for Plan-band items.
 - [../risk-assessment/SKILL.md](../risk-assessment/SKILL.md) — registering High items as emerging risks.
+- [../ai-governance/SKILL.md](../ai-governance/SKILL.md) — readiness work for AI-regime items.
 - [../grc-metrics-reporting/SKILL.md](../grc-metrics-reporting/SKILL.md) — horizon metrics in governance reporting.
 
 ---
-**Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.
+**Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

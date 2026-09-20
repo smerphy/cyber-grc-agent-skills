@@ -10,8 +10,8 @@ Everything is plain markdown in the open [Agent Skills format](https://agentskil
 agents/       6 persona system prompts (GRC analyst, compliance officer, risk manager,
               internal auditor, privacy officer, AI governance lead)
 skills/       17 task skills, each a SKILL.md procedure + references/ deep material
-context/      Shared knowledge packs: 6 frameworks, 10 regulation files, crosswalks,
-              glossary, risk-scoring methods
+context/      105 knowledge packs: 65 regulations, 40 frameworks & standards, plus
+              crosswalks, a global jurisdiction index, glossary, risk-scoring methods
 workflows/    8 multi-step playbooks chaining skills with decision gates
 templates/    11 deliverable skeletons (risk register, DPIA, SoA, workpapers, ...)
 docs/         Integration guides (Claude, OpenAI, generic) and architecture notes
@@ -40,13 +40,42 @@ scripts/      Validator for skill format and cross-file links (runs in CI)
 | [iso27001-readiness](skills/iso27001-readiness/SKILL.md) | Prepare for ISO 27001:2022 certification: ISMS scope, clauses 4–10, Statement of Applicability |
 | [regulatory-horizon-scanning](skills/regulatory-horizon-scanning/SKILL.md) | Track upcoming regulatory change from authoritative sources and triage impact |
 
-### Coverage
+### Knowledge layer
 
-**Frameworks:** NIST CSF 2.0 · ISO/IEC 27001:2022 · CIS Controls v8/v8.1 · SOC 2 (TSC) · NIST SP 800-53 r5 (+800-171/CMMC notes) · PCI DSS v4 · NIST AI RMF · ISO/IEC 42001
+105 context packs — 65 regulations and 40 frameworks and standards — plus two crosswalks, a glossary and risk-scoring notes. One line per pack, grouped by region and family, in the index: [context/README.md](context/README.md).
 
-**Regulations & laws:** EU GDPR · NIS2 · DORA · EU AI Act · HIPAA · CCPA/CPRA and US state privacy & breach laws · SOX (ITGC) · SEC cyber disclosure rules · GLBA / FTC Safeguards Rule · UK, Australia (APRA CPS 234, SOCI), Canada, Singapore, Brazil, China, Japan, India summaries
+Three entry points into it:
 
-**Crosswalks:** domain-level control crosswalk across the six frameworks; breach-notification deadline matrix across all covered regimes.
+- [Global jurisdiction index](context/regulations/other-jurisdictions.md) — one row per country: core law(s), regulator, headline breach clock, and the pack that holds the detail.
+- [Breach & incident notification timelines](context/crosswalks/breach-notification-timelines.md) — deadline matrix across regimes, with the clock-start definitions that differ between them.
+- [Framework crosswalk](context/crosswalks/framework-crosswalk.md) — domain-level mapping across the major control frameworks, with pointers to the official mapping sources.
+
+**Regulations by region**
+
+| Region | Packs | Covers |
+|---|---|---|
+| European Union | 16 | GDPR and its Chapter V transfer regime, NIS2 with the implementing regulation and national transposition, DORA with its technical-standards layer, EU AI Act, Cyber Resilience Act, Cybersecurity Act, Data Act, Digital Services Act, eIDAS 2.0, European Health Data Space, CER Directive, ePrivacy, RED and Machinery product security |
+| United Kingdom | 4 | UK GDPR / DPA 2018 / Data (Use and Access) Act 2025 / PECR, UK NIS and the Cyber Security and Resilience Bill, PSTI product security, FCA/PRA operational resilience and critical third parties |
+| United States — federal | 17 | HIPAA, GLBA and the FTC Safeguards Rule, SEC cyber disclosure, SOX ITGC, CIRCIA, FISMA, NERC CIP, TSA and Coast Guard transportation rules, FDA device cybersecurity, CJIS, IRS Pub 1075, COPPA, FERPA, the DOJ bulk-data rule, the banking incident-notification rule, FTC Act § 5 and the Health Breach Notification Rule, SEC Reg S-P / S-ID / SCI |
+| United States — state | 6 | Comprehensive state privacy laws, the 50-state breach-notification patchwork, NYDFS Part 500, the NAIC insurance data security model law, biometric privacy (BIPA, CUBI), state AI laws |
+| Asia-Pacific | 11 | Australia (Privacy Act, SOCI and Cyber Security Act, APRA CPS 234/230), China (CSL, DSL, PIPL), India (DPDP, CERT-In), Japan APPI, South Korea PIPA, Singapore, Hong Kong, New Zealand, Southeast Asian regimes |
+| Americas beyond the US | 3 | Canada (PIPEDA, Quebec Law 25, Alberta/BC PIPA, OSFI B-13), Brazil LGPD, Latin American regimes |
+| Rest of Europe, Middle East, Africa | 6 | Switzerland FADP and ISA, Saudi Arabia PDPL and NCA regulations, UAE federal and free-zone regimes, Israel, South Africa POPIA, African regimes |
+| Cross-sector and navigation | 2 | Automotive UN R155/R156 with ISO/SAE 21434; the global jurisdiction index |
+
+**Frameworks and standards by family**
+
+| Family | Packs | Covers |
+|---|---|---|
+| NIST | 12 | CSF 2.0 and its companion profiles and quick-start guides, SP 800-53 r5, 800-171 with CMMC, the RMF (800-37 with 800-30), 800-61 incident handling, 800-63 digital identity, 800-207 zero trust, 800-161 C-SCRM, SSDF 800-218, AI RMF, Privacy Framework |
+| ISO/IEC | 6 | 27001:2022, 27017/27018 cloud, 27701 privacy, 31000 with 27005, 22301 business continuity, 42001 AI management |
+| Audit, attestation and governance | 6 | SOC 2 Trust Services Criteria, SOC 1 / ISAE 3402 and the wider SOC family, HITRUST CSF, COBIT 2019, COSO internal control and ERM, the IIA Global Internal Audit Standards |
+| Payments and financial sector | 4 | PCI DSS v4.x, the other PCI SSC standards, Swift Customer Security Programme, the FFIEC IT Examination Handbook |
+| Cloud and government assurance | 3 | FedRAMP, CSA CCM / CAIQ / STAR, Germany's BSI IT-Grundschutz and C5 |
+| OT and supply-chain schemes | 2 | IEC 62443 with NIST SP 800-82, TISAX and VDA ISA |
+| Baselines and threat-informed practice | 7 | CIS Controls v8/v8.1, MITRE ATT&CK and D3FEND, OWASP application security, CISA CPGs and Secure by Design, FAIR risk quantification, Australia's Essential Eight and ISM, UK Cyber Essentials and the NCSC CAF |
+
+Every pack has the same shape: an At a glance table, what the instrument is, who it covers, core obligations (or, for a framework, its structure and requirements), enforcement or certification, timeline and status, what it means for a GRC team, and how it interacts with neighbouring regimes. Each one closes with a **Primary sources** list of official texts and a **verification footer** carrying a `Last reviewed` date. Packs are practitioner briefings with sourced specifics — they summarize, they do not replace the official text or legal advice.
 
 ## Quick start
 
@@ -88,7 +117,7 @@ Details and RAG/chunking guidance: [docs/integrations/generic.md](docs/integrati
 - **Three layers.** Personas define *who the agent is*, skills define *how a task is done*, context/templates define *what it needs to know and produce*. Compose them per task instead of one monolithic prompt.
 - **Progressive disclosure.** Each `SKILL.md` stays small enough to load whole; depth (question banks, rubrics, per-regime detail) lives in `references/` and `context/` files loaded on demand. This keeps token cost proportional to the task.
 - **Provider-neutral content.** No tool syntax, no vendor-specific markup anywhere in `skills/`, `context/`, `workflows/`, `agents/`, or `templates/`. Provider specifics are quarantined in `docs/integrations/`.
-- **Anti-fabrication by construction.** Skills instruct the agent to tie conclusions to evidence, flag uncertainty, and never invent citations or compliance status. Regulatory files carry a `Last reviewed` date and a verification footer.
+- **Anti-fabrication by construction.** Skills instruct the agent to tie conclusions to evidence, flag uncertainty, and never invent citations or compliance status. Every context pack traces its specifics to a `Primary sources` list of official texts and carries a `Last reviewed` date and a verification footer.
 - **Validated.** `python3 scripts/validate_skills.py` checks frontmatter, required sections, and that every cross-file link resolves; it runs in CI on every PR.
 
 Full rationale: [docs/architecture.md](docs/architecture.md).
@@ -104,7 +133,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Short version: follow the skill format, 
 ## Important limitations
 
 - **Not legal advice.** This library supports analysis; it does not replace qualified counsel. Notification decisions, regulator interaction, and legal interpretation need lawyer review.
-- **Regulations change.** Content reflects public sources as of the `Last reviewed` date in each file (initial release: 2026-07). Verify deadlines, thresholds, and penalties against official texts before relying on them.
+- **Regulations change.** Content reflects public sources as of the `Last reviewed` date in each file, and every pack lists the official sources it was written from. Verify deadlines, thresholds, and penalties against those texts before relying on them.
 - **LLMs make mistakes.** These skills reduce, but cannot eliminate, model error. Keep a human accountable for every compliance decision.
 
 ## License

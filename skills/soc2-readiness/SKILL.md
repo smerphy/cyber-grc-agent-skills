@@ -62,7 +62,7 @@ Decision point — boundary disputes: exclude a product line or environment only
 
 Build a control matrix: one row per criterion (CC1.1 through CC9.2, plus A/C/PI/P series if scoped), columns for control activity, owner, frequency, evidence source, automation status. The CC series structure:
 
-- **CC1-CC5** — entity-level criteria aligned to the COSO framework: control environment (CC1), communication and information (CC2), risk assessment (CC3), monitoring activities (CC4), control activities (CC5).
+- **CC1-CC5** — entity-level criteria aligned to the [COSO internal control framework](../../context/frameworks/coso-internal-control-erm.md): control environment (CC1), communication and information (CC2), risk assessment (CC3), monitoring activities (CC4), control activities (CC5).
 - **CC6** — logical and physical access controls (provisioning, deprovisioning, authentication, encryption, physical security).
 - **CC7** — system operations (vulnerability management, monitoring, incident detection and response, recovery).
 - **CC8** — change management.
@@ -152,11 +152,15 @@ Worked example (matrix excerpt):
 - [references/tsc-control-mapping.md](references/tsc-control-mapping.md) — CC1-CC9 and category criteria with typical controls and evidence per criterion.
 - [references/system-description-guide.md](references/system-description-guide.md) — five system components, description structure, CUECs, inclusive vs carve-out.
 - [../../context/frameworks/soc2-tsc.md](../../context/frameworks/soc2-tsc.md) — Trust Services Criteria overview, Type I vs Type II.
+- [../../context/frameworks/soc1-isae3402-soc-reports.md](../../context/frameworks/soc1-isae3402-soc-reports.md) — SOC 1 / ISAE 3402 and the rest of the SOC family, for choosing the right report.
+- [../../context/frameworks/coso-internal-control-erm.md](../../context/frameworks/coso-internal-control-erm.md) — the components and principles the CC1-CC5 entity-level criteria are built on.
 - [../../context/crosswalks/framework-crosswalk.md](../../context/crosswalks/framework-crosswalk.md) — seed mappings from ISO 27001 / CIS v8 / CSF 2.0.
+- Assurance products customers ask for alongside or instead of SOC 2: [../../context/frameworks/iso-27001-2022.md](../../context/frameworks/iso-27001-2022.md), [../../context/frameworks/iso-27017-27018-cloud.md](../../context/frameworks/iso-27017-27018-cloud.md), [../../context/frameworks/iso-27701-privacy-management.md](../../context/frameworks/iso-27701-privacy-management.md), [../../context/frameworks/csa-ccm-star.md](../../context/frameworks/csa-ccm-star.md) (STAR Attestation rides on a SOC 2 engagement), [../../context/frameworks/hitrust-csf.md](../../context/frameworks/hitrust-csf.md), [../../context/frameworks/fedramp.md](../../context/frameworks/fedramp.md), [../../context/frameworks/nist-csf-2.md](../../context/frameworks/nist-csf-2.md)
+- Technical baselines behind common logical-access, change and incident controls: [../../context/frameworks/nist-800-63-digital-identity.md](../../context/frameworks/nist-800-63-digital-identity.md), [../../context/frameworks/nist-800-207-zero-trust.md](../../context/frameworks/nist-800-207-zero-trust.md), [../../context/frameworks/nist-ssdf-800-218.md](../../context/frameworks/nist-ssdf-800-218.md), [../../context/frameworks/owasp-application-security.md](../../context/frameworks/owasp-application-security.md), [../../context/frameworks/nist-800-61-incident-handling.md](../../context/frameworks/nist-800-61-incident-handling.md), [../../context/frameworks/cis-controls-v8.md](../../context/frameworks/cis-controls-v8.md)
 - [../control-testing/SKILL.md](../control-testing/SKILL.md) — designing and executing evidence tests.
 - [../audit-preparation/SKILL.md](../audit-preparation/SKILL.md) — fieldwork logistics and request-list management.
 - [../iso27001-readiness/SKILL.md](../iso27001-readiness/SKILL.md) — overlapping certification track.
 - [../third-party-risk-assessment/SKILL.md](../third-party-risk-assessment/SKILL.md) — subservice organization reviews.
 
 ---
-**Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.
+**Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.

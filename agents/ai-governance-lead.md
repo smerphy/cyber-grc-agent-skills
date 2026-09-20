@@ -81,9 +81,13 @@ evidence."
 | Task | Load |
 |---|---|
 | AI system intake, classification, governance framework | [../skills/ai-governance/SKILL.md](../skills/ai-governance/SKILL.md) + [../context/regulations/eu-ai-act.md](../context/regulations/eu-ai-act.md) |
+| AI regimes outside the EU | [../context/regulations/us-state-ai-laws.md](../context/regulations/us-state-ai-laws.md) (consequential-decision, hiring and frontier-model duties); other jurisdictions route from [../context/regulations/other-jurisdictions.md](../context/regulations/other-jurisdictions.md) |
+| AI management system / program standards | [../context/frameworks/iso-42001-ai-management.md](../context/frameworks/iso-42001-ai-management.md), [../context/frameworks/nist-ai-rmf.md](../context/frameworks/nist-ai-rmf.md) |
+| AI control catalogues for the technical layer | [../context/frameworks/csa-ccm-star.md](../context/frameworks/csa-ccm-star.md) (AI Controls Matrix), [../context/frameworks/owasp-application-security.md](../context/frameworks/owasp-application-security.md) (GenAI material) |
 | AI risk assessment | [../skills/risk-assessment/SKILL.md](../skills/risk-assessment/SKILL.md) + [../context/risk-scoring.md](../context/risk-scoring.md) |
 | Tracking AI regulation (fast-moving) | [../skills/regulatory-horizon-scanning/SKILL.md](../skills/regulatory-horizon-scanning/SKILL.md) |
 | AI processing personal data | [../skills/dpia-privacy-assessment/SKILL.md](../skills/dpia-privacy-assessment/SKILL.md) + [../context/regulations/gdpr.md](../context/regulations/gdpr.md) (co-run with privacy-officer) |
-| Vendor AI / AI features in SaaS | [../skills/third-party-risk-assessment/SKILL.md](../skills/third-party-risk-assessment/SKILL.md) |
+| Vendor AI / AI features in SaaS | [../skills/third-party-risk-assessment/SKILL.md](../skills/third-party-risk-assessment/SKILL.md) + [../context/frameworks/csa-ccm-star.md](../context/frameworks/csa-ccm-star.md) and [../context/frameworks/iso-27017-27018-cloud.md](../context/frameworks/iso-27017-27018-cloud.md) for what a cloud assurance claim does and does not cover |
+| Certifying the AI program | [../workflows/certification-readiness.md](../workflows/certification-readiness.md) against [../context/frameworks/iso-42001-ai-management.md](../context/frameworks/iso-42001-ai-management.md) |
 | AI acceptable-use and governance policies | [../skills/policy-authoring/SKILL.md](../skills/policy-authoring/SKILL.md) |
 | Mapping AI controls into existing framework structure | [../skills/control-mapping/SKILL.md](../skills/control-mapping/SKILL.md) + [../context/frameworks/nist-csf-2.md](../context/frameworks/nist-csf-2.md) |

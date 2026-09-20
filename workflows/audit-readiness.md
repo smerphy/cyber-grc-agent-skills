@@ -27,7 +27,7 @@ roles:
 
 ## Prerequisites
 
-- Audit engagement details: audit type, criteria/standard, period covered (point-in-time vs period-of-time — a SOC 2 Type II covers a period; see [SOC 2 TSC](../context/frameworks/soc2-tsc.md)), auditor firm, and prior-year report with findings if this is a repeat.
+- Audit engagement details: audit type, criteria/standard, period covered (point-in-time vs period-of-time — a SOC 2 Type II covers a period; see [SOC 2 TSC](../context/frameworks/soc2-tsc.md)), auditor firm, and prior-year report with findings if this is a repeat. The criteria pack for the target sits in [../context/frameworks/](../context/frameworks/) — among them [SOC 1 / ISAE 3402](../context/frameworks/soc1-isae3402-soc-reports.md) where the engagement covers controls relevant to financial reporting rather than security, and the [FFIEC IT Examination Handbook](../context/frameworks/ffiec-it-examination-handbook.md) for a US banking examination; for a regulator exam under a specific regime, the regime's pack in [../context/regulations/](../context/regulations/) supplies the criteria.
 - Control inventory or statement of applicability for the audited framework.
 - Named control owners for every in-scope control.
 - An evidence repository location the whole team will actually use.
@@ -61,7 +61,7 @@ roles:
 
 - **Skill:** [control-testing](../skills/control-testing/SKILL.md)
 - **Inputs:** red/amber controls from step 3; controls with prior-year findings; controls new this period.
-- **Actions:** perform independent test-of-design and test-of-operating-effectiveness on the risk-weighted subset (testing everything is rarely feasible — prioritize prior findings, new controls, and evidence-weak controls). Use the auditor's likely sampling approach. Record results with the same rigor an auditor would: population, sample, attribute tested, result.
+- **Actions:** perform independent test-of-design and test-of-operating-effectiveness on the risk-weighted subset (testing everything is rarely feasible — prioritize prior findings, new controls, and evidence-weak controls). Use the auditor's likely sampling approach. Record results with the same rigor an auditor would: population, sample, attribute tested, result. Where an internal audit function runs the pre-test, it is bound by its own professional standards ([IIA Global Internal Audit Standards](../context/frameworks/iia-global-internal-audit-standards.md)), including on independence from the remediation in step 5.
 - **Outputs:** pre-test results with pass/fail per control and root cause for failures.
 
 ### 5. Remediation sprint — grc-analyst coordinates; control owners execute

@@ -64,7 +64,7 @@ Management review (9.3) must cover the standard's required inputs — status of 
 
 ### 3. Risk assessment and treatment (6.1.2, 6.1.3, 8.2, 8.3)
 
-1. Define the methodology: risk criteria (acceptance criteria and assessment criteria), how risks are identified (the 2022 standard does not mandate asset-threat-vulnerability decomposition — scenario-based is acceptable), analysis scales, and risk owners. Method detail: [risk-assessment](../risk-assessment/SKILL.md) and [../../context/risk-scoring.md](../../context/risk-scoring.md).
+1. Define the methodology: risk criteria (acceptance criteria and assessment criteria), how risks are identified (the 2022 standard does not mandate asset-threat-vulnerability decomposition — scenario-based is acceptable), analysis scales, and risk owners. Method detail: [risk-assessment](../risk-assessment/SKILL.md), [../../context/risk-scoring.md](../../context/risk-scoring.md) and [../../context/frameworks/iso-31000-27005-risk-management.md](../../context/frameworks/iso-31000-27005-risk-management.md).
 2. Execute it over the scope; record results (mandatory documented information).
 3. Select treatment for each risk (modify/retain/avoid/share); for modified risks, determine necessary controls, then **compare against Annex A** to verify nothing necessary was overlooked — Annex A is a completeness check, not a starting menu.
 4. Produce the risk treatment plan and obtain risk owners' approval of the plan and acceptance of residual risks (explicit 6.1.3 requirements auditors check).
@@ -132,11 +132,16 @@ Worked example (conformity checklist excerpt):
 - [references/soa-guide.md](references/soa-guide.md) — defensible SoA justifications, exclusion examples, common stage 1/2 nonconformities.
 - [../../templates/statement-of-applicability.md](../../templates/statement-of-applicability.md) — SoA template.
 - [../../context/frameworks/iso-27001-2022.md](../../context/frameworks/iso-27001-2022.md) — standard overview, Annex A themes.
+- [../../context/frameworks/iso-31000-27005-risk-management.md](../../context/frameworks/iso-31000-27005-risk-management.md) — ISO 31000 and ISO/IEC 27005, the risk management method behind clauses 6.1.2 and 6.1.3.
 - [../../context/risk-scoring.md](../../context/risk-scoring.md) — risk analysis methods.
+- Related ISO management-system and extension standards an ISMS scope often grows into: [../../context/frameworks/iso-27017-27018-cloud.md](../../context/frameworks/iso-27017-27018-cloud.md), [../../context/frameworks/iso-27701-privacy-management.md](../../context/frameworks/iso-27701-privacy-management.md), [../../context/frameworks/iso-22301-business-continuity.md](../../context/frameworks/iso-22301-business-continuity.md), [../../context/frameworks/iso-42001-ai-management.md](../../context/frameworks/iso-42001-ai-management.md)
+- Schemes built on an ISO 27001 certificate or ISMS audit: [../../context/frameworks/csa-ccm-star.md](../../context/frameworks/csa-ccm-star.md) (STAR Certification), [../../context/frameworks/germany-bsi-it-grundschutz-c5.md](../../context/frameworks/germany-bsi-it-grundschutz-c5.md) (ISO 27001 certificate on the basis of IT-Grundschutz)
+- Control sets that map back to Annex A and can seed or benchmark implementation: [../../context/frameworks/hitrust-csf.md](../../context/frameworks/hitrust-csf.md), [../../context/frameworks/tisax-vda-isa.md](../../context/frameworks/tisax-vda-isa.md), [../../context/frameworks/nist-csf-2.md](../../context/frameworks/nist-csf-2.md), [../../context/frameworks/cis-controls-v8.md](../../context/frameworks/cis-controls-v8.md), [../../context/frameworks/nist-800-53.md](../../context/frameworks/nist-800-53.md), [../../context/frameworks/soc2-tsc.md](../../context/frameworks/soc2-tsc.md), [../../context/frameworks/owasp-application-security.md](../../context/frameworks/owasp-application-security.md), [../../context/frameworks/nist-800-61-incident-handling.md](../../context/frameworks/nist-800-61-incident-handling.md)
+- [../../context/crosswalks/framework-crosswalk.md](../../context/crosswalks/framework-crosswalk.md) — domain-level mapping into and out of Annex A.
 - [../risk-assessment/SKILL.md](../risk-assessment/SKILL.md) — risk assessment execution.
 - [../audit-preparation/SKILL.md](../audit-preparation/SKILL.md) — internal and external audit logistics.
 - [../soc2-readiness/SKILL.md](../soc2-readiness/SKILL.md) — parallel attestation track.
 - [../regulatory-applicability/SKILL.md](../regulatory-applicability/SKILL.md) — legal register inputs (A.5.31).
 
 ---
-**Verification note:** Framework and regulatory details reflect publicly available sources as of mid-2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-07.
+**Verification note:** Framework and regulatory details reflect publicly available sources as of September 2026. Verify against the official text before relying on them for compliance decisions. Last reviewed: 2026-09.
